@@ -10,3 +10,13 @@ layout: default
   <span class="meta-pill">Reusable judgment</span>
 </div>
 {{ content }}
+
+<nav class="post-nav">
+  {% if page.previous %}
+    <a class="post-nav-link" href="{{ page.previous.url | relative_url }}">← Older: {{ page.previous.title }}</a>
+  {% endif %}
+  <a class="post-nav-link post-nav-home" href="{{ '/' | relative_url }}">Back to log index</a>
+  {% if page.next %}
+    <a class="post-nav-link post-nav-next" href="{{ page.next.url | relative_url }}">Newer: {{ page.next.title }} →</a>
+  {% endif %}
+</nav>

@@ -45,6 +45,25 @@
           </section>
 
           <section class="card sidebar-card">
+            <div class="sidebar-title">Latest post</div>
+            {% assign latest_post = site.posts.first %}
+            {% if latest_post %}
+              <a class="sidebar-post-link" href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
+              <div class="sidebar-post-date">{{ latest_post.date | date: "%b %-d, %Y" }}</div>
+              <p class="sidebar-post-summary">{{ latest_post.excerpt | strip_html | strip_newlines | truncate: 130 }}</p>
+            {% endif %}
+          </section>
+
+          <section class="card sidebar-card">
+            <div class="sidebar-title">Recent log index</div>
+            <ul class="sidebar-post-list">
+              {% for post in site.posts limit: 5 %}
+                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          <section class="card sidebar-card">
             <div class="sidebar-title">What this site tracks</div>
             <ul>
               <li>merged PRs worth remembering</li>

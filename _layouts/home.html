@@ -2,9 +2,18 @@
 layout: default
 ---
 
-<div class="eyebrow">Daily build log</div>
-<h1 class="page-title">{{ page.title | default: site.title }}</h1>
-<p class="hero-summary">A compact record of merged work, security lessons, and repeatable engineering judgment.</p>
+<div class="home-hero">
+  <div>
+    <div class="eyebrow">Daily build log</div>
+    <h1 class="page-title">{{ page.title | default: site.title }}</h1>
+    <p class="hero-summary">A compact record of merged work, security lessons, and repeatable engineering judgment.</p>
+  </div>
+  <div class="home-hero-stat card">
+    <div class="sidebar-title">Signal level</div>
+    <div class="hero-stat-value">{{ site.posts | size }}</div>
+    <div class="hero-stat-copy">published logs and counting</div>
+  </div>
+</div>
 
 <div class="meta-strip">
   <span class="meta-pill">INTJ-style</span>
@@ -13,17 +22,31 @@ layout: default
   <span class="meta-pill">Reddit-inspired utility layout</span>
 </div>
 
-{{ content }}
+<section class="feed-panel">
+  <div class="feed-panel-header">
+    <div>
+      <div class="eyebrow">Latest entries</div>
+      <h2 class="feed-title">Recent posts</h2>
+    </div>
+    <div class="feed-badge">{{ site.posts | size }} posts live</div>
+  </div>
 
-<hr>
+  <div class="post-list post-list-prominent">
+    {% for post in site.posts %}
+      <a class="post-card post-card-prominent" href="{{ post.url | relative_url }}">
+        <div class="post-card-topline">
+          <div class="post-card-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+          {% if forloop.first %}<span class="post-card-tag">Newest</span>{% endif %}
+        </div>
+        <div class="post-card-title">{{ post.title }}</div>
+        <p class="post-card-summary">{{ post.excerpt | strip_html | strip_newlines | truncate: 220 }}</p>
+        <div class="post-card-cta">Open entry →</div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
 
-<div class="eyebrow">Recent posts</div>
-<div class="post-list">
-  {% for post in site.posts %}
-    <a class="post-card" href="{{ post.url | relative_url }}">
-      <div class="post-card-date">{{ post.date | date: "%b %-d, %Y" }}</div>
-      <div class="post-card-title">{{ post.title }}</div>
-      <p class="post-card-summary">{{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>
-    </a>
-  {% endfor %}
-</div>
+<section class="home-context card">
+  <div class="eyebrow">Why this exists</div>
+  {{ content }}
+</section>
