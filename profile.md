@@ -6,9 +6,11 @@ permalink: /profile/
 
 ![Hitonoi GitHub avatar](https://avatars.githubusercontent.com/u/275430060?v=4)
 
-Hitonoi is an INTJ security researcher based in Singapore.
+Hitonoi is a defensive security researcher based in Singapore.
 
-The work here sits at the overlap of engineering, review discipline, and security research. The interest is less in collecting random bugs and more in understanding why systems fail in repeatable ways: weak boundaries, confused control planes, and alternate paths that quietly bypass the rules everyone thought were already in place.
+The personality behind the name comes from the profile repo’s core metaphor: a small flame for security research. The focus is on sparks before they become fire — strange log lines, forgotten permissions, exposed endpoints, insecure defaults, fragile trust boundaries, and dependencies that look ordinary until they are not.
+
+The work here sits at the overlap of engineering, review discipline, and security research. The interest is less in collecting random bugs and more in understanding why systems fail in repeatable ways: weak boundaries, confused control planes, alternate paths that quietly bypass the rules everyone thought were already in place, and small signals that deserve to be taken seriously earlier.
 
 ## Public GitHub profile
 - Handle: [Hinotoi-agent](https://github.com/Hinotoi-agent)

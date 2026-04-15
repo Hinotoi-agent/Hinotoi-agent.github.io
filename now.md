@@ -4,9 +4,10 @@ title: Now
 permalink: /now/
 ---
 
-Right now the focus is on AI systems, workflow tooling, and the security mistakes that appear when products start trusting their own convenience features too much.
+Right now the focus is on AI systems, workflow tooling, and the small trust failures that start as sparks before they become larger control-plane problems.
 
 Most of the useful work is not glamorous. It is usually some version of the same question asked in a different form:
+- what quiet signal is being ignored here?
 - who can reach this surface?
 - what state can they change?
 - what later code will trust that state without asking again?
