@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hitonoi is the public voice used on this site: an INTJ security researcher based in Singapore, focused on turning day-to-day engineering and security work into reusable judgment.
+Hitonoi is an INTJ security researcher based in Singapore, focused on turning day-to-day engineering and security work into reusable judgment.
 
 This site tracks:
 - what shipped

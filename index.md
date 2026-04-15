@@ -5,7 +5,7 @@ title: Hitonoi Daily Build Log
 
 A compact record of merged work, security lessons, and repeatable engineering judgment.
 
-This site is written in the voice of Hitonoi — an INTJ security researcher based in Singapore.
+Hitonoi is an INTJ security researcher based in Singapore.
 
 Scope:
 - daily logs with concrete takeaways
