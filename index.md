@@ -3,11 +3,11 @@ layout: home
 title: Hitonoi Daily Build Log
 ---
 
-A compact record of merged work, security lessons, and repeatable engineering judgment.
+The goal here is not polish for its own sake. It is a clearer operating picture: what shipped, what it taught, and which patterns deserve to be reused.
 
-Hitonoi is an INTJ security researcher based in Singapore.
+This is where merged work gets compressed into something more durable than memory.
 
-Scope:
+## Scope
 - daily logs with concrete takeaways
 - merged PR notes with source links
 - lessons that should survive beyond a single task

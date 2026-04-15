@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="eyebrow">Daily build log</div>
+<h1 class="page-title">{{ page.title | default: site.title }}</h1>
+<p class="hero-summary">A compact record of merged work, security lessons, and repeatable engineering judgment.</p>
+
+<div class="meta-strip">
+  <span class="meta-pill">INTJ-style</span>
+  <span class="meta-pill">Security research</span>
+  <span class="meta-pill">Singapore</span>
+  <span class="meta-pill">Reddit-inspired utility layout</span>
+</div>
+
+{{ content }}
+
+<hr>
+
+<div class="eyebrow">Recent posts</div>
+<div class="post-list">
+  {% for post in site.posts %}
+    <a class="post-card" href="{{ post.url | relative_url }}">
+      <div class="post-card-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+      <div class="post-card-title">{{ post.title }}</div>
+      <p class="post-card-summary">{{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>
+    </a>
+  {% endfor %}
+</div>
