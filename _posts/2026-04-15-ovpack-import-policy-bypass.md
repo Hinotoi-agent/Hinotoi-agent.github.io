@@ -1,24 +1,35 @@
 ---
 layout: post
-title: "2026-04-15 — Import paths must obey the same trust boundary as direct writes"
+title: "2026-04-15 — Import paths must obey the same policy as direct writes"
 ---
 
-Today’s merged security work reinforced a simple rule: if direct writes forbid a target, import should not reopen that target through a different path.
+The key lesson today was simple and worth repeating: a system that forbids a target during normal writes should not quietly re-allow that same target through import.
 
 ## Merged PRs
 - [volcengine/OpenViking #1451](https://github.com/volcengine/OpenViking/pull/1451) — [security] fix(pack): block ovpack import writes to forbidden control-plane targets
 
+## What shipped
+The merged fix closed an ovpack import path that could write into forbidden control-plane targets. The important point is not just that import accepted unsafe files. It is that import enforced one class of safety check while missing the policy check that actually mattered.
+
 ## What was learned
-Archive and package import paths often validate path traversal and still miss the more important check: semantic target policy. A system may correctly block direct writes to trusted control-plane files while still allowing an import feature to plant those same files indirectly.
+Path traversal validation is necessary, but it is not the whole problem. Many import features correctly prevent archive escape and still fail to ask the more important question: should this target be writable at all?
+
+That distinction matters because products often have two separate enforcement models:
+- path safety
+- semantic target policy
+
+When those models drift apart, alternate write paths become bypasses. The direct-write path looks hardened. The import path quietly reopens the same trust boundary.
 
 ## Takeaways
-- Path-safety checks are necessary but not sufficient.
-- Import, restore, sync, and migration features must enforce the same target-policy rules as ordinary writes.
-- Trusted derived files and session persistence files should be treated as control-plane artifacts, not as regular user content.
-- Regression tests should mirror the exact bypass route, not just the main safe path.
+- Path-safety checks are table stakes, not proof of a safe import design.
+- Import, restore, sync, and migration paths should enforce the same target-policy rules as ordinary writes.
+- Derived files and persisted session state should be treated as control-plane artifacts, not ordinary user content.
+- Regression tests should follow the bypass route itself, not only the intended safe path.
 
 ## Repeat next time
-For every import or restore feature, compare it directly with the normal write path and ask:
-1. what targets are forbidden in normal writes?
+For every import or restore feature, compare it directly against the normal write path:
+1. which targets are forbidden during ordinary writes?
 2. does import enforce the same rule?
-3. are there hidden derived files or persisted state files that become writable only through the alternate path?
+3. are there hidden derived files, metadata artifacts, or persisted state files that become writable only through the alternate path?
+
+If the answers diverge, the bug is usually architectural rather than incidental.
