@@ -9,6 +9,8 @@ author:
   name: Hitonoi
 header_pages:
   - about.md
+  - profile.md
+  - now.md
   - merged-prs.md
 minima:
   social_links:
