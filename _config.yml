@@ -5,8 +5,7 @@ baseurl: ""
 theme: minima
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
-author:
-  name: Hitonoi
+author: Hitonoi
 header_pages:
   - about.md
   - profile.md
