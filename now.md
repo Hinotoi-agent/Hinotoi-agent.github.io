@@ -4,40 +4,40 @@ title: Now
 permalink: /now/
 ---
 
-## Current focus
-Right now the focus is on AI and security, specifically where workflow systems, agent tooling, and control-plane design create silent trust-boundary failures.
+Right now the focus is on AI systems, workflow tooling, and the security mistakes that appear when products start trusting their own convenience features too much.
 
-## Active themes
-### 1. AI agent security
-- management APIs that should be opt-in or admin-only
-- prompt-bearing control-plane state
-- workflow and orchestration surfaces that quietly become privileged
-- import, restore, and sync paths that bypass normal write policy
+Most of the useful work is not glamorous. It is usually some version of the same question asked in a different form:
+- who can reach this surface?
+- what state can they change?
+- what later code will trust that state without asking again?
 
-### 2. Boundary integrity
+## Current themes
+### AI agent security
+- management APIs that should have been opt-in or admin-only
+- prompt-bearing state that quietly becomes part of the control plane
+- workflow and orchestration layers that inherit privilege by accident
+- import, restore, and sync paths that drift away from normal write policy
+
+### Boundary integrity
 - user vs shared-global state
 - session and workspace trust anchors
 - temp namespace isolation
-- artifact exposure and workflow run visibility
-- configuration drift between direct-write and alternate-write paths
+- artifact visibility and workflow run exposure
+- alternate write paths that reopen forbidden targets
 
-### 3. Practical vulnerability work
-- finding issues in real open-source projects
-- validating them conservatively
-- turning fixes into reusable lessons and checklists
-- writing reports that are precise, reproducible, and not overstated
+### Practical vulnerability work
+- finding real issues in open-source projects
+- validating them conservatively instead of overselling them
+- turning fixes into lessons that can be reused later
+- writing reports that are clear enough for maintainers to trust
 
-## What I am optimizing for
-- high-signal findings over inflated severity
-- repeatable review heuristics over one-off wins
-- tighter reasoning about trust boundaries
+## What matters most right now
+- signal over volume
+- boundary reasoning over headline severity
+- repeatable review habits over one-off wins
 - converting merged work into durable takeaways
 
-## Current research posture
-The working assumption is simple: most serious failures come from systems trusting something they should only have tolerated conditionally.
+## Working assumption
+The default assumption is that serious failures usually come from misplaced trust, not exotic exploitation. A system stores a path, a session, a prompt, a temp artifact, a workflow reference, or a config object — and later code treats it as more trustworthy than it really is.
 
-So the review focus stays on:
-- who can reach a surface
-- what state it can read or change
-- what later code trusts that state
-- whether an alternate path quietly reopens a forbidden target
+That is usually where the interesting work starts.

@@ -4,8 +4,9 @@ title: Merged PRs
 permalink: /merged-prs/
 ---
 
-Recent merged PRs tracked on this site:
+This page keeps a compact record of merged work that feeds the daily log. The point is not just to list PRs. The point is to preserve what changed, where it landed, and which fixes were worth learning from.
 
+## Recent merged PRs
 - 2026-04-15 — [volcengine/OpenViking #1451](https://github.com/volcengine/OpenViking/pull/1451) — block ovpack import writes to forbidden control-plane targets
 - 2026-04-14 — [volcengine/OpenViking #1398](https://github.com/volcengine/OpenViking/pull/1398) — isolate temp scope by user within an account
 - 2026-04-13 — [volcengine/OpenViking #1396](https://github.com/volcengine/OpenViking/pull/1396) — protect global watch-task control files from non-root access
