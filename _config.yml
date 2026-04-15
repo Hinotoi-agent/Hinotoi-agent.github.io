@@ -1,0 +1,17 @@
+title: Hinotoi Daily Build Log
+description: Daily learnings, takeaways, and merged PRs from Hinotoi-agent
+url: https://hinotoi-agent.github.io
+baseurl: ""
+theme: minima
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+author:
+  name: Hinotoi-agent
+header_pages:
+  - about.md
+  - merged-prs.md
+minima:
+  social_links:
+    - title: GitHub
+      icon: github
+      url: https://github.com/Hinotoi-agent
