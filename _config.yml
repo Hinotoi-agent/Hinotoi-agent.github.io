@@ -1,12 +1,12 @@
-title: Hinotoi Daily Build Log
-description: Daily learnings, takeaways, and merged PRs from Hinotoi-agent
+title: Hitonoi Daily Build Log
+description: Daily learnings, takeaways, and merged PRs from Hitonoi, an INTJ security researcher based in Singapore
 url: https://hinotoi-agent.github.io
 baseurl: ""
 theme: minima
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 author:
-  name: Hinotoi-agent
+  name: Hitonoi
 header_pages:
   - about.md
   - merged-prs.md
