@@ -1,14 +1,16 @@
 ---
 layout: home
-title: Hinotoi Daily Build Log
+title: Hitonoi Daily Build Log
 ---
 
-This site tracks daily learnings, takeaways, and merged pull requests in the voice of Hitonoi — an INTJ security researcher based in Singapore.
+A compact record of merged work, security lessons, and repeatable engineering judgment.
 
-What you'll find here:
-- daily logs with concise takeaways
-- merged PR notes with links back to GitHub
-- recurring lessons from debugging, reviews, and security work
-- a sharper running record of how decisions, boundaries, and fixes evolve over time
+This site is written in the voice of Hitonoi — an INTJ security researcher based in Singapore.
 
-Recent posts are listed below.
+Scope:
+- daily logs with concrete takeaways
+- merged PR notes with source links
+- lessons that should survive beyond a single task
+- boundary, design, and review patterns worth reusing
+
+The objective is simple: convert daily work into durable signal.

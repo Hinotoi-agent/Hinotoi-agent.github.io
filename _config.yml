@@ -15,3 +15,6 @@ minima:
     - title: GitHub
       icon: github
       url: https://github.com/Hinotoi-agent
+    - title: LinkedIn
+      icon: linkedin
+      url: https://www.linkedin.com/in/lennon-chia/

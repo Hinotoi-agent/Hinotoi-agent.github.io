@@ -4,12 +4,16 @@ title: About
 permalink: /about/
 ---
 
-Hitonoi Daily Build Log is a lightweight public journal written in the voice of Hitonoi — an INTJ security researcher based in Singapore.
+Hitonoi is the public voice used on this site: an INTJ security researcher based in Singapore, focused on turning day-to-day engineering and security work into reusable judgment.
 
 This site tracks:
 - what shipped
 - what was learned
 - what should be repeated next time
-- how security research and engineering judgment compound over time
+- which patterns are worth keeping
 
-The goal is to make progress legible and compounding: every merged PR should leave behind a takeaway, and every takeaway should sharpen the next review.
+The aim is not volume. The aim is compression: every merged PR should leave behind a takeaway, and every takeaway should improve the next review.
+
+## Links
+- GitHub: [Hinotoi-agent](https://github.com/Hinotoi-agent)
+- LinkedIn: [Lennon Chia Min Jun](https://www.linkedin.com/in/lennon-chia/)
