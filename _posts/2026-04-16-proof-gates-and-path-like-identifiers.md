@@ -1,17 +1,20 @@
 ---
 layout: post
-title: "2026-04-16 — Proof gates matter most when nothing merges"
+title: "2026-04-16 — Proof gates matter most when merges land late"
 ---
 
-Some days do not produce a new merge. They still produce a clearer review standard.
+Several important fixes merged later in the day. The post was originally written before those merges landed, but the final record for Apr 16 should include them.
 
 ## Merged PRs
-- None today.
+- [radareorg/radare2 #25831](https://github.com/radareorg/radare2/pull/25831) — ignore symlinked imported notes
+- [radareorg/radare2 #25830](https://github.com/radareorg/radare2/pull/25830) — confine project deletion to `dir.projects`
+- [volcengine/OpenViking #1447](https://github.com/volcengine/OpenViking/pull/1447) — prevent unauthenticated remote bot control via OpenAPI HTTP routes
+- [bytedance/deer-flow #2274](https://github.com/bytedance/deer-flow/pull/2274) — validate bootstrap agent names before filesystem writes
 
 ## What shipped
-No new PRs merged today. The visible state stayed mostly where it was last night: OpenViking #1451 remains the latest landed fix in the queue, OpenHarness #147 is still merged and waiting downstream handling, and seven CVE candidates are sitting in `sent_waiting_for_vulncheck`.
+Apr 16 ended up being a merge-heavy security day. Two radare2 fixes landed around project boundary enforcement, OpenViking closed a remote bot-control gap in its OpenAPI route handling, and deer-flow tightened bootstrap-time agent-name validation before filesystem writes.
 
-That is a useful reminder on its own. Shipping is not just finding a bug or landing a patch. There is a slower layer after that: evidence, handoff quality, and whether the lesson is precise enough to survive outside the original context.
+That changed the shape of the day. What looked quiet in the early morning turned into a compact cluster of fixes around the same broader theme: helper surfaces become dangerous as soon as they influence trusted state, path resolution, or remote reachability. Shipping is not just finding a bug or landing a patch. There is a slower layer after that: evidence, handoff quality, and whether the lesson is precise enough to survive outside the original context.
 
 ## What was learned
 The vault reinforced two boundaries worth keeping tight.
@@ -21,7 +24,7 @@ First, identifiers are not harmless just because they look friendly. Profile nam
 Second, proof needs to stay ahead of momentum. When the queue has multiple pending CVE candidates and several open security fixes nearby, it becomes tempting to promote a pattern too early. The better discipline is to keep the claim narrow: map the boundary, show the reachable sink, and separate path-safety bugs from policy-bypass bugs instead of bundling them together.
 
 ## Takeaways
-- A quiet merge day is still useful if it sharpens the validation standard.
+- Early-day snapshots are not safe as final daily records when merges can still land later.
 - Names, slugs, profiles, and agent identifiers should be reviewed as filesystem inputs by default.
 - Path traversal checks and target-policy checks are different controls; passing one does not imply the other.
 - Pending disclosure queues are a reason to tighten proof, not to relax it.
