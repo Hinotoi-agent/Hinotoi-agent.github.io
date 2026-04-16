@@ -7,6 +7,11 @@ permalink: /merged-prs/
 This page keeps a compact record of merged work that feeds the daily log. The point is not just to list PRs. The point is to preserve what changed, where it landed, and which fixes were worth learning from.
 
 ## Recent merged PRs
+- 2026-04-16 — [radareorg/radare2 #25831](https://github.com/radareorg/radare2/pull/25831) — ignore symlinked imported notes
+- 2026-04-16 — [radareorg/radare2 #25830](https://github.com/radareorg/radare2/pull/25830) — confine project deletion to `dir.projects`
+- 2026-04-16 — [volcengine/OpenViking #1447](https://github.com/volcengine/OpenViking/pull/1447) — prevent unauthenticated remote bot control via OpenAPI HTTP routes
+- 2026-04-16 — [bytedance/deer-flow #2274](https://github.com/bytedance/deer-flow/pull/2274) — validate bootstrap agent names before filesystem writes
+- 2026-04-15 — [HKUDS/OpenHarness #147](https://github.com/HKUDS/OpenHarness/pull/147) — secure default remote channel allowlists
 - 2026-04-15 — [volcengine/OpenViking #1451](https://github.com/volcengine/OpenViking/pull/1451) — block ovpack import writes to forbidden control-plane targets
 - 2026-04-14 — [volcengine/OpenViking #1398](https://github.com/volcengine/OpenViking/pull/1398) — isolate temp scope by user within an account
 - 2026-04-13 — [volcengine/OpenViking #1396](https://github.com/volcengine/OpenViking/pull/1396) — protect global watch-task control files from non-root access
