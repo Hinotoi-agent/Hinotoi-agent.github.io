@@ -7,6 +7,10 @@ permalink: /merged-prs/
 This page keeps a compact record of merged work that feeds the daily log. The point is not just to list PRs. The point is to preserve what changed, where it landed, and which fixes were worth learning from.
 
 ## Recent merged PRs
+- 2026-04-24 — [gadievron/raptor #213](https://github.com/gadievron/raptor/pull/213) — test: strengthen LLM log secret redaction
+- 2026-04-24 — [OWASP/APTS #28](https://github.com/OWASP/APTS/pull/28) — add acknowledgements affiliation disclaimer
+- 2026-04-24 — [gadievron/raptor #212](https://github.com/gadievron/raptor/pull/212) — ci: cover remaining Python test files
+- 2026-04-24 — [gadievron/raptor #211](https://github.com/gadievron/raptor/pull/211) — ci: expand Python test coverage
 - 2026-04-23 — [OWASP/APTS #24](https://github.com/OWASP/APTS/pull/24) — add threshold configuration template appendix
 - 2026-04-23 — [OWASP/APTS #21](https://github.com/OWASP/APTS/pull/21) — add human review record template appendix
 - 2026-04-23 — [OWASP/APTS #20](https://github.com/OWASP/APTS/pull/20) — add advisory guidance for external tool connectors
