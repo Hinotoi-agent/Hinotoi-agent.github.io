@@ -7,6 +7,11 @@ permalink: /merged-prs/
 This page keeps a compact record of merged work that feeds the daily log. The point is not just to list PRs. The point is to preserve what changed, where it landed, and which fixes were worth learning from.
 
 ## Recent merged PRs
+- 2026-04-26 — [gadievron/raptor #223](https://github.com/gadievron/raptor/pull/223) — [security] feat(web): make secret redaction operator-configurable
+- 2026-04-26 — [OWASP/APTS #32](https://github.com/OWASP/APTS/pull/32) — docs: add quick vendor review checklist
+- 2026-04-26 — [OWASP/APTS #30](https://github.com/OWASP/APTS/pull/30) — docs: add conformance claim example
+- 2026-04-26 — [OWASP/APTS #29](https://github.com/OWASP/APTS/pull/29) — docs: add reader path flowchart
+- 2026-04-26 — [OWASP/APTS #31](https://github.com/OWASP/APTS/pull/31) — docs: add evidence package manifest example
 - 2026-04-25 — [berabuddies/agentflow #18](https://github.com/berabuddies/agentflow/pull/18) — fix: harden web API pipeline loading and request validation
 - 2026-04-24 — [gadievron/raptor #213](https://github.com/gadievron/raptor/pull/213) — test: strengthen LLM log secret redaction
 - 2026-04-24 — [OWASP/APTS #28](https://github.com/OWASP/APTS/pull/28) — add acknowledgements affiliation disclaimer
