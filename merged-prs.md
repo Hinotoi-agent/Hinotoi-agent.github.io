@@ -7,6 +7,8 @@ permalink: /merged-prs/
 This page keeps a compact record of merged work that feeds the daily log. The point is not just to list PRs. The point is to preserve what changed, where it landed, and which fixes were worth learning from.
 
 ## Recent merged PRs
+- 2026-04-27 — [gadievron/raptor #219](https://github.com/gadievron/raptor/pull/219) — [security] fix(web): enforce WebClient target scope across redirects
+- 2026-04-27 — [volcengine/OpenViking #1702](https://github.com/volcengine/OpenViking/pull/1702) — [security] fix(bot): prevent image tool from reading host files outside sandbox
 - 2026-04-26 — [gadievron/raptor #223](https://github.com/gadievron/raptor/pull/223) — [security] feat(web): make secret redaction operator-configurable
 - 2026-04-26 — [OWASP/APTS #32](https://github.com/OWASP/APTS/pull/32) — docs: add quick vendor review checklist
 - 2026-04-26 — [OWASP/APTS #30](https://github.com/OWASP/APTS/pull/30) — docs: add conformance claim example
