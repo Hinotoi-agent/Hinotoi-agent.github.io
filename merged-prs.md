@@ -7,6 +7,7 @@ permalink: /merged-prs/
 This page keeps a compact record of merged work that feeds the daily log. The point is not just to list PRs. The point is to preserve what changed, where it landed, and which fixes were worth learning from.
 
 ## Recent merged PRs
+- 2026-04-30 — [bytedance/deer-flow #2633](https://github.com/bytedance/deer-flow/pull/2633) — [security] fix(sandbox): bind local Docker ports to loopback
 - 2026-04-29 — [HKUDS/OpenHarness #209](https://github.com/HKUDS/OpenHarness/pull/209) — [security] test(gateway): cover bridge spawn repro path
 - 2026-04-28 — [OWASP/APTS #42](https://github.com/OWASP/APTS/pull/42) — docs: add authority delegation matrix template
 - 2026-04-28 — [labring/FastGPT #6826](https://github.com/labring/FastGPT/pull/6826) — [security] fix(app): validate stored MCP tool URLs
