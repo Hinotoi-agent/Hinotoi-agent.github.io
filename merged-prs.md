@@ -7,6 +7,9 @@ permalink: /merged-prs/
 This page keeps a compact record of merged work that feeds the daily log. The point is not just to list PRs. The point is to preserve what changed, where it landed, and which fixes were worth learning from.
 
 ## Recent merged PRs
+- 2026-05-01 — [OWASP/APTS #46](https://github.com/OWASP/APTS/pull/46) — docs: add shift handoff template appendix
+- 2026-05-01 — [HKUDS/nanobot #3569](https://github.com/HKUDS/nanobot/pull/3569) — [security] fix(dingtalk): block SSRF in outbound media fetches
+- 2026-05-01 — [qwibitai/nanoclaw #2001](https://github.com/qwibitai/nanoclaw/pull/2001) — [security] fix(container): prevent host file read/delete via container-controlled outbox paths
 - 2026-04-30 — [bytedance/deer-flow #2633](https://github.com/bytedance/deer-flow/pull/2633) — [security] fix(sandbox): bind local Docker ports to loopback
 - 2026-04-29 — [HKUDS/OpenHarness #209](https://github.com/HKUDS/OpenHarness/pull/209) — [security] test(gateway): cover bridge spawn repro path
 - 2026-04-28 — [OWASP/APTS #42](https://github.com/OWASP/APTS/pull/42) — docs: add authority delegation matrix template
