@@ -10,7 +10,9 @@ header_pages:
   - about.md
   - profile.md
   - now.md
+  - selected-work.md
   - merged-prs.md
+  - archive.md
 minima:
   social_links:
     - title: GitHub

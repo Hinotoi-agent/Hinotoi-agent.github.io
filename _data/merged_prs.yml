@@ -1,0 +1,397 @@
+- date: '2026-05-01'
+  repo: OWASP/APTS
+  number: 46
+  title: 'docs: add shift handoff template appendix'
+  url: https://github.com/OWASP/APTS/pull/46
+  category: docs-standards
+  tags:
+  - docs
+  month: 2026-05
+- date: '2026-05-01'
+  repo: HKUDS/nanobot
+  number: 3569
+  title: '[security] fix(dingtalk): block SSRF in outbound media fetches'
+  url: https://github.com/HKUDS/nanobot/pull/3569
+  category: security
+  tags:
+  - dingtalk
+  - ssrf
+  month: 2026-05
+- date: '2026-05-01'
+  repo: qwibitai/nanoclaw
+  number: 2001
+  title: '[security] fix(container): prevent host file read/delete via container-controlled outbox paths'
+  url: https://github.com/qwibitai/nanoclaw/pull/2001
+  category: security
+  tags:
+  - path
+  month: 2026-05
+- date: '2026-04-30'
+  repo: bytedance/deer-flow
+  number: 2633
+  title: '[security] fix(sandbox): bind local Docker ports to loopback'
+  url: https://github.com/bytedance/deer-flow/pull/2633
+  category: security
+  tags:
+  - docker
+  - local
+  - sandbox
+  month: 2026-04
+- date: '2026-04-29'
+  repo: HKUDS/OpenHarness
+  number: 209
+  title: '[security] test(gateway): cover bridge spawn repro path'
+  url: https://github.com/HKUDS/OpenHarness/pull/209
+  category: security
+  tags:
+  - bridge
+  - path
+  month: 2026-04
+- date: '2026-04-28'
+  repo: OWASP/APTS
+  number: 42
+  title: 'docs: add authority delegation matrix template'
+  url: https://github.com/OWASP/APTS/pull/42
+  category: docs-standards
+  tags:
+  - auth
+  - docs
+  month: 2026-04
+- date: '2026-04-28'
+  repo: labring/FastGPT
+  number: 6826
+  title: '[security] fix(app): validate stored MCP tool URLs'
+  url: https://github.com/labring/FastGPT/pull/6826
+  category: security
+  tags:
+  - mcp
+  month: 2026-04
+- date: '2026-04-28'
+  repo: gadievron/raptor
+  number: 246
+  title: 'fix(diagram): harden Mermaid sanitizer edge cases'
+  url: https://github.com/gadievron/raptor/pull/246
+  category: security
+  tags:
+  - mermaid
+  month: 2026-04
+- date: '2026-04-28'
+  repo: HKUDS/OpenHarness
+  number: 208
+  title: '[security] fix(commands): keep bridge local-only by default'
+  url: https://github.com/HKUDS/OpenHarness/pull/208
+  category: security
+  tags:
+  - bridge
+  - local
+  month: 2026-04
+- date: '2026-04-28'
+  repo: HKUDS/OpenHarness
+  number: 197
+  title: '[security] fix(feishu): contain inbound attachment filenames'
+  url: https://github.com/HKUDS/OpenHarness/pull/197
+  category: security
+  tags: []
+  month: 2026-04
+- date: '2026-04-28'
+  repo: HKUDS/OpenHarness
+  number: 198
+  title: '[security] fix(plugins): reject traversal names on uninstall'
+  url: https://github.com/HKUDS/OpenHarness/pull/198
+  category: security
+  tags:
+  - plugin
+  month: 2026-04
+- date: '2026-04-27'
+  repo: gadievron/raptor
+  number: 219
+  title: '[security] fix(web): enforce WebClient target scope across redirects'
+  url: https://github.com/gadievron/raptor/pull/219
+  category: security
+  tags:
+  - web
+  month: 2026-04
+- date: '2026-04-27'
+  repo: volcengine/OpenViking
+  number: 1702
+  title: '[security] fix(bot): prevent image tool from reading host files outside sandbox'
+  url: https://github.com/volcengine/OpenViking/pull/1702
+  category: security
+  tags:
+  - sandbox
+  month: 2026-04
+- date: '2026-04-26'
+  repo: gadievron/raptor
+  number: 223
+  title: '[security] feat(web): make secret redaction operator-configurable'
+  url: https://github.com/gadievron/raptor/pull/223
+  category: security
+  tags:
+  - redaction
+  - web
+  month: 2026-04
+- date: '2026-04-26'
+  repo: OWASP/APTS
+  number: 32
+  title: 'docs: add quick vendor review checklist'
+  url: https://github.com/OWASP/APTS/pull/32
+  category: docs-standards
+  tags:
+  - docs
+  month: 2026-04
+- date: '2026-04-26'
+  repo: OWASP/APTS
+  number: 30
+  title: 'docs: add conformance claim example'
+  url: https://github.com/OWASP/APTS/pull/30
+  category: docs-standards
+  tags:
+  - docs
+  month: 2026-04
+- date: '2026-04-26'
+  repo: OWASP/APTS
+  number: 29
+  title: 'docs: add reader path flowchart'
+  url: https://github.com/OWASP/APTS/pull/29
+  category: docs-standards
+  tags:
+  - docs
+  - path
+  month: 2026-04
+- date: '2026-04-26'
+  repo: OWASP/APTS
+  number: 31
+  title: 'docs: add evidence package manifest example'
+  url: https://github.com/OWASP/APTS/pull/31
+  category: docs-standards
+  tags:
+  - docs
+  month: 2026-04
+- date: '2026-04-25'
+  repo: berabuddies/agentflow
+  number: 18
+  title: 'fix: harden web API pipeline loading and request validation'
+  url: https://github.com/berabuddies/agentflow/pull/18
+  category: security
+  tags:
+  - agent
+  - web
+  month: 2026-04
+- date: '2026-04-24'
+  repo: gadievron/raptor
+  number: 213
+  title: 'test: strengthen LLM log secret redaction'
+  url: https://github.com/gadievron/raptor/pull/213
+  category: security
+  tags:
+  - redaction
+  month: 2026-04
+- date: '2026-04-24'
+  repo: OWASP/APTS
+  number: 28
+  title: add acknowledgements affiliation disclaimer
+  url: https://github.com/OWASP/APTS/pull/28
+  category: docs-standards
+  tags: []
+  month: 2026-04
+- date: '2026-04-24'
+  repo: gadievron/raptor
+  number: 212
+  title: 'ci: cover remaining Python test files'
+  url: https://github.com/gadievron/raptor/pull/212
+  category: tests-ci
+  tags: []
+  month: 2026-04
+- date: '2026-04-24'
+  repo: gadievron/raptor
+  number: 211
+  title: 'ci: expand Python test coverage'
+  url: https://github.com/gadievron/raptor/pull/211
+  category: tests-ci
+  tags:
+  - coverage
+  month: 2026-04
+- date: '2026-04-23'
+  repo: OWASP/APTS
+  number: 24
+  title: add threshold configuration template appendix
+  url: https://github.com/OWASP/APTS/pull/24
+  category: docs-standards
+  tags: []
+  month: 2026-04
+- date: '2026-04-23'
+  repo: OWASP/APTS
+  number: 21
+  title: add human review record template appendix
+  url: https://github.com/OWASP/APTS/pull/21
+  category: docs-standards
+  tags: []
+  month: 2026-04
+- date: '2026-04-23'
+  repo: OWASP/APTS
+  number: 20
+  title: add advisory guidance for external tool connectors
+  url: https://github.com/OWASP/APTS/pull/20
+  category: docs-standards
+  tags: []
+  month: 2026-04
+- date: '2026-04-19'
+  repo: OWASP/APTS
+  number: 12
+  title: add evidence request checklist appendix
+  url: https://github.com/OWASP/APTS/pull/12
+  category: docs-standards
+  tags: []
+  month: 2026-04
+- date: '2026-04-19'
+  repo: OWASP/APTS
+  number: 11
+  title: add machine-readable conformance claim schema appendix
+  url: https://github.com/OWASP/APTS/pull/11
+  category: docs-standards
+  tags: []
+  month: 2026-04
+- date: '2026-04-19'
+  repo: OWASP/APTS
+  number: 10
+  title: add evidence package manifest appendix
+  url: https://github.com/OWASP/APTS/pull/10
+  category: docs-standards
+  tags: []
+  month: 2026-04
+- date: '2026-04-19'
+  repo: OWASP/APTS
+  number: 9
+  title: add machine-readable Rules of Engagement template appendix
+  url: https://github.com/OWASP/APTS/pull/9
+  category: docs-standards
+  tags: []
+  month: 2026-04
+- date: '2026-04-19'
+  repo: OWASP/APTS
+  number: 5
+  title: clarify security professional getting started path
+  url: https://github.com/OWASP/APTS/pull/5
+  category: security
+  tags:
+  - path
+  month: 2026-04
+- date: '2026-04-18'
+  repo: bytedance/deer-flow
+  number: 2332
+  title: require explicit opt-in for host-side document conversion
+  url: https://github.com/bytedance/deer-flow/pull/2332
+  category: engineering
+  tags: []
+  month: 2026-04
+- date: '2026-04-17'
+  repo: HKUDS/OpenHarness
+  number: 156
+  title: address code execution via untrusted plugin activation
+  url: https://github.com/HKUDS/OpenHarness/pull/156
+  category: engineering
+  tags:
+  - plugin
+  month: 2026-04
+- date: '2026-04-17'
+  repo: HKUDS/OpenHarness
+  number: 159
+  title: isolate shared-chat sessions by sender
+  url: https://github.com/HKUDS/OpenHarness/pull/159
+  category: security
+  tags: []
+  month: 2026-04
+- date: '2026-04-16'
+  repo: radareorg/radare2
+  number: 25831
+  title: ignore symlinked imported notes
+  url: https://github.com/radareorg/radare2/pull/25831
+  category: engineering
+  tags: []
+  month: 2026-04
+- date: '2026-04-16'
+  repo: radareorg/radare2
+  number: 25830
+  title: confine project deletion to `dir.projects`
+  url: https://github.com/radareorg/radare2/pull/25830
+  category: engineering
+  tags: []
+  month: 2026-04
+- date: '2026-04-16'
+  repo: volcengine/OpenViking
+  number: 1447
+  title: prevent unauthenticated remote bot control via OpenAPI HTTP routes
+  url: https://github.com/volcengine/OpenViking/pull/1447
+  category: security
+  tags:
+  - auth
+  - remote
+  month: 2026-04
+- date: '2026-04-16'
+  repo: bytedance/deer-flow
+  number: 2274
+  title: validate bootstrap agent names before filesystem writes
+  url: https://github.com/bytedance/deer-flow/pull/2274
+  category: security
+  tags:
+  - agent
+  month: 2026-04
+- date: '2026-04-15'
+  repo: HKUDS/OpenHarness
+  number: 147
+  title: secure default remote channel allowlists
+  url: https://github.com/HKUDS/OpenHarness/pull/147
+  category: engineering
+  tags:
+  - remote
+  month: 2026-04
+- date: '2026-04-15'
+  repo: volcengine/OpenViking
+  number: 1451
+  title: block ovpack import writes to forbidden control-plane targets
+  url: https://github.com/volcengine/OpenViking/pull/1451
+  category: security
+  tags: []
+  month: 2026-04
+- date: '2026-04-14'
+  repo: volcengine/OpenViking
+  number: 1398
+  title: isolate temp scope by user within an account
+  url: https://github.com/volcengine/OpenViking/pull/1398
+  category: security
+  tags: []
+  month: 2026-04
+- date: '2026-04-13'
+  repo: volcengine/OpenViking
+  number: 1396
+  title: protect global watch-task control files from non-root access
+  url: https://github.com/volcengine/OpenViking/pull/1396
+  category: engineering
+  tags: []
+  month: 2026-04
+- date: '2026-04-13'
+  repo: HKUDS/OpenHarness
+  number: 127
+  title: harden gateway slash command security
+  url: https://github.com/HKUDS/OpenHarness/pull/127
+  category: security
+  tags: []
+  month: 2026-04
+- date: '2026-04-13'
+  repo: nesquena/hermes-webui
+  number: 351
+  title: isolate profile .env secrets on switch
+  url: https://github.com/nesquena/hermes-webui/pull/351
+  category: security
+  tags:
+  - web
+  month: 2026-04
+- date: '2026-04-13'
+  repo: bytedance/deer-flow
+  number: 2161
+  title: disable custom-agent management API by default
+  url: https://github.com/bytedance/deer-flow/pull/2161
+  category: engineering
+  tags:
+  - agent
+  month: 2026-04

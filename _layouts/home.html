@@ -32,7 +32,7 @@ layout: default
   </div>
 
   <div class="post-list post-list-prominent">
-    {% for post in site.posts %}
+    {% for post in site.posts limit:7 %}
       <a class="post-card post-card-prominent" href="{{ post.url | relative_url }}">
         <div class="post-card-topline">
           <div class="post-card-date">{{ post.date | date: "%b %-d, %Y" }}</div>
@@ -43,6 +43,7 @@ layout: default
         <div class="post-card-cta">Open entry →</div>
       </a>
     {% endfor %}
+    <a class="archive-link archive-link-card" href="{{ '/archive/' | relative_url }}">Open full log archive →</a>
   </div>
 </section>
 

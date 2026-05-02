@@ -64,6 +64,18 @@
           </section>
 
           <section class="card sidebar-card">
+            <div class="sidebar-title">Current signal</div>
+            {% assign merged_prs = site.data.merged_prs %}
+            {% assign security_prs = merged_prs | where: "category", "security" %}
+            {% assign repos = merged_prs | group_by: "repo" %}
+            <ul>
+              <li>{{ merged_prs | size }} merged PRs indexed</li>
+              <li>{{ security_prs | size }} security / hardening PRs</li>
+              <li>{{ repos | size }} repositories touched</li>
+            </ul>
+          </section>
+
+          <section class="card sidebar-card">
             <div class="sidebar-title">What this site tracks</div>
             <ul>
               <li>merged PRs worth remembering</li>

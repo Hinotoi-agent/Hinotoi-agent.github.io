@@ -4,51 +4,63 @@ title: Merged PRs
 permalink: /merged-prs/
 ---
 
-This page keeps a compact record of merged work that feeds the daily log. The point is not just to list PRs. The point is to preserve what changed, where it landed, and which fixes were worth learning from.
+{% assign prs = site.data.merged_prs %}
+{% assign total_prs = prs | size %}
+{% assign security_prs = prs | where: "category", "security" %}
+{% assign docs_prs = prs | where: "category", "docs-standards" %}
+{% assign test_prs = prs | where: "category", "tests-ci" %}
+{% assign repos = prs | group_by: "repo" | sort: "name" %}
+{% assign categories = prs | group_by: "category" %}
+{% assign months = prs | group_by: "month" %}
 
-## Recent merged PRs
-- 2026-05-01 — [OWASP/APTS #46](https://github.com/OWASP/APTS/pull/46) — docs: add shift handoff template appendix
-- 2026-05-01 — [HKUDS/nanobot #3569](https://github.com/HKUDS/nanobot/pull/3569) — [security] fix(dingtalk): block SSRF in outbound media fetches
-- 2026-05-01 — [qwibitai/nanoclaw #2001](https://github.com/qwibitai/nanoclaw/pull/2001) — [security] fix(container): prevent host file read/delete via container-controlled outbox paths
-- 2026-04-30 — [bytedance/deer-flow #2633](https://github.com/bytedance/deer-flow/pull/2633) — [security] fix(sandbox): bind local Docker ports to loopback
-- 2026-04-29 — [HKUDS/OpenHarness #209](https://github.com/HKUDS/OpenHarness/pull/209) — [security] test(gateway): cover bridge spawn repro path
-- 2026-04-28 — [OWASP/APTS #42](https://github.com/OWASP/APTS/pull/42) — docs: add authority delegation matrix template
-- 2026-04-28 — [labring/FastGPT #6826](https://github.com/labring/FastGPT/pull/6826) — [security] fix(app): validate stored MCP tool URLs
-- 2026-04-28 — [gadievron/raptor #246](https://github.com/gadievron/raptor/pull/246) — fix(diagram): harden Mermaid sanitizer edge cases
-- 2026-04-28 — [HKUDS/OpenHarness #208](https://github.com/HKUDS/OpenHarness/pull/208) — [security] fix(commands): keep bridge local-only by default
-- 2026-04-28 — [HKUDS/OpenHarness #197](https://github.com/HKUDS/OpenHarness/pull/197) — [security] fix(feishu): contain inbound attachment filenames
-- 2026-04-28 — [HKUDS/OpenHarness #198](https://github.com/HKUDS/OpenHarness/pull/198) — [security] fix(plugins): reject traversal names on uninstall
-- 2026-04-27 — [gadievron/raptor #219](https://github.com/gadievron/raptor/pull/219) — [security] fix(web): enforce WebClient target scope across redirects
-- 2026-04-27 — [volcengine/OpenViking #1702](https://github.com/volcengine/OpenViking/pull/1702) — [security] fix(bot): prevent image tool from reading host files outside sandbox
-- 2026-04-26 — [gadievron/raptor #223](https://github.com/gadievron/raptor/pull/223) — [security] feat(web): make secret redaction operator-configurable
-- 2026-04-26 — [OWASP/APTS #32](https://github.com/OWASP/APTS/pull/32) — docs: add quick vendor review checklist
-- 2026-04-26 — [OWASP/APTS #30](https://github.com/OWASP/APTS/pull/30) — docs: add conformance claim example
-- 2026-04-26 — [OWASP/APTS #29](https://github.com/OWASP/APTS/pull/29) — docs: add reader path flowchart
-- 2026-04-26 — [OWASP/APTS #31](https://github.com/OWASP/APTS/pull/31) — docs: add evidence package manifest example
-- 2026-04-25 — [berabuddies/agentflow #18](https://github.com/berabuddies/agentflow/pull/18) — fix: harden web API pipeline loading and request validation
-- 2026-04-24 — [gadievron/raptor #213](https://github.com/gadievron/raptor/pull/213) — test: strengthen LLM log secret redaction
-- 2026-04-24 — [OWASP/APTS #28](https://github.com/OWASP/APTS/pull/28) — add acknowledgements affiliation disclaimer
-- 2026-04-24 — [gadievron/raptor #212](https://github.com/gadievron/raptor/pull/212) — ci: cover remaining Python test files
-- 2026-04-24 — [gadievron/raptor #211](https://github.com/gadievron/raptor/pull/211) — ci: expand Python test coverage
-- 2026-04-23 — [OWASP/APTS #24](https://github.com/OWASP/APTS/pull/24) — add threshold configuration template appendix
-- 2026-04-23 — [OWASP/APTS #21](https://github.com/OWASP/APTS/pull/21) — add human review record template appendix
-- 2026-04-23 — [OWASP/APTS #20](https://github.com/OWASP/APTS/pull/20) — add advisory guidance for external tool connectors
-- 2026-04-19 — [OWASP/APTS #12](https://github.com/OWASP/APTS/pull/12) — add evidence request checklist appendix
-- 2026-04-19 — [OWASP/APTS #11](https://github.com/OWASP/APTS/pull/11) — add machine-readable conformance claim schema appendix
-- 2026-04-19 — [OWASP/APTS #10](https://github.com/OWASP/APTS/pull/10) — add evidence package manifest appendix
-- 2026-04-19 — [OWASP/APTS #9](https://github.com/OWASP/APTS/pull/9) — add machine-readable Rules of Engagement template appendix
-- 2026-04-19 — [OWASP/APTS #5](https://github.com/OWASP/APTS/pull/5) — clarify security professional getting started path
-- 2026-04-18 — [bytedance/deer-flow #2332](https://github.com/bytedance/deer-flow/pull/2332) — require explicit opt-in for host-side document conversion
-- 2026-04-17 — [HKUDS/OpenHarness #156](https://github.com/HKUDS/OpenHarness/pull/156) — address code execution via untrusted plugin activation
-- 2026-04-17 — [HKUDS/OpenHarness #159](https://github.com/HKUDS/OpenHarness/pull/159) — isolate shared-chat sessions by sender
-- 2026-04-16 — [radareorg/radare2 #25831](https://github.com/radareorg/radare2/pull/25831) — ignore symlinked imported notes
-- 2026-04-16 — [radareorg/radare2 #25830](https://github.com/radareorg/radare2/pull/25830) — confine project deletion to `dir.projects`
-- 2026-04-16 — [volcengine/OpenViking #1447](https://github.com/volcengine/OpenViking/pull/1447) — prevent unauthenticated remote bot control via OpenAPI HTTP routes
-- 2026-04-16 — [bytedance/deer-flow #2274](https://github.com/bytedance/deer-flow/pull/2274) — validate bootstrap agent names before filesystem writes
-- 2026-04-15 — [HKUDS/OpenHarness #147](https://github.com/HKUDS/OpenHarness/pull/147) — secure default remote channel allowlists
-- 2026-04-15 — [volcengine/OpenViking #1451](https://github.com/volcengine/OpenViking/pull/1451) — block ovpack import writes to forbidden control-plane targets
-- 2026-04-14 — [volcengine/OpenViking #1398](https://github.com/volcengine/OpenViking/pull/1398) — isolate temp scope by user within an account
-- 2026-04-13 — [volcengine/OpenViking #1396](https://github.com/volcengine/OpenViking/pull/1396) — protect global watch-task control files from non-root access
-- 2026-04-13 — [HKUDS/OpenHarness #127](https://github.com/HKUDS/OpenHarness/pull/127) — harden gateway slash command security
-- 2026-04-13 — [nesquena/hermes-webui #351](https://github.com/nesquena/hermes-webui/pull/351) — isolate profile .env secrets on switch
-- 2026-04-13 — [bytedance/deer-flow #2161](https://github.com/bytedance/deer-flow/pull/2161) — disable custom-agent management API by default
+This page is now an archive, not an endless flat list. The latest work stays visible here; older entries are grouped into monthly, repository, and category paths so the signal does not get buried under volume.
+
+<div class="stat-grid">
+  <div class="stat-card"><span>Total merged PRs</span><strong>{{ total_prs }}</strong></div>
+  <div class="stat-card"><span>Security / hardening</span><strong>{{ security_prs | size }}</strong></div>
+  <div class="stat-card"><span>Docs / standards</span><strong>{{ docs_prs | size }}</strong></div>
+  <div class="stat-card"><span>Tests / CI</span><strong>{{ test_prs | size }}</strong></div>
+</div>
+
+## Browse
+
+<div class="chip-row">
+  <a class="chip" href="{{ '/merged-prs/archive/' | relative_url }}">Full archive</a>
+  <a class="chip" href="{{ '/selected-work/' | relative_url }}">Selected work</a>
+  {% for month in months %}<a class="chip" href="{{ '/merged-prs/' | append: month.name | append: '/' | relative_url }}">{{ month.name }}</a>{% endfor %}
+  {% for group in repos %}<a class="chip" href="#repo-{{ group.name | slugify }}">{{ group.name }}</a>{% endfor %}
+</div>
+
+## Latest merged PRs
+
+<div class="pr-list">
+{% for pr in prs limit:20 %}
+  <article class="pr-card">
+    <div class="pr-card-meta">{{ pr.date }} · {{ pr.category | replace: '-', ' ' }}</div>
+    <h3><a href="{{ pr.url }}">{{ pr.repo }} #{{ pr.number }}</a></h3>
+    <p>{{ pr.title }}</p>
+  </article>
+{% endfor %}
+</div>
+
+<p><a class="archive-link" href="{{ '/merged-prs/archive/' | relative_url }}">Open the full archive →</a></p>
+
+## By repository
+
+{% for group in repos %}
+### <span id="repo-{{ group.name | slugify }}">{{ group.name }}</span>
+{% assign repo_prs = group.items %}
+{% for pr in repo_prs limit:8 %}
+- {{ pr.date }} — [#{{ pr.number }}]({{ pr.url }}) — {{ pr.title }}
+{% endfor %}
+{% if repo_prs.size > 8 %}- _{{ repo_prs.size | minus: 8 }} more in the full archive._{% endif %}
+{% endfor %}
+
+## By category
+
+{% for group in categories %}
+### {{ group.name | replace: '-', ' ' | capitalize }}
+{% for pr in group.items limit:10 %}
+- {{ pr.date }} — [{{ pr.repo }} #{{ pr.number }}]({{ pr.url }}) — {{ pr.title }}
+{% endfor %}
+{% endfor %}
