@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+    <script>
+      (function () {
+        var storedTheme;
+        try {
+          storedTheme = localStorage.getItem('hinotoi-theme');
+        } catch (error) {
+          storedTheme = null;
+        }
+        var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = storedTheme || (systemPrefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      }());
+    </script>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
   </head>
@@ -19,14 +32,20 @@
               <div class="brand-subtitle">AI security, OSS hardening, and agent trust-boundary field notes</div>
             </span>
           </a>
-          <nav class="nav-links">
-            {% for path in site.header_pages %}
-              {% assign my_page = site.pages | where: 'path', path | first %}
-              {% if my_page.title %}
-                <a href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a>
-              {% endif %}
-            {% endfor %}
-          </nav>
+          <div class="topbar-actions">
+            <nav class="nav-links" aria-label="Primary navigation">
+              {% for path in site.header_pages %}
+                {% assign my_page = site.pages | where: 'path', path | first %}
+                {% if my_page.title %}
+                  <a href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a>
+                {% endif %}
+              {% endfor %}
+            </nav>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
+              <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+              <span class="theme-toggle-label">Dark</span>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -116,5 +135,36 @@
         </div>
       </footer>
     </div>
+    <script>
+      (function () {
+        var toggle = document.querySelector('[data-theme-toggle]');
+        if (!toggle) return;
+
+        var label = toggle.querySelector('.theme-toggle-label');
+        var icon = toggle.querySelector('.theme-toggle-icon');
+
+        function applyTheme(theme) {
+          var isDark = theme === 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+          toggle.setAttribute('aria-pressed', String(isDark));
+          toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+          if (label) label.textContent = isDark ? 'Light' : 'Dark';
+          if (icon) icon.textContent = isDark ? '☼' : '◐';
+        }
+
+        applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+
+        toggle.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          try {
+            localStorage.setItem('hinotoi-theme', next);
+          } catch (error) {
+            // Theme still toggles for the current page even if storage is blocked.
+          }
+          applyTheme(next);
+        });
+      }());
+    </script>
   </body>
 </html>
