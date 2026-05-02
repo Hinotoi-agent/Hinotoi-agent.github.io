@@ -1,3 +1,44 @@
+- date: '2026-05-02'
+  repo: OWASP/APTS
+  number: 47
+  title: 'docs: add autonomy downgrade matrix template'
+  url: https://github.com/OWASP/APTS/pull/47
+  category: docs-standards
+  tags:
+  - docs
+  - autonomy
+  month: 2026-05
+- date: '2026-05-02'
+  repo: gadievron/raptor
+  number: 257
+  title: 'feat(project): add coverage threshold gate'
+  url: https://github.com/gadievron/raptor/pull/257
+  category: evidence
+  tags:
+  - coverage
+  - evidence
+  month: 2026-05
+- date: '2026-05-02'
+  repo: gadievron/raptor
+  number: 256
+  title: 'feat(project): add grouped Markdown findings export'
+  url: https://github.com/gadievron/raptor/pull/256
+  category: evidence
+  tags:
+  - findings
+  - handoff
+  month: 2026-05
+- date: '2026-05-02'
+  repo: bytedance/deer-flow
+  number: 2623
+  title: '[security] fix(upload): reject symlinked upload destinations'
+  url: https://github.com/bytedance/deer-flow/pull/2623
+  category: security
+  tags:
+  - upload
+  - symlink
+  - path
+  month: 2026-05
 - date: '2026-05-01'
   repo: OWASP/APTS
   number: 46
