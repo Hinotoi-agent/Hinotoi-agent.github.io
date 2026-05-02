@@ -7,12 +7,9 @@ markdown: kramdown
 permalink: /:year/:month/:day/:title/
 author: Hitonoi
 header_pages:
+  - merged-prs.md
+  - archive.md
   - about.md
-  - ai-security-patterns.md
-  - field-notes.md
-  - research-method.md
-  - selected-work.md
-  - reading-list.md
 minima:
   social_links:
     - title: GitHub

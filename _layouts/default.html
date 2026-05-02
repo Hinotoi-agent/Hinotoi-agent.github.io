@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
   </head>
-  <body>
+  <body class="layout-{{ page.layout | default: 'default' }}">
     <div class="site-shell">
       <header class="topbar">
         <div class="topbar-inner">
@@ -47,7 +47,7 @@
             </nav>
             {% assign latest_post = site.posts.first %}
             {% if latest_post %}
-              <a class="blog-post-button" href="{{ latest_post.url | relative_url }}">Blog Posts</a>
+              <a class="blog-post-button" href="{{ latest_post.url | relative_url }}">Latest Post</a>
             {% endif %}
             <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
               <span class="theme-toggle-icon" aria-hidden="true">◐</span>
