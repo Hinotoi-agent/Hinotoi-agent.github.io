@@ -2,23 +2,41 @@
 layout: default
 ---
 
-<div class="eyebrow">{{ page.date | date: "%b %-d, %Y" }}</div>
-<h1 class="page-title">{{ page.title }}</h1>
+{% assign takeaway_summary = page.takeaway | default: "" %}
+
+<div class="eyebrow">Daily security note · {{ page.date | date: "%b %-d, %Y" }}</div>
+<h1 class="page-title post-title">{{ page.title }}</h1>
 <div class="meta-strip">
-  <span class="meta-pill">Daily security note</span>
-  <span class="meta-pill">Takeaways</span>
-  <span class="meta-pill">Vault-backed learning</span>
+  <span class="meta-pill content-label">Daily Note</span>
+  <span class="meta-pill content-label">Takeaways</span>
+  <span class="meta-pill content-label">Vault-backed learning</span>
   {% if page.tags %}
     {% for tag in page.tags limit: 4 %}<span class="meta-pill">{{ tag }}</span>{% endfor %}
   {% endif %}
 </div>
+
+<section class="post-summary-box">
+  <div class="post-summary-item">
+    <span>Signal</span>
+    <strong>{{ page.tags | first | default: "AI security" }}</strong>
+  </div>
+  <div class="post-summary-item post-summary-wide">
+    <span>Main takeaway</span>
+    <strong>{% if takeaway_summary != "" %}{{ takeaway_summary }}{% else %}{{ page.excerpt | strip_html | strip_newlines | truncate: 120 }}{% endif %}</strong>
+  </div>
+  <div class="post-summary-item">
+    <span>Reuse</span>
+    <strong>Evidence → lesson → next review</strong>
+  </div>
+</section>
+
 {{ content }}
 
 <nav class="post-nav">
   {% if page.previous %}
     <a class="post-nav-link" href="{{ page.previous.url | relative_url }}">← Older: {{ page.previous.title }}</a>
   {% endif %}
-  <a class="post-nav-link post-nav-home" href="{{ '/' | relative_url }}">Back to log index</a>
+  <a class="post-nav-link post-nav-home" href="{{ '/' | relative_url }}">Back to notes home</a>
   {% if page.next %}
     <a class="post-nav-link post-nav-next" href="{{ page.next.url | relative_url }}">Newer: {{ page.next.title }} →</a>
   {% endif %}

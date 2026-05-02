@@ -2,25 +2,86 @@
 layout: default
 ---
 
-<div class="home-hero">
-  <div>
+{% assign latest_post = site.posts.first %}
+{% assign latest_takeaway = "Enforce the invariant at the operation that can do damage." %}
+{% if latest_post and latest_post.takeaway %}
+  {% assign latest_takeaway = latest_post.takeaway %}
+{% endif %}
+
+<section class="home-hero home-hero-editorial">
+  <div class="hero-copy-panel">
     <div class="eyebrow">Cybersecurity AI blog</div>
-    <h1 class="page-title">{{ page.title | default: site.title }}</h1>
-    <p class="hero-summary">Field notes on AI security, OSS hardening, prompt/tool boundaries, and research lessons routed back into the vault.</p>
+    <h1 class="page-title hero-title">AI security field notes from real OSS hardening work.</h1>
+    <p class="hero-summary hero-summary-large">Daily observations on agent trust boundaries, SSRF, uploads, parser exposure, path safety, prompt/content injection, and maintainer-friendly fixes that actually ship.</p>
+    <div class="hero-actions">
+      {% if latest_post %}
+        <a class="button button-primary" href="{{ latest_post.url | relative_url }}">Read latest post</a>
+      {% endif %}
+      <a class="button button-secondary" href="{{ '/ai-security-patterns/' | relative_url }}">Browse patterns</a>
+    </div>
   </div>
-  <div class="home-hero-stat card">
-    <div class="sidebar-title">Signal level</div>
+  <aside class="home-hero-stat card signal-card">
+    <div class="sidebar-title">Current signal</div>
     <div class="hero-stat-value">{{ site.posts | size }}</div>
-    <div class="hero-stat-copy">published logs and counting</div>
-  </div>
+    <div class="hero-stat-copy">daily notes indexed</div>
+    <div class="signal-card-divider"></div>
+    <div class="signal-label">Latest takeaway</div>
+    <p>{{ latest_takeaway }}</p>
+  </aside>
+</section>
+
+{% if latest_post %}
+  <a class="latest-feature card" href="{{ latest_post.url | relative_url }}">
+    <div class="latest-feature-meta">
+      <span>Latest field note</span>
+      <span>{{ latest_post.date | date: "%b %-d, %Y" }}</span>
+    </div>
+    <h2>{{ latest_post.title }}</h2>
+    <p><strong>Takeaway:</strong> {{ latest_takeaway }}</p>
+    <div class="post-card-cta">Read note →</div>
+  </a>
+{% endif %}
+
+<div class="takeaway-strip">
+  <span class="takeaway-kicker">Latest takeaway</span>
+  <span>{{ latest_takeaway }}</span>
 </div>
 
-<div class="meta-strip">
+<div class="meta-strip meta-strip-editorial">
+  <span class="meta-pill content-label">Daily Note</span>
+  <span class="meta-pill content-label">Pattern</span>
+  <span class="meta-pill content-label">Evidence</span>
+  <span class="meta-pill content-label">Method</span>
   <span class="meta-pill">AI security</span>
   <span class="meta-pill">OSS hardening</span>
   <span class="meta-pill">Agent trust boundaries</span>
-  <span class="meta-pill">Vault-backed observations</span>
 </div>
+
+<section class="start-here card">
+  <div class="feed-panel-header">
+    <div>
+      <div class="eyebrow">Start here</div>
+      <h2 class="feed-title">Read the site by signal, evidence, and reuse</h2>
+    </div>
+  </div>
+  <div class="start-grid">
+    <a href="{{ '/research-method/' | relative_url }}">
+      <span>01</span>
+      <strong>How observations are made</strong>
+      <small>Method, verification, and vault routing.</small>
+    </a>
+    <a href="{{ '/ai-security-patterns/' | relative_url }}">
+      <span>02</span>
+      <strong>Current AI security patterns</strong>
+      <small>Trust boundaries that keep repeating.</small>
+    </a>
+    <a href="{{ '/selected-work/' | relative_url }}">
+      <span>03</span>
+      <strong>Selected shipped fixes</strong>
+      <small>Evidence from merged OSS work.</small>
+    </a>
+  </div>
+</section>
 
 <section class="theme-panel card">
   <div class="feed-panel-header">
@@ -33,6 +94,7 @@ layout: default
   <div class="pattern-grid pattern-grid-compact">
     {% for theme in site.data.research_themes limit: 3 %}
       <article class="pattern-card">
+        <div class="pr-card-meta">Pattern</div>
         <h3>{{ theme.name }}</h3>
         <p>{{ theme.summary }}</p>
       </article>
@@ -43,22 +105,27 @@ layout: default
 <section class="feed-panel">
   <div class="feed-panel-header">
     <div>
-      <div class="eyebrow">Latest entries</div>
+      <div class="eyebrow">Daily notes</div>
       <h2 class="feed-title">Recent posts</h2>
     </div>
     <div class="feed-badge">{{ site.posts | size }} posts live</div>
   </div>
 
-  <div class="post-list post-list-prominent">
+  <div class="post-list post-list-compact">
     {% for post in site.posts limit:7 %}
-      <a class="post-card post-card-prominent" href="{{ post.url | relative_url }}">
+      <a class="post-card post-card-compact" href="{{ post.url | relative_url }}">
         <div class="post-card-topline">
           <div class="post-card-date">{{ post.date | date: "%b %-d, %Y" }}</div>
-          {% if forloop.first %}<span class="post-card-tag">Newest</span>{% endif %}
+          {% if forloop.first %}<span class="post-card-tag">Newest</span>{% else %}<span class="post-card-tag post-card-tag-muted">Daily Note</span>{% endif %}
         </div>
         <div class="post-card-title">{{ post.title }}</div>
-        <p class="post-card-summary">{{ post.excerpt | strip_html | strip_newlines | truncate: 220 }}</p>
-        <div class="post-card-cta">Open entry →</div>
+        <p class="post-card-summary">{{ post.excerpt | strip_html | strip_newlines | truncate: 118 }}</p>
+        {% if post.tags %}
+          <div class="tag-row tag-row-tight">
+            {% for tag in post.tags limit: 3 %}<span class="tag-pill">{{ tag }}</span>{% endfor %}
+          </div>
+        {% endif %}
+        <div class="post-card-cta">Read note →</div>
       </a>
     {% endfor %}
     <a class="archive-link archive-link-card" href="{{ '/archive/' | relative_url }}">Open full log archive →</a>

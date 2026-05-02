@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "YYYY-MM-DD — <short security thesis>"
+takeaway: "<one sentence primary takeaway>"
 categories: [daily, ai-security]
 tags: [agent-security, oss-hardening]
 ---

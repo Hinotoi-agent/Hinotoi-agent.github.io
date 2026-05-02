@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "2026-05-01 — Sinks are where trust boundaries become real"
+takeaway: "Enforce the invariant at the operation that can do damage."
 categories: [daily, ai-security]
 tags: [agent-security, ssrf, path-safety, oss-hardening]
 ---
