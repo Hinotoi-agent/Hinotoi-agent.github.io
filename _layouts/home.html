@@ -9,11 +9,29 @@ layout: default
   <header class="simple-hero">
     <p class="eyebrow">Security blog</p>
     <h1>AI security notes and shipped PRs.</h1>
-    <p class="simple-lede">Short posts from OSS security work: trust boundaries, SSRF, uploads, parser exposure, path safety, and fixes that made it into pull requests.</p>
+    <p class="simple-lede">Short notes from OSS security work, followed by the pull requests that shipped.</p>
     {% if latest_post %}
       <a class="button button-primary" href="{{ latest_post.url | relative_url }}">Read latest post</a>
     {% endif %}
   </header>
+
+  <section class="simple-section">
+    <div class="simple-section-heading">
+      <div>
+        <p class="eyebrow">Merged PRs</p>
+        <h2>Recent security work</h2>
+      </div>
+      <a href="{{ '/merged-prs/' | relative_url }}">Full PR list →</a>
+    </div>
+    <div class="simple-pr-list">
+      {% for pr in recent_prs limit:12 %}
+        <a class="simple-pr-row" href="{{ pr.url }}">
+          <span class="simple-pr-meta">{{ pr.date }} · {{ pr.repo }} #{{ pr.number }}</span>
+          <strong>{{ pr.title }}</strong>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
 
   <section class="simple-section">
     <div class="simple-section-heading">
@@ -29,24 +47,6 @@ layout: default
         <a class="simple-post-row" href="{{ post.url | relative_url }}">
           <time>{{ post.date | date: "%b %-d, %Y" }}</time>
           <span>{{ post_title_parts | last }}</span>
-        </a>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section class="simple-section">
-    <div class="simple-section-heading">
-      <div>
-        <p class="eyebrow">Merged PRs</p>
-        <h2>Recent security work</h2>
-      </div>
-      <a href="{{ '/merged-prs/' | relative_url }}">Full PR list →</a>
-    </div>
-    <div class="simple-pr-list">
-      {% for pr in recent_prs limit:12 %}
-        <a class="simple-pr-row" href="{{ pr.url }}">
-          <span class="simple-pr-meta">{{ pr.date }} · {{ pr.repo }} #{{ pr.number }}</span>
-          <strong>{{ pr.title }}</strong>
         </a>
       {% endfor %}
     </div>
