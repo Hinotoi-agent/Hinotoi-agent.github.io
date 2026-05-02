@@ -277,6 +277,8 @@ pre {
 }
 pre code { background: transparent; border: 0; padding: 0; color: inherit; }
 
+.mobile-home-lead { display: none; }
+
 .home-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 220px;
@@ -640,7 +642,16 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
     gap: 0.55rem;
   }
   .brand-mark { width: 8px; height: 8px; box-shadow: 0 0 0 3px rgba(255, 91, 34, 0.14); }
-  .brand-title { font-size: 0.88rem; max-width: min(48vw, 13.5rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .brand-title {
+    font-size: 0;
+    max-width: none;
+  }
+  .brand-title::after {
+    content: "Hinotoi";
+    font-size: 0.92rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
   .brand-subtitle,
   .nav-links,
   .sidebar-column { display: none; }
@@ -662,6 +673,9 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
     justify-content: center;
     padding-inline: 0;
   }
+  .blog-post-button::before { content: "Posts"; }
+  .blog-post-button { font-size: 0; }
+  .blog-post-button::before { font-size: 0.76rem; }
   .theme-toggle-label { display: none; }
   .main-grid {
     margin-top: 0.45rem;
@@ -672,6 +686,63 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
     border: 0;
     box-shadow: none;
     background: transparent;
+  }
+  .mobile-home-lead {
+    display: block;
+    padding: 1rem;
+    border-radius: 16px;
+    background: var(--surface-gradient);
+  }
+  .mobile-home-lead h1 {
+    margin: 0 0 0.45rem;
+    font-size: 1.68rem;
+    line-height: 1.05;
+  }
+  .mobile-home-lead p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.93rem;
+    line-height: 1.45;
+  }
+  .mobile-latest-note {
+    margin: 0.9rem 0 0.85rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border);
+  }
+  .mobile-latest-note span,
+  .mobile-latest-note small {
+    display: block;
+    color: var(--muted);
+    font-size: 0.74rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .mobile-latest-note strong {
+    display: block;
+    margin: 0.25rem 0 0.2rem;
+    color: var(--heading);
+    font-size: 1.06rem;
+    line-height: 1.28;
+  }
+  .mobile-latest-note em {
+    display: block;
+    margin-top: 0.55rem;
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.42;
+    font-style: normal;
+  }
+  .mobile-secondary-link {
+    display: block;
+    margin-top: 0.65rem;
+    text-align: center;
+    font-weight: 800;
+  }
+  .home-hero,
+  .latest-feature,
+  .takeaway-strip {
+    display: none;
   }
   .hero-copy-panel {
     padding: 0.92rem;
@@ -711,12 +782,23 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
   .meta-pill { padding: 0.32rem 0.55rem; font-size: 0.78rem; }
   .feed-panel-header { align-items: flex-start; flex-direction: column; gap: 0.45rem; }
   .feed-badge { white-space: normal; }
-  .post-card-compact { padding: 0.95rem; }
-  .post-card-title { font-size: 1rem; line-height: 1.35; }
-  .post-card-summary { font-size: 0.9rem; }
+  .post-card-compact {
+    padding: 0.78rem 0;
+    border: 0;
+    border-radius: 0;
+    border-top: 1px solid var(--border);
+    box-shadow: none;
+    background: transparent;
+  }
+  .post-card-compact:first-child { border-top: 0; }
+  .post-card-title { font-size: 0.98rem; line-height: 1.32; }
+  .post-card-summary,
+  .tag-row,
+  .post-card-cta { display: none; }
   .start-here,
   .theme-panel,
-  .home-context { padding: 1rem; }
+  .home-context { padding: 0.95rem; margin-top: 0.85rem; }
+  .theme-panel { display: none; }
   .stat-grid { grid-template-columns: 1fr; }
   .footer { padding: 0 0.7rem 1.35rem; }
   .footer-card { display: block; padding: 0.95rem; }

@@ -7,6 +7,26 @@ layout: default
 {% if latest_post and latest_post.takeaway %}
   {% assign latest_takeaway = latest_post.takeaway %}
 {% endif %}
+{% assign latest_title = latest_post.title %}
+{% if latest_post %}
+  {% assign latest_title_parts = latest_post.title | split: " — " %}
+  {% assign latest_title = latest_title_parts | last %}
+{% endif %}
+
+{% if latest_post %}
+  <section class="mobile-home-lead card">
+    <h1>AI security field notes</h1>
+    <p>Practical OSS security notes on trust boundaries, SSRF, uploads, parsers, path safety, and prompt injection.</p>
+    <div class="mobile-latest-note">
+      <span>Latest note</span>
+      <strong>{{ latest_title }}</strong>
+      <small>{{ latest_post.date | date: "%b %-d, %Y" }}</small>
+      <em>{{ latest_takeaway }}</em>
+    </div>
+    <a class="button button-primary" href="{{ latest_post.url | relative_url }}">Read latest note</a>
+    <a class="mobile-secondary-link" href="{{ '/ai-security-patterns/' | relative_url }}">Browse patterns →</a>
+  </section>
+{% endif %}
 
 <section class="home-hero home-hero-editorial">
   <div class="hero-copy-panel">
