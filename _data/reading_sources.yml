@@ -1,0 +1,32 @@
+- title: GitHub Security Advisories
+  url: https://github.com/advisories
+  category: Advisory stream
+  use: Track real fix patterns, affected-version language, and repeatable bug classes across ecosystems.
+- title: GitHub Security Lab
+  url: https://securitylab.github.com/research/
+  category: Research
+  use: Study source-to-sink proof shapes and maintainer-friendly vulnerability writeups.
+- title: PortSwigger Research
+  url: https://portswigger.net/research
+  category: Web security research
+  use: Extract web exploitation primitives, browser behavior notes, and proof reliability patterns.
+- title: Google Project Zero
+  url: https://googleprojectzero.blogspot.com/
+  category: Vulnerability research
+  use: Learn precise root-cause narration, variant analysis, and exploitability boundaries.
+- title: Trail of Bits Blog
+  url: https://blog.trailofbits.com/
+  category: Security engineering
+  use: Convert audit lessons into practical review checklists and defensive engineering habits.
+- title: OWASP Top 10 for LLM Applications
+  url: https://owasp.org/www-project-top-10-for-large-language-model-applications/
+  category: AI security guidance
+  use: Keep AI-agent observations tied to recognized prompt, tool, supply-chain, and data-exposure risks.
+- title: Model Context Protocol documentation
+  url: https://modelcontextprotocol.io/
+  category: Agent/tooling ecosystem
+  use: Map tool-server assumptions, connector trust boundaries, and integration surfaces before reviewing MCP-like systems.
+- title: Anthropic safety and security notes
+  url: https://www.anthropic.com/news
+  category: AI safety/security vendor notes
+  use: Watch for changes in tool-use, computer-use, and agent-risk framing without treating vendor guidance as the only source.

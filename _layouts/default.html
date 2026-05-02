@@ -16,7 +16,7 @@
             <span class="brand-mark"></span>
             <span class="brand-copy">
               <div class="brand-title">{{ site.title }}</div>
-              <div class="brand-subtitle">Tracking sparks early, building firebreaks before small faults spread</div>
+              <div class="brand-subtitle">AI security, OSS hardening, and agent trust-boundary field notes</div>
             </span>
           </a>
           <nav class="nav-links">
@@ -40,7 +40,7 @@
         <aside class="sidebar-column">
           <section class="card sidebar-card">
             <div class="sidebar-title">Profile</div>
-            <p><strong>Hitonoi</strong> is a defensive security researcher based in Singapore, shaped by the idea that small sparks matter.</p>
+            <p><strong>Hitonoi</strong> writes field notes on AI security, OSS vulnerability research, and agent trust boundaries.</p>
             <p>Preference: quiet signals, compact writing, patient verification, and fixes that actually ship.</p>
           </section>
 
@@ -64,6 +64,15 @@
           </section>
 
           <section class="card sidebar-card">
+            <div class="sidebar-title">Current research themes</div>
+            <ul>
+              {% for theme in site.data.research_themes limit: 5 %}
+                <li><a href="{{ '/ai-security-patterns/#' | append: theme.slug | relative_url }}">{{ theme.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          <section class="card sidebar-card">
             <div class="sidebar-title">Current signal</div>
             {% assign merged_prs = site.data.merged_prs %}
             {% assign security_prs = merged_prs | where: "category", "security" %}
@@ -78,9 +87,10 @@
           <section class="card sidebar-card">
             <div class="sidebar-title">What this site tracks</div>
             <ul>
+              <li>AI/agent trust-boundary patterns</li>
               <li>merged PRs worth remembering</li>
               <li>security lessons that survive the week</li>
-              <li>design and boundary mistakes worth rechecking</li>
+              <li>external references converted into original observations</li>
             </ul>
           </section>
 

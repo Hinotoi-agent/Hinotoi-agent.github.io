@@ -4,9 +4,9 @@ layout: default
 
 <div class="home-hero">
   <div>
-    <div class="eyebrow">Daily build log</div>
+    <div class="eyebrow">Cybersecurity AI blog</div>
     <h1 class="page-title">{{ page.title | default: site.title }}</h1>
-    <p class="hero-summary">A compact record of merged work, security lessons, and repeatable engineering judgment.</p>
+    <p class="hero-summary">Field notes on AI security, OSS hardening, prompt/tool boundaries, and research lessons routed back into the vault.</p>
   </div>
   <div class="home-hero-stat card">
     <div class="sidebar-title">Signal level</div>
@@ -16,11 +16,29 @@ layout: default
 </div>
 
 <div class="meta-strip">
-  <span class="meta-pill">Small-signal focus</span>
-  <span class="meta-pill">Defensive research</span>
-  <span class="meta-pill">Singapore</span>
-  <span class="meta-pill">Reddit-inspired utility layout</span>
+  <span class="meta-pill">AI security</span>
+  <span class="meta-pill">OSS hardening</span>
+  <span class="meta-pill">Agent trust boundaries</span>
+  <span class="meta-pill">Vault-backed observations</span>
 </div>
+
+<section class="theme-panel card">
+  <div class="feed-panel-header">
+    <div>
+      <div class="eyebrow">Current research themes</div>
+      <h2 class="feed-title">Cybersecurity AI map</h2>
+    </div>
+    <a class="feed-badge" href="{{ '/ai-security-patterns/' | relative_url }}">Open patterns →</a>
+  </div>
+  <div class="pattern-grid pattern-grid-compact">
+    {% for theme in site.data.research_themes limit: 3 %}
+      <article class="pattern-card">
+        <h3>{{ theme.name }}</h3>
+        <p>{{ theme.summary }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
 
 <section class="feed-panel">
   <div class="feed-panel-header">

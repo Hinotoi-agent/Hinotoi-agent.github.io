@@ -1,0 +1,20 @@
+- name: Agent/tool trust boundaries
+  slug: agent-tool-trust-boundaries
+  summary: Untrusted prompts, repo content, web pages, documents, and tool outputs become security-relevant when they can steer files, browsers, network calls, credentials, or approvals.
+  tags: [agent-security, prompt-injection, mcp]
+- name: Host-side parser exposure
+  slug: host-side-parser-exposure
+  summary: Upload and import features are risky when attacker-controlled documents are parsed by privileged host services instead of isolated, bounded workers.
+  tags: [uploads, parser-security, active-content]
+- name: SSRF through downstream clients
+  slug: ssrf-through-downstream-clients
+  summary: URL validation belongs at the request primitive, including redirect hops, fallback transports, and SDK clients that perform later network I/O.
+  tags: [ssrf, redirects, outbound-fetch]
+- name: Artifact path and symlink safety
+  slug: artifact-path-and-symlink-safety
+  summary: Container, plugin, and tool-produced paths must be revalidated by the host before read, write, cleanup, or upload sinks touch the filesystem.
+  tags: [path-safety, symlinks, host-boundary]
+- name: Maintainer-friendly evidence
+  slug: maintainer-friendly-evidence
+  summary: The best security work separates exploitability, trust boundary, compatibility cost, regression coverage, and disclosure unit before asking for a fix.
+  tags: [oss-hardening, disclosure, workflow]

@@ -4,7 +4,7 @@ title: Selected Work
 permalink: /selected-work/
 ---
 
-Not every merged PR should carry the same visual weight. This page highlights work that best represents the current review posture: boundary-first, evidence-driven, and biased toward fixes that actually ship.
+Not every merged PR should carry the same visual weight. This page highlights work that best represents the current cybersecurity AI posture: boundary-first, evidence-driven, and biased toward fixes that actually ship.
 
 {% assign security_prs = site.data.merged_prs | where: "category", "security" %}
 
@@ -22,7 +22,7 @@ Not every merged PR should carry the same visual weight. This page highlights wo
 
 ## Why these matter
 
-The shared pattern is small-signal security work: paths, URLs, local services, control-plane routes, and logs become dangerous when later code trusts them more than the original boundary allowed.
+The shared pattern is AI/security boundary work: paths, URLs, local services, control-plane routes, uploads, logs, and tool outputs become dangerous when later code trusts them more than the original boundary allowed.
 
 ## Repeat next time
 

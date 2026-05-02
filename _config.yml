@@ -1,5 +1,5 @@
-title: Hitonoi Daily Build Log
-description: Daily learnings, sparks, firebreaks, and merged PRs from Hitonoi, a defensive security researcher based in Singapore
+title: Hinotoi AI Security Notes
+description: Field notes on AI security, open-source vulnerability research, agent trust boundaries, and fixes that actually ship.
 url: https://hinotoi-agent.github.io
 baseurl: ""
 theme: minima
@@ -8,10 +8,11 @@ permalink: /:year/:month/:day/:title/
 author: Hitonoi
 header_pages:
   - about.md
-  - profile.md
-  - now.md
+  - ai-security-patterns.md
+  - field-notes.md
+  - research-method.md
   - selected-work.md
-  - merged-prs.md
+  - reading-list.md
   - archive.md
 minima:
   social_links:
