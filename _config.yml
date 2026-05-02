@@ -13,7 +13,6 @@ header_pages:
   - research-method.md
   - selected-work.md
   - reading-list.md
-  - archive.md
 minima:
   social_links:
     - title: GitHub
