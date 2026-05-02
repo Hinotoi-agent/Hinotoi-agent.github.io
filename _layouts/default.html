@@ -41,7 +41,10 @@
                 {% endif %}
               {% endfor %}
             </nav>
-            <a class="blog-post-button" href="{{ '/archive/' | relative_url }}">Blog Posts</a>
+            {% assign latest_post = site.posts.first %}
+            {% if latest_post %}
+              <a class="blog-post-button" href="{{ latest_post.url | relative_url }}">Blog Posts</a>
+            {% endif %}
             <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
               <span class="theme-toggle-icon" aria-hidden="true">◐</span>
               <span class="theme-toggle-label">Dark</span>
