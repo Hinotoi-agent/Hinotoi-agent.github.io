@@ -1,3 +1,14 @@
+- date: '2026-05-05'
+  repo: gadievron/raptor
+  number: 308
+  title: 'ci: run libexec wrapper tests'
+  url: https://github.com/gadievron/raptor/pull/308
+  category: evidence
+  tags:
+  - ci
+  - tests
+  - evidence
+  month: 2026-05
 - date: '2026-05-02'
   repo: OWASP/APTS
   number: 47
