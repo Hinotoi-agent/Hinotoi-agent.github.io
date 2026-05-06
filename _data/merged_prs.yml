@@ -1,3 +1,15 @@
+- date: '2026-05-06'
+  repo: HKUDS/OpenHarness
+  number: 232
+  title: '[security] fix(commands): keep config auth commands local-only'
+  url: https://github.com/HKUDS/OpenHarness/pull/232
+  category: security
+  tags:
+  - agent-security
+  - control-plane
+  - secrets
+  - gateway
+  month: 2026-05
 - date: '2026-05-05'
   repo: gadievron/raptor
   number: 308
