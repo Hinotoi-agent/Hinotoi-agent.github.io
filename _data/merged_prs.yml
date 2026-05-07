@@ -1,3 +1,37 @@
+- date: '2026-05-07'
+  repo: gadievron/raptor
+  number: 336
+  title: '[security] fix(web): redact crawler URL artifacts'
+  url: https://github.com/gadievron/raptor/pull/336
+  category: security
+  tags:
+  - web
+  - redaction
+  - artifacts
+  - logs
+  month: 2026-05
+- date: '2026-05-07'
+  repo: bytedance/deer-flow
+  number: 2740
+  title: '[security] fix(auth): reject cross-site auth POSTs'
+  url: https://github.com/bytedance/deer-flow/pull/2740
+  category: security
+  tags:
+  - auth
+  - csrf
+  - browser-origin
+  month: 2026-05
+- date: '2026-05-07'
+  repo: gadievron/raptor
+  number: 338
+  title: 'feat(tuning): auto-detect worker limits'
+  url: https://github.com/gadievron/raptor/pull/338
+  category: evidence
+  tags:
+  - tuning
+  - operator-intent
+  - compute
+  month: 2026-05
 - date: '2026-05-06'
   repo: HKUDS/OpenHarness
   number: 232
