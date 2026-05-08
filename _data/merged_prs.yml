@@ -1,3 +1,15 @@
+- date: '2026-05-08'
+  repo: steipete/summarize
+  number: 214
+  title: '[security] fix(daemon): keep daemon config private'
+  url: https://github.com/steipete/summarize/pull/214
+  category: security
+  tags:
+  - daemon
+  - credentials
+  - filesystem
+  - permissions
+  month: 2026-05
 - date: '2026-05-07'
   repo: gadievron/raptor
   number: 336
