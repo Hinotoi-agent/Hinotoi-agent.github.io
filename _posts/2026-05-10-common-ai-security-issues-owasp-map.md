@@ -13,15 +13,15 @@ The short version: most findings are not exotic LLM-only problems. They are fami
 ## Pattern chart
 
 <div class="chart-panel" role="img" aria-label="Approximate finding counts by pattern">
-  <div class="chart-row"><span class="chart-label">Unsafe tool/code execution</span><span class="chart-bar" style="--w: 100%">8</span></div>
-  <div class="chart-row"><span class="chart-label">Missing auth / exposed control planes</span><span class="chart-bar" style="--w: 87.5%">7</span></div>
-  <div class="chart-row"><span class="chart-label">File read / secret disclosure</span><span class="chart-bar" style="--w: 87.5%">7</span></div>
-  <div class="chart-row"><span class="chart-label">File write / workspace escape</span><span class="chart-bar" style="--w: 87.5%">7</span></div>
-  <div class="chart-row"><span class="chart-label">Authorization / identity bypass</span><span class="chart-bar" style="--w: 75%">6</span></div>
-  <div class="chart-row"><span class="chart-label">SSRF / unsafe fetching</span><span class="chart-bar" style="--w: 62.5%">5</span></div>
-  <div class="chart-row"><span class="chart-label">Browser, OAuth, webhook trust</span><span class="chart-bar" style="--w: 50%">4</span></div>
-  <div class="chart-row"><span class="chart-label">Network exposure / local defaults</span><span class="chart-bar" style="--w: 25%">2</span></div>
-  <div class="chart-row"><span class="chart-label">Package / archive supply chain</span><span class="chart-bar" style="--w: 12.5%">1</span></div>
+  <div class="chart-row"><span class="chart-label">Unsafe tool/code execution <small>LLM06 / LLM05</small></span><span class="chart-bar" style="--w: 100%">8</span></div>
+  <div class="chart-row"><span class="chart-label">Missing auth / exposed control planes <small>LLM06 / LLM01</small></span><span class="chart-bar" style="--w: 87.5%">7</span></div>
+  <div class="chart-row"><span class="chart-label">File read / secret disclosure <small>LLM02 / LLM05</small></span><span class="chart-bar" style="--w: 87.5%">7</span></div>
+  <div class="chart-row"><span class="chart-label">File write / workspace escape <small>LLM03 / LLM06</small></span><span class="chart-bar" style="--w: 87.5%">7</span></div>
+  <div class="chart-row"><span class="chart-label">Authorization / identity bypass <small>LLM06 / LLM02</small></span><span class="chart-bar" style="--w: 75%">6</span></div>
+  <div class="chart-row"><span class="chart-label">SSRF / unsafe fetching <small>LLM06 / LLM03</small></span><span class="chart-bar" style="--w: 62.5%">5</span></div>
+  <div class="chart-row"><span class="chart-label">Browser, OAuth, webhook trust <small>LLM06</small></span><span class="chart-bar" style="--w: 50%">4</span></div>
+  <div class="chart-row"><span class="chart-label">Network exposure / local defaults <small>LLM06</small></span><span class="chart-bar" style="--w: 25%">2</span></div>
+  <div class="chart-row"><span class="chart-label">Package / archive supply chain <small>LLM03</small></span><span class="chart-bar" style="--w: 12.5%">1</span></div>
 </div>
 
 <style>
@@ -41,6 +41,14 @@ The short version: most findings are not exotic LLM-only problems. They are fami
   font-size: .95rem;
 }
 .chart-label { color: var(--muted, #57606a); }
+.chart-label small {
+  display: block;
+  margin-top: .2rem;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: var(--accent, #d9480f);
+}
 .chart-bar {
   display: block;
   width: var(--w);
