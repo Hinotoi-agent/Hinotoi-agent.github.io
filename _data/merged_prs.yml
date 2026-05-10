@@ -1,3 +1,70 @@
+- date: '2026-05-10'
+  repo: OWASP/APTS
+  number: 54
+  title: 'docs: add scope change decision record template'
+  url: https://github.com/OWASP/APTS/pull/54
+  category: docs-standards
+  tags:
+  - docs
+  - scope
+  - evidence
+  - autonomy
+  month: 2026-05
+- date: '2026-05-10'
+  repo: heymrun/heym
+  number: 93
+  title: '[security] fix(workflows): enforce subworkflow access checks'
+  url: https://github.com/heymrun/heym/pull/93
+  category: security
+  tags:
+  - workflow
+  - authz
+  - agents
+  month: 2026-05
+- date: '2026-05-10'
+  repo: heymrun/heym
+  number: 92
+  title: '[security] fix(files): contain stored upload paths'
+  url: https://github.com/heymrun/heym/pull/92
+  category: security
+  tags:
+  - upload
+  - path
+  - filesystem
+  month: 2026-05
+- date: '2026-05-10'
+  repo: heymrun/heym
+  number: 94
+  title: '[security] fix(tools): harden Python tool sandbox'
+  url: https://github.com/heymrun/heym/pull/94
+  category: security
+  tags:
+  - python
+  - sandbox
+  - tools
+  month: 2026-05
+- date: '2026-05-10'
+  repo: openclaw/crabbox
+  number: 65
+  title: '[security] fix(islo): contain workdir paths under workspace'
+  url: https://github.com/openclaw/crabbox/pull/65
+  category: security
+  tags:
+  - workspace
+  - path
+  - sandbox
+  month: 2026-05
+- date: '2026-05-10'
+  repo: openclaw/crabbox
+  number: 64
+  title: '[security] fix(auth): reject admin claims in user tokens'
+  url: https://github.com/openclaw/crabbox/pull/64
+  category: security
+  tags:
+  - auth
+  - tokens
+  - privilege
+  month: 2026-05
 - date: '2026-05-09'
   repo: OWASP/APTS
   number: 55

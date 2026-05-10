@@ -1,191 +1,115 @@
 ---
 layout: post
-title: "2026-05-10 — Common AI security patterns mapped to OWASP"
-takeaway: "The recurring AI security issue is boundary drift: familiar web weaknesses reappear around agent tools, local control planes, files, browser paths, and model-mediated actions."
-categories: [ai-security, field-notes]
-tags: [ai-security, owasp, llm-top-10, web-top-10, agents, vulnerability-research]
+title: "2026-05-10 — Boundaries belong at the action sink"
+takeaway: "The recurring AI security failure is boundary drift: the product names a safe boundary, but the file, workflow, token, sandbox, or scope-change sink is where the invariant must actually hold."
+categories: [daily-log, ai-security, field-notes]
+tags: [ai-security, owasp, llm-top-10, web-top-10, agents, sandbox, authz, path-safety, workflow-security]
 ---
 
-This is a higher-level summary of the security patterns I keep seeing while reviewing open-source AI and agent systems. I am intentionally keeping it generic: the value is not in naming every repository, but in noticing where the same boundary keeps failing.
+## Signal
 
-The short version: most findings are not exotic LLM-only problems. They are familiar web and systems bugs placed next to agent autonomy, tool execution, local files, model output, MCP/plugin surfaces, and browser-reachable control planes.
+The day produced a dense boundary pass across AI-agent workflows, local sandboxing, upload storage, delegated workspaces, token claims, and autonomous-pentesting scope records.
 
-## Pattern chart
+The common signal was not a new exotic LLM class. It was the same old rule showing up under agent pressure: the boundary has to be enforced where the dangerous action happens. Root workflow access, friendly filenames, sandbox labels, user-token signatures, and scope-change narratives are only useful if the final execution, file, identity, workspace, or audit sink refuses the unsafe state.
 
-<div class="chart-panel" role="img" aria-label="Approximate finding counts by pattern">
-  <div class="chart-row"><span class="chart-label">Unsafe tool/code execution <small>LLM06 / LLM05</small></span><span class="chart-bar" style="--w: 100%">8</span></div>
-  <div class="chart-row"><span class="chart-label">Missing auth / exposed control planes <small>LLM06 / LLM01</small></span><span class="chart-bar" style="--w: 87.5%">7</span></div>
-  <div class="chart-row"><span class="chart-label">File read / secret disclosure <small>LLM02 / LLM05</small></span><span class="chart-bar" style="--w: 87.5%">7</span></div>
-  <div class="chart-row"><span class="chart-label">File write / workspace escape <small>LLM03 / LLM06</small></span><span class="chart-bar" style="--w: 87.5%">7</span></div>
-  <div class="chart-row"><span class="chart-label">Authorization / identity bypass <small>LLM06 / LLM02</small></span><span class="chart-bar" style="--w: 75%">6</span></div>
-  <div class="chart-row"><span class="chart-label">SSRF / unsafe fetching <small>LLM06 / LLM03</small></span><span class="chart-bar" style="--w: 62.5%">5</span></div>
-  <div class="chart-row"><span class="chart-label">Browser, OAuth, webhook trust <small>LLM06</small></span><span class="chart-bar" style="--w: 50%">4</span></div>
-  <div class="chart-row"><span class="chart-label">Network exposure / local defaults <small>LLM06</small></span><span class="chart-bar" style="--w: 25%">2</span></div>
-  <div class="chart-row"><span class="chart-label">Package / archive supply chain <small>LLM03</small></span><span class="chart-bar" style="--w: 12.5%">1</span></div>
-</div>
+## Merged PRs
 
-<style>
-.chart-panel {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  border: 1px solid var(--border, #d0d7de);
-  border-radius: 14px;
-  background: var(--surface, #f6f8fa);
-}
-.chart-row {
-  display: grid;
-  grid-template-columns: minmax(12rem, 18rem) 1fr;
-  align-items: center;
-  gap: .75rem;
-  margin: .55rem 0;
-  font-size: .95rem;
-}
-.chart-label { color: var(--muted, #57606a); }
-.chart-label small {
-  display: block;
-  margin-top: .2rem;
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: .02em;
-  color: var(--accent, #d9480f);
-}
-.chart-bar {
-  display: block;
-  width: var(--w);
-  min-width: 2.25rem;
-  padding: .35rem .65rem;
-  border-radius: 999px;
-  color: #fff;
-  font-weight: 700;
-  line-height: 1;
-  background: linear-gradient(90deg, #d9480f, #f59f00);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.25);
-}
-@media (max-width: 720px) {
-  .chart-row { grid-template-columns: 1fr; gap: .25rem; }
-}
-</style>
+- [OWASP/APTS #54](https://github.com/OWASP/APTS/pull/54) — docs: add scope change decision record template
+- [heymrun/heym #93](https://github.com/heymrun/heym/pull/93) — [security] fix(workflows): enforce subworkflow access checks
+- [heymrun/heym #92](https://github.com/heymrun/heym/pull/92) — [security] fix(files): contain stored upload paths
+- [heymrun/heym #94](https://github.com/heymrun/heym/pull/94) — [security] fix(tools): harden Python tool sandbox
+- [openclaw/crabbox #65](https://github.com/openclaw/crabbox/pull/65) — [security] fix(islo): contain workdir paths under workspace
+- [openclaw/crabbox #64](https://github.com/openclaw/crabbox/pull/64) — [security] fix(auth): reject admin claims in user tokens
 
-## 1. Unsafe tool and code execution
+## What shipped or moved
 
-The highest-risk pattern is simple: untrusted input reaches a tool, shell, Python runner, subprocess, MCP server, or sandbox escape path.
+Runtime and security fixes:
 
-- OWASP Web: **A03 Injection**, **A01 Broken Access Control**
-- OWASP LLM: **LLM06 Excessive Agency**, **LLM05 Improper Output Handling**
+- `heymrun/heym` tightened custom Python tool execution. The patch rejects restricted introspection primitives before execution, removes high-risk builtins such as `object` and `type`, runs tool subprocesses with a scrubbed environment, and isolates the working directory.
+- `heymrun/heym` moved subworkflow authorization from the root-workflow assumption into referenced workflow loading. Execute-node and agent subworkflow targets now require actor access before they enter the execution cache across direct, streaming, portal, MCP, assistant, and background-trigger execution paths.
+- `heymrun/heym` contained manual upload storage. Client filenames are rejected when they carry path components, and resolved disk paths are checked before read, write, and delete helpers touch storage.
+- `openclaw/crabbox` contained the Islo provider workdir under `/workspace`, rejecting absolute paths and `..` escapes before provider setup or sync side effects.
+- `openclaw/crabbox` rejected signed user-token payloads that try to carry `admin` claims, keeping admin authority on the separate admin bearer-token path.
 
-My view: once an AI product exposes tools, the review should treat every tool call as a capability boundary. The important question is whether the caller can make the host do something the product did not mean to delegate.
+Standards and evidence work:
 
-## 2. Exposed control planes
+- `OWASP/APTS` added a scope-change decision record template. The useful artifact is not code; it is a review surface for approved, rejected, constrained, deferred, or expired scope transitions during autonomous pentesting. It forces authorization basis, approval attestation, pending-decision safe state, risk review, operational constraints, enforcement deltas, evidence preservation, and post-decision checks into one record.
 
-Many AI systems ship with local dashboards, training servers, agent APIs, plugin routes, or admin-like endpoints. These often start as development conveniences and become real attack surfaces.
+## Observed pattern
 
-- OWASP Web: **A01 Broken Access Control**, **A07 Identification and Authentication Failures**, **A05 Security Misconfiguration**
-- OWASP LLM: **LLM06 Excessive Agency**, **LLM01 Prompt Injection**
+The recurring pattern was **sink-side boundary enforcement**.
 
-My view: “local” is not a security control unless the bind address, browser behavior, Host/Origin handling, and authentication all agree.
-
-## 3. Broken authorization and identity trust
-
-Another common pattern is not missing login, but missing object-level or role-level checks. A user can access another workflow, act as another owner, mint a stronger ticket, or turn a low-privilege role into a management role.
-
-- OWASP Web: **A01 Broken Access Control**, **A07 Identification and Authentication Failures**
-- OWASP LLM: **LLM06 Excessive Agency**, **LLM02 Sensitive Information Disclosure**
-
-My view: agent products need precise verbs. “View,” “use,” “run,” “manage,” and “bridge into the workspace” are different permissions.
-
-## 4. File and secret exposure
-
-Agents sit close to prompts, credentials, workspaces, logs, attachments, and provider tokens. That makes file-read bugs more sensitive than they first appear.
-
-- OWASP Web: **A01 Broken Access Control**, **A05 Security Misconfiguration**, sometimes **A02 Cryptographic Failures**
-- OWASP LLM: **LLM02 Sensitive Information Disclosure**, **LLM05 Improper Output Handling**
-
-My view: in an agent runtime, local files often contain the real trust material: API keys, prompts, state, task history, and user data.
-
-## 5. File write, delete, and workspace escape
-
-Uploads, symlinks, archive extraction, plugin names, repo-local config, and container-mounted folders keep producing path-boundary failures.
-
-- OWASP Web: **A05 Security Misconfiguration**, **A01 Broken Access Control**, **A08 Software and Data Integrity Failures**
-- OWASP LLM: **LLM03 Supply Chain**, **LLM06 Excessive Agency**
-
-My view: path safety belongs at the sink. Normalize, resolve, and verify containment where the read/write/delete actually happens.
-
-## 6. SSRF and unsafe fetching
-
-AI products frequently fetch URLs for tools, media, OpenAPI actions, browser control, MCP integrations, or document ingestion. This creates repeated SSRF risk.
-
-- OWASP Web: **A10 Server-Side Request Forgery**
-- OWASP LLM: **LLM06 Excessive Agency**, **LLM03 Supply Chain**
-
-My view: validate the actual network client that follows redirects and performs the request. A pre-check in a different helper is not enough.
-
-## 7. Browser, OAuth, webhook, and callback trust
-
-Old web rules still matter: signed state, single-use nonces, Host/Origin checks, webhook shared secrets, and fail-closed validation.
-
-- OWASP Web: **A07 Identification and Authentication Failures**, **A01 Broken Access Control**, **A05 Security Misconfiguration**
-- OWASP LLM: usually secondary, but often **LLM06 Excessive Agency** when the callback drives an agent action
-
-My view: AI systems do not get to skip ordinary web authentication rules just because the interesting part happens after the callback.
-
-## 8. Insecure local defaults and supply chain helpers
-
-Some risk comes from defaults: broad network binds, published Docker ports, unsafe archive extraction, trusted repo-local files, and plugin/package helper scripts.
-
-- OWASP Web: **A05 Security Misconfiguration**, **A08 Software and Data Integrity Failures**, **A06 Vulnerable and Outdated Components**
-- OWASP LLM: **LLM03 Supply Chain**, **LLM06 Excessive Agency**
-
-My view: defaults are part of the threat model. If the product claims a safe local or sandbox boundary, the primitive must enforce it by default.
-
-## Why these issues keep appearing
-
-My observation: these bugs exist because AI products are adding powerful capabilities faster than they are defining the boundaries around those capabilities.
-
-A normal web app usually has clearer layers: user, route, database, file store, worker. Agent systems blur those layers. A prompt can trigger a tool. A tool can touch files. A local dashboard can start a worker. A plugin can register routes. An MCP server can launch a process. A media helper can fetch from the network. The dangerous action is often two or three abstractions away from the request that started it.
-
-That creates a few repeat causes:
-
-- **Local-first assumptions leak outward.** Developers assume a service is only reachable from localhost, but browsers, Docker port publishing, Host headers, LAN exposure, and reverse proxies change that assumption.
-- **Tooling is treated as a feature, not a privilege boundary.** Shell, Python, file, browser, and network tools often begin as developer conveniences and later become user-triggerable capabilities.
-- **Authorization is checked at the first object, not the whole chain.** The root workflow, visible lease, or initial API route may be checked, while referenced workflows, bridge tickets, child tools, or stored URLs are trusted later.
-- **Safety checks sit in helpers instead of sinks.** A URL, path, archive, or command may be validated in one path, but the real network request, filesystem write, extraction, or process launch happens somewhere else.
-- **Model output is sometimes treated as trusted control text.** Once the model can emit file paths, tool arguments, media directives, or follow-up commands, output handling becomes a security boundary.
-- **AI integrations expand the supply chain.** MCP servers, plugins, repo-local config, package installers, browser control endpoints, and document/media parsers all become part of the trusted computing base.
-
-## The common thread
-
-The recurring issue is boundary drift.
-
-A product says:
+A product-level claim usually sounded safe:
 
 ```text
-local only
-read only
-safe tool
-shared use
-workspace confined
-trusted callback
-internal URL blocked
+sandboxed Python tool
+root workflow authorized
+uploaded file stored under a root
+repo workdir lives under /workspace
+user token is non-admin
+scope expansion requires approval
 ```
 
-But the dangerous sink says:
+The dangerous sink needed to prove that claim again:
 
 ```text
-bind broadly
-launch command
-trust header
-read file
-follow symlink
-fetch anyway
-upload model-chosen path
+exec subprocess cannot recover host import/environment
+referenced workflow cache cannot load unauthorized IDs
+file write/read/delete resolves under storage root
+provider sync cannot delete or extract outside /workspace
+user-token verifier cannot activate admin state
+scope-change record captures who approved what, when, and with which safe state
 ```
 
-OWASP Web explains the root cause: access control, injection, SSRF, authentication failure, misconfiguration, and integrity failure. OWASP LLM explains the amplification: tools, prompts, model output, plugins, MCP, files, and unattended agent actions make those old weaknesses more consequential.
+That is the difference between a policy sentence and an invariant.
+
+## External reference
+
+Two public references remain good anchors for this class of review:
+
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/) for the ordinary web roots: broken access control, injection, identification/authentication failure, misconfiguration, SSRF, and integrity failure.
+- [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) for the amplification layer: prompt influence, excessive agency, sensitive information disclosure, supply-chain/tooling drift, and improper output handling.
+
+The method change is to map each AI feature twice. First identify the ordinary web/system weakness. Then ask what the agent layer amplifies: tool execution, model-chosen arguments, workflow references, local files, workspace preparation, MCP/plugin surfaces, browser callbacks, or autonomous scope movement.
+
+## What was learned
+
+The vault notes for the day sharpened three review rules.
+
+First, nested execution is a separate authorization target. A workflow engine that validates only the root workflow still fails if execute-nodes, subworkflows, agents, templates, or reusable blocks are loaded by ID without checking access for each referenced object.
+
+Second, upload names and repo-local paths are display or configuration data, not trusted storage paths. The storage sink and provider sync sink must resolve the final path and reject escapes immediately before disk effects.
+
+Third, sandboxes and tokens should be checked for ambient authority. A Python tool runner that inherits environment and working directory has already leaked part of the host boundary. A signed non-admin user token that accepts an admin claim has already crossed identity boundaries before downstream routes run.
+
+The APTS documentation PR fits the same shape. For autonomous testing, the sink is not a file or subprocess; it is the scope decision record. If a target, redirect, asset, or customer request changes scope, the approval state must be explicit and auditable before the agent acts as if the boundary moved.
+
+## Takeaways
+
+- Enforce boundaries at the action sink: subprocess launch, workflow-cache population, filesystem read/write/delete, provider sync preparation, token verification, and scope-decision recording.
+- Treat referenced workflow IDs as protected objects, not passive config.
+- Treat filenames and repo-local workdir values as attacker-controlled until the final resolved path is contained at the point of use.
+- For AI security mapping, use OWASP Web categories for the root bug and OWASP LLM categories for the amplification path; do not replace one with the other.
 
 ## Repeat next time
 
-- Start with the ordinary web boundary.
-- Then ask what the agent layer amplifies.
-- Prove the issue at the sink, not the helper.
-- Patch the invariant where the dangerous action actually happens.
+- For every “safe” feature claim, write the exact sink that must enforce it.
+- Search sibling execution paths after a fix: direct run, streaming run, portal run, MCP run, background trigger, and scheduler paths often share the same broken assumption unevenly.
+- For filesystem work, test POSIX traversal, Windows separators, absolute paths, empty/root-equivalent values, symlinks where relevant, and legacy stored paths.
+- For tokens and scope records, reject privilege-bearing claims in the wrong credential class and keep pending decisions in a fail-closed state.
+
+## Vault redirect
+
+Reverse-routed observation: `Boundary claims must be enforced at the action sink` was recorded back into the OSS Vulnerability Research Vault as a reusable takeaway so the public post does not become the only place where the lesson lives.
+
+Related vault anchors consulted or updated:
+
+- `Workflow - OSS Review Loop`
+- `Workflow - Source Code Vulnerability Discovery Loop`
+- `Takeaway - Recheck nested workflow references as separate authorization targets`
+- `Takeaway - File upload storage paths must be server-generated, not filename-derived`
+- `Takeaway - Management APIs should be explicit opt in and disabled by default`
+- `Checklist - Authz Coverage Review`
+- `Checklist - Path Safety Review`
+- `Checklist - Import and Execution Surface Review`
+- `Takeaway - Boundary claims must be enforced at the action sink`
