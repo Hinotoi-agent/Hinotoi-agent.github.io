@@ -1,22 +1,22 @@
 ---
 layout: post
-title: "2026-05-10 — Common AI security issues mapped to OWASP"
-takeaway: "Across the current vault findings, the recurring failure is not one exotic LLM bug. It is old web security boundaries reappearing around agent tools, local control planes, file systems, and model-mediated actions."
+title: "2026-05-10 — Common AI security patterns mapped to OWASP"
+takeaway: "The recurring AI security issue is boundary drift: familiar web weaknesses reappear around agent tools, local control planes, files, browser paths, and model-mediated actions."
 categories: [ai-security, field-notes]
 tags: [ai-security, owasp, llm-top-10, web-top-10, agents, vulnerability-research]
 ---
 
-This is a compact map of the security issues in the OSS vulnerability vault so far. I grouped the findings by the failure mode that matters most during review, then mapped each group to the closest OWASP Web Top 10 and OWASP Top 10 for LLM Applications categories.
+This is a higher-level summary of the security patterns I keep seeing while reviewing open-source AI and agent systems. I am intentionally keeping it generic: the value is not in naming every repository, but in noticing where the same boundary keeps failing.
 
-The short version: most of the issues are not mysterious. They are familiar web and systems bugs placed next to agent autonomy, tool execution, local files, model output, MCP/plugin surfaces, and browser-reachable control planes.
+The short version: most findings are not exotic LLM-only problems. They are familiar web and systems bugs placed next to agent autonomy, tool execution, local files, model output, MCP/plugin surfaces, and browser-reachable control planes.
 
-## Category chart
+## Pattern chart
 
-<div class="chart-panel" role="img" aria-label="Finding counts by category">
+<div class="chart-panel" role="img" aria-label="Approximate finding counts by pattern">
   <div class="chart-row"><span class="chart-label">Unsafe tool/code execution</span><span class="chart-bar" style="--w: 100%">8</span></div>
   <div class="chart-row"><span class="chart-label">Missing auth / exposed control planes</span><span class="chart-bar" style="--w: 87.5%">7</span></div>
   <div class="chart-row"><span class="chart-label">File read / secret disclosure</span><span class="chart-bar" style="--w: 87.5%">7</span></div>
-  <div class="chart-row"><span class="chart-label">File write / delete / workspace escape</span><span class="chart-bar" style="--w: 87.5%">7</span></div>
+  <div class="chart-row"><span class="chart-label">File write / workspace escape</span><span class="chart-bar" style="--w: 87.5%">7</span></div>
   <div class="chart-row"><span class="chart-label">Authorization / identity bypass</span><span class="chart-bar" style="--w: 75%">6</span></div>
   <div class="chart-row"><span class="chart-label">SSRF / unsafe fetching</span><span class="chart-bar" style="--w: 62.5%">5</span></div>
   <div class="chart-row"><span class="chart-label">Browser, OAuth, webhook trust</span><span class="chart-bar" style="--w: 50%">4</span></div>
@@ -58,185 +58,111 @@ The short version: most of the issues are not mysterious. They are familiar web 
 }
 </style>
 
-## 1. Unsafe tool/code execution
+## 1. Unsafe tool and code execution
 
-**Pattern:** an API, agent tool, MCP server, sandbox, or helper path reaches shell, Python, subprocess, or command execution without a strong boundary.
+The highest-risk pattern is simple: untrusted input reaches a tool, shell, Python runner, subprocess, MCP server, or sandbox escape path.
 
-**OWASP map:** Web **A03 Injection**, **A01 Broken Access Control**, **A05 Security Misconfiguration**. LLM **LLM06 Excessive Agency**, **LLM05 Improper Output Handling**, **LLM03 Supply Chain**.
+- OWASP Web: **A03 Injection**, **A01 Broken Access Control**
+- OWASP LLM: **LLM06 Excessive Agency**, **LLM05 Improper Output Handling**
 
-Findings:
+My view: once an AI product exposes tools, the review should treat every tool call as a capability boundary. The important question is whether the caller can make the host do something the product did not mean to delegate.
 
-- `heymrun/heym` — Python tool sandbox escape.
-- `HKUDS/AutoAgent` — unauthenticated FastAPI tool RCE.
-- `HKUDS/AutoAgent` — unauthenticated Docker TCP command server RCE.
-- `berabuddies/agentflow` — unauthenticated inline shell/python pipeline RCE.
-- `0xSero/vllm-studio` — unauthenticated runtime job command execution.
-- `HKUDS/OpenHarness` PR 61 — GitTool read-only diff external-diff execution.
-- `NousResearch/hermes-agent` — ACP stdio MCP command execution.
-- `NousResearch/hermes-agent` — process stdin approval bypass.
+## 2. Exposed control planes
 
-**Thought:** this is the sharpest AI-agent risk class. When a product exposes tools, agents, pipelines, MCP servers, or sandboxes, the real question is not whether the UI calls it a tool. The question is whether untrusted input can reach a host capability.
+Many AI systems ship with local dashboards, training servers, agent APIs, plugin routes, or admin-like endpoints. These often start as development conveniences and become real attack surfaces.
 
-## 2. Missing authentication / exposed control planes
+- OWASP Web: **A01 Broken Access Control**, **A07 Identification and Authentication Failures**, **A05 Security Misconfiguration**
+- OWASP LLM: **LLM06 Excessive Agency**, **LLM01 Prompt Injection**
 
-**Pattern:** a server intended for local use, admin use, or agent orchestration is reachable without authentication.
+My view: “local” is not a security control unless the bind address, browser behavior, Host/Origin handling, and authentication all agree.
 
-**OWASP map:** Web **A01 Broken Access Control**, **A07 Identification and Authentication Failures**, **A05 Security Misconfiguration**. LLM **LLM06 Excessive Agency**, **LLM02 Sensitive Information Disclosure**, **LLM01 Prompt Injection**.
+## 3. Broken authorization and identity trust
 
-Findings:
+Another common pattern is not missing login, but missing object-level or role-level checks. A user can access another workflow, act as another owner, mint a stronger ticket, or turn a low-privilege role into a management role.
 
-- `HKUDS/nanobot` — browser-reachable unauthenticated API control plane.
-- `HKUDS/OpenHarness` PR 87 — unauthenticated web control plane.
-- `NousResearch/hermes-agent` — dashboard plugin API unauthenticated Kanban dispatch.
-- `MLT-OSS/open-assistant-api` — file routes missing token auth.
-- `bytedance/deer-flow` — unauthenticated custom agent `SOUL` / `USER` prompt management.
-- `lupantech/AgentFlow` — unauthenticated training control plane.
-- `NousResearch/hermes-agent` — unauthenticated detailed health diagnostics.
+- OWASP Web: **A01 Broken Access Control**, **A07 Identification and Authentication Failures**
+- OWASP LLM: **LLM06 Excessive Agency**, **LLM02 Sensitive Information Disclosure**
 
-**Thought:** local-first software often treats `localhost` or a dashboard as a trust boundary. That only works if bind address, Host/Origin handling, auth, and browser behavior all enforce the same assumption.
+My view: agent products need precise verbs. “View,” “use,” “run,” “manage,” and “bridge into the workspace” are different permissions.
 
-## 3. Authorization / identity boundary bypass
+## 4. File and secret exposure
 
-**Pattern:** the caller is authenticated, but the system trusts the wrong identity, skips object-level authorization, or grants a lower role an owner-level capability.
+Agents sit close to prompts, credentials, workspaces, logs, attachments, and provider tokens. That makes file-read bugs more sensitive than they first appear.
 
-**OWASP map:** Web **A01 Broken Access Control**, **A07 Identification and Authentication Failures**. LLM **LLM06 Excessive Agency**, **LLM02 Sensitive Information Disclosure**.
+- OWASP Web: **A01 Broken Access Control**, **A05 Security Misconfiguration**, sometimes **A02 Cryptographic Failures**
+- OWASP LLM: **LLM02 Sensitive Information Disclosure**, **LLM05 Improper Output Handling**
 
-Findings:
+My view: in an agent runtime, local files often contain the real trust material: API keys, prompts, state, task history, and user data.
 
-- `heymrun/heym` — cross-workflow subworkflow authorization bypass.
-- `heymrun/heym` — shared users can re-share workflows.
-- `openclaw/crabbox` — shared token owner/org impersonation.
-- `openclaw/crabbox` — use-role bridge ticket minting.
-- `OpenClaw` — trusted-proxy requests default to full operator scopes.
-- `NousResearch/hermes-agent` — Telegram model picker callback authorization gap.
+## 5. File write, delete, and workspace escape
 
-**Thought:** agent systems amplify IDOR-style bugs because “view,” “use,” “run,” “manage,” and “bridge into a workspace” are different privileges. The review has to split those verbs apart.
+Uploads, symlinks, archive extraction, plugin names, repo-local config, and container-mounted folders keep producing path-boundary failures.
 
-## 4. File read / secret disclosure
+- OWASP Web: **A05 Security Misconfiguration**, **A01 Broken Access Control**, **A08 Software and Data Integrity Failures**
+- OWASP LLM: **LLM03 Supply Chain**, **LLM06 Excessive Agency**
 
-**Pattern:** attacker-controlled paths, model-controlled media, or unauthenticated file APIs expose local files, prompts, credentials, artifacts, or secret-bearing config.
+My view: path safety belongs at the sink. Normalize, resolve, and verify containment where the read/write/delete actually happens.
 
-**OWASP map:** Web **A01 Broken Access Control**, **A02 Cryptographic Failures**, **A05 Security Misconfiguration**. LLM **LLM02 Sensitive Information Disclosure**, **LLM05 Improper Output Handling**.
+## 6. SSRF and unsafe fetching
 
-Findings:
+AI products frequently fetch URLs for tools, media, OpenAPI actions, browser control, MCP integrations, or document ingestion. This creates repeated SSRF risk.
 
-- `0xSero/vllm-studio` — frontend agent filesystem read.
-- `HKUDS/AutoAgent` — File Surfer workspace path traversal.
-- `berabuddies/agentflow` — artifact API path traversal file disclosure.
-- `HKUDS/nanobot` — message tool outbound media arbitrary file read.
-- `NousResearch/hermes-agent` — `MEDIA:` directive arbitrary local file exfiltration.
-- `NousResearch/hermes-agent` — ACP resource link arbitrary local file read.
-- `steipete/summarize` — daemon config credential disclosure.
+- OWASP Web: **A10 Server-Side Request Forgery**
+- OWASP LLM: **LLM06 Excessive Agency**, **LLM03 Supply Chain**
 
-**Thought:** file read bugs become more serious around agents because files often contain prompts, credentials, session state, workspace data, and provider tokens. “Just a file read” is rarely just a file read in an agent runtime.
+My view: validate the actual network client that follows redirects and performs the request. A pre-check in a different helper is not enough.
 
-## 5. Arbitrary file write / delete / workspace escape
+## 7. Browser, OAuth, webhook, and callback trust
 
-**Pattern:** upload filenames, plugin names, symlinks, repo-local configs, or container-writable paths escape the intended directory and affect host files.
+Old web rules still matter: signed state, single-use nonces, Host/Origin checks, webhook shared secrets, and fail-closed validation.
 
-**OWASP map:** Web **A01 Broken Access Control**, **A05 Security Misconfiguration**, **A08 Software and Data Integrity Failures**. LLM **LLM03 Supply Chain**, **LLM06 Excessive Agency**.
+- OWASP Web: **A07 Identification and Authentication Failures**, **A01 Broken Access Control**, **A05 Security Misconfiguration**
+- OWASP LLM: usually secondary, but often **LLM06 Excessive Agency** when the callback drives an agent action
 
-Findings:
+My view: AI systems do not get to skip ordinary web authentication rules just because the interesting part happens after the callback.
 
-- `heymrun/heym` — upload filename traversal arbitrary file write.
-- `bytedance/deer-flow` — symlinked upload destination write.
-- `HKUDS/OpenHarness` — Feishu/Lark attachment filename traversal.
-- `HKUDS/OpenHarness` — plugin uninstall path traversal.
-- `nesquena/hermes-webui` — profile path traversal.
-- `qwibitai/nanoclaw` — container-writable Claude fragments symlink host file deletion.
-- `openclaw/crabbox` — Islo workdir workspace escape.
+## 8. Insecure local defaults and supply chain helpers
 
-**Thought:** path safety should be enforced at the sink with resolved containment checks. It should not depend on a caller convention, a UI label, or the absence of `..` in one parser layer.
+Some risk comes from defaults: broad network binds, published Docker ports, unsafe archive extraction, trusted repo-local files, and plugin/package helper scripts.
 
-## 6. SSRF / unsafe server-side fetching
+- OWASP Web: **A05 Security Misconfiguration**, **A08 Software and Data Integrity Failures**, **A06 Vulnerable and Outdated Components**
+- OWASP LLM: **LLM03 Supply Chain**, **LLM06 Excessive Agency**
 
-**Pattern:** model/tool/user-controlled URLs reach backend HTTP clients, media fetchers, MCP clients, OpenAPI action runners, or browser-control discovery paths.
+My view: defaults are part of the threat model. If the product claims a safe local or sandbox boundary, the primitive must enforce it by default.
 
-**OWASP map:** Web **A10 Server-Side Request Forgery**. LLM **LLM06 Excessive Agency**, **LLM03 Supply Chain**.
+## The common thread
 
-Findings:
+The recurring issue is boundary drift.
 
-- `MLT-OSS/open-assistant-api` — unauthenticated action SSRF.
-- `HKUDS/nanobot` — DingTalk outbound media SSRF.
-- `labring/FastGPT` — stored MCP tool URLs bypass internal-address validation.
-- `NousResearch/hermes-agent` — vision media download helper SSRF guard.
-- `NousResearch/hermes-agent` — unsafe explicit CDP override endpoint validation.
-
-**Thought:** the safest SSRF review question is: where does the actual redirect-following transport run? Validating a stored URL, a preview URL, or a helper path is not enough if another client performs the real network I/O later.
-
-## 7. Browser, OAuth, webhook, and request-origin trust
-
-**Pattern:** the system trusts browser requests, OAuth state, Host headers, callbacks, or webhook notifications without a strong origin/secret/state boundary.
-
-**OWASP map:** Web **A07 Identification and Authentication Failures**, **A01 Broken Access Control**, **A05 Security Misconfiguration**. LLM: usually secondary, often **LLM06 Excessive Agency** when the request can drive agent behavior.
-
-Findings:
-
-- `bytedance/deer-flow` — login CSRF session fixation.
-- `BasedHardware/omi` — MCP OAuth callback forgeable state.
-- `NousResearch/hermes-agent` — API server Host header rebinding.
-- `NousResearch/hermes-agent` — MS Graph webhook missing `clientState` fail-open.
-
-**Thought:** callback and browser-adjacent endpoints need boring invariants: signed state, single-use nonces, Origin/Host checks where appropriate, and fail-closed secrets. Agent products do not get to skip old web rules.
-
-## 8. Network exposure / insecure local defaults
-
-**Pattern:** local or sandbox services bind too broadly, publish Docker ports on all interfaces, or perform side effects before local/remote admission checks.
-
-**OWASP map:** Web **A05 Security Misconfiguration**, **A01 Broken Access Control**. LLM **LLM06 Excessive Agency**.
-
-Findings:
-
-- `bytedance/deer-flow` — local Docker sandbox broad port bind.
-- `HKUDS/OpenHarness` — pre-allowlist channel media side effects.
-
-**Thought:** if the design says “local only,” the primitive has to say local only too. Documentation is not a bind address.
-
-## 9. Package / archive supply chain
-
-**Pattern:** install or compatibility scripts trust downloaded archives and extract them without containment.
-
-**OWASP map:** Web **A08 Software and Data Integrity Failures**, **A06 Vulnerable and Outdated Components**. LLM **LLM03 Supply Chain**.
-
-Findings:
-
-- `NousResearch/hermes-agent` — Android psutil sdist unsafe tar extraction.
-
-**Thought:** package-install helper scripts are part of the attack surface. If they download and extract code, they need the same path traversal, symlink, hardlink, and special-file checks as any other archive handler.
-
-## Cross-cutting lesson
-
-The common issue is boundary drift.
-
-The product says one thing:
+A product says:
 
 ```text
 local only
 read only
-shared use
 safe tool
-trusted callback
+shared use
 workspace confined
-internal URL rejected
+trusted callback
+internal URL blocked
 ```
 
-But the sink does another thing:
+But the dangerous sink says:
 
 ```text
-binds to 0.0.0.0
-launches a command
-trusts a header
-reads an arbitrary file
-follows a symlink
-fetches through a different client
-accepts model-controlled output as an action
+bind broadly
+launch command
+trust header
+read file
+follow symlink
+fetch anyway
+upload model-chosen path
 ```
 
-For AI security review, OWASP LLM categories explain why the impact is amplified: tools, prompts, model output, MCP, files, and agent autonomy turn old classes of web bugs into host-side action. OWASP Web categories still explain the root cause: access control, injection, misconfiguration, SSRF, auth failures, and integrity failures.
+OWASP Web explains the root cause: access control, injection, SSRF, authentication failure, misconfiguration, and integrity failure. OWASP LLM explains the amplification: tools, prompts, model output, plugins, MCP, files, and unattended agent actions make those old weaknesses more consequential.
 
 ## Repeat next time
 
-- Start with the old web boundary: auth, object auth, path containment, SSRF, origin/state, and command injection.
-- Then ask what the LLM/agent layer amplifies: tool use, prompt control, file upload, file read, MCP/plugin loading, browser reachability, and unattended execution.
-- Prove the bug at the sink, not at the helper.
-- Prefer small patches that encode the invariant where the dangerous action actually happens.
+- Start with the ordinary web boundary.
+- Then ask what the agent layer amplifies.
+- Prove the issue at the sink, not the helper.
+- Patch the invariant where the dangerous action actually happens.
