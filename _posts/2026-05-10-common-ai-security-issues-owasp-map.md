@@ -138,6 +138,21 @@ Some risk comes from defaults: broad network binds, published Docker ports, unsa
 
 My view: defaults are part of the threat model. If the product claims a safe local or sandbox boundary, the primitive must enforce it by default.
 
+## Why these issues keep appearing
+
+My observation: these bugs exist because AI products are adding powerful capabilities faster than they are defining the boundaries around those capabilities.
+
+A normal web app usually has clearer layers: user, route, database, file store, worker. Agent systems blur those layers. A prompt can trigger a tool. A tool can touch files. A local dashboard can start a worker. A plugin can register routes. An MCP server can launch a process. A media helper can fetch from the network. The dangerous action is often two or three abstractions away from the request that started it.
+
+That creates a few repeat causes:
+
+- **Local-first assumptions leak outward.** Developers assume a service is only reachable from localhost, but browsers, Docker port publishing, Host headers, LAN exposure, and reverse proxies change that assumption.
+- **Tooling is treated as a feature, not a privilege boundary.** Shell, Python, file, browser, and network tools often begin as developer conveniences and later become user-triggerable capabilities.
+- **Authorization is checked at the first object, not the whole chain.** The root workflow, visible lease, or initial API route may be checked, while referenced workflows, bridge tickets, child tools, or stored URLs are trusted later.
+- **Safety checks sit in helpers instead of sinks.** A URL, path, archive, or command may be validated in one path, but the real network request, filesystem write, extraction, or process launch happens somewhere else.
+- **Model output is sometimes treated as trusted control text.** Once the model can emit file paths, tool arguments, media directives, or follow-up commands, output handling becomes a security boundary.
+- **AI integrations expand the supply chain.** MCP servers, plugins, repo-local config, package installers, browser control endpoints, and document/media parsers all become part of the trusted computing base.
+
 ## The common thread
 
 The recurring issue is boundary drift.
