@@ -1,3 +1,51 @@
+- date: '2026-05-11'
+  repo: openclaw/crabbox
+  number: 78
+  title: '[security] fix: reject empty env allow wildcards'
+  url: https://github.com/openclaw/crabbox/pull/78
+  category: security
+  tags:
+  - secrets
+  - env
+  - allowlist
+  - remote-execution
+  month: 2026-05
+- date: '2026-05-11'
+  repo: nesquena/hermes-webui
+  number: 2048
+  title: '[security] fix(session): validate workspace on import'
+  url: https://github.com/nesquena/hermes-webui/pull/2048
+  category: security
+  tags:
+  - workspace
+  - import
+  - filesystem
+  - session
+  month: 2026-05
+- date: '2026-05-11'
+  repo: openclaw/crabbox
+  number: 70
+  title: '[security] fix: ignore identity headers for shared token auth'
+  url: https://github.com/openclaw/crabbox/pull/70
+  category: security
+  tags:
+  - auth
+  - tokens
+  - identity
+  - control-plane
+  month: 2026-05
+- date: '2026-05-11'
+  repo: openclaw/crabbox
+  number: 71
+  title: '[security] fix: require manage access for bridge tickets'
+  url: https://github.com/openclaw/crabbox/pull/71
+  category: security
+  tags:
+  - authz
+  - bridge
+  - tickets
+  - leases
+  month: 2026-05
 - date: '2026-05-10'
   repo: OWASP/APTS
   number: 54
