@@ -1,3 +1,15 @@
+- date: '2026-05-13'
+  repo: steipete/summarize
+  number: 220
+  title: '[security] fix(daemon): keep slide output under user directory'
+  url: https://github.com/steipete/summarize/pull/220
+  category: security
+  tags:
+  - daemon
+  - path
+  - filesystem
+  - local-control-plane
+  month: 2026-05
 - date: '2026-05-11'
   repo: openclaw/crabbox
   number: 78
