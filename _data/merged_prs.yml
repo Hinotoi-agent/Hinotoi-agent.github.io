@@ -1,3 +1,111 @@
+- date: '2026-05-14'
+  repo: Hinotoi-agent/Verifymate
+  number: 5
+  title: 'feat: redact secrets in evidence snippets'
+  url: https://github.com/Hinotoi-agent/Verifymate/pull/5
+  category: evidence
+  tags:
+  - evidence
+  - redaction
+  - secrets
+  - verifymate
+  month: 2026-05
+- date: '2026-05-14'
+  repo: Hinotoi-agent/Verifymate
+  number: 4
+  title: 'feat: add profile-aware evidence readiness'
+  url: https://github.com/Hinotoi-agent/Verifymate/pull/4
+  category: evidence
+  tags:
+  - evidence
+  - readiness
+  - profiles
+  - verifymate
+  month: 2026-05
+- date: '2026-05-14'
+  repo: Hinotoi-agent/Verifymate
+  number: 3
+  title: 'feat: add structured checker gates'
+  url: https://github.com/Hinotoi-agent/Verifymate/pull/3
+  category: evidence
+  tags:
+  - evidence
+  - gates
+  - checker
+  - verifymate
+  month: 2026-05
+- date: '2026-05-14'
+  repo: steipete/summarize
+  number: 217
+  title: '[security] fix(refresh-free): keep config rewrites private'
+  url: https://github.com/steipete/summarize/pull/217
+  category: security
+  tags:
+  - extension
+  - credentials
+  - permissions
+  - config
+  month: 2026-05
+- date: '2026-05-14'
+  repo: steipete/summarize
+  number: 218
+  title: '[security] fix(extension): harden hover summary trust boundary'
+  url: https://github.com/steipete/summarize/pull/218
+  category: security
+  tags:
+  - extension
+  - browser-origin
+  - local-control-plane
+  - daemon
+  month: 2026-05
+- date: '2026-05-14'
+  repo: Hinotoi-agent/Verifymate
+  number: 2
+  title: 'feat: show line-level evidence locations'
+  url: https://github.com/Hinotoi-agent/Verifymate/pull/2
+  category: evidence
+  tags:
+  - evidence
+  - line-numbers
+  - reporting
+  - verifymate
+  month: 2026-05
+- date: '2026-05-14'
+  repo: steipete/summarize
+  number: 219
+  title: '[security] fix(extension): confirm automation tool calls'
+  url: https://github.com/steipete/summarize/pull/219
+  category: security
+  tags:
+  - extension
+  - tool-calls
+  - confirmation
+  - prompt-injection
+  month: 2026-05
+- date: '2026-05-14'
+  repo: steipete/summarize
+  number: 222
+  title: '[security] fix(extension): guard automation artifacts bridge'
+  url: https://github.com/steipete/summarize/pull/222
+  category: security
+  tags:
+  - extension
+  - artifacts
+  - postmessage
+  - bridge
+  month: 2026-05
+- date: '2026-05-14'
+  repo: Hinotoi-agent/Verifymate
+  number: 1
+  title: 'feat: add report templates and strict mode'
+  url: https://github.com/Hinotoi-agent/Verifymate/pull/1
+  category: evidence
+  tags:
+  - evidence
+  - templates
+  - strict-mode
+  - verifymate
+  month: 2026-05
 - date: '2026-05-13'
   repo: steipete/summarize
   number: 220
