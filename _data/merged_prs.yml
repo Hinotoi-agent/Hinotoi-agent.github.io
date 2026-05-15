@@ -1,3 +1,63 @@
+- date: '2026-05-15'
+  repo: bytedance/deer-flow
+  number: 2963
+  title: '[security] fix(gateway): cap skill artifact preview decompression'
+  url: https://github.com/bytedance/deer-flow/pull/2963
+  category: security
+  tags:
+  - archive-preview
+  - decompression
+  - gateway
+  - resource-limits
+  month: 2026-05
+- date: '2026-05-15'
+  repo: OWASP/APTS
+  number: 59
+  title: 'docs: add model and retention record templates'
+  url: https://github.com/OWASP/APTS/pull/59
+  category: docs-standards
+  tags:
+  - docs
+  - assurance
+  - retention
+  - model-drift
+  month: 2026-05
+- date: '2026-05-15'
+  repo: HKUDS/nanobot
+  number: 3842
+  title: '[security] fix(message): confine local media attachments'
+  url: https://github.com/HKUDS/nanobot/pull/3842
+  category: security
+  tags:
+  - media
+  - workspace
+  - path-safety
+  - exfiltration
+  month: 2026-05
+- date: '2026-05-15'
+  repo: Hinotoi-agent/Verifymate
+  number: 6
+  title: 'feat: flag over-framed severity claims'
+  url: https://github.com/Hinotoi-agent/Verifymate/pull/6
+  category: evidence
+  tags:
+  - evidence
+  - severity
+  - maintainer-readiness
+  - verifymate
+  month: 2026-05
+- date: '2026-05-15'
+  repo: HKUDS/nanobot
+  number: 3789
+  title: '[security] fix(feishu): confine downloaded media filenames'
+  url: https://github.com/HKUDS/nanobot/pull/3789
+  category: security
+  tags:
+  - media
+  - filenames
+  - path-safety
+  - feishu
+  month: 2026-05
 - date: '2026-05-14'
   repo: Hinotoi-agent/Verifymate
   number: 5
