@@ -1,3 +1,63 @@
+- date: '2026-05-16'
+  repo: HKUDS/OpenHarness
+  number: 255
+  title: '[security] fix(ohmo): scope Slack thread sessions by sender'
+  url: https://github.com/HKUDS/OpenHarness/pull/255
+  category: security
+  tags:
+  - slack
+  - sessions
+  - remote-channel
+  - authz
+  month: 2026-05
+- date: '2026-05-16'
+  repo: HKUDS/OpenHarness
+  number: 258
+  title: '[security] fix(commands): keep autopilot local-only by default'
+  url: https://github.com/HKUDS/OpenHarness/pull/258
+  category: security
+  tags:
+  - autopilot
+  - remote-command
+  - local-only
+  - ai-agents
+  month: 2026-05
+- date: '2026-05-16'
+  repo: HKUDS/OpenHarness
+  number: 261
+  title: '[security] fix(commands): keep /commit local-only over remote channels'
+  url: https://github.com/HKUDS/OpenHarness/pull/261
+  category: security
+  tags:
+  - git
+  - remote-command
+  - local-only
+  - hooks
+  month: 2026-05
+- date: '2026-05-16'
+  repo: gadievron/raptor
+  number: 498
+  title: 'test(web): honor scanner crawl limits'
+  url: https://github.com/gadievron/raptor/pull/498
+  category: evidence
+  tags:
+  - crawler
+  - resource-limits
+  - regression-tests
+  - scanner
+  month: 2026-05
+- date: '2026-05-16'
+  repo: gadievron/raptor
+  number: 487
+  title: 'test: harden log sanitisation regressions'
+  url: https://github.com/gadievron/raptor/pull/487
+  category: evidence
+  tags:
+  - logs
+  - terminal-safety
+  - sanitisation
+  - regression-tests
+  month: 2026-05
 - date: '2026-05-15'
   repo: bytedance/deer-flow
   number: 2963
