@@ -8,6 +8,7 @@ permalink: /:year/:month/:day/:title/
 author: Hitonoi
 header_pages:
   - merged-prs.md
+  - ai-jobs.md
   - archive.md
   - about.md
 minima:

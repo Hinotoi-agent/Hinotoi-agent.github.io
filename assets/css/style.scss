@@ -320,9 +320,11 @@ pre code { background: transparent; border: 0; padding: 0; color: inherit; }
 .simple-section-heading h2 { margin: 0.1rem 0 0; }
 .simple-section-heading a { font-weight: 800; white-space: nowrap; }
 .simple-post-list,
-.simple-pr-list { display: grid; gap: 0; }
+.simple-pr-list,
+.simple-job-list { display: grid; gap: 0; }
 .simple-post-row,
-.simple-pr-row {
+.simple-pr-row,
+.simple-job-row {
   display: grid;
   gap: 0.2rem;
   padding: 0.82rem 0;
@@ -331,7 +333,8 @@ pre code { background: transparent; border: 0; padding: 0; color: inherit; }
   text-decoration: none;
 }
 .simple-post-row:hover,
-.simple-pr-row:hover { text-decoration: none; }
+.simple-pr-row:hover,
+.simple-job-row:hover { text-decoration: none; }
 .simple-post-row time,
 .simple-pr-meta {
   color: var(--muted);
@@ -341,10 +344,59 @@ pre code { background: transparent; border: 0; padding: 0; color: inherit; }
   letter-spacing: 0.06em;
 }
 .simple-post-row span,
-.simple-pr-row strong {
+.simple-pr-row strong,
+.simple-job-row strong {
   color: var(--heading);
   font-size: 1rem;
   line-height: 1.35;
+}
+
+.page-lede {
+  max-width: 66ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+.jobs-meta-card,
+.jobs-empty {
+  margin: 1rem 0 1.2rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+}
+.jobs-meta-card p,
+.jobs-empty p { margin-bottom: 0; color: var(--muted); }
+.jobs-list { display: grid; gap: 1rem; margin-top: 1.2rem; }
+.job-card {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.job-card-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.job-card h2 { margin: 0.45rem 0 0.25rem; }
+.job-company { color: var(--muted); font-weight: 700; }
+.job-card p { color: var(--text); margin-bottom: 0.75rem; }
+.job-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.job-tags span {
+  display: inline-flex;
+  padding: 0.18rem 0.5rem;
+  border: 1px solid var(--tag-border);
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.78rem;
+  font-weight: 800;
 }
 
 .mobile-home-lead { display: none; }

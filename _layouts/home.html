@@ -4,6 +4,7 @@ layout: default
 
 {% assign latest_post = site.posts.first %}
 {% assign recent_prs = site.data.merged_prs %}
+{% assign ai_jobs = site.data.ai_jobs.jobs %}
 
 <section class="simple-home">
   <header class="simple-hero">
@@ -29,6 +30,26 @@ layout: default
           <span class="simple-pr-meta">{{ pr.date }} · {{ pr.repo }} #{{ pr.number }}</span>
           <strong>{{ pr.title }}</strong>
         </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="simple-section">
+    <div class="simple-section-heading">
+      <div>
+        <p class="eyebrow">Singapore jobs</p>
+        <h2>AI / AI-security roles this week</h2>
+      </div>
+      <a href="{{ '/ai-jobs/' | relative_url }}">Full jobs list →</a>
+    </div>
+    <div class="simple-job-list">
+      {% for job in ai_jobs limit:5 %}
+        <a class="simple-job-row" href="{{ job.url }}">
+          <span class="simple-pr-meta">{{ job.company }} · {{ job.location }}</span>
+          <strong>{{ job.title }}</strong>
+        </a>
+      {% else %}
+        <p>No Singapore AI/security roles found in the latest refresh.</p>
       {% endfor %}
     </div>
   </section>

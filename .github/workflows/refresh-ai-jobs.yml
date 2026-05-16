@@ -1,0 +1,37 @@
+name: Refresh Singapore AI jobs
+
+on:
+  schedule:
+    # Monday morning UTC; evening in Singapore.
+    - cron: '17 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Refresh Singapore AI / AI-security jobs
+        run: python scripts/update_ai_jobs.py
+
+      - name: Commit refreshed job data
+        run: |
+          if git diff --quiet -- _data/ai_jobs.json; then
+            echo "No Singapore job changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/ai_jobs.json
+          git commit -m "data: refresh Singapore AI jobs"
+          git push
