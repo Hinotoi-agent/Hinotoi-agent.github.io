@@ -6,7 +6,11 @@ standard library only, so the weekly GitHub Actions job does not need secrets or
 extra dependencies. Results are strict to Singapore / Remote-Singapore locations
 and then ranked for AI-security, penetration testing, red-team, AppSec,
 product-security, trust/safety, and adjacent security-engineering signals. The
-generated page intentionally publishes only the top 10 roles each week.
+ranking is also weighted with broad, non-contact CV-fit signals: offensive
+security leadership, incident response, VAPT, adversary emulation, AI security,
+agent trust boundaries, vulnerability research, and cloud/application/product
+security. The generated page intentionally publishes only the top 10 roles each
+week.
 """
 from __future__ import annotations
 
@@ -119,6 +123,83 @@ ENGINEERING_TERMS = [
     "specialist",
 ]
 
+CV_MATCH_TERMS = {
+    "Offensive Security": [
+        "offensive security",
+        "penetration testing",
+        "penetration tester",
+        "pentest",
+        "red team",
+        "adversary emulation",
+        "attack path",
+        "exploitability",
+        "vapt",
+    ],
+    "AI Security": [
+        "ai security",
+        "agentic ai",
+        "agent security",
+        "llm security",
+        "model security",
+        "prompt injection",
+        "rag",
+        "machine learning security",
+        "cybersecurity ai",
+        "cyber-physical security",
+    ],
+    "Vulnerability Research": [
+        "vulnerability research",
+        "vulnerability triage",
+        "source code review",
+        "secure code",
+        "security research",
+        "cve",
+        "open-source",
+        "oss",
+        "product security advisory",
+    ],
+    "App/Product Security": [
+        "application security",
+        "appsec",
+        "product security",
+        "cloud security",
+        "secure development",
+        "security architect",
+        "security engineer",
+    ],
+    "Incident Response": [
+        "incident response",
+        "detection engineering",
+        "threat hunting",
+        "threat intelligence",
+        "forensics",
+        "purple teaming",
+    ],
+    "Leadership": [
+        "lead",
+        "manager",
+        "principal",
+        "staff",
+        "architect",
+        "consultant",
+        "governance",
+        "executive reporting",
+        "remediation planning",
+    ],
+}
+
+CV_STRONG_TITLE_TERMS = [
+    "offensive security",
+    "penetration testing",
+    "red team",
+    "product security",
+    "application security",
+    "ai security",
+    "agentic ai",
+    "vulnerability",
+    "incident response",
+]
+
 EXCLUDED_TITLE_TERMS = [
     "account executive",
     "partner manager",
@@ -175,6 +256,13 @@ class Job:
     summary: str
     tags: tuple[str, ...]
     score: int
+    cv_score: int
+    fit: tuple[str, ...]
+    priority: str
+    why_match: str
+    possible_gap: str
+    categories: tuple[str, ...]
+    score_breakdown: dict[str, int]
 
 
 def clean_text(value: object, limit: int | None = None) -> str:
@@ -216,41 +304,156 @@ def term_hits(text: str, terms: Iterable[str]) -> list[str]:
     return hits
 
 
-def score_job(title: str, company: str, location: str, summary: str) -> tuple[int, list[str]]:
+def cv_fit_score(title: str, company: str, location: str, summary: str) -> tuple[int, list[str]]:
+    text = " ".join([title, company, location, summary])
+    title_text = title.lower()
+    score = 0
+    labels: list[str] = []
+    for label, terms in CV_MATCH_TERMS.items():
+        hits = set(term_hits(text, terms))
+        if not hits:
+            continue
+        labels.append(label)
+        score += 5 + min(len(hits), 4) * 2
+        if any(term in title_text for term in terms):
+            score += 4
+    if any(term in title_text for term in CV_STRONG_TITLE_TERMS):
+        score += 6
+    if "manager" in title_text or "lead" in title_text or "architect" in title_text:
+        score += 3
+    return score, labels[:4]
+
+
+def bounded(value: float, lower: int = 0, upper: int = 100) -> int:
+    return max(lower, min(upper, round(value)))
+
+
+def freshness_score(published_at: str) -> int:
+    if not published_at:
+        return 45
+    try:
+        published = datetime.fromisoformat(published_at[:10]).replace(tzinfo=timezone.utc)
+    except ValueError:
+        return 45
+    age_days = max(0, (datetime.now(timezone.utc) - published).days)
+    if age_days <= 7:
+        return 100
+    if age_days <= 21:
+        return 82
+    if age_days <= 45:
+        return 65
+    if age_days <= 90:
+        return 45
+    return 25
+
+
+def noise_penalty(title: str, summary: str) -> int:
+    text = f"{title} {summary}".lower()
+    penalty = 0
+    if any(term in text for term in ["sales", "account manager", "business development", "pre-sales", "presales"]):
+        penalty += 35
+    if any(term in text for term in ["intern", "internship", "fresh graduate", "junior"]):
+        penalty += 22
+    if any(term in text for term in ["governance", "compliance", "audit", "grc"]):
+        penalty += 10
+    if "security" not in text and not any(term in text for term in ["red team", "penetration", "appsec", "vulnerability"]):
+        penalty += 25
+    return penalty
+
+
+def classify_categories(title: str, summary: str, fit: list[str]) -> list[str]:
+    text = f"{title} {summary}".lower()
+    categories: list[str] = []
+    if "AI Security" in fit or any(term in text for term in ["agentic ai", "ai security", "llm security", "prompt injection", "model security"]):
+        categories.append("Best AI-security role")
+    if "Offensive Security" in fit or any(term in text for term in ["penetration", "pentest", "red team", "offensive security"]):
+        categories.append("Best pentest/red-team role")
+    if "App/Product Security" in fit or any(term in text for term in ["application security", "appsec", "product security", "secure sdlc"]):
+        categories.append("Best product/AppSec role")
+    if "Vulnerability Research" in fit or any(term in text for term in ["research", "vulnerability", "source code review", "cve"]):
+        categories.append("Best research role")
+    if "Leadership" in fit or any(term in text for term in ["lead", "manager", "architect", "principal", "staff"]):
+        categories.append("Best leadership role")
+    return categories[:3] or ["Best overall match"]
+
+
+def explain_match(title: str, fit: list[str], categories: list[str], breakdown: dict[str, int]) -> tuple[str, str, str]:
+    if breakdown["final"] >= 85:
+        priority = "High"
+    elif breakdown["final"] >= 70:
+        priority = "Medium-high"
+    elif breakdown["final"] >= 58:
+        priority = "Medium"
+    else:
+        priority = "Watchlist"
+
+    fit_text = ", ".join(fit[:3]) if fit else "general Singapore security relevance"
+    category_text = ", ".join(label.replace("Best ", "").replace(" role", "") for label in categories[:2])
+    why = (
+        f"Strong overlap with {fit_text}. The ranking also weights this as {category_text}, "
+        f"with CV fit {breakdown['cv_fit']}/100 and AI/security relevance {breakdown['ai_security']}/100."
+    )
+
+    lower_title = title.lower()
+    if "research" in lower_title or "fellow" in lower_title:
+        gap = "Check academic contract length, publication expectations, and whether the role values hands-on offensive security work."
+    elif "architect" in lower_title or "manager" in lower_title or "lead" in lower_title:
+        gap = "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes."
+    elif "product" in lower_title or "application" in lower_title:
+        gap = "Prepare examples around secure SDLC, code review, and product-risk tradeoffs beyond pure pentesting."
+    elif "ai" in lower_title or "agent" in lower_title or "llm" in lower_title:
+        gap = "Emphasize AI-agent threat models and practical testing evidence, since requirements may expect ML/security depth."
+    else:
+        gap = "Verify the day-to-day scope is technical and not mostly compliance, sales, or generic security operations."
+    return priority, why, gap
+
+
+def score_job(title: str, company: str, location: str, summary: str, published_at: str = "") -> tuple[int, list[str], int, list[str], str, str, str, list[str], dict[str, int]]:
     text = " ".join([title, company, location, summary])
     title_text = title.lower()
     ai_hits = term_hits(text, AI_TERMS)
     security_hits = term_hits(text, SECURITY_TERMS)
     engineering_hits = term_hits(text, ENGINEERING_TERMS)
     title_hits = term_hits(title, TITLE_RELEVANCE_TERMS)
+    cv_raw, cv_labels = cv_fit_score(title, company, location, summary)
 
     if any(term in title_text for term in EXCLUDED_TITLE_TERMS):
-        return 0, []
+        return 0, [], 0, [], "Filtered", "Excluded by title noise terms.", "", [], {}
 
-    score = 0
-    score += 4 * len(set(ai_hits))
-    score += 4 * len(set(security_hits))
-    score += 1 * len(set(engineering_hits))
-    score += 3 * len(set(title_hits))
-    if ai_hits and security_hits:
-        score += 12
-    if "security" in title_text or "red team" in title_text:
-        score += 7
-    if any(term in title_text for term in ["penetration", "pentest", "offensive security", "application security", "appsec", "product security", "vulnerability"]):
-        score += 9
-    if any(term in title_text for term in ["ai", "llm", "machine learning", "research engineer", "applied ai", "data scientist"]):
-        score += 4
-    if not security_hits:
-        score -= 12
-    if not title_hits and not (ai_hits and security_hits):
-        score -= 8
-    if "singapore" in location.lower():
-        score += 3
+    cv_fit = bounded(cv_raw * 2.25)
+    ai_security = bounded(
+        len(set(ai_hits)) * 11
+        + len(set(security_hits)) * 9
+        + len(set(title_hits)) * 7
+        + (18 if ai_hits and security_hits else 0)
+        + (12 if any(term in title_text for term in ["ai security", "agentic ai", "llm security", "red team", "penetration", "product security", "application security"]) else 0)
+    )
+    career_upside = bounded(
+        42
+        + (20 if any(term in title_text for term in ["lead", "manager", "principal", "staff", "architect", "senior"]) else 0)
+        + (12 if any(term in title_text for term in ["research", "fellow", "engineer", "consultant"]) else 0)
+        + (8 if company.lower() in {"okx", "national university of singapore", "nanyang technological university"} or "keysight" in company.lower() else 0)
+    )
+    location_fit = 100 if "singapore" in location.lower() else 80 if is_singapore_location(location) else 0
+    freshness = freshness_score(published_at)
+    penalty = noise_penalty(title, summary)
+    final = bounded((0.45 * cv_fit) + (0.25 * ai_security) + (0.15 * career_upside) + (0.10 * location_fit) + (0.05 * freshness) - penalty)
 
     tags = []
     for hit in list(dict.fromkeys(title_hits + ai_hits + security_hits + engineering_hits))[:6]:
         tags.append(hit.title() if hit.islower() else hit)
-    return score, tags
+    categories = classify_categories(title, summary, cv_labels)
+    breakdown = {
+        "final": final,
+        "cv_fit": cv_fit,
+        "ai_security": ai_security,
+        "career_upside": career_upside,
+        "location_fit": location_fit,
+        "freshness": freshness,
+        "noise_penalty": penalty,
+    }
+    priority, why_match, possible_gap = explain_match(title, cv_labels, categories, breakdown)
+    return final, tags, cv_fit, cv_labels, priority, why_match, possible_gap, categories, breakdown
 
 
 def from_greenhouse(company: str, board: str) -> list[Job]:
@@ -272,7 +475,8 @@ def from_greenhouse(company: str, board: str) -> list[Job]:
             continue
         title = clean_text(item.get("title"))
         summary = clean_text(item.get("content"), 280)
-        score, tags = score_job(title, company, location, summary)
+        published_at = clean_text(item.get("updated_at") or item.get("first_published"))[:10]
+        score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown = score_job(title, company, location, summary, published_at)
         if score < 9:
             continue
         jobs.append(
@@ -282,10 +486,17 @@ def from_greenhouse(company: str, board: str) -> list[Job]:
                 location=location,
                 url=item.get("absolute_url") or f"https://boards.greenhouse.io/{board}",
                 source="Greenhouse",
-                published_at=clean_text(item.get("updated_at") or item.get("first_published"))[:10],
+                published_at=published_at,
                 summary=summary or "Singapore role matched by title/company/location metadata.",
                 tags=tuple(tags),
                 score=score,
+                cv_score=cv_score,
+                fit=tuple(fit),
+                priority=priority,
+                why_match=why_match,
+                possible_gap=possible_gap,
+                categories=tuple(categories),
+                score_breakdown=score_breakdown,
             )
         )
     return jobs
@@ -311,7 +522,8 @@ def from_remotive(query: str) -> list[Job]:
         title = clean_text(item.get("title"))
         company = clean_text(item.get("company_name"))
         summary = clean_text(item.get("description"), 280)
-        score, tags = score_job(title, company, location, summary)
+        published_at = clean_text(item.get("publication_date"))[:10]
+        score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown = score_job(title, company, location, summary, published_at)
         if score < 9:
             continue
         jobs.append(
@@ -321,10 +533,17 @@ def from_remotive(query: str) -> list[Job]:
                 location=location,
                 url=item.get("url") or item.get("job_url") or "https://remotive.com/remote-jobs",
                 source="Remotive",
-                published_at=clean_text(item.get("publication_date"))[:10],
+                published_at=published_at,
                 summary=summary,
                 tags=tuple(tags),
                 score=score,
+                cv_score=cv_score,
+                fit=tuple(fit),
+                priority=priority,
+                why_match=why_match,
+                possible_gap=possible_gap,
+                categories=tuple(categories),
+                score_breakdown=score_breakdown,
             )
         )
     return jobs
@@ -347,7 +566,8 @@ def from_remoteok() -> list[Job]:
         company = clean_text(item.get("company"))
         tags_text = " ".join(clean_text(t) for t in item.get("tags", []))
         summary = clean_text(" ".join([tags_text, item.get("description", "")]), 280)
-        score, tags = score_job(title, company, location, summary)
+        published_at = clean_text(item.get("date"))[:10]
+        score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown = score_job(title, company, location, summary, published_at)
         if score < 9:
             continue
         jobs.append(
@@ -357,10 +577,17 @@ def from_remoteok() -> list[Job]:
                 location=location,
                 url=item.get("url") or "https://remoteok.com/",
                 source="RemoteOK",
-                published_at=clean_text(item.get("date"))[:10],
+                published_at=published_at,
                 summary=summary or "Singapore remote role matched by title/location metadata.",
                 tags=tuple(tags),
                 score=score,
+                cv_score=cv_score,
+                fit=tuple(fit),
+                priority=priority,
+                why_match=why_match,
+                possible_gap=possible_gap,
+                categories=tuple(categories),
+                score_breakdown=score_breakdown,
             )
         )
     return jobs
@@ -414,10 +641,11 @@ def from_mycareersfuture(query: str, limit: int = 20) -> list[Job]:
         company = mcf_company(item)
         description_bits = [item.get("description", ""), item.get("otherRequirements", "")]
         summary = clean_text(" ".join(str(bit or "") for bit in description_bits), 280)
-        score, tags = score_job(title, company, location, summary)
+        metadata = item.get("metadata") if isinstance(item.get("metadata"), dict) else {}
+        published_at = clean_text(metadata.get("newPostingDate") or metadata.get("originalPostingDate") or metadata.get("createdAt"))[:10]
+        score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown = score_job(title, company, location, summary, published_at)
         if score < 12:
             continue
-        metadata = item.get("metadata") if isinstance(item.get("metadata"), dict) else {}
         job_url = metadata.get("jobDetailsUrl") or f"https://www.mycareersfuture.gov.sg/job/{item.get('uuid', '')}"
         jobs.append(
             Job(
@@ -426,10 +654,17 @@ def from_mycareersfuture(query: str, limit: int = 20) -> list[Job]:
                 location=location,
                 url=job_url,
                 source="MyCareersFuture",
-                published_at=clean_text(metadata.get("newPostingDate") or metadata.get("originalPostingDate") or metadata.get("createdAt"))[:10],
+                published_at=published_at,
                 summary=summary or "Singapore role matched from MyCareersFuture job metadata.",
                 tags=tuple(tags),
                 score=score + 2,
+                cv_score=cv_score,
+                fit=tuple(fit),
+                priority=priority,
+                why_match=why_match,
+                possible_gap=possible_gap,
+                categories=tuple(categories),
+                score_breakdown={**score_breakdown, "final": score + 2, "source_boost": 2},
             )
         )
     return jobs
@@ -465,7 +700,7 @@ def main() -> int:
     data = {
         "updated_at": now,
         "location_filter": "Singapore / Remote-Singapore",
-        "source_note": "Weekly top-10 public ATS/feed scan for Singapore AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, and adjacent security-engineering roles. Includes MyCareersFuture plus selected public ATS/remote feeds. Links go to the original job posts; verify current availability before applying.",
+        "source_note": "Weekly top-10 public ATS/feed scan for Singapore AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, and adjacent security-engineering roles. Ranking is weighted against broad CV-fit signals: offensive security leadership, incident response, VAPT/adversary emulation, AI security, agent trust boundaries, vulnerability research, and cloud/application/product security. Links go to the original job posts; verify current availability before applying.",
         "jobs": [
             {
                 "title": job.title,
@@ -477,13 +712,20 @@ def main() -> int:
                 "summary": job.summary,
                 "tags": list(job.tags),
                 "score": job.score,
+                "cv_score": job.cv_score,
+                "fit": list(job.fit),
+                "priority": job.priority,
+                "why_match": job.why_match,
+                "possible_gap": job.possible_gap,
+                "categories": list(job.categories),
+                "score_breakdown": job.score_breakdown,
             }
             for job in jobs
         ],
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"wrote {len(jobs)} top Singapore AI-security/pentest jobs to {OUT}")
+    print(f"wrote {len(jobs)} top Singapore CV-weighted AI-security/pentest jobs to {OUT}")
     return 0
 
 

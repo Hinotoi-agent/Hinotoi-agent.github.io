@@ -22,3 +22,4 @@ The aim is not volume. The aim is compression: every daily post should leave beh
 ## Links
 
 - GitHub: [Hinotoi-agent](https://github.com/Hinotoi-agent)
+- LinkedIn: [Lennon Chia Min Jun](https://www.linkedin.com/in/lennon-chia/)

@@ -32,3 +32,4 @@ The work here sits at the overlap of engineering, review discipline, and securit
 
 ## Links
 - GitHub: [Hinotoi-agent](https://github.com/Hinotoi-agent)
+- LinkedIn: [Lennon Chia Min Jun](https://www.linkedin.com/in/lennon-chia/)
