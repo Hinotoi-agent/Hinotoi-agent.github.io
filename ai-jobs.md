@@ -7,7 +7,7 @@ permalink: /ai-jobs/
 {% assign job_feed = site.data.ai_jobs %}
 {% assign jobs = job_feed.jobs %}
 
-<p class="page-lede">Weekly Singapore-focused scan for AI, LLM, AI-security, product-security, trust/safety, and adjacent engineering roles.</p>
+<p class="page-lede">Weekly top 10 Singapore roles focused on AI-security, LLM-security, penetration testing, red-team, AppSec, product-security, and adjacent security engineering.</p>
 
 <div class="jobs-meta-card">
   <div>
@@ -42,7 +42,7 @@ permalink: /ai-jobs/
   </div>
 {% else %}
   <div class="jobs-empty">
-    <h2>No Singapore AI/security roles found in this refresh.</h2>
-    <p>The weekly scanner will try again next Monday. The feed is intentionally strict: roles must match Singapore / Remote-Singapore plus AI, LLM, security, trust/safety, or related engineering signals.</p>
+    <h2>No Singapore AI-security or penetration-testing roles found in this refresh.</h2>
+    <p>The weekly scanner will try again next Monday. The feed is intentionally strict: roles must match Singapore / Remote-Singapore plus AI-security, LLM-security, penetration testing, red-team, AppSec, product-security, trust/safety, or related security-engineering signals.</p>
   </div>
 {% endif %}

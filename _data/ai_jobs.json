@@ -1,8 +1,94 @@
 {
-  "updated_at": "2026-05-16T16:12:27Z",
+  "updated_at": "2026-05-16T16:32:33Z",
   "location_filter": "Singapore / Remote-Singapore",
-  "source_note": "Weekly public ATS/feed scan for Singapore AI, LLM, AI-security, product-security, trust/safety, and adjacent security-engineering roles. Links go to the original job posts; verify current availability before applying.",
+  "source_note": "Weekly top-10 public ATS/feed scan for Singapore AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, and adjacent security-engineering roles. Includes MyCareersFuture plus selected public ATS/remote feeds. Links go to the original job posts; verify current availability before applying.",
   "jobs": [
+    {
+      "title": "Research Associate/ Fellow (AI for Cybersecurity - Automatic Agentic Penetration Testing)",
+      "company": "NATIONAL UNIVERSITY OF SINGAPORE",
+      "location": "Singapore · South",
+      "url": "https://www.mycareersfuture.gov.sg/job/sciences/research-associate-fellow-national-university-singapore-6ec73d300207eafa2387110381f8e670",
+      "source": "MyCareersFuture",
+      "published_at": "2026-05-14",
+      "summary": "Interested applicants are invited to apply directly at the NUS Career Portal. Please note your application will only be processed if you apply via NUS Career Portal. NUS Career Portal link: https://careers.nus.edu.sg/job/Research-Associate-Fellow-%28AI-for-Cybersecurity-Automati…",
+      "tags": [
+        "AI",
+        "Agent",
+        "Security",
+        "Cyber",
+        "Cybersecurity",
+        "Penetration Testing"
+      ],
+      "score": 79
+    },
+    {
+      "title": "Product Security Architect — Agentic AI & Security",
+      "company": "KEYSIGHT TECHNOLOGIES SINGAPORE (SALES) PTE. LTD.",
+      "location": "Singapore · North",
+      "url": "https://www.mycareersfuture.gov.sg/job/engineering/product-security-architect-%E2%80%94-agentic-ai-security-keysight-technologies-singapore-2619cb29bceeb8b60cc787b84ca33a41",
+      "source": "MyCareersFuture",
+      "published_at": "2026-04-30",
+      "summary": "About Keysight: Keysight is on the forefront of technology innovation, delivering breakthroughs and trusted insights in electronic design, simulation, prototyping, test, manufacturing, and optimization. Our ~15,000 employees create world-class solutions in communications, 5G, au…",
+      "tags": [
+        "AI",
+        "Agent",
+        "Security",
+        "Product Security",
+        "Architect"
+      ],
+      "score": 66
+    },
+    {
+      "title": "Product Security Engineer — Agentic AI & Development",
+      "company": "KEYSIGHT TECHNOLOGIES SINGAPORE (SALES) PTE. LTD.",
+      "location": "Singapore · North",
+      "url": "https://www.mycareersfuture.gov.sg/job/engineering/product-security-engineer-%E2%80%94-agentic-ai-development-keysight-technologies-singapore-809ea319b59e76c272714a4b5ad1f4f3",
+      "source": "MyCareersFuture",
+      "published_at": "2026-04-30",
+      "summary": "About Keysight: Keysight is on the forefront of technology innovation, delivering breakthroughs and trusted insights in electronic design, simulation, prototyping, test, manufacturing, and optimization. Our ~15,000 employees create world-class solutions in communications, 5G, au…",
+      "tags": [
+        "AI",
+        "Agent",
+        "Security",
+        "Product Security",
+        "Engineer"
+      ],
+      "score": 66
+    },
+    {
+      "title": "Product Security Engineer — Security & Agentic AI 2",
+      "company": "KEYSIGHT TECHNOLOGIES SINGAPORE (SALES) PTE. LTD.",
+      "location": "Singapore · North",
+      "url": "https://www.mycareersfuture.gov.sg/job/engineering/product-security-engineer-%E2%80%94-security-agentic-ai-2-keysight-technologies-singapore-1d3f9e098db7a070da900b0a8ee2804c",
+      "source": "MyCareersFuture",
+      "published_at": "2026-04-21",
+      "summary": "Overview Keysight is at the forefront of technology innovation, delivering breakthroughs and trusted insights in electronic design, simulation, prototyping, test, manufacturing, and optimization. Our ~15,000 employees create world-class solutions in communications, 5G, automotiv…",
+      "tags": [
+        "AI",
+        "Agent",
+        "Security",
+        "Product Security",
+        "Engineer"
+      ],
+      "score": 66
+    },
+    {
+      "title": "Research Fellow (Agentic AI, AI security and cyber-physical security)",
+      "company": "NANYANG TECHNOLOGICAL UNIVERSITY",
+      "location": "Singapore · West",
+      "url": "https://www.mycareersfuture.gov.sg/job/sciences/research-fellow-nanyang-technological-university-6103cad7c17cfddd0e6d0ff4395b2ee7",
+      "source": "MyCareersFuture",
+      "published_at": "2026-05-08",
+      "summary": "School of Electrical and Electronic Engineering is one of the founding Schools of the Nanyang Technological University. Built on a culture of excellence, the School is renowned for its high academic standards and research. With over 3,000 undergraduates students and 2,000 gradua…",
+      "tags": [
+        "AI",
+        "Agent",
+        "Security",
+        "Cyber",
+        "Engineer"
+      ],
+      "score": 57
+    },
     {
       "title": "AI Agent Security Research Engineer",
       "company": "OKX",
@@ -19,544 +105,73 @@
         "Engineer",
         "Lead"
       ],
+      "score": 56
+    },
+    {
+      "title": "Senior Security Consultant (Penetration Testing)",
+      "company": "LRQA LIMITED (Singapore Branch)",
+      "location": "Singapore · South",
+      "url": "https://www.mycareersfuture.gov.sg/job/consulting/senior-security-consultant-lrqa-a0f4138c36819814ca73f4d35e7585a3",
+      "source": "MyCareersFuture",
+      "published_at": "2026-05-12",
+      "summary": "At LRQA our focus has always been on excellence in cyber security. We have teams that offer world class services in red teaming, penetration testing, threat intelligence, research and development, detection and response, governance, risk, and compliance, and plenty more. Our bus…",
+      "tags": [
+        "Security",
+        "Penetration Testing",
+        "Cyber",
+        "Risk",
+        "Red Team",
+        "Detection"
+      ],
+      "score": 55
+    },
+    {
+      "title": "Lead Cybersecurity Specialist (Offensive Security)",
+      "company": "JJ CONSULTING SERVICES",
+      "location": "Singapore · Islandwide",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/lead-cybersecurity-specialist-jj-consulting-services-0b74c5ede54fe7bb828a03e0cc849a30",
+      "source": "MyCareersFuture",
+      "published_at": "2026-05-16",
+      "summary": "​ Our Client is an established company in Singapore, who is seeking to recruit a Lead Cybersecurity Specialist (Offensive Security). Lead Cybersecurity Specialist (Offensive Security) As the Cybersecurity Specialist (Offensive Security) within the CISO Office, you will be the do…",
+      "tags": [
+        "Security",
+        "Cyber",
+        "Cybersecurity",
+        "Offensive Security",
+        "Lead",
+        "Specialist"
+      ],
       "score": 51
     },
     {
-      "title": "Senior Risk Manager, Trading (AI-Augmented Operations)",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7718885003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-28",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
+      "title": "Security Engineer II, Enterprise Security AI - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "location": "Singapore · South",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/security-engineer-ii-enterprise-security-ai-singapore-google-asia-pacific-f69100668f1a8bb8a5b25c4090c657ab",
+      "source": "MyCareersFuture",
+      "published_at": "2026-05-14",
+      "summary": "Product area The Core team builds the technical foundation behind Google’s flagship products. We are owners and advocates for the underlying design elements, developer platforms, product components, and infrastructure at Google. These are the essential building blocks for excell…",
       "tags": [
         "AI",
-        "Risk",
-        "Manager",
-        "Lead"
-      ],
-      "score": 32
-    },
-    {
-      "title": "Research Engineer, Applied AI",
-      "company": "Google DeepMind",
-      "location": "Singapore",
-      "url": "https://job-boards.greenhouse.io/deepmind/jobs/7219900",
-      "source": "Greenhouse",
-      "published_at": "2026-04-01",
-      "summary": "Job Description We are seeking a Research Engineer to lead the development and deployment of novel applications, leveraging Google’s generative AI models. This role focuses on rapidly developing new features, and working across partner teams to deliver solutions, and maximize im…",
-      "tags": [
-        "AI",
-        "Research Engineer",
-        "Generative Ai",
-        "Engineer",
-        "Lead"
-      ],
-      "score": 28
-    },
-    {
-      "title": "Principal Product Manager, AI Agent Infrastructure",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7710516003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-23",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "AI",
-        "Agent",
-        "Agent Infrastructure",
-        "Manager",
-        "Lead"
-      ],
-      "score": 27
-    },
-    {
-      "title": "Principal AI Engineer, AI Agent Development",
-      "company": "OKX",
-      "location": "Hong Kong, Hong Kong SAR; Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/6690158003",
-      "source": "Greenhouse",
-      "published_at": "2026-05-15",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "AI",
-        "Agent",
-        "Engineer",
-        "Lead"
-      ],
-      "score": 24
-    },
-    {
-      "title": "Principal/Senior Product Manager, AI and Agent",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7531921003",
-      "source": "Greenhouse",
-      "published_at": "2026-03-15",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "AI",
-        "Agent",
-        "Manager",
-        "Lead"
-      ],
-      "score": 24
-    },
-    {
-      "title": "Senior Product Manager, AI Agent Products",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7699601003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-14",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "AI",
-        "Agent",
-        "Manager",
-        "Lead"
-      ],
-      "score": 24
-    },
-    {
-      "title": "Senior/Staff Engineer, AI Agent Development",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7699598003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-14",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "AI",
-        "Agent",
-        "Engineer",
-        "Lead"
-      ],
-      "score": 24
-    },
-    {
-      "title": "Expert Application Security Engineer (iOS)",
-      "company": "OKX",
-      "location": "Hong Kong, Hong Kong SAR; Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/5958660003",
-      "source": "Greenhouse",
-      "published_at": "2026-03-15",
-      "summary": "About OKX: At OKX, we believe that the future will be reshaped by Crypto, ultimately contributing to every individual's freedom. OKX began as a crypto exchange giving millions of people access to crypto trading and over time becoming among the largest platforms in the world. In…",
-      "tags": [
         "Security",
-        "Application Security",
         "Engineer"
       ],
-      "score": 23
+      "score": 43
     },
     {
-      "title": "Vice President of Product, AI and Agent",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7691998003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-14",
-      "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (d…",
-      "tags": [
-        "AI",
-        "Agent",
-        "Lead"
-      ],
-      "score": 23
-    },
-    {
-      "title": "Technical Lead Manager, Applied AI",
-      "company": "Google DeepMind",
-      "location": "Singapore",
-      "url": "https://job-boards.greenhouse.io/deepmind/jobs/7215819",
-      "source": "Greenhouse",
-      "published_at": "2026-03-24",
-      "summary": "Job Description We are seeking a Technical Lead Manager (TLM) to lead the development and deployment of novel applications, leveraging Google’s generative AI models. This role focuses on rapidly developing new features, and working across partner teams to deliver solutions, and…",
-      "tags": [
-        "AI",
-        "Generative Ai",
-        "Manager",
-        "Lead"
-      ],
-      "score": 21
-    },
-    {
-      "title": "Senior Data Analyst, Trading Product (AI-Native)",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/6225586003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-14",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "AI",
-        "Data Analyst",
-        "Analyst",
-        "Lead"
-      ],
-      "score": 20
-    },
-    {
-      "title": "Senior Data Scientist, Risk (Risk Strategy)",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7575853003",
-      "source": "Greenhouse",
-      "published_at": "2026-03-15",
-      "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (d…",
-      "tags": [
-        "Risk",
-        "Data Scientist",
-        "Scientist",
-        "Lead"
-      ],
-      "score": 20
-    },
-    {
-      "title": "Senior Machine Learning Engineer, Compliance",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7673486003",
-      "source": "Greenhouse",
-      "published_at": "2026-03-20",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "Machine Learning",
-        "Compliance",
-        "Engineer",
-        "Lead"
-      ],
-      "score": 20
-    },
-    {
-      "title": "Director, Compliance Data Science & AI",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7671505003",
-      "source": "Greenhouse",
-      "published_at": "2026-03-20",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "AI",
-        "Compliance",
-        "Lead"
-      ],
-      "score": 19
-    },
-    {
-      "title": "Fraud Risk Strategy Expert",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/6270708003",
-      "source": "Greenhouse",
-      "published_at": "2026-05-07",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "Risk",
-        "Fraud",
-        "Lead"
-      ],
-      "score": 18
-    },
-    {
-      "title": "Senior Model Risk Quant Manager",
-      "company": "OKX",
-      "location": "Hong Kong, Hong Kong SAR; Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7720291003",
-      "source": "Greenhouse",
-      "published_at": "2026-05-12",
-      "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (d…",
-      "tags": [
-        "Risk",
-        "Model Risk",
-        "Quant",
-        "Manager",
-        "Lead"
-      ],
-      "score": 18
-    },
-    {
-      "title": "Growth & AI Initiatives Manager",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7668551003",
-      "source": "Greenhouse",
-      "published_at": "2026-03-23",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "AI",
-        "Manager",
-        "Lead"
-      ],
-      "score": 17
-    },
-    {
-      "title": "Principal AI Engineer, Chatbot Development",
-      "company": "OKX",
-      "location": "Hong Kong, Hong Kong SAR; Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7648781003",
-      "source": "Greenhouse",
+      "title": "Senior Security Engineer, Enterprise Security AI - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "location": "Singapore · South",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/senior-security-engineer-enterprise-security-ai-singapore-google-asia-pacific-96e1ca13cbca6137b4a3654aa9efa23e",
+      "source": "MyCareersFuture",
       "published_at": "2026-05-15",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
+      "summary": "Product area The Core team builds the technical foundation behind Google’s flagship products. We are owners and advocates for the underlying design elements, developer platforms, product components, and infrastructure at Google. These are the essential building blocks for excell…",
       "tags": [
         "AI",
-        "Engineer",
-        "Lead"
+        "Security",
+        "Engineer"
       ],
-      "score": 17
-    },
-    {
-      "title": "Product Manager / Director, AI Trading",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7712844003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-24",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "AI",
-        "Manager",
-        "Lead"
-      ],
-      "score": 17
-    },
-    {
-      "title": "Senior Staff Engineer, AI Platform and Infrastructure",
-      "company": "OKX",
-      "location": "Hong Kong, Hong Kong SAR; Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7477322003",
-      "source": "Greenhouse",
-      "published_at": "2026-05-15",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading c…",
-      "tags": [
-        "AI",
-        "Engineer",
-        "Lead"
-      ],
-      "score": 17
-    },
-    {
-      "title": "Principal Engineer, Agent Infrastructure & Memory Architecture",
-      "company": "OKX",
-      "location": "Hong Kong, Hong Kong SAR; Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7648794003",
-      "source": "Greenhouse",
-      "published_at": "2026-05-15",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "Agent",
-        "Agent Infrastructure",
-        "Engineer",
-        "Architect",
-        "Lead"
-      ],
-      "score": 16
-    },
-    {
-      "title": "Senior Compliance Data Scientist",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7678872003",
-      "source": "Greenhouse",
-      "published_at": "2026-03-25",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "Data Scientist",
-        "Compliance",
-        "Scientist",
-        "Lead"
-      ],
-      "score": 16
-    },
-    {
-      "title": "Senior Director/ Vice President, AI",
-      "company": "OKX",
-      "location": "Hong Kong, Hong Kong SAR; San Jose, California, United States; Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7709347003",
-      "source": "Greenhouse",
-      "published_at": "2026-05-12",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "AI",
-        "Lead"
-      ],
-      "score": 16
-    },
-    {
-      "title": "Senior Strategy PMO / Project Manager (AI & Org Efficiency)",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7650512003",
-      "source": "Greenhouse",
-      "published_at": "2026-03-16",
-      "summary": "About the Role We are looking for a highly capable Senior Strategy PMO / Project Manager to join our CEO Office / Strategy PMO team. This role goes beyond traditional project management — you will operate at the intersection of strategy, execution, and organizational scaling , p…",
-      "tags": [
-        "AI",
-        "Manager"
-      ],
-      "score": 16
-    },
-    {
-      "title": "Vice President, AI Strategy & Transformation",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7684887003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-14",
-      "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (d…",
-      "tags": [
-        "AI",
-        "Lead"
-      ],
-      "score": 16
-    },
-    {
-      "title": "Forward Deployed AI Accelerator, Marketing",
-      "company": "Stripe",
-      "location": "Singapore, Sydney",
-      "url": "https://stripe.com/jobs/search?gh_jid=7748114",
-      "source": "Greenhouse",
-      "published_at": "2026-05-14",
-      "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies — from the world's largest enterprises to the most ambitious startups — use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our m…",
-      "tags": [
-        "AI"
-      ],
-      "score": 15
-    },
-    {
-      "title": "(Senior) Data Infra Product Manager, On Chain (Web3)",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7671639003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-28",
-      "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (d…",
-      "tags": [
-        "Data Infra",
-        "Manager",
-        "Lead"
-      ],
-      "score": 13
-    },
-    {
-      "title": "Senior Data Scientist, Product & Growth Analytics",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7732807003",
-      "source": "Greenhouse",
-      "published_at": "2026-05-13",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "Data Scientist",
-        "Scientist",
-        "Lead"
-      ],
-      "score": 13
-    },
-    {
-      "title": "Senior Product Manager - Risk Platform",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/6642975003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-06",
-      "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (d…",
-      "tags": [
-        "Risk",
-        "Manager",
-        "Lead"
-      ],
-      "score": 12
-    },
-    {
-      "title": "Senior Product Manager, Risk Intelligence Product",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7690776003",
-      "source": "Greenhouse",
-      "published_at": "2026-04-06",
-      "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (d…",
-      "tags": [
-        "Risk",
-        "Manager",
-        "Lead"
-      ],
-      "score": 12
-    },
-    {
-      "title": "Senior Risk Manager, Trading (24/7 team)",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7512717003",
-      "source": "Greenhouse",
-      "published_at": "2026-03-15",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "Risk",
-        "Manager",
-        "Lead"
-      ],
-      "score": 12
-    },
-    {
-      "title": "Senior/Staff Software Engineer, Liquidity Platform, Risk & Analytics",
-      "company": "OKX",
-      "location": "Hong Kong, Hong Kong SAR; Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7735190003",
-      "source": "Greenhouse",
-      "published_at": "2026-05-15",
-      "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (d…",
-      "tags": [
-        "Risk",
-        "Engineer",
-        "Lead"
-      ],
-      "score": 12
-    },
-    {
-      "title": "Senior Data Engineer, Compliance Data Infrastructure",
-      "company": "OKX",
-      "location": "Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7678894003",
-      "source": "Greenhouse",
-      "published_at": "2026-03-25",
-      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading…",
-      "tags": [
-        "Data Infra",
-        "Compliance",
-        "Engineer",
-        "Lead"
-      ],
-      "score": 11
-    },
-    {
-      "title": "Credit Risk Strategy Manager",
-      "company": "Stripe",
-      "location": "Singapore",
-      "url": "https://stripe.com/jobs/search?gh_jid=7863824",
-      "source": "Greenhouse",
-      "published_at": "2026-05-14",
-      "summary": "About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to in…",
-      "tags": [
-        "Risk",
-        "Manager"
-      ],
-      "score": 11
-    },
-    {
-      "title": "Risk Partnerships Manager",
-      "company": "Stripe",
-      "location": "Singapore",
-      "url": "https://stripe.com/jobs/search?gh_jid=7309521",
-      "source": "Greenhouse",
-      "published_at": "2026-05-14",
-      "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our m…",
-      "tags": [
-        "Risk",
-        "Manager"
-      ],
-      "score": 11
+      "score": 43
     }
   ]
 }

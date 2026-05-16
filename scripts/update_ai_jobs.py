@@ -4,8 +4,9 @@
 The script intentionally uses public ATS/job-board JSON endpoints and the Python
 standard library only, so the weekly GitHub Actions job does not need secrets or
 extra dependencies. Results are strict to Singapore / Remote-Singapore locations
-and then ranked for AI, LLM, security, trust/safety, and adjacent engineering
-signals.
+and then ranked for AI-security, penetration testing, red-team, AppSec,
+product-security, trust/safety, and adjacent security-engineering signals. The
+generated page intentionally publishes only the top 10 roles each week.
 """
 from __future__ import annotations
 
@@ -42,14 +43,31 @@ REMOTE_FEEDS = [
     ("RemoteOK", "https://remoteok.com/api"),
 ]
 
+MAX_JOBS = 10
+
 SEARCH_QUERIES = [
     "AI security Singapore",
     "LLM security Singapore",
-    "machine learning security Singapore",
     "AI red team Singapore",
-    "AI safety Singapore",
+    "AI safety security Singapore",
+    "machine learning security Singapore",
+    "application security AI Singapore",
+    "product security AI Singapore",
+    "penetration testing Singapore",
+    "penetration tester Singapore",
+    "red team Singapore",
+    "offensive security Singapore",
     "security engineer machine learning Singapore",
-    "AI engineer Singapore security",
+]
+
+MYCAREERSFUTURE_QUERIES = SEARCH_QUERIES + [
+    "cyber security AI",
+    "application security",
+    "product security",
+    "penetration testing",
+    "penetration tester",
+    "red team",
+    "offensive security",
 ]
 
 AI_TERMS = [
@@ -69,16 +87,24 @@ AI_TERMS = [
 SECURITY_TERMS = [
     "security",
     "cyber",
+    "cybersecurity",
     "trust and safety",
     "safety",
     "risk",
     "abuse",
     "red team",
+    "penetration testing",
+    "penetration tester",
+    "pentest",
+    "offensive security",
     "application security",
+    "appsec",
     "product security",
     "cloud security",
     "detection",
     "threat",
+    "vulnerability",
+    "incident response",
     "fraud",
 ]
 
@@ -101,6 +127,9 @@ EXCLUDED_TITLE_TERMS = [
     "finance & strategy",
     "product support",
     "support specialist",
+    "account manager",
+    "sales",
+    "business development",
 ]
 
 TITLE_RELEVANCE_TERMS = [
@@ -113,6 +142,16 @@ TITLE_RELEVANCE_TERMS = [
     "model risk",
     "quant",
     "agent infrastructure",
+    "penetration testing",
+    "penetration tester",
+    "pentest",
+    "red team",
+    "offensive security",
+    "application security",
+    "appsec",
+    "product security",
+    "vulnerability",
+    "threat detection",
 ]
 
 SINGAPORE_PATTERNS = [
@@ -150,8 +189,11 @@ def clean_text(value: object, limit: int | None = None) -> str:
     return text
 
 
-def fetch_json(url: str) -> object:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+def fetch_json(url: str, extra_headers: dict[str, str] | None = None) -> object:
+    headers = {"User-Agent": USER_AGENT, "Accept": "application/json"}
+    if extra_headers:
+        headers.update(extra_headers)
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=25) as response:
         return json.load(response)
 
@@ -191,11 +233,15 @@ def score_job(title: str, company: str, location: str, summary: str) -> tuple[in
     score += 1 * len(set(engineering_hits))
     score += 3 * len(set(title_hits))
     if ai_hits and security_hits:
-        score += 8
+        score += 12
     if "security" in title_text or "red team" in title_text:
-        score += 5
+        score += 7
+    if any(term in title_text for term in ["penetration", "pentest", "offensive security", "application security", "appsec", "product security", "vulnerability"]):
+        score += 9
     if any(term in title_text for term in ["ai", "llm", "machine learning", "research engineer", "applied ai", "data scientist"]):
-        score += 5
+        score += 4
+    if not security_hits:
+        score -= 12
     if not title_hits and not (ai_hits and security_hits):
         score -= 8
     if "singapore" in location.lower():
@@ -320,6 +366,75 @@ def from_remoteok() -> list[Job]:
     return jobs
 
 
+def mcf_company(item: dict) -> str:
+    for key in ("postedCompany", "hiringCompany"):
+        value = item.get(key)
+        if isinstance(value, dict) and value.get("name"):
+            return clean_text(value.get("name"))
+    return "MyCareersFuture employer"
+
+
+def mcf_location(item: dict) -> str:
+    address = item.get("address") if isinstance(item.get("address"), dict) else {}
+    if address.get("isOverseas"):
+        country = clean_text(address.get("overseasCountry"))
+        return country or "Overseas"
+    districts = address.get("districts") if isinstance(address.get("districts"), list) else []
+    if districts and isinstance(districts[0], dict) and districts[0].get("region"):
+        return f"Singapore · {clean_text(districts[0].get('region'))}"
+    return "Singapore"
+
+
+def from_mycareersfuture(query: str, limit: int = 20) -> list[Job]:
+    params = urllib.parse.urlencode({"search": query, "limit": limit, "page": 0})
+    url = f"https://api.mycareersfuture.gov.sg/v2/jobs?{params}"
+    try:
+        payload = fetch_json(
+            url,
+            {
+                "mcf-client": "jobseeker",
+                "Origin": "https://www.mycareersfuture.gov.sg",
+                "Referer": "https://www.mycareersfuture.gov.sg/",
+            },
+        )
+    except Exception as exc:  # noqa: BLE001
+        print(f"warn: mycareersfuture {query}: {exc}", file=sys.stderr)
+        return []
+
+    if not isinstance(payload, dict):
+        return []
+    jobs = []
+    for item in payload.get("results", []):
+        if not isinstance(item, dict):
+            continue
+        location = mcf_location(item)
+        if not is_singapore_location(location):
+            continue
+        title = clean_text(item.get("title"))
+        company = mcf_company(item)
+        description_bits = [item.get("description", ""), item.get("otherRequirements", "")]
+        summary = clean_text(" ".join(str(bit or "") for bit in description_bits), 280)
+        score, tags = score_job(title, company, location, summary)
+        if score < 12:
+            continue
+        metadata = item.get("metadata") if isinstance(item.get("metadata"), dict) else {}
+        job_url = metadata.get("jobDetailsUrl") or f"https://www.mycareersfuture.gov.sg/job/{item.get('uuid', '')}"
+        jobs.append(
+            Job(
+                title=title,
+                company=company,
+                location=location,
+                url=job_url,
+                source="MyCareersFuture",
+                published_at=clean_text(metadata.get("newPostingDate") or metadata.get("originalPostingDate") or metadata.get("createdAt"))[:10],
+                summary=summary or "Singapore role matched from MyCareersFuture job metadata.",
+                tags=tuple(tags),
+                score=score + 2,
+            )
+        )
+    return jobs
+
+
 def dedupe(jobs: Iterable[Job]) -> list[Job]:
     seen = set()
     unique = []
@@ -341,13 +456,16 @@ def main() -> int:
         all_jobs.extend(from_remotive(query))
         time.sleep(0.2)
     all_jobs.extend(from_remoteok())
+    for query in MYCAREERSFUTURE_QUERIES:
+        all_jobs.extend(from_mycareersfuture(query))
+        time.sleep(0.2)
 
-    jobs = dedupe(all_jobs)[:40]
+    jobs = dedupe(all_jobs)[:MAX_JOBS]
     now = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     data = {
         "updated_at": now,
         "location_filter": "Singapore / Remote-Singapore",
-        "source_note": "Weekly public ATS/feed scan for Singapore AI, LLM, AI-security, product-security, trust/safety, and adjacent security-engineering roles. Links go to the original job posts; verify current availability before applying.",
+        "source_note": "Weekly top-10 public ATS/feed scan for Singapore AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, and adjacent security-engineering roles. Includes MyCareersFuture plus selected public ATS/remote feeds. Links go to the original job posts; verify current availability before applying.",
         "jobs": [
             {
                 "title": job.title,
@@ -365,7 +483,7 @@ def main() -> int:
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"wrote {len(jobs)} Singapore AI/security jobs to {OUT}")
+    print(f"wrote {len(jobs)} top Singapore AI-security/pentest jobs to {OUT}")
     return 0
 
 
