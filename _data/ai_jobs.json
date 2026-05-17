@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T06:06:21Z",
+  "updated_at": "2026-05-17T06:24:31Z",
   "location_filter": "Singapore / Remote-Singapore / APAC remote eligible",
   "search_focus": "Singapore AI job search for AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, vulnerability research, and adjacent security-engineering roles.",
   "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, label new/still-open roles, and penalize sales, junior-only, compliance-heavy, SOC-only, or non-technical noise.",
@@ -43,19 +43,19 @@
       "source": "Greenhouse/Anthropic",
       "status": "ok",
       "count": 0,
-      "seconds": 1.07
+      "seconds": 1.16
     },
     {
       "source": "Greenhouse/Cloudflare",
       "status": "ok",
       "count": 0,
-      "seconds": 0.79
+      "seconds": 0.62
     },
     {
       "source": "Greenhouse/Datadog",
       "status": "ok",
       "count": 0,
-      "seconds": 1.08
+      "seconds": 0.63
     },
     {
       "source": "Greenhouse/Elastic",
@@ -67,91 +67,91 @@
       "source": "Greenhouse/Google DeepMind",
       "status": "ok",
       "count": 2,
-      "seconds": 0.33
+      "seconds": 0.71
     },
     {
       "source": "Greenhouse/MongoDB",
       "status": "ok",
       "count": 0,
-      "seconds": 1.1
+      "seconds": 2.67
     },
     {
       "source": "Greenhouse/OKX",
       "status": "ok",
       "count": 41,
-      "seconds": 0.85
+      "seconds": 0.66
     },
     {
       "source": "Greenhouse/Stripe",
       "status": "ok",
       "count": 2,
-      "seconds": 0.85
+      "seconds": 0.87
     },
     {
       "source": "Greenhouse/Wiz",
       "status": "ok",
       "count": 0,
-      "seconds": 0.59
+      "seconds": 1.87
     },
     {
       "source": "Greenhouse/Scale AI",
       "status": "ok",
       "count": 0,
-      "seconds": 0.38
+      "seconds": 0.58
     },
     {
       "source": "Greenhouse/GitLab",
       "status": "ok",
       "count": 1,
-      "seconds": 0.83
+      "seconds": 0.41
     },
     {
       "source": "Lever/Mistral AI",
       "status": "ok",
       "count": 2,
-      "seconds": 4.03
+      "seconds": 2.54
     },
     {
       "source": "Ashby/OpenAI",
       "status": "ok",
       "count": 3,
-      "seconds": 1.54
+      "seconds": 4.39
     },
     {
       "source": "Ashby/Cursor",
       "status": "ok",
       "count": 0,
-      "seconds": 0.33
+      "seconds": 0.3
     },
     {
       "source": "Ashby/Harvey",
       "status": "ok",
       "count": 0,
-      "seconds": 4.38
+      "seconds": 0.45
     },
     {
       "source": "Ashby/Perplexity",
       "status": "ok",
       "count": 0,
-      "seconds": 0.31
+      "seconds": 0.33
     },
     {
       "source": "Ashby/Replit",
       "status": "ok",
       "count": 0,
-      "seconds": 0.38
+      "seconds": 0.34
     },
     {
       "source": "Ashby/Modal",
       "status": "ok",
       "count": 0,
-      "seconds": 0.34
+      "seconds": 0.3
     },
     {
       "source": "Remotive/AI security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.22
     },
     {
       "source": "Remotive/LLM security Singapore",
@@ -169,7 +169,7 @@
       "source": "Remotive/AI red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.08
     },
     {
       "source": "Remotive/AI safety security Singapore",
@@ -181,7 +181,7 @@
       "source": "Remotive/machine learning security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.07
     },
     {
       "source": "Remotive/application security AI Singapore",
@@ -199,19 +199,19 @@
       "source": "Remotive/penetration testing Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.07
     },
     {
       "source": "Remotive/penetration tester Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.06
     },
     {
       "source": "Remotive/red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.08
     },
     {
       "source": "Remotive/offensive security Singapore",
@@ -223,175 +223,175 @@
       "source": "Remotive/vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.07
     },
     {
       "source": "Remotive/security engineer machine learning Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.07
     },
     {
       "source": "Remotive/trust safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.08
     },
     {
       "source": "RemoteOK",
       "status": "ok",
       "count": 1,
-      "seconds": 0.11
+      "seconds": 0.1
     },
     {
       "source": "MyCareersFuture/AI security Singapore",
       "status": "ok",
       "count": 3,
-      "seconds": 3.74
+      "seconds": 4.14
     },
     {
       "source": "MyCareersFuture/LLM security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.91
+      "seconds": 3.69
     },
     {
       "source": "MyCareersFuture/agent security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.87
+      "seconds": 3.8
     },
     {
       "source": "MyCareersFuture/AI red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.98
+      "seconds": 3.83
     },
     {
       "source": "MyCareersFuture/AI safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.69
+      "seconds": 3.8
     },
     {
       "source": "MyCareersFuture/machine learning security Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 4.1
+      "seconds": 3.98
     },
     {
       "source": "MyCareersFuture/application security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.99
+      "seconds": 4.06
     },
     {
       "source": "MyCareersFuture/product security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.08
+      "seconds": 4.1
     },
     {
       "source": "MyCareersFuture/penetration testing Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.66
+      "seconds": 3.65
     },
     {
       "source": "MyCareersFuture/penetration tester Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.83
+      "seconds": 3.64
     },
     {
       "source": "MyCareersFuture/red team Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 3.97
+      "seconds": 3.96
     },
     {
       "source": "MyCareersFuture/offensive security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.94
+      "seconds": 3.65
     },
     {
       "source": "MyCareersFuture/vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.97
+      "seconds": 3.56
     },
     {
       "source": "MyCareersFuture/security engineer machine learning Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 4.09
+      "seconds": 4.35
     },
     {
       "source": "MyCareersFuture/trust safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.06
+      "seconds": 3.91
     },
     {
       "source": "MyCareersFuture/cyber security AI",
       "status": "ok",
       "count": 1,
-      "seconds": 3.8
+      "seconds": 3.77
     },
     {
       "source": "MyCareersFuture/application security",
       "status": "ok",
       "count": 23,
-      "seconds": 4.08
+      "seconds": 4.59
     },
     {
       "source": "MyCareersFuture/product security",
       "status": "ok",
       "count": 24,
-      "seconds": 4.37
+      "seconds": 4.38
     },
     {
       "source": "MyCareersFuture/penetration testing",
       "status": "ok",
       "count": 19,
-      "seconds": 3.98
+      "seconds": 3.91
     },
     {
       "source": "MyCareersFuture/penetration tester",
       "status": "ok",
       "count": 9,
-      "seconds": 3.89
+      "seconds": 3.62
     },
     {
       "source": "MyCareersFuture/red team",
       "status": "ok",
       "count": 8,
-      "seconds": 3.98
+      "seconds": 3.8
     },
     {
       "source": "MyCareersFuture/offensive security",
       "status": "ok",
       "count": 20,
-      "seconds": 3.92
+      "seconds": 3.91
     },
     {
       "source": "MyCareersFuture/vulnerability research",
       "status": "ok",
       "count": 4,
-      "seconds": 3.74
+      "seconds": 3.56
     },
     {
       "source": "MyCareersFuture/threat research",
       "status": "ok",
       "count": 2,
-      "seconds": 3.92
+      "seconds": 3.79
     },
     {
       "source": "MyCareersFuture/secure software development",
       "status": "ok",
       "count": 14,
-      "seconds": 3.97
+      "seconds": 4.32
     }
   ],
   "alerts": [
@@ -448,6 +448,11 @@
         "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.",
         "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
       "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
       "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
@@ -506,6 +511,11 @@
         "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.",
         "Build code-level security fixes and concise design-review writeups, not only assessment findings."
       ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
+      ],
       "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
       "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
       "status_badge": "New this week",
@@ -562,6 +572,11 @@
       "learning_gaps": [
         "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.",
         "Build code-level security fixes and concise design-review writeups, not only assessment findings."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
       "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
       "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
@@ -624,6 +639,11 @@
         "Keep a public-safe research portfolio with sanitized PoCs, diagrams, and before/after patch evidence.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
       ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice."
+      ],
       "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
       "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
       "status_badge": "New this week",
@@ -681,6 +701,11 @@
       "learning_gaps": [
         "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review.",
+        "CRTO/CARTP-style adversary-emulation training if the role asks for red-team operations or attack-path development.",
+        "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
       ],
       "alert_reason": "offensive-security signal, new this week",
       "next_action": "Shortlist: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
@@ -745,6 +770,11 @@
         "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
         "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
       "alert_reason": "offensive-security signal, priority employer, new this week",
       "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
@@ -810,6 +840,11 @@
         "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
       ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
+      ],
       "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
       "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
       "status_badge": "New this week",
@@ -866,6 +901,11 @@
       "learning_gaps": [
         "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.",
         "Build code-level security fixes and concise design-review writeups, not only assessment findings."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
       "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
       "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
@@ -928,6 +968,11 @@
         "Keep a public-safe research portfolio with sanitized PoCs, diagrams, and before/after patch evidence.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
       ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice."
+      ],
       "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
       "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
       "status_badge": "New this week",
@@ -985,6 +1030,11 @@
       "learning_gaps": [
         "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review.",
+        "CRTO/CARTP-style adversary-emulation training if the role asks for red-team operations or attack-path development.",
+        "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
       ],
       "alert_reason": "offensive-security signal, new this week",
       "next_action": "Shortlist: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
@@ -1050,6 +1100,11 @@
         "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
       ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
+      ],
       "alert_reason": "offensive-security signal, priority employer, new this week",
       "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
       "status_badge": "New this week",
@@ -1108,6 +1163,11 @@
         "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.",
         "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review."
       ],
       "alert_reason": "offensive-security signal, new this week",
       "next_action": "Shortlist: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
@@ -1172,6 +1232,11 @@
         "Keep a public-safe research portfolio with sanitized PoCs, diagrams, and before/after patch evidence.",
         "Strengthen cloud threat-model examples and hands-on validation across at least one major cloud stack."
       ],
+      "certifications_to_consider": [
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience.",
+        "AWS Security Specialty, Azure Security Engineer, or Google Professional Cloud Security Engineer for platform-heavy AppSec roles.",
+        "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review."
+      ],
       "alert_reason": "offensive-security signal, new this week",
       "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
       "status_badge": "New this week",
@@ -1231,6 +1296,11 @@
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes.",
         "Strengthen cloud threat-model examples and hands-on validation across at least one major cloud stack."
       ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review."
+      ],
       "alert_reason": "offensive-security signal, new this week",
       "next_action": "Watch: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
       "status_badge": "New this week",
@@ -1286,6 +1356,11 @@
       "learning_gaps": [
         "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.",
         "Keep a public-safe research portfolio with sanitized PoCs, diagrams, and before/after patch evidence."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice."
       ],
       "alert_reason": "AI-security signal, new this week",
       "next_action": "Watch: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
@@ -1346,6 +1421,11 @@
         "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes.",
         "Strengthen cloud threat-model examples and hands-on validation across at least one major cloud stack."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs."
       ],
       "alert_reason": "priority employer, new this week",
       "next_action": "Watch: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",

@@ -1221,7 +1221,15 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin: 0.9rem 0;
 }
-.job-learning-plan > div {
+.job-learning-heading {
+  color: var(--heading);
+  font-size: 0.82rem;
+  font-weight: 900;
+  grid-column: 1 / -1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.job-learning-plan > div:not(.job-learning-heading) {
   background: var(--surface-alt);
   border: 1px solid var(--border);
   border-radius: 12px;

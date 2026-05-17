@@ -29,6 +29,7 @@ REQUIRED_JOB_FIELDS = {
     "apply_angle",
     "skillsets_to_build",
     "learning_gaps",
+    "certifications_to_consider",
     "next_action",
     "status_badge",
     "status",
@@ -130,7 +131,7 @@ def main() -> int:
         label = f"job #{idx} ({row.get('company', 'unknown')} / {row.get('title', 'unknown')})"
         for field in ["title", "company", "location", "url", "source", "why_match", "possible_gap", "apply_angle", "next_action", "status_badge"]:
             require_nonempty_string(row, field, label)
-        for field in ["skillsets_to_build", "learning_gaps"]:
+        for field in ["skillsets_to_build", "learning_gaps", "certifications_to_consider"]:
             require_nonempty_list(row, field, label)
         score = row.get("score")
         if not isinstance(score, int) or not (0 <= score <= 100):

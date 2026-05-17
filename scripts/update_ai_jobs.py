@@ -180,6 +180,7 @@ class Job:
     apply_angle: str
     skillsets_to_build: tuple[str, ...]
     learning_gaps: tuple[str, ...]
+    certifications_to_consider: tuple[str, ...]
     alert_reason: str
     next_action: str = ""
     status_badge: str = ""
@@ -426,7 +427,39 @@ def learning_plan(title: str, summary: str, fit: list[str], categories: list[str
     return skills[:4], gaps[:4]
 
 
-def score_job(title: str, company: str, location: str, summary: str, published_at: str = "") -> tuple[int, list[str], int, list[str], str, str, str, list[str], dict[str, int], str, str, list[str], list[str], str]:
+def certification_plan(title: str, summary: str, fit: list[str], categories: list[str]) -> list[str]:
+    """Public certification/course suggestions that make a candidate more relevant for each role type."""
+    text = f"{title} {summary} {' '.join(fit)} {' '.join(categories)}".lower()
+    certs: list[str] = []
+
+    def add(item: str) -> None:
+        if item not in certs:
+            certs.append(item)
+
+    if any(t in text for t in ["ai", "agent", "llm", "model", "machine learning", "agentic", "prompt injection", "rag"]):
+        add("AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.")
+        add("Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.")
+    if any(t in text for t in ["product security", "application security", "appsec", "secure sdlc", "code review", "architect"]):
+        add("CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience.")
+        add("AWS Security Specialty, Azure Security Engineer, or Google Professional Cloud Security Engineer for platform-heavy AppSec roles.")
+    if any(t in text for t in ["penetration", "red team", "offensive", "vapt", "adversary"]):
+        add("OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review.")
+        add("CRTO/CARTP-style adversary-emulation training if the role asks for red-team operations or attack-path development.")
+    if any(t in text for t in ["incident response", "detection", "threat hunting", "forensics", "soc"]):
+        add("GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs.")
+    if any(t in text for t in ["research", "fellow", "vulnerability", "cve", "cyber-physical", "security research"]):
+        add("Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice.")
+    if any(t in text for t in ["manager", "lead", "principal", "staff", "consultant", "architect"]):
+        add("Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management.")
+    if any(t in text for t in ["cloud", "kubernetes", "aws", "azure", "gcp", "container"]):
+        add("Kubernetes/cloud security track: CKS plus one cloud-provider security specialty aligned to the employer stack.")
+
+    if not certs:
+        add("Pick one role-aligned hands-on credential or portfolio project, then publish a concise public-safe case study proving practical impact.")
+    return certs[:3]
+
+
+def score_job(title: str, company: str, location: str, summary: str, published_at: str = "") -> tuple[int, list[str], int, list[str], str, str, str, list[str], dict[str, int], str, str, list[str], list[str], list[str], str]:
     text = " ".join([title, company, location, summary])
     title_text = title.lower()
     ai_hits = term_hits(text, AI_TERMS)
@@ -436,7 +469,7 @@ def score_job(title: str, company: str, location: str, summary: str, published_a
     cv_raw, cv_labels = cv_fit_score(title, company, location, summary)
 
     if any(term in title_text for term in EXCLUDED_TITLE_TERMS):
-        return 0, [], 0, [], "Filtered", "Excluded by title noise terms.", "", [], {}, "Excluded", "", [], [], ""
+        return 0, [], 0, [], "Filtered", "Excluded by title noise terms.", "", [], {}, "Excluded", "", [], [], [], ""
 
     seniority = detect_seniority(title, summary)
     cv_fit = bounded(cv_raw * 2.3)
@@ -475,8 +508,9 @@ def score_job(title: str, company: str, location: str, summary: str, published_a
     }
     priority, why_match, possible_gap, apply_angle = explain_match(title, cv_labels, categories, breakdown, seniority)
     skillsets_to_build, learning_gaps = learning_plan(title, summary, cv_labels, categories)
+    certifications_to_consider = certification_plan(title, summary, cv_labels, categories)
     alert_reason = alert_for(final, title, company, cv_labels)
-    return final, tags, cv_fit, cv_labels, priority, why_match, possible_gap, categories, breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, alert_reason
+    return final, tags, cv_fit, cv_labels, priority, why_match, possible_gap, categories, breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, certifications_to_consider, alert_reason
 
 
 def build_job(title: str, company: str, location: str, url: str, source: str, published_at: str, summary: str, min_score: int) -> Job | None:
@@ -488,7 +522,7 @@ def build_job(title: str, company: str, location: str, url: str, source: str, pu
         return None
     if not is_remote_singapore_eligible(location, f"{title} {summary}"):
         return None
-    score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, alert_reason = score_job(title, company, location, summary, published_at)
+    score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, certifications_to_consider, alert_reason = score_job(title, company, location, summary, published_at)
     if score < min_score:
         return None
     return Job(
@@ -496,7 +530,8 @@ def build_job(title: str, company: str, location: str, url: str, source: str, pu
         summary=summary or "Role matched by title/company/location metadata.", tags=tuple(tags), score=score,
         cv_score=cv_score, fit=tuple(fit), priority=priority, why_match=why_match, possible_gap=possible_gap,
         categories=tuple(categories), score_breakdown=score_breakdown, seniority=seniority, apply_angle=apply_angle,
-        skillsets_to_build=tuple(skillsets_to_build), learning_gaps=tuple(learning_gaps), alert_reason=alert_reason,
+        skillsets_to_build=tuple(skillsets_to_build), learning_gaps=tuple(learning_gaps),
+        certifications_to_consider=tuple(certifications_to_consider), alert_reason=alert_reason,
     )
 
 
@@ -824,6 +859,7 @@ def job_to_dict(job: Job) -> dict[str, object]:
         "apply_angle": job.apply_angle,
         "skillsets_to_build": list(job.skillsets_to_build),
         "learning_gaps": list(job.learning_gaps),
+        "certifications_to_consider": list(job.certifications_to_consider),
         "alert_reason": job.alert_reason,
         "next_action": job.next_action,
         "status_badge": job.status_badge,

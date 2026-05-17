@@ -166,12 +166,19 @@ permalink: /ai-jobs/
         {% endif %}
         {% if job.possible_gap %}<p class="job-gap"><strong>Possible gap to check:</strong> {{ job.possible_gap }}</p>{% endif %}
 
-        {% if job.skillsets_to_build or job.learning_gaps %}
+        {% if job.skillsets_to_build or job.learning_gaps or job.certifications_to_consider %}
           <div class="job-learning-plan">
+            <div class="job-learning-heading">Relevance plan</div>
             {% if job.skillsets_to_build and job.skillsets_to_build.size > 0 %}
               <div>
                 <strong>Skillsets to build:</strong>
                 <ul>{% for skill in job.skillsets_to_build %}<li>{{ skill }}</li>{% endfor %}</ul>
+              </div>
+            {% endif %}
+            {% if job.certifications_to_consider and job.certifications_to_consider.size > 0 %}
+              <div>
+                <strong>Certs / courses to consider:</strong>
+                <ul>{% for cert in job.certifications_to_consider %}<li>{{ cert }}</li>{% endfor %}</ul>
               </div>
             {% endif %}
             {% if job.learning_gaps and job.learning_gaps.size > 0 %}
