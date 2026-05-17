@@ -1,0 +1,1981 @@
+{
+  "updated_at": "2026-05-17T05:25:51Z",
+  "jobs": {
+    "qwg42wm7i3lxcylgu3": {
+      "title": "Product Security Architect — Agentic AI & Security",
+      "company": "KEYSIGHT TECHNOLOGIES SINGAPORE (SALES) PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 100
+    },
+    "czw4xlnvxvdrkkrqje": {
+      "title": "Product Security Engineer — Agentic AI & Development",
+      "company": "KEYSIGHT TECHNOLOGIES SINGAPORE (SALES) PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 91
+    },
+    "eh3zrtk6syie2esfme": {
+      "title": "AI Security Researcher",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 89
+    },
+    "g2s66zcpglrlqiohjr": {
+      "title": "Product Security Engineer — Security & Agentic AI 2",
+      "company": "KEYSIGHT TECHNOLOGIES SINGAPORE (SALES) PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 89
+    },
+    "fcprafxlxsfh5xbohe": {
+      "title": "AI Agent Security Research Engineer",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 89
+    },
+    "lcymvdcroi3ltwwz7o": {
+      "title": "Security Engineer, Offensive Security",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 82
+    },
+    "jfoxppsqwh2twrspqu": {
+      "title": "Application Security Engineer",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 81
+    },
+    "fexl5acd57yne7mtkx": {
+      "title": "Consultant, Security Testing and Red Teaming",
+      "company": "ENSIGN INFOSECURITY (CYBERSECURITY) PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 80
+    },
+    "cgel4lsfu2sojxoeur": {
+      "title": "Application Security Lead / Manager",
+      "company": "PEOPLESEARCH PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 77
+    },
+    "pz3dvjdptlqsai6kwc": {
+      "title": "Lead Cybersecurity Specialist (Offensive Security)",
+      "company": "JJ CONSULTING SERVICES",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 77
+    },
+    "lqiuhugqgd7lonvcwz": {
+      "title": "Principal Solutions Engineer - Application Security",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 75
+    },
+    "fvk4e6l24j4artcgz7": {
+      "title": "Anthropic Fellows Program — AI Security",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 75
+    },
+    "hsbvfki5xtruqzrrzy": {
+      "title": "Engineer, Automotive Cyber Security - Lab & Vulnerability Research",
+      "company": "DESAY SV AUTOMOTIVE SINGAPORE PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 74
+    },
+    "dsamwaxewlch2klhoe": {
+      "title": "Red Team Manager",
+      "company": "DIGITAL TREASURES CENTER PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 71
+    },
+    "fghc77rh2zr4b6gp65": {
+      "title": "Research Fellow (Agentic AI, AI security and cyber-physical security)",
+      "company": "NANYANG TECHNOLOGICAL UNIVERSITY",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 71
+    },
+    "4mibydqkfarmuta5v7": {
+      "title": "Incident Response Engineer",
+      "company": "CLOUDFLARE, PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 70
+    },
+    "rxjqnpqiy7p5ep4q5b": {
+      "title": "Research Associate/ Fellow (AI for Cybersecurity - Automatic Agentic Penetration Testing)",
+      "company": "NATIONAL UNIVERSITY OF SINGAPORE",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 70
+    },
+    "gtev22k6tntt352suc": {
+      "title": "IT Security Officer (CyberSecurity Engineer)",
+      "company": "NSEARCH GLOBAL PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 69
+    },
+    "xicnmu5wgwruihyzwo": {
+      "title": "Senior Privacy Engineer (RED team) - PDPO (Singapore)",
+      "company": "TIKTOK PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 69
+    },
+    "qjjyxq3trovgafxhqd": {
+      "title": "Red Team Manager | Series A Digital Assets Payments",
+      "company": "DADACONSULTANTS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 68
+    },
+    "5jk5of4lgpeur4kbto": {
+      "title": "Senior Penetration Tester/Team Lead",
+      "company": "FORTIEDGE PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 68
+    },
+    "mq6555j6cim2vggo3t": {
+      "title": "Security Engineer - Threat Intel",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 67
+    },
+    "x6z5ow5rernqt2ouds": {
+      "title": "Senior Product Security Engineer",
+      "company": "ROCKWELL AUTOMATION ASIA PACIFIC BUSINESS CENTER PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 66
+    },
+    "vz6uxzkm2dqqfa5o63": {
+      "title": "Penetration Testing Consultant",
+      "company": "SWARMNETICS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 64
+    },
+    "zhz7zb2cj7je56qkh7": {
+      "title": "Resident Security Engineer",
+      "company": "FARBEN INFORMATION (SINGAPORE) PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 63
+    },
+    "lhin7luko2pzi27lef": {
+      "title": "Senior Security Engineer",
+      "company": "JUMBORCA PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 62
+    },
+    "eokazqroknwfjl4zmy": {
+      "title": "Cyber Security Consultant",
+      "company": "WIZLYNX PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 62
+    },
+    "ms4cuipwvhajqespd4": {
+      "title": "Principal Security Engineer, Infrastructure Security",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 61
+    },
+    "mm25qezlb6it5n6fbm": {
+      "title": "Information Technology - Principal Technologist (Security Architect)",
+      "company": "SINGAPORE AIRLINES LIMITED",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 60
+    },
+    "frjlfdp4eorj6zczig": {
+      "title": "Solutions Support Engineer, (Cloud Security & AI)",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 60
+    },
+    "agwwxyncjbedhfizj6": {
+      "title": "Associate Director, Application Security",
+      "company": "AIA SINGAPORE PRIVATE LIMITED",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 59
+    },
+    "aok5zvsutnkc36y2ho": {
+      "title": "Senior Government Affairs Manager",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 59
+    },
+    "csj6hn5gmgxjew6v7r": {
+      "title": "Penetration Tester (Hybrid) – Contract",
+      "company": "ANTARES MANAGEMENT SERVICES PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 59
+    },
+    "mz7khjdcw4hkext2je": {
+      "title": "Lead, Data Center Physical Security Operations (North America)",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 59
+    },
+    "nm5fv2gk43j4fgfuds": {
+      "title": "Cybersecurity Engineer",
+      "company": "CERTIS TECHNOLOGY (SINGAPORE) PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 56
+    },
+    "hzhngaxbdp4uqcxgsx": {
+      "title": "Security Engineer",
+      "company": "ENSIGN INFOSECURITY (CYBERSECURITY) PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 54
+    },
+    "jguwe77jxq2ja3ql6p": {
+      "title": "Advanced Delivery Architect, Japan",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "74yp2dwsvchswdlc3x": {
+      "title": "Manager, Solutions Engineering",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "trntl6ddxxadizu6i6": {
+      "title": "Manager, Solutions Support Engineering - East",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "azsxbphel5u3mfj2ru": {
+      "title": "Partner Solutions Architect",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "42qnsg6mxkb3fa5pop": {
+      "title": "Partner Solutions Architect - CSP",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "hvp3k5bkqd2lnjyp2f": {
+      "title": "Principal Solutions Engineer",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "22fbawfno2al4hmndv": {
+      "title": "Principal Solutions Engineer - India",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "hncpngop6i7ypcgls5": {
+      "title": "Senior Partner Solutions Architect",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "i6crjop4zlicjoethn": {
+      "title": "Senior Partner Solutions Architect, Japan",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "we35ewie3frn62oyqi": {
+      "title": "Sovereign Cloud Flex Architect",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "f4x2fc76gx6csry6jw": {
+      "title": "Expert Application Security Engineer (iOS)",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "it52xjkyrd7bs7f36w": {
+      "title": "Senior Security Engineer, Enterprise Security AI - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "26icqbraiuf6pvh6x7": {
+      "title": "Technical Cyber Threat Investigator",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 53
+    },
+    "p4farclwoewhvxon3r": {
+      "title": "Senior Security Consultant (Penetration Testing)",
+      "company": "LRQA LIMITED (Singapore Branch)",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 52
+    },
+    "cnfi73ykprijcpykcg": {
+      "title": "Backend Engineer, AI Security",
+      "company": "Stripe",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 52
+    },
+    "iu7x66ozyckroftoly": {
+      "title": "Cyber Security Researcher",
+      "company": "EVOLUTION RECRUITMENT SOLUTIONS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 52
+    },
+    "fm4dlo6jbzimeyzjam": {
+      "title": "GTM Readiness Manager, Product & Platform",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 51
+    },
+    "e3vssthpaoj56elld5": {
+      "title": "Renewal Manager (Central)",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 51
+    },
+    "iielc72j3ghevcjnmj": {
+      "title": "Senior Customer Experience Manager (Central)",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 51
+    },
+    "wazt44itfz4wu43w47": {
+      "title": "Senior Manager, Partner Marketing - AMER",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 51
+    },
+    "odywirzxtdi5vsxfc2": {
+      "title": "Senior Partner Enablement Manager",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 51
+    },
+    "e6nistdyviwjgccypu": {
+      "title": "Senior Technical Enablement Manager",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 51
+    },
+    "usivefhspypb4armzm": {
+      "title": "Senior Technical Enablement Program Manager",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 51
+    },
+    "jxyifhwupv6kgqyqft": {
+      "title": "Strategy Lead, GTM Onboarding and Readiness",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 51
+    },
+    "25kjttxy2jflmouxp2": {
+      "title": "Penetration Tester",
+      "company": "EAMES CONSULTING GROUP (SINGAPORE) PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 51
+    },
+    "jizyhx42w2gf2ztvxz": {
+      "title": "Threat Collections Engineer",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 51
+    },
+    "pxxx7ajep6xfinlxxg": {
+      "title": "Principal Software Engineer, Infrastructure Security",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 50
+    },
+    "zophm6qioya3v2pt4u": {
+      "title": "Penetration Tester",
+      "company": "FORTIEDGE PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 50
+    },
+    "zi3cxwj463ehawa4sz": {
+      "title": "Security Engineer II, Enterprise Security AI - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 50
+    },
+    "4twzdz3vsmn53hpspd": {
+      "title": "Penetration Tester",
+      "company": "LANTU EMPLOYMENT AGENCY PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 50
+    },
+    "2v6jzwafomtnywmmqm": {
+      "title": "Senior Machine Learning Engineer, TikTok BRIC Account Security (Singapore)",
+      "company": "TIKTOK PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 50
+    },
+    "stdsoyrqqduruho2id": {
+      "title": "Senior Business Value Consultant, Japan",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 49
+    },
+    "mtkfpo3776vv3vj47d": {
+      "title": "Technical CBRN-E Threat Investigator",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 49
+    },
+    "jlbwpkpv6ruydktv4t": {
+      "title": "Information Security Engineer, Product Security - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 48
+    },
+    "mqiu4ktdviv4bgwfjz": {
+      "title": "Penetration Tester - PERM - up SGD 12k",
+      "company": "MORGAN MCKINLEY PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 47
+    },
+    "roqtkaiauuyya46kqo": {
+      "title": "Penetration Tester (JD#10971)",
+      "company": "SCIENTE INTERNATIONAL PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 47
+    },
+    "deebrwkjwx24pktr3m": {
+      "title": "Security Technology Deployment Specialist",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 47
+    },
+    "w4rp7ftuw3hkzzsuki": {
+      "title": "Security Engineer",
+      "company": "EVOLUTION RECRUITMENT SOLUTIONS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 46
+    },
+    "ljtas44zz3vmpja2we": {
+      "title": "Software Developer (AI, Distributed Systems & Security Analytics)",
+      "company": "RELEVANCE LAB PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 46
+    },
+    "xcwhmcfmkpv4pcfgig": {
+      "title": "Cybersecurity Engineer (Anti-Fraud & Content Security)",
+      "company": "XIAOMI TECHNOLOGIES SINGAPORE PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 45
+    },
+    "v4qzdcdszm4ws3wb65": {
+      "title": "Oracle HCM ( Application Security)",
+      "company": "ZENITH INFOTECH (S) PTE LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 45
+    },
+    "px2besdv3gjddxixnc": {
+      "title": "Software Security Engineer - Corporate Platforms",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 45
+    },
+    "rhnywbblvzihnfpk45": {
+      "title": "Product Manager (Cyber Security)",
+      "company": "ANCHOR SEARCH GROUP PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 44
+    },
+    "6nuobdqtattdohe76j": {
+      "title": "Cyber security consultant (OSCP, CRT cert required)",
+      "company": "JOBEE PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 43
+    },
+    "chthtd4rgms3pldpeh": {
+      "title": "Security Engineer - Product & Production Infrastructure",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 43
+    },
+    "hy6rz7ekmtwsmrwnvo": {
+      "title": "Security Engineer, Infrastructure Security",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 43
+    },
+    "jmexpzcmzlc37fdqzq": {
+      "title": "Cybersecurity Operations Specialist (Security Services) ***SINGAPOREAN ONLY***",
+      "company": "ETHOS SEARCH ASSOCIATES PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 43
+    },
+    "taehveyeindde233xe": {
+      "title": "Global Head, Group IT Security",
+      "company": "DKSH MANAGEMENT PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 42
+    },
+    "j56z2hvy5myimkahlq": {
+      "title": "Information Security Consultant",
+      "company": "INSYGHTS SECURITY PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 41
+    },
+    "ar3r3x5adnm6zzd7wz": {
+      "title": "Cybersecurity Engineer (Public Healthcare)",
+      "company": "WEBSPARKS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 41
+    },
+    "hx3yz2asiilu44vhli": {
+      "title": "Cybersecurity Senior Engineer / Engineer",
+      "company": "TECHNTEA PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 41
+    },
+    "sfyscwk4vthklgtlpc": {
+      "title": "Threat Analyst",
+      "company": "CORNERSTONE GLOBAL PARTNERS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 40
+    },
+    "pfx4tbab5yjctarmk6": {
+      "title": "Project Manager",
+      "company": "TALENTVIS SINGAPORE PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 40
+    },
+    "53w24a7fvmfpuejfqc": {
+      "title": "Security Consultant (CII)",
+      "company": "CUSTODIO TECHNOLOGIES PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 40
+    },
+    "qy5i24g5cow4opptd7": {
+      "title": "IT Security Officer",
+      "company": "TOTAL EBIZ SOLUTIONS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 39
+    },
+    "hhv24czc72tafgah6a": {
+      "title": "Senior Information Security Specialist",
+      "company": "SINGAPORE TELECOMMUNICATIONS LIMITED",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 38
+    },
+    "7ad7iuih5uv7sgzst4": {
+      "title": "Senior GTM Systems Engineer",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 38
+    },
+    "p7zgrakle466tsfqst": {
+      "title": "Senior Solutions Engineer, Melbourne",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 38
+    },
+    "zrlohbhg6dra6gjgse": {
+      "title": "Senior Solutions Engineer, South Korea",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 38
+    },
+    "2zfsceyrmhdgvfyjfj": {
+      "title": "Senior Solutions Engineer, Sydney",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 38
+    },
+    "jalcueajs3mtdk3r4i": {
+      "title": "Sr. Solutions Engineer, Italy",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 38
+    },
+    "x7t5jimkn3c5z5pnn5": {
+      "title": "🇩🇪Customer Support Manager",
+      "company": "Parkosecure GmbH",
+      "source": "Remotive",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 37
+    },
+    "deqctjllk2lutomxed": {
+      "title": "Senior Risk Manager, Trading (AI-Augmented Operations)",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 36
+    },
+    "7fsa7z6kakz7c4ie36": {
+      "title": "Junior Penetration Tester",
+      "company": "LANTU EMPLOYMENT AGENCY PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 36
+    },
+    "kqk347avvmecd3x7f3": {
+      "title": "Security Consultant - OSCP",
+      "company": "TECHKNOWLEDGEY PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 36
+    },
+    "5qhnykmkxzoqcoytxk": {
+      "title": "Senior Business Systems Analyst (East Coast Preferred)",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 36
+    },
+    "q4s6pwjrrwnrlpwrr4": {
+      "title": "Senior GTM Strategy and Planning Analyst",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 36
+    },
+    "lpvcfeif4hf7bf7v2x": {
+      "title": "Senior HR Business Partner",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 36
+    },
+    "xfvxuuze3i35flcxea": {
+      "title": "Senior Public Sector Field Operations Analyst",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 36
+    },
+    "fc45wpgks2zynlk5ru": {
+      "title": "Senior Security Engineer, Enterprise SaaS Security - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 35
+    },
+    "vtvtic75vrkubgmqv3": {
+      "title": "Solutions Engineer",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 35
+    },
+    "eilncfzbaoh3yo5zow": {
+      "title": "Solutions Engineer, Growth - East",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 35
+    },
+    "w3a7nzukrf4loy4ksp": {
+      "title": "Solutions Engineer, Growth - West",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 35
+    },
+    "45jeyxi7qhzgpd5iod": {
+      "title": "Solutions Engineer, Italy",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 35
+    },
+    "7vg6iioyn7trsfeekq": {
+      "title": "Solutions Engineer, South Korea",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 35
+    },
+    "wwtksrfhisxyiiefgq": {
+      "title": "Solutions Support Engineer",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 35
+    },
+    "hbd5khlhaccrnua44h": {
+      "title": "Solutions Support Engineer - East",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 35
+    },
+    "tfqgqhkh2khifoewqq": {
+      "title": "Solutions Support Engineer - West",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 35
+    },
+    "2bdrr36y6mo6tb33cz": {
+      "title": "Principal Product Manager, AI Agent Infrastructure",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 34
+    },
+    "r5uuzx2jgquwnwgzdw": {
+      "title": "Principal AI Engineer, AI Agent Development",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 34
+    },
+    "pgp6vt5wr65624s5op": {
+      "title": "Manager, Security Incident Response Team (USA)",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 33
+    },
+    "xp3lgn7efu3fmedlo5": {
+      "title": "Principal Engineer, Agent Infrastructure & Memory Architecture",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 33
+    },
+    "jv5dbdyavifbksmruh": {
+      "title": "Commercial Counsel",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 33
+    },
+    "w66hnba3bimpqy4rfm": {
+      "title": "Commercial Counsel - German speaking",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 33
+    },
+    "2jsrzoisk3rk34q4qd": {
+      "title": "Commissions Accountant",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 33
+    },
+    "cgn5yqxkfyu5gcczfw": {
+      "title": "Employment Law Counsel",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 33
+    },
+    "dciapm6udfjtfo2kgf": {
+      "title": "Revenue Systems Administrator",
+      "company": "Wiz",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 33
+    },
+    "t6bwgyt4r2i7qj2z6d": {
+      "title": "Staff Product Manager, AI Agent Orchestration",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 32
+    },
+    "lvuuovvysety253gyd": {
+      "title": "Security Engineer II, Enterprise SaaS Security - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 32
+    },
+    "4w6tchpd7yesebv4t4": {
+      "title": "Security Engineer, Third Party Security Diligence - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 32
+    },
+    "t3q2x4d3ip42obkl6w": {
+      "title": "Mobile Engineering Director, Security",
+      "company": "OKBL PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 32
+    },
+    "yy63e7cisgckqiaqjr": {
+      "title": "Software & Application Developer for ABB 800xA DCS System & IT/OT Cyber security assistance",
+      "company": "A & H CONTROLS (PTE. LTD.)",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 32
+    },
+    "mjdhtwxhs5dlzsruqg": {
+      "title": "Software Engineer, Infrastructure Security",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 32
+    },
+    "546djqfqajw64skyh2": {
+      "title": "Technical Policy Manager, Cyber Harms",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 31
+    },
+    "uj3qvppad7fapg3z3k": {
+      "title": "Senior Model Risk Quant Manager",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 31
+    },
+    "twxzxfhiwpocxwhcfx": {
+      "title": "Senior/Staff Engineer, AI Agent Development",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 31
+    },
+    "nuvzn2h64vzce3nggo": {
+      "title": "Anthropic Fellows Program — AI Safety",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 31
+    },
+    "7hmfw5uemqx34fh72r": {
+      "title": "Senior Security Engineer, Security Incident Response Team (SIRT)",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 30
+    },
+    "u7raygtx5gjpzrmkme": {
+      "title": "Principal/Senior Product Manager, AI and Agent",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 30
+    },
+    "n73nasbchcopc523qr": {
+      "title": "Senior Product Manager, AI Agent Products",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 30
+    },
+    "poostqtzrnzoxh4h63": {
+      "title": "Solutions Architect, AI + Security & Compliance, EMEA",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 30
+    },
+    "57xorp3zc6fwqo4nvi": {
+      "title": "Senior Cybersecurity Governance Specialist ***SINGAPOREAN ONLY***",
+      "company": "ETHOS SEARCH ASSOCIATES PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 30
+    },
+    "7mvdftyoob7uwqtgt2": {
+      "title": "First VP, Group Risk Management AI & Data Risk Governance & Control – Advanced AI Risk Specialist",
+      "company": "UNITED OVERSEAS BANK LIMITED",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 30
+    },
+    "f3u6cagdnna7g66lfx": {
+      "title": "Security Consultant (VAPT)",
+      "company": "THIRD PARTY CONSULTING PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 29
+    },
+    "3icotledhl4crscnak": {
+      "title": "Principal AI Engineer, Chatbot Development",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 29
+    },
+    "vbxco37xoitclrrp2c": {
+      "title": "Senior Staff Engineer, AI Platform and Infrastructure",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 29
+    },
+    "xxrnbgg3j3mhf6x2ve": {
+      "title": "Vulnerability Analyst",
+      "company": "QUESSCORP CONSULTING PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 29
+    },
+    "6b2h4qdjoxd7c6auyh": {
+      "title": "Software Engineer (Full-Stack / AI Solutions)",
+      "company": "SCIENTEC CONSULTING PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 29
+    },
+    "zamvirm3oaxy6nuhuc": {
+      "title": "Senior Solutions Architect - AI & Platforms SME",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 28
+    },
+    "bsvwnltu72332npm6n": {
+      "title": "Product Manager (B2B, IT Security/Network)",
+      "company": "RECRUIT EXPERT PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 28
+    },
+    "2t5xzq4dq2vve2oqbn": {
+      "title": "Senior Professional Services, Technical Architect - AI",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 27
+    },
+    "cdgww4pcyeorpdbr3k": {
+      "title": "Staff Backend (Python) Engineer, AI Engineering:Duo Chat",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 27
+    },
+    "q55muwvzx4zm7g432e": {
+      "title": "Staff Backend Engineer (Ruby on Rails/AI), Verify",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 27
+    },
+    "3up5p7ui5le4pwajsk": {
+      "title": "Staff Network Engineer",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 26
+    },
+    "3dkz3s4gkwj3x5jkpr": {
+      "title": "Technical Lead Manager, Applied AI",
+      "company": "Google DeepMind",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 26
+    },
+    "i5i2akytakuxqg6vop": {
+      "title": "Information Technology - Cyber Security Applications Engineer",
+      "company": "SINGAPORE AIRLINES LIMITED",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 26
+    },
+    "37r6aznz7xarbbylri": {
+      "title": "Applied AI, Senior/Staff Forward Deployed Machine Learning Engineer - Singapore",
+      "company": "Mistral AI",
+      "source": "Lever",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 25
+    },
+    "x5jhkynxh67oguzssp": {
+      "title": "Product Manager / Director, AI Trading",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 25
+    },
+    "yygqbwkwu4nkyobooc": {
+      "title": "Senior Cyber Ops Specialist (Security Services) (JD#10996)",
+      "company": "SCIENTE INTERNATIONAL PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 25
+    },
+    "fx6ogx7ehbgrwnr4et": {
+      "title": "Full Stack Engineer, Link",
+      "company": "Stripe",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 25
+    },
+    "ujhztyzrnrznu4mswt": {
+      "title": "Operations Sourcing Manager, Data Center",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 24
+    },
+    "kuct72od35v2g2raod": {
+      "title": "Staff AI Engineer, Model Post-Training and Alignment",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 24
+    },
+    "qvgk7eff4th4w4c45f": {
+      "title": "Lead, AI Deployment Manager",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 24
+    },
+    "d6qzpkvwjprgq7itzo": {
+      "title": "Third Party Risk Manager, APAC",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 24
+    },
+    "xinvvacb5rpqfk3ri7": {
+      "title": "Support Enablement Lead",
+      "company": "Harvey",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 23
+    },
+    "ev7vx3y7cw5ue4q54l": {
+      "title": "Support Operations Manager, User Operations",
+      "company": "Harvey",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 23
+    },
+    "7fzg2ciyh6w72nomm4": {
+      "title": "Technical Support Operations Manager, US",
+      "company": "Harvey",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 23
+    },
+    "chm223hxjd7ul2izgr": {
+      "title": "(Senior) Data Infra Product Manager, On Chain (Web3)",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 23
+    },
+    "vw7anobxienuvastrr": {
+      "title": "Growth & AI Initiatives Manager",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 23
+    },
+    "dx3bwpr2t4j34sc7uf": {
+      "title": "Senior Strategy PMO / Project Manager (AI & Org Efficiency)",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 23
+    },
+    "iejjd5ofzl5lazp4cl": {
+      "title": "Research Engineer, Machine Learning (RL Velocity)",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 23
+    },
+    "bl3lmj56f2vdgtgugp": {
+      "title": "Research Engineer, Applied AI",
+      "company": "Google DeepMind",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 23
+    },
+    "6dthajrqfnyi52juam": {
+      "title": "Staff Infrastructure Security Engineer (APAC, EMEA)",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 22
+    },
+    "nuqnl665ze55vip3x3": {
+      "title": "Intermediate Vulnerability Researcher, AST: Vulnerability Research",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 22
+    },
+    "ytkrkhfkszw6wbinfe": {
+      "title": "Transaction Manager",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 22
+    },
+    "bptzoeqgosejtdqt43": {
+      "title": "Principal AIgorithm Engineer, Search and Recommendation",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 22
+    },
+    "7lglgpgqyzygskvbtc": {
+      "title": "Staff AI Engineer - Notebooks",
+      "company": "Datadog",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 22
+    },
+    "mo5kmj5s6q4secdppe": {
+      "title": "Full-stack Developer (Node/React)",
+      "company": "IOTEQ SYSTEMS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 22
+    },
+    "he2r7jbajb5bqikxls": {
+      "title": "Applied AI Engineer, Senior/Staff Fullstack Software Engineer - Singapore",
+      "company": "Mistral AI",
+      "source": "Lever",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 21
+    },
+    "vsazrd6efgtit3vyqg": {
+      "title": "Principal Cybersecurity Incident Manager (USA)",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 21
+    },
+    "obs5t4vua4igpqywvh": {
+      "title": "Senior/Staff Software Engineer, Liquidity Platform, Risk & Analytics",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 21
+    },
+    "ukrtrobp2p4o5oe424": {
+      "title": "Research Lead, Training Insights",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 21
+    },
+    "zmhg7ul4p55dzykvg4": {
+      "title": "AI Deployment Manager - India",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 21
+    },
+    "el7jdasb7i2cvttfuy": {
+      "title": "Safeguards Analyst, Human Exploitation & Abuse",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 21
+    },
+    "pzfd5zvuon3xejx6xh": {
+      "title": "Safeguards Enforcement Analyst, Safety Evaluations",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 21
+    },
+    "ndmmtrcc3muzkmwiqp": {
+      "title": "Safeguards Policy Analyst, Fraud & Scams",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 21
+    },
+    "ip6d6opt4y2cderfqr": {
+      "title": "Associate Cybersecurity Specialist",
+      "company": "RED ALPHA CYBERSECURITY PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 21
+    },
+    "puwk554ji7v7n67hzi": {
+      "title": "Engineering Manager AI Fleet Management & Honk",
+      "company": "Spotify",
+      "source": "RemoteOK",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 20
+    },
+    "3d4ii7utfgnv55gk33": {
+      "title": "Senior Product Manager/ Director , Campaign Platforms",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 20
+    },
+    "jv5fzgiq5562uosmxx": {
+      "title": "Manager, Solutions Engineering (India)",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 20
+    },
+    "dr253fydyvascshu6r": {
+      "title": "Engineering Manager, Software Supply Chain Security: Pipeline Security",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 20
+    },
+    "wll6up5u5fpmywvwsp": {
+      "title": "APAC Strategic Initiatives Lead, Global Affairs",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 20
+    },
+    "neuuyd4m2qeosbzohd": {
+      "title": "Anthropic Fellows Program — ML Systems & Performance",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 20
+    },
+    "ea74iizcsyyjepofyo": {
+      "title": "Research Engineer, Knowledge Team",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 20
+    },
+    "ioig2ixcukcy6hr4wi": {
+      "title": "Research Engineer, Model Evaluations",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 20
+    },
+    "sfggiedpvut2gjfm3y": {
+      "title": "Vice President of Product, AI and Agent",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 20
+    },
+    "gn2qfbot3qvpx3cmfd": {
+      "title": "IT Security Officer (Public Sector)",
+      "company": "WEBSPARKS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 20
+    },
+    "unaao3mxivbcsel3b5": {
+      "title": "VP of Product Security",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 19
+    },
+    "akklvvtu4zjmjowriy": {
+      "title": "Data Center Portfolio Planning & Execution Lead",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 19
+    },
+    "u532kkde6mamkox5dn": {
+      "title": "Principal Engineer, Software Supply Chain Security",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 19
+    },
+    "kxoutdsaoze5g6om5a": {
+      "title": "Staff Backend Engineer (Go), Software Supply Chain Security: Secrets Management",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 19
+    },
+    "rkc4zqf3j66j4u5lzb": {
+      "title": "Staff Backend Engineer, Software Supply Chain Security",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 19
+    },
+    "anrlbdrs5e6pcwggi3": {
+      "title": "Datacenter NetDeploy Lead - Stargate",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 19
+    },
+    "cr53gkcdiil6rjpec4": {
+      "title": "Infrastructure Partnership Delivery Lead – Stargate",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 19
+    },
+    "3l3qqn4gqvck2cgi72": {
+      "title": "Data Center Design Execution Lead",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 18
+    },
+    "w4rrkfmxosctmb6mfn": {
+      "title": "Infrastructure Tax Lead",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 18
+    },
+    "zlgmq5xmggzcryvwgg": {
+      "title": "Research Engineer, Environment Scaling",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 18
+    },
+    "2xjp2omge3d3m544ki": {
+      "title": "Research Engineer, Reward Models Platform",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 18
+    },
+    "wjzhrqemnq5lxxzcor": {
+      "title": "Research Engineer, Universes",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 18
+    },
+    "rl3lodrx7llfbxoyxg": {
+      "title": "Research Engineer/Research Scientist, Pre-training",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 18
+    },
+    "ip4xcnk4bmjxxjacit": {
+      "title": "Senior Director/ Vice President, AI",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 18
+    },
+    "67zv7qw4eekfpsyxs7": {
+      "title": "Affiliate BD Manager (Taiwan)",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 17
+    },
+    "c7ehsjg5kgml2uzuyl": {
+      "title": "Engineering Manager, SSCS: Supply Chain",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 17
+    },
+    "cmkxrnrfncecbok5yw": {
+      "title": "Risk Partnerships Manager",
+      "company": "Stripe",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 17
+    },
+    "o4zfdgbznmp56ajvxz": {
+      "title": "Senior Data Analyst, Trading Product (AI-Native)",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 17
+    },
+    "3gg3e2jbbyn7kxvo6r": {
+      "title": "Senior/Principal Product Manager, DEX Trading",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 16
+    },
+    "7vhi3fryljyzix4wwo": {
+      "title": "Senior Product Manager - Risk Platform",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 16
+    },
+    "t3g5hra4zuvosy7sr3": {
+      "title": "Senior Product Manager, Risk Intelligence Product",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 16
+    },
+    "5zpquuqqjrkmtpe7xa": {
+      "title": "Program Manager - Dubai",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 16
+    },
+    "3qo2nzzw6mhdxpufck": {
+      "title": "IT Security Officer",
+      "company": "DCI CONSULTANTS PRIVATE LIMITED",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 16
+    },
+    "frsuwmcbzlhljuwgbg": {
+      "title": "Staff Backend Engineer, SSCS: AI Governance",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "xheif4iecv377ynumz": {
+      "title": "Senior Product Manager, Infra Operations",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "vxadonybryondr5p6w": {
+      "title": "Senior Risk Manager, Trading (24/7 team)",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "bek6vcsqglvoqfzvv5": {
+      "title": "Senior Strategy & Operations Manager, OKX SG",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "pu5i4pp2zawu6xk23p": {
+      "title": "Senior/Staff Engineer, Growth",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "gdwb3pl3nksqwuyeni": {
+      "title": "Senior/Staff Software Engineer (Android) - Mobile Infrastructure",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "eauihq5hil34byavnr": {
+      "title": "Senior Solution Architect, Thailand",
+      "company": "Elastic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "tsw5rv2vyj6x2mlipr": {
+      "title": "Risk Partnerships Manager, Banks",
+      "company": "Stripe",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "h326wxgod3ck4peo2h": {
+      "title": "Senior Staff Product Designer, Agentic Commerce",
+      "company": "Stripe",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "rwqom3qnkuyhhrih6x": {
+      "title": "Anthropic Fellows Program",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "ix5cgmhidii47hxca6": {
+      "title": "Anthropic Fellows Program — Reinforcement Learning",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "dsyloyiw5sltox2gq2": {
+      "title": "Anthropic Fellows Program — The Anthropic Institute Fellows (Economics & Policy)",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "rrtxviv2gdzcuqygcq": {
+      "title": "Research Operations, External Artifacts",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "yy3rd5urti35aly65l": {
+      "title": "Vice President, AI Strategy & Transformation",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "5o7ujek46526n54dli": {
+      "title": "Distinguished Engineer, Agentic SDLC & Non‑Linear Productivity",
+      "company": "GitLab",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 15
+    },
+    "h6vw2le3huy2udvkhq": {
+      "title": "Principal Product Manager, Affiliate Program & KOL",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 14
+    },
+    "joi4mgrpofonqiuw2l": {
+      "title": "Principal/Senior Product Manager, Advanced Trading Operations (Spot/Derivatives)",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 14
+    },
+    "frknr3phnyu3to7p6b": {
+      "title": "Principal Engineer, Middleware",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 14
+    },
+    "2np6suio7omq4ddeeh": {
+      "title": "Staff/Senior Staff Frontend Engineer - Customer Genius & BOSS",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 14
+    },
+    "74o3ncezcbwlyznw6m": {
+      "title": "Staff/Senior Staff Frontend Engineer - Growth",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 14
+    },
+    "34xiaqvyp2o2o6ykp6": {
+      "title": "Solutions Architect, Platforms",
+      "company": "Stripe",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 14
+    },
+    "xxrcg2kvtzhl6jno4m": {
+      "title": "Motion Designer, Core Brand",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 14
+    },
+    "maj26tk4dn5orjuxy3": {
+      "title": "Product Security Architect",
+      "company": "Replit",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 79
+    },
+    "jab7ah5aklcxubenwc": {
+      "title": "Product Security Engineer (PSIRT - Product Security Incident Response Team)",
+      "company": "Replit",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 76
+    },
+    "caioexn6ftee2t3wgp": {
+      "title": "Offensive Security Engineer",
+      "company": "Replit",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 70
+    },
+    "7r5fqcap7y4xq7luw7": {
+      "title": "Security Architecture Lead",
+      "company": "Replit",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 64
+    },
+    "nhamxrn7b7kqdwthdr": {
+      "title": "Staff Software Engineer, Anti-Abuse & Security",
+      "company": "Replit",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 56
+    },
+    "epk2phswfi3szfbv44": {
+      "title": "Senior Software Engineer, Anti-Abuse & Security",
+      "company": "Replit",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 41
+    },
+    "2ywb4gs3xsza3qto4f": {
+      "title": "SOC Engineer",
+      "company": "Replit",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 32
+    },
+    "5lszsegr7x4bobac2p": {
+      "title": "Staff Software Engineer, Agent Platform",
+      "company": "Replit",
+      "source": "Ashby",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 19
+    },
+    "vii4bqrt2p6t5ezgcd": {
+      "title": "Cybersecurity Engineer",
+      "company": "SEDHA CONSULTING PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "last_score": 41
+    }
+  }
+}
