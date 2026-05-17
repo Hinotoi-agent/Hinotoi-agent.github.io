@@ -181,6 +181,8 @@ class Job:
     skillsets_to_build: tuple[str, ...]
     learning_gaps: tuple[str, ...]
     alert_reason: str
+    next_action: str = ""
+    status_badge: str = ""
     first_seen: str = ""
     last_seen: str = ""
     status: str = "New"
@@ -664,6 +666,45 @@ def normalized_history_key(title: str, company: str, fallback: str = "") -> str:
     return stable_key(fallback or f"{title}|{company}".lower())
 
 
+
+def status_badge_for(status: str, score: int, first_seen: str, now_date: str) -> str:
+    """Compact public badge for rendering; no private tracker state."""
+    if status == "New":
+        return "New this week"
+    if score >= ALERT_SCORE:
+        return "Repeated high match"
+    if first_seen and first_seen != now_date:
+        return "Still open"
+    return "Watchlist"
+
+
+def next_action_for(job: Job, status: str) -> str:
+    """Public, role-specific next step that avoids private CV/contact details."""
+    text = f"{job.title} {' '.join(job.categories)} {' '.join(job.fit)}".lower()
+    if status == "New" and job.score >= ALERT_SCORE:
+        prefix = "Apply this refresh"
+    elif job.score >= ALERT_SCORE:
+        prefix = "Prioritize follow-up"
+    elif job.priority in {"High", "Medium-high"}:
+        prefix = "Shortlist"
+    else:
+        prefix = "Watch"
+
+    if any(term in text for term in ["ai", "agent", "llm", "model"]):
+        focus = "lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence"
+    elif any(term in text for term in ["product", "application", "appsec", "secure sdlc", "code review"]):
+        focus = "lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes"
+    elif any(term in text for term in ["penetration", "red team", "offensive"]):
+        focus = "lead with offensive-security delivery, impact-based exploit chains, and remediation guidance"
+    elif any(term in text for term in ["research", "vulnerability", "cve"]):
+        focus = "lead with vulnerability research craft: root cause, reproducible evidence, variant analysis, and patch validation"
+    elif any(term in text for term in ["manager", "lead", "architect", "principal", "staff"]):
+        focus = "lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements"
+    else:
+        focus = "verify the role is hands-on technical security work, then tailor around practical risk judgement and fixes"
+
+    return f"{prefix}: {focus}."
+
 def job_key(job: Job) -> str:
     return normalized_history_key(job.title, job.company, job.url or f"{job.title}|{job.company}|{job.location}")
 
@@ -743,7 +784,9 @@ def apply_history(jobs: list[Job], history: dict[str, dict[str, object]], now_da
         # across repeated local/test runs before the commit is deployed.
         status = "Still open" if previous and first_seen != now_date else "New"
         alert = alert_for(job.score, job.title, job.company, list(job.fit), status)
-        enriched.append(replace(job, first_seen=first_seen, last_seen=now_date, status=status, alert_reason=alert))
+        badge = status_badge_for(status, job.score, first_seen, now_date)
+        next_action = next_action_for(job, status)
+        enriched.append(replace(job, first_seen=first_seen, last_seen=now_date, status=status, status_badge=badge, next_action=next_action, alert_reason=alert))
         history[key] = {
             "title": job.title,
             "company": job.company,
@@ -782,6 +825,8 @@ def job_to_dict(job: Job) -> dict[str, object]:
         "skillsets_to_build": list(job.skillsets_to_build),
         "learning_gaps": list(job.learning_gaps),
         "alert_reason": job.alert_reason,
+        "next_action": job.next_action,
+        "status_badge": job.status_badge,
         "first_seen": job.first_seen,
         "last_seen": job.last_seen,
         "status": job.status,

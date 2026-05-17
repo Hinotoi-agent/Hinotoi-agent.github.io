@@ -132,7 +132,7 @@ permalink: /ai-jobs/
         <div class="job-card-topline">
           <span>{{ job.source }}</span>
           {% if job.published_at %}<time>{{ job.published_at }}</time>{% endif %}
-          {% if job.status %}<span class="job-status job-status-{{ job.status | downcase | replace: ' ', '-' }}">{{ job.status }}</span>{% endif %}
+          {% if job.status_badge %}<span class="job-status job-status-{{ job.status_badge | downcase | replace: ' ', '-' }}">{{ job.status_badge }}</span>{% elsif job.status %}<span class="job-status job-status-{{ job.status | downcase | replace: ' ', '-' }}">{{ job.status }}</span>{% endif %}
         </div>
         <div class="job-rank-row">
           <span class="job-rank">#{{ forloop.index }}</span>
@@ -151,7 +151,19 @@ permalink: /ai-jobs/
 
         {% if job.fit and job.fit.size > 0 %}<div class="job-fit"><strong>CV fit:</strong> {{ job.fit | join: ", " }}</div>{% endif %}
         {% if job.why_match %}<p class="job-why"><strong>Why this matches:</strong> {{ job.why_match }}</p>{% endif %}
-        {% if job.apply_angle %}<p class="job-angle"><strong>Best application angle:</strong> {{ job.apply_angle }}</p>{% endif %}
+
+        {% if job.next_action or job.apply_angle %}
+          <div class="job-action-plan">
+            <div class="job-action-plan-heading">
+              <span>Action plan</span>
+              {% if job.status_badge %}<strong>{{ job.status_badge }}</strong>{% endif %}
+            </div>
+            {% if job.next_action %}<p><strong>Next action:</strong> {{ job.next_action }}</p>{% endif %}
+            {% if job.apply_angle %}<p><strong>Best application angle:</strong> {{ job.apply_angle }}</p>{% endif %}
+          </div>
+        {% elsif job.apply_angle %}
+          <p class="job-angle"><strong>Best application angle:</strong> {{ job.apply_angle }}</p>
+        {% endif %}
         {% if job.possible_gap %}<p class="job-gap"><strong>Possible gap to check:</strong> {{ job.possible_gap }}</p>{% endif %}
 
         {% if job.skillsets_to_build or job.learning_gaps %}

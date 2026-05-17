@@ -1162,7 +1162,9 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
   padding: 0.34rem 0.55rem;
 }
 .job-rank,
-.job-priority-high {
+.job-priority-high,
+.job-status-new-this-week,
+.job-status-repeated-high-match {
   background: var(--accent-soft);
   border-color: var(--accent-border);
   color: var(--accent-dark);
@@ -1180,6 +1182,39 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
   padding-left: 0.8rem;
 }
 .job-gap { color: var(--muted); }
+.job-action-plan {
+  background: linear-gradient(135deg, var(--accent-soft), var(--surface-alt));
+  border: 1px solid var(--accent-border);
+  border-radius: 14px;
+  margin: 0.9rem 0;
+  padding: 0.85rem;
+}
+.job-action-plan-heading {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+}
+.job-action-plan-heading span {
+  color: var(--heading);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+.job-action-plan-heading strong {
+  background: var(--surface);
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  font-size: 0.76rem;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+}
+.job-action-plan p {
+  color: var(--muted);
+  margin: 0.4rem 0 0;
+}
+.job-action-plan p strong { color: var(--heading); }
 .job-learning-plan {
   display: grid;
   gap: 0.75rem;

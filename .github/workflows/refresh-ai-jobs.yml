@@ -24,6 +24,9 @@ jobs:
       - name: Refresh Singapore AI job search data
         run: python scripts/update_ai_jobs.py
 
+      - name: Validate generated AI job data
+        run: python scripts/validate_ai_jobs.py
+
       - name: Commit refreshed job data
         run: |
           if git diff --quiet -- _data/ai_jobs.json _data/ai_jobs_history.json; then
