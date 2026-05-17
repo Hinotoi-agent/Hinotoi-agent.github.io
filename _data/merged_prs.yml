@@ -1,3 +1,16 @@
+- date: '2026-05-17'
+  repo: gadievron/raptor
+  number: 489
+  title: 'feat(web): add opt-in ffuf discovery'
+  url: https://github.com/gadievron/raptor/pull/489
+  category: security
+  tags:
+  - web-scanning
+  - ffuf
+  - scope-control
+  - subprocess
+  - artifact-redaction
+  month: 2026-05
 - date: '2026-05-16'
   repo: HKUDS/OpenHarness
   number: 255
