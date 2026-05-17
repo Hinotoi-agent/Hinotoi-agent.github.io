@@ -37,10 +37,10 @@ layout: default
   <section class="simple-section">
     <div class="simple-section-heading">
       <div>
-        <p class="eyebrow">Singapore jobs</p>
+        <p class="eyebrow">Singapore AI job search</p>
         <h2>Top 10 CV-fit AI-security / pentest roles</h2>
       </div>
-      <a href="{{ '/ai-jobs/' | relative_url }}">Full jobs list →</a>
+      <a href="{{ '/ai-jobs/' | relative_url }}">AI job search →</a>
     </div>
     <div class="simple-job-list">
       {% for job in ai_jobs limit:5 %}
@@ -49,7 +49,7 @@ layout: default
           <strong>{{ job.title }}</strong>
         </a>
       {% else %}
-        <p>No Singapore AI-security or penetration-testing roles found in the latest refresh.</p>
+        <p>No Singapore AI job search matches found in the latest refresh.</p>
       {% endfor %}
     </div>
   </section>

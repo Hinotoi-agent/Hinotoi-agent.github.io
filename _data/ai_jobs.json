@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026-05-16T17:07:35Z",
+  "updated_at": "2026-05-17T03:06:54Z",
   "location_filter": "Singapore / Remote-Singapore",
+  "search_focus": "Singapore AI job search for AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, and adjacent security-engineering roles.",
+  "search_behavior": "Query public ATS and job-board feeds, require Singapore or remote-Singapore location metadata, score all candidates before truncating to the top 10, and penalize sales, junior-only, compliance-heavy, or non-technical noise.",
+  "minimum_score": 12,
+  "sources": [
+    "Greenhouse public boards",
+    "Remotive",
+    "RemoteOK",
+    "MyCareersFuture"
+  ],
   "source_note": "Weekly top-10 public ATS/feed scan for Singapore AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, and adjacent security-engineering roles. Ranking is weighted against broad CV-fit signals: offensive security leadership, incident response, VAPT/adversary emulation, AI security, agent trust boundaries, vulnerability research, and cloud/application/product security. Links go to the original job posts; verify current availability before applying.",
   "jobs": [
     {

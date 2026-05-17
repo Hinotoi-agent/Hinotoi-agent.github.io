@@ -1,4 +1,4 @@
-name: Refresh Singapore AI jobs
+name: Refresh Singapore AI job search
 
 on:
   schedule:
@@ -21,17 +21,17 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Refresh Singapore AI / AI-security jobs
+      - name: Refresh Singapore AI job search data
         run: python scripts/update_ai_jobs.py
 
       - name: Commit refreshed job data
         run: |
           if git diff --quiet -- _data/ai_jobs.json; then
-            echo "No Singapore job changes to commit."
+            echo "No Singapore AI job search changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add _data/ai_jobs.json
-          git commit -m "data: refresh Singapore AI jobs"
+          git commit -m "data: refresh Singapore AI job search"
           git push

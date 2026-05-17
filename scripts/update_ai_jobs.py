@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh Singapore AI / AI-security job leads for the Hinotoi GitHub Pages site.
+"""Refresh Singapore AI job-search leads for the Hinotoi GitHub Pages site.
 
 The script intentionally uses public ATS/job-board JSON endpoints and the Python
 standard library only, so the weekly GitHub Actions job does not need secrets or
@@ -700,6 +700,10 @@ def main() -> int:
     data = {
         "updated_at": now,
         "location_filter": "Singapore / Remote-Singapore",
+        "search_focus": "Singapore AI job search for AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, and adjacent security-engineering roles.",
+        "search_behavior": "Query public ATS and job-board feeds, require Singapore or remote-Singapore location metadata, score all candidates before truncating to the top 10, and penalize sales, junior-only, compliance-heavy, or non-technical noise.",
+        "minimum_score": 12,
+        "sources": ["Greenhouse public boards", "Remotive", "RemoteOK", "MyCareersFuture"],
         "source_note": "Weekly top-10 public ATS/feed scan for Singapore AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, and adjacent security-engineering roles. Ranking is weighted against broad CV-fit signals: offensive security leadership, incident response, VAPT/adversary emulation, AI security, agent trust boundaries, vulnerability research, and cloud/application/product security. Links go to the original job posts; verify current availability before applying.",
         "jobs": [
             {
@@ -725,7 +729,7 @@ def main() -> int:
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"wrote {len(jobs)} top Singapore CV-weighted AI-security/pentest jobs to {OUT}")
+    print(f"wrote {len(jobs)} top Singapore CV-weighted AI job-search matches to {OUT}")
     return 0
 
 

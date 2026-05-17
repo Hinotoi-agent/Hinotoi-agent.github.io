@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Singapore AI Jobs
+title: AI job search
 permalink: /ai-jobs/
 ---
 
 {% assign job_feed = site.data.ai_jobs %}
 {% assign jobs = job_feed.jobs %}
 
-<p class="page-lede">Weekly top 10 Singapore roles focused on AI-security, LLM-security, penetration testing, red-team, AppSec, product-security, and adjacent security engineering — now ranked with a weighted CV-fit model, transparent reasons, and role-category badges.</p>
+<p class="page-lede">Singapore-focused AI job search for security-adjacent roles: AI-security, LLM-security, penetration testing, red-team, AppSec, product-security, trust/safety, and adjacent security engineering. The weekly refresh keeps only the top 10 matches after location checks, relevance scoring, CV-fit weighting, and noise filtering.</p>
 
 <div class="jobs-meta-card">
   <div>
@@ -17,6 +17,12 @@ permalink: /ai-jobs/
     <strong>Last refreshed:</strong> {{ job_feed.updated_at | default: "pending first refresh" }}
   </div>
   <p>{{ job_feed.source_note }}</p>
+  {% if job_feed.search_behavior %}
+    <p><strong>Search behavior:</strong> {{ job_feed.search_behavior }}</p>
+  {% endif %}
+  {% if job_feed.minimum_score %}
+    <p><strong>Publishing threshold:</strong> final score {{ job_feed.minimum_score }}+ before top-10 ranking.</p>
+  {% endif %}
 </div>
 
 {% if jobs and jobs.size > 0 %}
@@ -29,7 +35,7 @@ permalink: /ai-jobs/
       <div><strong>10%</strong><span>Singapore/location fit</span></div>
       <div><strong>5%</strong><span>Freshness</span></div>
     </div>
-    <p>Generic sales, junior-only, compliance-heavy, or non-technical matches are penalized before the top 10 is selected.</p>
+    <p>Generic sales, junior-only, compliance-heavy, or non-technical matches are penalized before the top 10 is selected. The search intentionally prefers Singapore or remote-Singapore roles where AI/LLM/security terms appear in the title, description, or structured job metadata.</p>
   </section>
 
   <section class="jobs-category-panel" aria-label="Best matches by role type">
@@ -111,7 +117,7 @@ permalink: /ai-jobs/
   </div>
 {% else %}
   <div class="jobs-empty">
-    <h2>No Singapore AI-security or penetration-testing roles found in this refresh.</h2>
+    <h2>No Singapore AI job search matches found in this refresh.</h2>
     <p>The weekly scanner will try again next Monday. The feed is intentionally strict: roles must match Singapore / Remote-Singapore plus AI-security, LLM-security, penetration testing, red-team, AppSec, product-security, trust/safety, or related security-engineering signals.</p>
   </div>
 {% endif %}
