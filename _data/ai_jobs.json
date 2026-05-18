@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T06:24:31Z",
+  "updated_at": "2026-05-18T01:14:22Z",
   "location_filter": "Singapore / Remote-Singapore / APAC remote eligible",
   "search_focus": "Singapore AI job search for AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, vulnerability research, and adjacent security-engineering roles.",
   "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, label new/still-open roles, and penalize sales, junior-only, compliance-heavy, SOC-only, or non-technical noise.",
@@ -16,21 +16,21 @@
   "stats": {
     "candidates_scored": 120,
     "published_count": 10,
-    "alert_count": 6,
-    "removed_since_last_refresh": 0,
+    "alert_count": 4,
+    "removed_since_last_refresh": 20,
     "status_counts": {
-      "New": 120
+      "Still open": 120
     },
     "source_counts": {
-      "MyCareersFuture": 71,
-      "Greenhouse": 43,
+      "MyCareersFuture": 72,
+      "Greenhouse": 42,
       "Lever": 2,
       "Ashby": 3,
       "RemoteOK": 1
     },
     "category_counts": {
       "Best AI-security role": 5,
-      "Best product/AppSec role": 26,
+      "Best product/AppSec role": 27,
       "Best leadership role": 85,
       "Best research role": 14,
       "Best pentest/red-team role": 26,
@@ -43,139 +43,139 @@
       "source": "Greenhouse/Anthropic",
       "status": "ok",
       "count": 0,
-      "seconds": 1.16
+      "seconds": 2.17
     },
     {
       "source": "Greenhouse/Cloudflare",
       "status": "ok",
       "count": 0,
-      "seconds": 0.62
+      "seconds": 1.85
     },
     {
       "source": "Greenhouse/Datadog",
       "status": "ok",
       "count": 0,
-      "seconds": 0.63
+      "seconds": 0.65
     },
     {
       "source": "Greenhouse/Elastic",
       "status": "ok",
       "count": 1,
-      "seconds": 0.59
+      "seconds": 1.8
     },
     {
       "source": "Greenhouse/Google DeepMind",
       "status": "ok",
       "count": 2,
-      "seconds": 0.71
+      "seconds": 0.32
     },
     {
       "source": "Greenhouse/MongoDB",
       "status": "ok",
       "count": 0,
-      "seconds": 2.67
+      "seconds": 0.44
     },
     {
       "source": "Greenhouse/OKX",
       "status": "ok",
-      "count": 41,
-      "seconds": 0.66
+      "count": 40,
+      "seconds": 0.52
     },
     {
       "source": "Greenhouse/Stripe",
       "status": "ok",
       "count": 2,
-      "seconds": 0.87
+      "seconds": 0.48
     },
     {
       "source": "Greenhouse/Wiz",
       "status": "ok",
       "count": 0,
-      "seconds": 1.87
+      "seconds": 0.57
     },
     {
       "source": "Greenhouse/Scale AI",
       "status": "ok",
       "count": 0,
-      "seconds": 0.58
+      "seconds": 0.35
     },
     {
       "source": "Greenhouse/GitLab",
       "status": "ok",
       "count": 1,
-      "seconds": 0.41
+      "seconds": 0.38
     },
     {
       "source": "Lever/Mistral AI",
       "status": "ok",
       "count": 2,
-      "seconds": 2.54
+      "seconds": 4.61
     },
     {
       "source": "Ashby/OpenAI",
       "status": "ok",
       "count": 3,
-      "seconds": 4.39
+      "seconds": 0.86
     },
     {
       "source": "Ashby/Cursor",
       "status": "ok",
       "count": 0,
-      "seconds": 0.3
+      "seconds": 0.35
     },
     {
       "source": "Ashby/Harvey",
       "status": "ok",
       "count": 0,
-      "seconds": 0.45
+      "seconds": 0.57
     },
     {
       "source": "Ashby/Perplexity",
       "status": "ok",
       "count": 0,
-      "seconds": 0.33
+      "seconds": 0.31
     },
     {
       "source": "Ashby/Replit",
       "status": "ok",
       "count": 0,
-      "seconds": 0.34
+      "seconds": 0.44
     },
     {
       "source": "Ashby/Modal",
       "status": "ok",
       "count": 0,
-      "seconds": 0.3
+      "seconds": 0.29
     },
     {
       "source": "Remotive/AI security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.22
+      "seconds": 0.07
     },
     {
       "source": "Remotive/LLM security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.06
     },
     {
       "source": "Remotive/agent security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.08
     },
     {
       "source": "Remotive/AI red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.07
     },
     {
       "source": "Remotive/AI safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.05
     },
     {
       "source": "Remotive/machine learning security Singapore",
@@ -187,13 +187,13 @@
       "source": "Remotive/application security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.07
     },
     {
       "source": "Remotive/product security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.06
     },
     {
       "source": "Remotive/penetration testing Singapore",
@@ -205,103 +205,103 @@
       "source": "Remotive/penetration tester Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.07
     },
     {
       "source": "Remotive/red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.06
     },
     {
       "source": "Remotive/offensive security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.07
     },
     {
       "source": "Remotive/vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.06
     },
     {
       "source": "Remotive/security engineer machine learning Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.06
     },
     {
       "source": "Remotive/trust safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.06
     },
     {
       "source": "RemoteOK",
       "status": "ok",
       "count": 1,
-      "seconds": 0.1
+      "seconds": 0.09
     },
     {
       "source": "MyCareersFuture/AI security Singapore",
       "status": "ok",
       "count": 3,
-      "seconds": 4.14
+      "seconds": 3.65
     },
     {
       "source": "MyCareersFuture/LLM security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.69
+      "seconds": 3.56
     },
     {
       "source": "MyCareersFuture/agent security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.8
+      "seconds": 3.75
     },
     {
       "source": "MyCareersFuture/AI red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.83
+      "seconds": 3.94
     },
     {
       "source": "MyCareersFuture/AI safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.8
+      "seconds": 3.84
     },
     {
       "source": "MyCareersFuture/machine learning security Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 3.98
+      "seconds": 4.09
     },
     {
       "source": "MyCareersFuture/application security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.06
+      "seconds": 4.22
     },
     {
       "source": "MyCareersFuture/product security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.1
+      "seconds": 4.22
     },
     {
       "source": "MyCareersFuture/penetration testing Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.65
+      "seconds": 3.78
     },
     {
       "source": "MyCareersFuture/penetration tester Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.64
+      "seconds": 4.08
     },
     {
       "source": "MyCareersFuture/red team Singapore",
@@ -313,85 +313,85 @@
       "source": "MyCareersFuture/offensive security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.65
+      "seconds": 3.95
     },
     {
       "source": "MyCareersFuture/vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.56
+      "seconds": 3.59
     },
     {
       "source": "MyCareersFuture/security engineer machine learning Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 4.35
+      "seconds": 4.16
     },
     {
       "source": "MyCareersFuture/trust safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.91
+      "seconds": 4.1
     },
     {
       "source": "MyCareersFuture/cyber security AI",
       "status": "ok",
       "count": 1,
-      "seconds": 3.77
+      "seconds": 3.76
     },
     {
       "source": "MyCareersFuture/application security",
       "status": "ok",
       "count": 23,
-      "seconds": 4.59
+      "seconds": 4.15
     },
     {
       "source": "MyCareersFuture/product security",
       "status": "ok",
-      "count": 24,
-      "seconds": 4.38
+      "count": 23,
+      "seconds": 4.91
     },
     {
       "source": "MyCareersFuture/penetration testing",
       "status": "ok",
       "count": 19,
-      "seconds": 3.91
+      "seconds": 3.81
     },
     {
       "source": "MyCareersFuture/penetration tester",
       "status": "ok",
       "count": 9,
-      "seconds": 3.62
+      "seconds": 3.82
     },
     {
       "source": "MyCareersFuture/red team",
       "status": "ok",
       "count": 8,
-      "seconds": 3.8
+      "seconds": 4.08
     },
     {
       "source": "MyCareersFuture/offensive security",
       "status": "ok",
       "count": 20,
-      "seconds": 3.91
+      "seconds": 3.69
     },
     {
       "source": "MyCareersFuture/vulnerability research",
       "status": "ok",
       "count": 4,
-      "seconds": 3.56
+      "seconds": 3.59
     },
     {
       "source": "MyCareersFuture/threat research",
       "status": "ok",
       "count": 2,
-      "seconds": 3.79
+      "seconds": 3.88
     },
     {
       "source": "MyCareersFuture/secure software development",
       "status": "ok",
       "count": 14,
-      "seconds": 4.32
+      "seconds": 4.08
     }
   ],
   "alerts": [
@@ -403,6 +403,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-04-30",
       "summary": "About Keysight: Keysight is on the forefront of technology innovation, delivering breakthroughs and trusted insights in electronic design, simulation, prototyping, test, manufacturing, and optimization. Our ~15,000 employees create world-class solutions in communications, 5G, automotive, energy, quantum, aerospace, de…",
+      "salary_estimate": "Listed SGD 8,200–13,700/mo",
       "tags": [
         "AI",
         "Agent",
@@ -454,12 +455,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
-      "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
-      "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "New this week",
+      "alert_reason": "score ≥ 85, AI-security signal, priority employer",
+      "next_action": "Prioritize follow-up: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
+      "status_badge": "Repeated high match",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "Product Security Engineer — Agentic AI & Development",
@@ -469,6 +470,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-04-30",
       "summary": "About Keysight: Keysight is on the forefront of technology innovation, delivering breakthroughs and trusted insights in electronic design, simulation, prototyping, test, manufacturing, and optimization. Our ~15,000 employees create world-class solutions in communications, 5G, automotive, energy, quantum, aerospace, de…",
+      "salary_estimate": "Listed SGD 5,000–8,650/mo",
       "tags": [
         "AI",
         "Agent",
@@ -516,12 +518,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
-      "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
-      "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "New this week",
+      "alert_reason": "score ≥ 85, AI-security signal, priority employer",
+      "next_action": "Prioritize follow-up: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
+      "status_badge": "Repeated high match",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "Product Security Engineer — Security & Agentic AI 2",
@@ -531,6 +533,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-04-21",
       "summary": "Overview Keysight is at the forefront of technology innovation, delivering breakthroughs and trusted insights in electronic design, simulation, prototyping, test, manufacturing, and optimization. Our ~15,000 employees create world-class solutions in communications, 5G, automotive, energy, quantum, aerospace, defense,…",
+      "salary_estimate": "Listed SGD 4,700–6,400/mo",
       "tags": [
         "AI",
         "Agent",
@@ -578,12 +581,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
-      "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
-      "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "New this week",
+      "alert_reason": "score ≥ 85, AI-security signal, priority employer",
+      "next_action": "Prioritize follow-up: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
+      "status_badge": "Repeated high match",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "AI Agent Security Research Engineer",
@@ -593,6 +596,7 @@
       "source": "Greenhouse",
       "published_at": "2026-04-29",
       "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (dApps). OKX is also a trusted brand by hu…",
+      "salary_estimate": "Est. SGD 150k–230k/yr",
       "tags": [
         "AI",
         "Agent",
@@ -644,147 +648,116 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice."
       ],
-      "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
-      "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "New this week",
+      "alert_reason": "score ≥ 85, AI-security signal, priority employer",
+      "next_action": "Prioritize follow-up: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
+      "status_badge": "Repeated high match",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
-    },
-    {
-      "title": "Consultant, Security Testing and Red Teaming",
-      "company": "ENSIGN INFOSECURITY (CYBERSECURITY) PTE. LTD.",
-      "location": "Singapore · Central",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/consultant-security-testing-red-teaming-ensign-infosecurity-523da8cc771f043b893fbe74ffe4ff67",
-      "source": "MyCareersFuture",
-      "published_at": "2026-05-12",
-      "summary": "Description The Consultant, Security Testing and Red Teaming is a core delivery role within the offensive security practice, responsible for independently executing penetration testing engagements and contributing to advanced offensive security activities. This role has a strong emphasis on hands-on penetration testin…",
-      "tags": [
-        "Security",
-        "Red Team",
-        "Cyber",
-        "Cybersecurity",
-        "Penetration Testing",
-        "Offensive Security",
-        "Consultant"
-      ],
-      "score": 80,
-      "cv_score": 76,
-      "fit": [
-        "Offensive Security",
-        "Leadership"
-      ],
-      "priority": "Medium-high",
-      "why_match": "Strong overlap with Offensive Security, Leadership. Ranked as pentest/red-team, leadership, with CV fit 76/100, AI/security relevance 82/100, and mid/senior trajectory.",
-      "possible_gap": "Confirm the work includes modern application/cloud targets and is not a narrow checklist testing role.",
-      "categories": [
-        "Best pentest/red-team role",
-        "Best leadership role"
-      ],
-      "score_breakdown": {
-        "final": 80,
-        "cv_fit": 76,
-        "ai_security": 82,
-        "career_upside": 52,
-        "location_fit": 100,
-        "freshness": 100,
-        "company_boost": 0,
-        "noise_penalty": 0,
-        "source_boost": 2
-      },
-      "seniority": "Mid/senior",
-      "apply_angle": "Lead with offensive-security delivery, exploitability judgement, adversary emulation, and clear remediation guidance.",
-      "skillsets_to_build": [
-        "Offensive security delivery: web/cloud/API testing, adversary emulation, reporting, and risk-ranked remediation guidance.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
-      ],
-      "learning_gaps": [
-        "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
-      ],
-      "certifications_to_consider": [
-        "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review.",
-        "CRTO/CARTP-style adversary-emulation training if the role asks for red-team operations or attack-path development.",
-        "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
-      ],
-      "alert_reason": "offensive-security signal, new this week",
-      "next_action": "Shortlist: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
-      "status_badge": "New this week",
-      "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
-    },
-    {
-      "title": "Application Security Lead / Manager",
-      "company": "PEOPLESEARCH PTE. LTD.",
-      "location": "Singapore · Islandwide",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/application-security-lead-manager-peoplesearch-4c69fd0f491176a86e7815e0372cb5b0",
-      "source": "MyCareersFuture",
-      "published_at": "2026-05-11",
-      "summary": "Key Responsibilities Drive secure SDLC practices, including policies, standards, and governance Conduct application security assessments (e.g., code reviews, penetration testing, automated scans) Oversee the use of security testing tools such as SAST, DAST, and SCA Perform threat modelling and provide guidance on risk…",
-      "tags": [
-        "Security",
-        "Application Security",
-        "Risk",
-        "Penetration Testing",
-        "Threat",
-        "Secure Sdlc",
-        "Code Review"
-      ],
-      "score": 77,
-      "cv_score": 100,
-      "fit": [
-        "Offensive Security",
-        "App/Product Security",
-        "Leadership"
-      ],
-      "priority": "Medium-high",
-      "why_match": "Strong overlap with Offensive Security, App/Product Security, Leadership. Ranked as pentest/red-team, product/AppSec, with CV fit 100/100, AI/security relevance 91/100, and lead/manager trajectory.",
-      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
-      "categories": [
-        "Best pentest/red-team role",
-        "Best product/AppSec role",
-        "Best leadership role"
-      ],
-      "score_breakdown": {
-        "final": 77,
-        "cv_fit": 100,
-        "ai_security": 91,
-        "career_upside": 70,
-        "location_fit": 100,
-        "freshness": 100,
-        "company_boost": 8,
-        "noise_penalty": 26,
-        "source_boost": 2
-      },
-      "seniority": "Lead/manager",
-      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
-      "skillsets_to_build": [
-        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
-        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
-        "Offensive security delivery: web/cloud/API testing, adversary emulation, reporting, and risk-ranked remediation guidance.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
-      ],
-      "learning_gaps": [
-        "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.",
-        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
-        "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
-      ],
-      "certifications_to_consider": [
-        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
-        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
-        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
-      ],
-      "alert_reason": "offensive-security signal, priority employer, new this week",
-      "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
-      "status_badge": "New this week",
-      "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     }
   ],
-  "removed_recently": [],
+  "removed_recently": [
+    {
+      "title": "AI Security Researcher",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Security Engineer, Offensive Security",
+      "company": "Anthropic",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Application Security Engineer",
+      "company": "Anthropic",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Principal Solutions Engineer - Application Security",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Anthropic Fellows Program — AI Security",
+      "company": "Anthropic",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Security Engineer - Threat Intel",
+      "company": "Anthropic",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Principal Security Engineer, Infrastructure Security",
+      "company": "OpenAI",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Solutions Support Engineer, (Cloud Security & AI)",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Senior Government Affairs Manager",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Lead, Data Center Physical Security Operations (North America)",
+      "company": "Anthropic",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Advanced Delivery Architect, Japan",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Manager, Solutions Engineering",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Manager, Solutions Support Engineering - East",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Partner Solutions Architect",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Partner Solutions Architect - CSP",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Principal Solutions Engineer",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Principal Solutions Engineer - India",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Senior Partner Solutions Architect",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Senior Partner Solutions Architect, Japan",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    },
+    {
+      "title": "Sovereign Cloud Flex Architect",
+      "company": "Wiz",
+      "last_seen": "2026-05-17"
+    }
+  ],
   "jobs": [
     {
       "title": "Product Security Architect — Agentic AI & Security",
@@ -794,6 +767,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-04-30",
       "summary": "About Keysight: Keysight is on the forefront of technology innovation, delivering breakthroughs and trusted insights in electronic design, simulation, prototyping, test, manufacturing, and optimization. Our ~15,000 employees create world-class solutions in communications, 5G, automotive, energy, quantum, aerospace, de…",
+      "salary_estimate": "Listed SGD 8,200–13,700/mo",
       "tags": [
         "AI",
         "Agent",
@@ -845,12 +819,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
-      "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
-      "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "New this week",
+      "alert_reason": "score ≥ 85, AI-security signal, priority employer",
+      "next_action": "Prioritize follow-up: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
+      "status_badge": "Repeated high match",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "Product Security Engineer — Agentic AI & Development",
@@ -860,6 +834,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-04-30",
       "summary": "About Keysight: Keysight is on the forefront of technology innovation, delivering breakthroughs and trusted insights in electronic design, simulation, prototyping, test, manufacturing, and optimization. Our ~15,000 employees create world-class solutions in communications, 5G, automotive, energy, quantum, aerospace, de…",
+      "salary_estimate": "Listed SGD 5,000–8,650/mo",
       "tags": [
         "AI",
         "Agent",
@@ -907,12 +882,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
-      "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
-      "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "New this week",
+      "alert_reason": "score ≥ 85, AI-security signal, priority employer",
+      "next_action": "Prioritize follow-up: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
+      "status_badge": "Repeated high match",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "AI Agent Security Research Engineer",
@@ -922,6 +897,7 @@
       "source": "Greenhouse",
       "published_at": "2026-04-29",
       "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (dApps). OKX is also a trusted brand by hu…",
+      "salary_estimate": "Est. SGD 150k–230k/yr",
       "tags": [
         "AI",
         "Agent",
@@ -973,12 +949,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice."
       ],
-      "alert_reason": "score ≥ 85, AI-security signal, priority employer, new this week",
-      "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "New this week",
+      "alert_reason": "score ≥ 85, AI-security signal, priority employer",
+      "next_action": "Prioritize follow-up: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
+      "status_badge": "Repeated high match",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "Consultant, Security Testing and Red Teaming",
@@ -988,6 +964,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-05-12",
       "summary": "Description The Consultant, Security Testing and Red Teaming is a core delivery role within the offensive security practice, responsible for independently executing penetration testing engagements and contributing to advanced offensive security activities. This role has a strong emphasis on hands-on penetration testin…",
+      "salary_estimate": "Listed SGD 5,000–8,000/mo",
       "tags": [
         "Security",
         "Red Team",
@@ -1036,12 +1013,12 @@
         "CRTO/CARTP-style adversary-emulation training if the role asks for red-team operations or attack-path development.",
         "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
       ],
-      "alert_reason": "offensive-security signal, new this week",
+      "alert_reason": "offensive-security signal",
       "next_action": "Shortlist: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
-      "status_badge": "New this week",
+      "status_badge": "Still open",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "Application Security Lead / Manager",
@@ -1051,6 +1028,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-05-11",
       "summary": "Key Responsibilities Drive secure SDLC practices, including policies, standards, and governance Conduct application security assessments (e.g., code reviews, penetration testing, automated scans) Oversee the use of security testing tools such as SAST, DAST, and SCA Perform threat modelling and provide guidance on risk…",
+      "salary_estimate": "Listed SGD 10k–12k/mo",
       "tags": [
         "Security",
         "Application Security",
@@ -1105,12 +1083,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
-      "alert_reason": "offensive-security signal, priority employer, new this week",
+      "alert_reason": "offensive-security signal, priority employer",
       "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
-      "status_badge": "New this week",
+      "status_badge": "Still open",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "Lead Cybersecurity Specialist (Offensive Security)",
@@ -1120,6 +1098,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-05-16",
       "summary": "​ Our Client is an established company in Singapore, who is seeking to recruit a Lead Cybersecurity Specialist (Offensive Security). Lead Cybersecurity Specialist (Offensive Security) As the Cybersecurity Specialist (Offensive Security) within the CISO Office, you will be the domain expert responsible for elevating th…",
+      "salary_estimate": "Listed SGD 12k–15k/mo",
       "tags": [
         "Security",
         "Cyber",
@@ -1169,12 +1148,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review."
       ],
-      "alert_reason": "offensive-security signal, new this week",
+      "alert_reason": "offensive-security signal",
       "next_action": "Shortlist: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
-      "status_badge": "New this week",
+      "status_badge": "Still open",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "Engineer, Automotive Cyber Security - Lab & Vulnerability Research",
@@ -1184,6 +1163,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-05-05",
       "summary": "We are looking for a seasoned cybersecurity engineer to join our automotive cybersecurity lab, focusing on pentesting, fuzzing, reverse engineering, vulnerability analysis, and patch development for in-vehicle systems. You’ll work across embedded platforms, applications, and cloud integrations to secure next-gen conne…",
+      "salary_estimate": "Listed SGD 5,500–10k/mo",
       "tags": [
         "Security",
         "Cyber",
@@ -1237,12 +1217,12 @@
         "AWS Security Specialty, Azure Security Engineer, or Google Professional Cloud Security Engineer for platform-heavy AppSec roles.",
         "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review."
       ],
-      "alert_reason": "offensive-security signal, new this week",
+      "alert_reason": "offensive-security signal",
       "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
-      "status_badge": "New this week",
+      "status_badge": "Still open",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "Red Team Manager",
@@ -1252,6 +1232,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-05-13",
       "summary": "1. Red Team Operations & Programme Leadership Design, plan, and execute full-scope red team engagements (network, application, cloud, social engineering, physical) against dtcpay's production and pre-production environments. Develop and maintain adversary emulation plans aligned with MITRE ATT&CK, TIBER-EU, and MAS TP…",
+      "salary_estimate": "Listed SGD 12k–18k/mo",
       "tags": [
         "Red Team",
         "Engineer",
@@ -1301,12 +1282,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review."
       ],
-      "alert_reason": "offensive-security signal, new this week",
+      "alert_reason": "offensive-security signal",
       "next_action": "Watch: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
-      "status_badge": "New this week",
+      "status_badge": "Still open",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "Research Fellow (Agentic AI, AI security and cyber-physical security)",
@@ -1316,6 +1297,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-05-08",
       "summary": "School of Electrical and Electronic Engineering is one of the founding Schools of the Nanyang Technological University. Built on a culture of excellence, the School is renowned for its high academic standards and research. With over 3,000 undergraduates students and 2,000 graduate students it is one of the largest EEE…",
+      "salary_estimate": "Listed SGD 6,000–12k/mo",
       "tags": [
         "AI",
         "Agent",
@@ -1362,12 +1344,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice."
       ],
-      "alert_reason": "AI-security signal, new this week",
+      "alert_reason": "AI-security signal",
       "next_action": "Watch: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "New this week",
+      "status_badge": "Still open",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     },
     {
       "title": "Incident Response Engineer",
@@ -1377,6 +1359,7 @@
       "source": "MyCareersFuture",
       "published_at": "2026-05-04",
       "summary": "Available Location: Singapore Our Mission The Security Response Team’s mission is to systematically respond to security threats safeguarding Cloudflare. We operate 24/7 across the globe to respond to security incidents, continuously improve our response capabilities, lead digital investigations and enhance our overall…",
+      "salary_estimate": "Listed SGD 5,400–10,100/mo",
       "tags": [
         "Incident Response",
         "Security",
@@ -1427,12 +1410,12 @@
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
         "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs."
       ],
-      "alert_reason": "priority employer, new this week",
+      "alert_reason": "priority employer",
       "next_action": "Watch: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
-      "status_badge": "New this week",
+      "status_badge": "Still open",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-17",
-      "status": "New"
+      "last_seen": "2026-05-18",
+      "status": "Still open"
     }
   ]
 }

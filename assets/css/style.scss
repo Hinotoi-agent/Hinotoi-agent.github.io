@@ -1254,6 +1254,19 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
   background: transparent;
   color: var(--muted);
 }
+.job-company,
+.job-fit {
+  color: var(--muted);
+}
+
+.job-salary {
+  color: var(--text);
+  margin-top: 0.3rem;
+}
+
+.job-salary strong {
+  color: var(--accent);
+}
 
 @media (max-width: 640px) {
   .score-model-grid,

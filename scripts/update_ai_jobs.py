@@ -167,6 +167,7 @@ class Job:
     source: str
     published_at: str
     summary: str
+    salary_estimate: str
     tags: tuple[str, ...]
     score: int
     cv_score: int
@@ -513,7 +514,87 @@ def score_job(title: str, company: str, location: str, summary: str, published_a
     return final, tags, cv_fit, cv_labels, priority, why_match, possible_gap, categories, breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, certifications_to_consider, alert_reason
 
 
-def build_job(title: str, company: str, location: str, url: str, source: str, published_at: str, summary: str, min_score: int) -> Job | None:
+def money_amount(value: object) -> int | None:
+    if value is None or value == "":
+        return None
+    if isinstance(value, (int, float)):
+        return int(value)
+    text = clean_text(value).lower().replace(",", "")
+    match = re.search(r"(\d+(?:\.\d+)?)\s*([km])?", text)
+    if not match:
+        return None
+    amount = float(match.group(1))
+    suffix = match.group(2)
+    if suffix == "k":
+        amount *= 1_000
+    elif suffix == "m":
+        amount *= 1_000_000
+    return int(amount)
+
+
+def format_compensation(minimum: object = None, maximum: object = None, currency: str = "SGD", interval: str = "year") -> str:
+    low = money_amount(minimum)
+    high = money_amount(maximum)
+    if low is None and high is None:
+        return ""
+    currency = clean_text(currency or "SGD").upper()
+    interval = clean_text(interval or "year").lower()
+    if interval.startswith("month") or interval in {"monthly", "mo"}:
+        suffix = "/mo"
+    elif interval.startswith("hour") or interval in {"hourly", "hr"}:
+        suffix = "/hr"
+    else:
+        suffix = "/yr"
+    def compact(amount: int) -> str:
+        return f"{amount // 1000}k" if amount >= 10_000 and amount % 1000 == 0 else f"{amount:,}"
+    if low is not None and high is not None and low != high:
+        value = f"{currency} {compact(low)}–{compact(high)}{suffix}"
+    else:
+        amount = low if low is not None else high
+        if amount is None:
+            return ""
+        value = f"{currency} {compact(amount)}{suffix}"
+    return f"Listed {value}"
+
+
+def salary_text_from_value(value: object) -> str:
+    if not value:
+        return ""
+    if isinstance(value, dict):
+        salary_type = value.get("type") if isinstance(value.get("type"), dict) else {}
+        currency = clean_text(value.get("currency") or value.get("currencyCode") or value.get("salaryCurrency") or "SGD")
+        interval = clean_text(value.get("interval") or value.get("period") or value.get("unit") or salary_type.get("salaryType") or "year")
+        return format_compensation(value.get("minimum") or value.get("min") or value.get("minValue"), value.get("maximum") or value.get("max") or value.get("maxValue"), currency, interval)
+    text = clean_text(value, 120)
+    return f"Listed {text}" if text else ""
+
+
+def fallback_salary_estimate(title: str, location: str, company: str) -> str:
+    text = f"{title} {location} {company}".lower()
+    low, high = 150_000, 230_000
+    if any(term in text for term in ["director", "head of"]):
+        low, high = 230_000, 360_000
+    elif any(term in text for term in ["principal", "staff", "architect"]):
+        low, high = 190_000, 300_000
+    elif any(term in text for term in ["manager", "lead"]):
+        low, high = 170_000, 280_000
+    elif any(term in text for term in ["senior", "sr."]):
+        low, high = 140_000, 230_000
+    elif any(term in text for term in ["analyst", "associate", "junior", "graduate"]):
+        low, high = 80_000, 140_000
+    if any(term in text for term in ["remote", "global", "worldwide", "united states"]):
+        low, high = int(low * 1.1), int(high * 1.25)
+    return format_compensation(low, high, "SGD", "year").replace("Listed", "Est.")
+
+
+def salary_estimate_for(title: str, company: str, location: str, listed_salary: str = "") -> str:
+    listed_salary = clean_text(listed_salary, 140)
+    if listed_salary:
+        return listed_salary
+    return fallback_salary_estimate(title, location, company)
+
+
+def build_job(title: str, company: str, location: str, url: str, source: str, published_at: str, summary: str, min_score: int, listed_salary: str = "") -> Job | None:
     title = clean_text(title)
     company = clean_text(company) or "Unknown employer"
     location = clean_text(location) or "Remote / APAC"
@@ -525,9 +606,10 @@ def build_job(title: str, company: str, location: str, url: str, source: str, pu
     score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, certifications_to_consider, alert_reason = score_job(title, company, location, summary, published_at)
     if score < min_score:
         return None
+    salary_estimate = salary_estimate_for(title, company, location, listed_salary)
     return Job(
         title=title, company=company, location=location, url=str(url), source=source, published_at=published_at,
-        summary=summary or "Role matched by title/company/location metadata.", tags=tuple(tags), score=score,
+        summary=summary or "Role matched by title/company/location metadata.", salary_estimate=salary_estimate, tags=tuple(tags), score=score,
         cv_score=cv_score, fit=tuple(fit), priority=priority, why_match=why_match, possible_gap=possible_gap,
         categories=tuple(categories), score_breakdown=score_breakdown, seniority=seniority, apply_angle=apply_angle,
         skillsets_to_build=tuple(skillsets_to_build), learning_gaps=tuple(learning_gaps),
@@ -557,7 +639,8 @@ def from_greenhouse(company: str, board: str) -> list[Job]:
         title = clean_text(item.get("title"))
         summary = clean_text(item.get("content"), 320)
         published_at = clean_text(item.get("updated_at") or item.get("first_published"))[:10]
-        job = build_job(title, company, location, item.get("absolute_url") or f"https://boards.greenhouse.io/{board}", "Greenhouse", published_at, summary, 14)
+        listed_salary = salary_text_from_value(item.get("salary") or item.get("compensation") or item.get("compensationRange"))
+        job = build_job(title, company, location, item.get("absolute_url") or f"https://boards.greenhouse.io/{board}", "Greenhouse", published_at, summary, 14, listed_salary)
         if job:
             jobs.append(job)
     return jobs
@@ -581,7 +664,8 @@ def from_lever(company: str, slug: str) -> list[Job]:
         created_at = item.get("createdAt")
         if isinstance(created_at, int) and created_at > 0:
             published_at = datetime.fromtimestamp(created_at / 1000, tz=timezone.utc).date().isoformat()
-        job = build_job(title, company, location, item.get("hostedUrl") or item.get("applyUrl") or f"https://jobs.lever.co/{slug}", "Lever", published_at, summary, 18)
+        listed_salary = salary_text_from_value(item.get("salaryRange") or item.get("compensation") or item.get("salary"))
+        job = build_job(title, company, location, item.get("hostedUrl") or item.get("applyUrl") or f"https://jobs.lever.co/{slug}", "Lever", published_at, summary, 18, listed_salary)
         if job:
             jobs.append(job)
     return jobs
@@ -599,7 +683,8 @@ def from_ashby(company: str, board: str) -> list[Job]:
         summary = clean_text(item.get("descriptionPlain") or item.get("descriptionHtml") or "", 320)
         published_at = clean_text(item.get("publishedDate") or item.get("createdAt"))[:10]
         url = item.get("jobUrl") or item.get("externalLink") or f"https://jobs.ashbyhq.com/{board}"
-        job = build_job(title, company, location, url, "Ashby", published_at, summary, 18)
+        listed_salary = salary_text_from_value(item.get("compensationTierSummary") or item.get("compensation") or item.get("salary"))
+        job = build_job(title, company, location, url, "Ashby", published_at, summary, 18, listed_salary)
         if job:
             jobs.append(job)
     return jobs
@@ -618,6 +703,7 @@ def from_remotive(query: str) -> list[Job]:
             item.get("title"), item.get("company_name"), item.get("candidate_required_location"),
             item.get("url") or item.get("job_url") or "https://remotive.com/remote-jobs", "Remotive",
             clean_text(item.get("publication_date"))[:10], item.get("description"), 18,
+            salary_text_from_value(item.get("salary")),
         )
         if job:
             jobs.append(job)
@@ -632,9 +718,10 @@ def from_remoteok() -> list[Job]:
         if not isinstance(item, dict):
             continue
         tags_text = " ".join(clean_text(t) for t in item.get("tags", []) if t)
+        listed_salary = format_compensation(item.get("salary_min"), item.get("salary_max"), item.get("salary_currency") or "USD", "year")
         job = build_job(
             item.get("position"), item.get("company"), item.get("location"), item.get("url") or "https://remoteok.com/",
-            "RemoteOK", clean_text(item.get("date"))[:10], f"{tags_text} {item.get('description', '')}", 18,
+            "RemoteOK", clean_text(item.get("date"))[:10], f"{tags_text} {item.get('description', '')}", 18, listed_salary,
         )
         if job:
             jobs.append(job)
@@ -678,6 +765,7 @@ def from_mycareersfuture(query: str, limit: int = 25) -> list[Job]:
             item.get("title"), mcf_company(item), mcf_location(item), url, "MyCareersFuture",
             clean_text(metadata.get("newPostingDate") or metadata.get("originalPostingDate") or metadata.get("createdAt"))[:10],
             " ".join(str(bit or "") for bit in [item.get("description", ""), item.get("otherRequirements", "")]), 14,
+            salary_text_from_value(item.get("salary")),
         )
         if job:
             bumped = min(100, job.score + 2)
@@ -846,6 +934,7 @@ def job_to_dict(job: Job) -> dict[str, object]:
         "source": job.source,
         "published_at": job.published_at,
         "summary": job.summary,
+        "salary_estimate": job.salary_estimate,
         "tags": list(job.tags),
         "score": job.score,
         "cv_score": job.cv_score,

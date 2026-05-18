@@ -142,6 +142,7 @@ permalink: /ai-jobs/
         </div>
         <h2><a href="{{ job.url }}">{{ job.title }}</a></h2>
         <div class="job-company">{{ job.company }} · {{ job.location }}</div>
+        {% if job.salary_estimate %}<div class="job-salary"><strong>Salary:</strong> {{ job.salary_estimate }}</div>{% endif %}
 
         {% if job.categories and job.categories.size > 0 %}
           <div class="job-category-badges">
