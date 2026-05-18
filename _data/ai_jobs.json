@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-18T01:14:22Z",
+  "updated_at": "2026-05-18T11:54:02Z",
   "location_filter": "Singapore / Remote-Singapore / APAC remote eligible",
   "search_focus": "Singapore AI job search for AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, vulnerability research, and adjacent security-engineering roles.",
   "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, label new/still-open roles, and penalize sales, junior-only, compliance-heavy, SOC-only, or non-technical noise.",
@@ -14,26 +14,27 @@
   ],
   "source_note": "Weekly top-10 public ATS/feed scan for Singapore and Singapore-eligible remote AI/security roles. Ranking is weighted against broad CV-fit signals: offensive security leadership, incident response, VAPT/adversary emulation, AI security, agent trust boundaries, vulnerability research, and cloud/application/product security. Links go to original job posts; verify current availability before applying.",
   "stats": {
-    "candidates_scored": 120,
+    "candidates_scored": 126,
     "published_count": 10,
-    "alert_count": 4,
+    "alert_count": 6,
     "removed_since_last_refresh": 20,
     "status_counts": {
-      "Still open": 120
+      "New": 7,
+      "Still open": 119
     },
     "source_counts": {
-      "MyCareersFuture": 72,
-      "Greenhouse": 42,
+      "MyCareersFuture": 75,
+      "Greenhouse": 45,
       "Lever": 2,
       "Ashby": 3,
       "RemoteOK": 1
     },
     "category_counts": {
+      "Best pentest/red-team role": 29,
+      "Best leadership role": 91,
       "Best AI-security role": 5,
-      "Best product/AppSec role": 27,
-      "Best leadership role": 85,
+      "Best product/AppSec role": 26,
       "Best research role": 14,
-      "Best pentest/red-team role": 26,
       "Best incident-response role": 5,
       "Best overall match": 9
     }
@@ -43,61 +44,61 @@
       "source": "Greenhouse/Anthropic",
       "status": "ok",
       "count": 0,
-      "seconds": 2.17
+      "seconds": 0.76
     },
     {
       "source": "Greenhouse/Cloudflare",
       "status": "ok",
       "count": 0,
-      "seconds": 1.85
+      "seconds": 0.41
     },
     {
       "source": "Greenhouse/Datadog",
       "status": "ok",
       "count": 0,
-      "seconds": 0.65
+      "seconds": 0.62
     },
     {
       "source": "Greenhouse/Elastic",
       "status": "ok",
       "count": 1,
-      "seconds": 1.8
+      "seconds": 0.35
     },
     {
       "source": "Greenhouse/Google DeepMind",
       "status": "ok",
       "count": 2,
-      "seconds": 0.32
+      "seconds": 0.14
     },
     {
       "source": "Greenhouse/MongoDB",
       "status": "ok",
       "count": 0,
-      "seconds": 0.44
+      "seconds": 0.61
     },
     {
       "source": "Greenhouse/OKX",
       "status": "ok",
-      "count": 40,
-      "seconds": 0.52
+      "count": 43,
+      "seconds": 0.57
     },
     {
       "source": "Greenhouse/Stripe",
       "status": "ok",
       "count": 2,
-      "seconds": 0.48
+      "seconds": 0.46
     },
     {
       "source": "Greenhouse/Wiz",
       "status": "ok",
       "count": 0,
-      "seconds": 0.57
+      "seconds": 0.41
     },
     {
       "source": "Greenhouse/Scale AI",
       "status": "ok",
       "count": 0,
-      "seconds": 0.35
+      "seconds": 0.32
     },
     {
       "source": "Greenhouse/GitLab",
@@ -109,133 +110,133 @@
       "source": "Lever/Mistral AI",
       "status": "ok",
       "count": 2,
-      "seconds": 4.61
+      "seconds": 0.57
     },
     {
       "source": "Ashby/OpenAI",
       "status": "ok",
       "count": 3,
-      "seconds": 0.86
+      "seconds": 4.66
     },
     {
       "source": "Ashby/Cursor",
       "status": "ok",
       "count": 0,
-      "seconds": 0.35
+      "seconds": 0.11
     },
     {
       "source": "Ashby/Harvey",
       "status": "ok",
       "count": 0,
-      "seconds": 0.57
+      "seconds": 0.19
     },
     {
       "source": "Ashby/Perplexity",
       "status": "ok",
       "count": 0,
-      "seconds": 0.31
+      "seconds": 0.1
     },
     {
       "source": "Ashby/Replit",
       "status": "ok",
       "count": 0,
-      "seconds": 0.44
+      "seconds": 0.13
     },
     {
       "source": "Ashby/Modal",
       "status": "ok",
       "count": 0,
-      "seconds": 0.29
+      "seconds": 0.31
     },
     {
       "source": "Remotive/AI security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.06
     },
     {
       "source": "Remotive/LLM security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.03
     },
     {
       "source": "Remotive/agent security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.03
     },
     {
       "source": "Remotive/AI red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.03
     },
     {
       "source": "Remotive/AI safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.05
+      "seconds": 0.03
     },
     {
       "source": "Remotive/machine learning security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.03
     },
     {
       "source": "Remotive/application security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.03
     },
     {
       "source": "Remotive/product security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.03
     },
     {
       "source": "Remotive/penetration testing Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.03
     },
     {
       "source": "Remotive/penetration tester Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.03
     },
     {
       "source": "Remotive/red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.03
     },
     {
       "source": "Remotive/offensive security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.03
     },
     {
       "source": "Remotive/vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.04
     },
     {
       "source": "Remotive/security engineer machine learning Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.03
     },
     {
       "source": "Remotive/trust safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.03
     },
     {
       "source": "RemoteOK",
@@ -247,154 +248,217 @@
       "source": "MyCareersFuture/AI security Singapore",
       "status": "ok",
       "count": 3,
-      "seconds": 3.65
+      "seconds": 4.92
     },
     {
       "source": "MyCareersFuture/LLM security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.56
+      "seconds": 4.21
     },
     {
       "source": "MyCareersFuture/agent security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.75
+      "seconds": 4.58
     },
     {
       "source": "MyCareersFuture/AI red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.94
+      "seconds": 4.87
     },
     {
       "source": "MyCareersFuture/AI safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.84
+      "seconds": 4.7
     },
     {
       "source": "MyCareersFuture/machine learning security Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 4.09
+      "seconds": 4.71
     },
     {
       "source": "MyCareersFuture/application security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.22
+      "seconds": 4.96
     },
     {
       "source": "MyCareersFuture/product security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.22
+      "seconds": 4.83
     },
     {
       "source": "MyCareersFuture/penetration testing Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.78
+      "seconds": 4.53
     },
     {
       "source": "MyCareersFuture/penetration tester Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.08
+      "seconds": 4.6
     },
     {
       "source": "MyCareersFuture/red team Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 3.96
+      "seconds": 4.94
     },
     {
       "source": "MyCareersFuture/offensive security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.95
+      "seconds": 4.4
     },
     {
       "source": "MyCareersFuture/vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 3.59
+      "seconds": 4.41
     },
     {
       "source": "MyCareersFuture/security engineer machine learning Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 4.16
+      "seconds": 4.95
     },
     {
       "source": "MyCareersFuture/trust safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.1
+      "seconds": 4.61
     },
     {
       "source": "MyCareersFuture/cyber security AI",
       "status": "ok",
       "count": 1,
-      "seconds": 3.76
+      "seconds": 4.25
     },
     {
       "source": "MyCareersFuture/application security",
       "status": "ok",
       "count": 23,
-      "seconds": 4.15
+      "seconds": 6.11
     },
     {
       "source": "MyCareersFuture/product security",
       "status": "ok",
-      "count": 23,
-      "seconds": 4.91
+      "count": 24,
+      "seconds": 5.67
     },
     {
       "source": "MyCareersFuture/penetration testing",
       "status": "ok",
-      "count": 19,
-      "seconds": 3.81
+      "count": 20,
+      "seconds": 4.95
     },
     {
       "source": "MyCareersFuture/penetration tester",
       "status": "ok",
-      "count": 9,
-      "seconds": 3.82
+      "count": 11,
+      "seconds": 4.95
     },
     {
       "source": "MyCareersFuture/red team",
       "status": "ok",
-      "count": 8,
-      "seconds": 4.08
+      "count": 9,
+      "seconds": 4.98
     },
     {
       "source": "MyCareersFuture/offensive security",
       "status": "ok",
-      "count": 20,
-      "seconds": 3.69
+      "count": 21,
+      "seconds": 5.14
     },
     {
       "source": "MyCareersFuture/vulnerability research",
       "status": "ok",
       "count": 4,
-      "seconds": 3.59
+      "seconds": 4.31
     },
     {
       "source": "MyCareersFuture/threat research",
       "status": "ok",
       "count": 2,
-      "seconds": 3.88
+      "seconds": 4.57
     },
     {
       "source": "MyCareersFuture/secure software development",
       "status": "ok",
       "count": 14,
-      "seconds": 4.08
+      "seconds": 5.23
     }
   ],
   "alerts": [
+    {
+      "title": "Senior Security Consultant (Penetration Testing)",
+      "company": "VANTAGE POINT SECURITY PTE. LTD.",
+      "location": "Singapore · Central",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/senior-security-consultant-vantage-point-security-50b461d0df9dcabd2fba4d992b137ec5",
+      "source": "MyCareersFuture",
+      "published_at": "2026-05-18",
+      "summary": "Location: Singapore Role Purpose: We are seeking an accomplished and proactive Senior Penetration Tester to lead our offensive security and penetration testing projects. The successful candidate will possess extensive practical experience, hold multiple industry-recognised certifications, and demonstrate strong leader…",
+      "salary_estimate": "Listed SGD 7,500–9,500/mo",
+      "tags": [
+        "Security",
+        "Penetration Testing",
+        "Penetration Tester",
+        "Offensive Security",
+        "Lead",
+        "Consultant"
+      ],
+      "score": 80,
+      "cv_score": 80,
+      "fit": [
+        "Offensive Security",
+        "Leadership"
+      ],
+      "priority": "Medium-high",
+      "why_match": "Strong overlap with Offensive Security, Leadership. Ranked as pentest/red-team, leadership, with CV fit 80/100, AI/security relevance 64/100, and lead/manager trajectory.",
+      "possible_gap": "Confirm the work includes modern application/cloud targets and is not a narrow checklist testing role.",
+      "categories": [
+        "Best pentest/red-team role",
+        "Best leadership role"
+      ],
+      "score_breakdown": {
+        "final": 80,
+        "cv_fit": 80,
+        "ai_security": 64,
+        "career_upside": 74,
+        "location_fit": 100,
+        "freshness": 100,
+        "company_boost": 0,
+        "noise_penalty": 0,
+        "source_boost": 2
+      },
+      "seniority": "Lead/manager",
+      "apply_angle": "Lead with offensive-security delivery, exploitability judgement, adversary emulation, and clear remediation guidance.",
+      "skillsets_to_build": [
+        "Offensive security delivery: web/cloud/API testing, adversary emulation, reporting, and risk-ranked remediation guidance.",
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
+      ],
+      "learning_gaps": [
+        "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review.",
+        "CRTO/CARTP-style adversary-emulation training if the role asks for red-team operations or attack-path development.",
+        "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
+      ],
+      "alert_reason": "offensive-security signal, new this week",
+      "next_action": "Shortlist: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
+      "status_badge": "New this week",
+      "first_seen": "2026-05-18",
+      "last_seen": "2026-05-18",
+      "status": "New"
+    },
     {
       "title": "Product Security Architect — Agentic AI & Security",
       "company": "KEYSIGHT TECHNOLOGIES SINGAPORE (SALES) PTE. LTD.",
@@ -654,6 +718,69 @@
       "first_seen": "2026-05-17",
       "last_seen": "2026-05-18",
       "status": "Still open"
+    },
+    {
+      "title": "Associate Security Consultant (Penetration Testing)",
+      "company": "VANTAGE POINT SECURITY PTE. LTD.",
+      "location": "Singapore · Central",
+      "url": "https://www.mycareersfuture.gov.sg/job/professional-services/associate-security-consultant-vantage-point-security-2bcc7d3fe196d036cf6d5eae0e1bcf00",
+      "source": "MyCareersFuture",
+      "published_at": "2026-05-18",
+      "summary": "Role Purpose: The Associate Security Consultant attains CREST CRT certification, learns other security assurance skills and assists in delivering penetration testing & offensive security projects to ensure a successful outcome that at least meets or exceeds the expectations of our clients. Role Outcomes: Mentored to a…",
+      "salary_estimate": "Listed SGD 4,500–5,000/mo",
+      "tags": [
+        "Security",
+        "Penetration Testing",
+        "Offensive Security",
+        "Consultant"
+      ],
+      "score": 71,
+      "cv_score": 71,
+      "fit": [
+        "Offensive Security",
+        "Leadership"
+      ],
+      "priority": "Medium",
+      "why_match": "Strong overlap with Offensive Security, Leadership. Ranked as pentest/red-team, leadership, with CV fit 71/100, AI/security relevance 55/100, and mid/senior trajectory.",
+      "possible_gap": "Confirm the work includes modern application/cloud targets and is not a narrow checklist testing role.",
+      "categories": [
+        "Best pentest/red-team role",
+        "Best leadership role"
+      ],
+      "score_breakdown": {
+        "final": 71,
+        "cv_fit": 71,
+        "ai_security": 55,
+        "career_upside": 52,
+        "location_fit": 100,
+        "freshness": 100,
+        "company_boost": 0,
+        "noise_penalty": 0,
+        "source_boost": 2
+      },
+      "seniority": "Mid/senior",
+      "apply_angle": "Lead with offensive-security delivery, exploitability judgement, adversary emulation, and clear remediation guidance.",
+      "skillsets_to_build": [
+        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
+        "Offensive security delivery: web/cloud/API testing, adversary emulation, reporting, and risk-ranked remediation guidance.",
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
+      ],
+      "learning_gaps": [
+        "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.",
+        "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
+        "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review."
+      ],
+      "alert_reason": "offensive-security signal, new this week",
+      "next_action": "Watch: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
+      "status_badge": "New this week",
+      "first_seen": "2026-05-18",
+      "last_seen": "2026-05-18",
+      "status": "New"
     }
   ],
   "removed_recently": [
@@ -759,6 +886,69 @@
     }
   ],
   "jobs": [
+    {
+      "title": "Senior Security Consultant (Penetration Testing)",
+      "company": "VANTAGE POINT SECURITY PTE. LTD.",
+      "location": "Singapore · Central",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/senior-security-consultant-vantage-point-security-50b461d0df9dcabd2fba4d992b137ec5",
+      "source": "MyCareersFuture",
+      "published_at": "2026-05-18",
+      "summary": "Location: Singapore Role Purpose: We are seeking an accomplished and proactive Senior Penetration Tester to lead our offensive security and penetration testing projects. The successful candidate will possess extensive practical experience, hold multiple industry-recognised certifications, and demonstrate strong leader…",
+      "salary_estimate": "Listed SGD 7,500–9,500/mo",
+      "tags": [
+        "Security",
+        "Penetration Testing",
+        "Penetration Tester",
+        "Offensive Security",
+        "Lead",
+        "Consultant"
+      ],
+      "score": 80,
+      "cv_score": 80,
+      "fit": [
+        "Offensive Security",
+        "Leadership"
+      ],
+      "priority": "Medium-high",
+      "why_match": "Strong overlap with Offensive Security, Leadership. Ranked as pentest/red-team, leadership, with CV fit 80/100, AI/security relevance 64/100, and lead/manager trajectory.",
+      "possible_gap": "Confirm the work includes modern application/cloud targets and is not a narrow checklist testing role.",
+      "categories": [
+        "Best pentest/red-team role",
+        "Best leadership role"
+      ],
+      "score_breakdown": {
+        "final": 80,
+        "cv_fit": 80,
+        "ai_security": 64,
+        "career_upside": 74,
+        "location_fit": 100,
+        "freshness": 100,
+        "company_boost": 0,
+        "noise_penalty": 0,
+        "source_boost": 2
+      },
+      "seniority": "Lead/manager",
+      "apply_angle": "Lead with offensive-security delivery, exploitability judgement, adversary emulation, and clear remediation guidance.",
+      "skillsets_to_build": [
+        "Offensive security delivery: web/cloud/API testing, adversary emulation, reporting, and risk-ranked remediation guidance.",
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
+      ],
+      "learning_gaps": [
+        "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review.",
+        "CRTO/CARTP-style adversary-emulation training if the role asks for red-team operations or attack-path development.",
+        "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
+      ],
+      "alert_reason": "offensive-security signal, new this week",
+      "next_action": "Shortlist: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
+      "status_badge": "New this week",
+      "first_seen": "2026-05-18",
+      "last_seen": "2026-05-18",
+      "status": "New"
+    },
     {
       "title": "Product Security Architect — Agentic AI & Security",
       "company": "KEYSIGHT TECHNOLOGIES SINGAPORE (SALES) PTE. LTD.",
@@ -1290,132 +1480,67 @@
       "status": "Still open"
     },
     {
-      "title": "Research Fellow (Agentic AI, AI security and cyber-physical security)",
-      "company": "NANYANG TECHNOLOGICAL UNIVERSITY",
-      "location": "Singapore · West",
-      "url": "https://www.mycareersfuture.gov.sg/job/sciences/research-fellow-nanyang-technological-university-6103cad7c17cfddd0e6d0ff4395b2ee7",
+      "title": "Associate Security Consultant (Penetration Testing)",
+      "company": "VANTAGE POINT SECURITY PTE. LTD.",
+      "location": "Singapore · Central",
+      "url": "https://www.mycareersfuture.gov.sg/job/professional-services/associate-security-consultant-vantage-point-security-2bcc7d3fe196d036cf6d5eae0e1bcf00",
       "source": "MyCareersFuture",
-      "published_at": "2026-05-08",
-      "summary": "School of Electrical and Electronic Engineering is one of the founding Schools of the Nanyang Technological University. Built on a culture of excellence, the School is renowned for its high academic standards and research. With over 3,000 undergraduates students and 2,000 graduate students it is one of the largest EEE…",
-      "salary_estimate": "Listed SGD 6,000–12k/mo",
+      "published_at": "2026-05-18",
+      "summary": "Role Purpose: The Associate Security Consultant attains CREST CRT certification, learns other security assurance skills and assists in delivering penetration testing & offensive security projects to ensure a successful outcome that at least meets or exceeds the expectations of our clients. Role Outcomes: Mentored to a…",
+      "salary_estimate": "Listed SGD 4,500–5,000/mo",
       "tags": [
-        "AI",
-        "Agent",
-        "Agentic",
         "Security",
-        "Cyber",
-        "Engineer"
+        "Penetration Testing",
+        "Offensive Security",
+        "Consultant"
       ],
       "score": 71,
-      "cv_score": 46,
+      "cv_score": 71,
       "fit": [
-        "AI Security"
+        "Offensive Security",
+        "Leadership"
       ],
       "priority": "Medium",
-      "why_match": "Strong overlap with AI Security. Ranked as AI-security, research, with CV fit 46/100, AI/security relevance 100/100, and junior trajectory.",
-      "possible_gap": "Check contract length, publication expectations, and whether the role values hands-on offensive security work.",
+      "why_match": "Strong overlap with Offensive Security, Leadership. Ranked as pentest/red-team, leadership, with CV fit 71/100, AI/security relevance 55/100, and mid/senior trajectory.",
+      "possible_gap": "Confirm the work includes modern application/cloud targets and is not a narrow checklist testing role.",
       "categories": [
-        "Best AI-security role",
-        "Best research role"
+        "Best pentest/red-team role",
+        "Best leadership role"
       ],
       "score_breakdown": {
         "final": 71,
-        "cv_fit": 46,
-        "ai_security": 100,
+        "cv_fit": 71,
+        "ai_security": 55,
         "career_upside": 52,
         "location_fit": 100,
-        "freshness": 82,
+        "freshness": 100,
         "company_boost": 0,
         "noise_penalty": 0,
         "source_boost": 2
       },
-      "seniority": "Junior",
-      "apply_angle": "Lead with vulnerability research, threat-model depth, and examples that translated research into practical mitigations.",
+      "seniority": "Mid/senior",
+      "apply_angle": "Lead with offensive-security delivery, exploitability judgement, adversary emulation, and clear remediation guidance.",
       "skillsets_to_build": [
         "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
-        "Vulnerability research craft: root-cause analysis, reproducible PoCs, variant analysis, disclosure-quality writeups, and patch validation."
+        "Offensive security delivery: web/cloud/API testing, adversary emulation, reporting, and risk-ranked remediation guidance.",
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
       ],
       "learning_gaps": [
         "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.",
-        "Keep a public-safe research portfolio with sanitized PoCs, diagrams, and before/after patch evidence."
+        "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
       ],
       "certifications_to_consider": [
         "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
         "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
-        "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice."
+        "OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review."
       ],
-      "alert_reason": "AI-security signal",
-      "next_action": "Watch: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "Still open",
-      "first_seen": "2026-05-17",
+      "alert_reason": "offensive-security signal, new this week",
+      "next_action": "Watch: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
+      "status_badge": "New this week",
+      "first_seen": "2026-05-18",
       "last_seen": "2026-05-18",
-      "status": "Still open"
-    },
-    {
-      "title": "Incident Response Engineer",
-      "company": "CLOUDFLARE, PTE. LTD.",
-      "location": "Singapore · Central",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/incident-response-engineer-cloudflare-c8ebd2489dbb5523c6d893db39ac174b",
-      "source": "MyCareersFuture",
-      "published_at": "2026-05-04",
-      "summary": "Available Location: Singapore Our Mission The Security Response Team’s mission is to systematically respond to security threats safeguarding Cloudflare. We operate 24/7 across the globe to respond to security incidents, continuously improve our response capabilities, lead digital investigations and enhance our overall…",
-      "salary_estimate": "Listed SGD 5,400–10,100/mo",
-      "tags": [
-        "Incident Response",
-        "Security",
-        "Threat",
-        "Engineer",
-        "Lead"
-      ],
-      "score": 70,
-      "cv_score": 57,
-      "fit": [
-        "Incident Response",
-        "Leadership"
-      ],
-      "priority": "Medium",
-      "why_match": "Strong overlap with Incident Response, Leadership. Ranked as incident-response, leadership, with CV fit 57/100, AI/security relevance 34/100, and lead/manager trajectory.",
-      "possible_gap": "Verify the day-to-day scope is technical and not mostly compliance, sales, or generic security operations.",
-      "categories": [
-        "Best incident-response role",
-        "Best leadership role"
-      ],
-      "score_breakdown": {
-        "final": 70,
-        "cv_fit": 57,
-        "ai_security": 34,
-        "career_upside": 82,
-        "location_fit": 100,
-        "freshness": 82,
-        "company_boost": 8,
-        "noise_penalty": 0,
-        "source_boost": 2
-      },
-      "seniority": "Lead/manager",
-      "apply_angle": "Frame the pitch around technical security judgement, practical fixes, and ability to work across engineering teams.",
-      "skillsets_to_build": [
-        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
-        "Detection/IR fundamentals: log analysis, incident scoping, containment, cloud telemetry, and post-incident hardening.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design.",
-        "Cloud/platform security: IAM, Kubernetes/container boundaries, CI/CD, secrets handling, and cloud-native detection."
-      ],
-      "learning_gaps": [
-        "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.",
-        "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes.",
-        "Strengthen cloud threat-model examples and hands-on validation across at least one major cloud stack."
-      ],
-      "certifications_to_consider": [
-        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
-        "Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.",
-        "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs."
-      ],
-      "alert_reason": "priority employer",
-      "next_action": "Watch: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
-      "status_badge": "Still open",
-      "first_seen": "2026-05-17",
-      "last_seen": "2026-05-18",
-      "status": "Still open"
+      "status": "New"
     }
   ]
 }
