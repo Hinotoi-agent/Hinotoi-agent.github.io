@@ -1,3 +1,15 @@
+- date: '2026-05-19'
+  repo: Hinotoi-agent/Verifymate
+  number: 7
+  title: 'Add source-to-sink evidence chain checks'
+  url: https://github.com/Hinotoi-agent/Verifymate/pull/7
+  category: evidence
+  tags:
+  - evidence
+  - source-to-sink
+  - verifymate
+  - false-positive-triage
+  month: 2026-05
 - date: '2026-05-17'
   repo: gadievron/raptor
   number: 489
