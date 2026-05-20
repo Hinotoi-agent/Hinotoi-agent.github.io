@@ -1,3 +1,28 @@
+- date: '2026-05-20'
+  repo: gadievron/honeyslop
+  number: 6
+  title: 'Add honeyslop doctor validation'
+  url: https://github.com/gadievron/honeyslop/pull/6
+  category: evidence
+  tags:
+  - canaries
+  - validation
+  - ci
+  - honeypot
+  - instrumentation
+  month: 2026-05
+- date: '2026-05-20'
+  repo: gadievron/honeyslop
+  number: 7
+  title: 'Add UUID rotation helper'
+  url: https://github.com/gadievron/honeyslop/pull/7
+  category: evidence
+  tags:
+  - uuid-rotation
+  - canaries
+  - dry-run
+  - instrumentation
+  month: 2026-05
 - date: '2026-05-19'
   repo: Hinotoi-agent/Verifymate
   number: 7
