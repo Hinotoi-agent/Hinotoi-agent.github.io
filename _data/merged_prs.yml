@@ -1,3 +1,16 @@
+- date: '2026-05-21'
+  repo: Hinotoi-agent/Verifymate
+  number: 8
+  title: 'feat: check destructive action safety evidence'
+  url: https://github.com/Hinotoi-agent/Verifymate/pull/8
+  category: evidence
+  tags:
+  - verifymate
+  - destructive-actions
+  - path-safety
+  - operator-safety
+  - evidence
+  month: 2026-05
 - date: '2026-05-20'
   repo: gadievron/honeyslop
   number: 6
