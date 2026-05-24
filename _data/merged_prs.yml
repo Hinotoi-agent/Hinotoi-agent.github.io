@@ -1,3 +1,55 @@
+- date: '2026-05-24'
+  repo: gadievron/raptor
+  number: 615
+  title: 'feat(source-intel): surface C-level input sources'
+  url: https://github.com/gadievron/raptor/pull/615
+  category: evidence
+  tags:
+  - source-intel
+  - c-cpp
+  - input-sources
+  - evidence
+  - function-taxonomy
+  month: 2026-05
+- date: '2026-05-24'
+  repo: HKUDS/OpenHarness
+  number: 276
+  title: '[security] fix(ohmo): keep session restore local-only remotely'
+  url: https://github.com/HKUDS/OpenHarness/pull/276
+  category: security
+  tags:
+  - remote-gateway
+  - session-restore
+  - transcript-disclosure
+  - local-only
+  - agent-security
+  month: 2026-05
+- date: '2026-05-24'
+  repo: HKUDS/OpenHarness
+  number: 272
+  title: '[security] fix(commands): keep project context commands local-only'
+  url: https://github.com/HKUDS/OpenHarness/pull/272
+  category: security
+  tags:
+  - remote-gateway
+  - prompt-injection
+  - project-context
+  - local-only
+  - agent-security
+  month: 2026-05
+- date: '2026-05-24'
+  repo: gadievron/raptor
+  number: 555
+  title: 'feat(fuzzing): add seed corpus preparation'
+  url: https://github.com/gadievron/raptor/pull/555
+  category: evidence
+  tags:
+  - fuzzing
+  - seed-corpus
+  - artifact-safety
+  - secret-skips
+  - deterministic-evidence
+  month: 2026-05
 - date: '2026-05-23'
   repo: nanocoai/nanoclaw
   number: 2566
