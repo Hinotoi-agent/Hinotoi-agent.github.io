@@ -1,3 +1,29 @@
+- date: '2026-05-25'
+  repo: Hinotoi-agent/vulnweave
+  number: 4
+  title: 'fix: constrain vault exports and candidate evidence'
+  url: https://github.com/Hinotoi-agent/vulnweave/pull/4
+  category: evidence
+  tags:
+  - vulnweave
+  - vault-export
+  - candidate-evidence
+  - path-containment
+  - security-tooling
+  month: 2026-05
+- date: '2026-05-25'
+  repo: NousResearch/hermes-agent
+  number: 30972
+  title: '[security] fix(file-safety): deny reads of Google OAuth tokens'
+  url: https://github.com/NousResearch/hermes-agent/pull/30972
+  category: security
+  tags:
+  - credential-stores
+  - file-safety
+  - oauth-tokens
+  - read-deny
+  - agent-security
+  month: 2026-05
 - date: '2026-05-24'
   repo: gadievron/raptor
   number: 615
