@@ -1,3 +1,29 @@
+- date: '2026-05-26'
+  repo: OWASP/APTS
+  number: 61
+  title: 'docs: add credential lifecycle record template'
+  url: https://github.com/OWASP/APTS/pull/61
+  category: docs standards
+  tags:
+  - evidence-records
+  - credential-lifecycle
+  - secrets
+  - standards
+  - oss-hardening
+  month: 2026-05
+- date: '2026-05-26'
+  repo: OWASP/APTS
+  number: 60
+  title: 'docs: add operator competency record template'
+  url: https://github.com/OWASP/APTS/pull/60
+  category: docs standards
+  tags:
+  - evidence-records
+  - human-oversight
+  - operator-competency
+  - standards
+  - oss-hardening
+  month: 2026-05
 - date: '2026-05-25'
   repo: Hinotoi-agent/vulnweave
   number: 4
