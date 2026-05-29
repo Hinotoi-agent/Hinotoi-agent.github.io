@@ -1,3 +1,18 @@
+- date: '2026-05-29'
+  repo: HKUDS/nanobot
+  number: 4047
+  title: '[security] fix(msteams): trust service URLs before replies'
+  url: https://github.com/HKUDS/nanobot/pull/4047
+  category: security
+  tags:
+  - msteams
+  - bot-framework
+  - service-url
+  - ssrf
+  - token-disclosure
+  - stored-authority
+  - oss-hardening
+  month: 2026-05
 - date: '2026-05-26'
   repo: OWASP/APTS
   number: 61
