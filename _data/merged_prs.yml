@@ -1,3 +1,18 @@
+- date: '2026-05-30'
+  repo: HKUDS/nanobot
+  number: 4106
+  title: '[security] fix(matrix): bound inbound media downloads'
+  url: https://github.com/HKUDS/nanobot/pull/4106
+  category: security
+  tags:
+  - matrix
+  - media-downloads
+  - resource-exhaustion
+  - dos
+  - streaming-limits
+  - concurrency-caps
+  - oss-hardening
+  month: 2026-05
 - date: '2026-05-29'
   repo: HKUDS/nanobot
   number: 4047
