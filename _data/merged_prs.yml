@@ -1,3 +1,55 @@
+- date: '2026-05-31'
+  repo: Hinotoi-agent/vulnweave
+  number: 5
+  title: 'feat: detect provider endpoint override exfiltration'
+  url: https://github.com/Hinotoi-agent/vulnweave/pull/5
+  category: evidence
+  tags:
+  - provider-endpoints
+  - credential-exfiltration
+  - detector-guard-order
+  - security-tooling
+  - oss-hardening
+  month: 2026-05
+- date: '2026-05-31'
+  repo: steipete/CodexBar
+  number: 1228
+  title: '[security] fix(release): isolate notarization temp files'
+  url: https://github.com/steipete/CodexBar/pull/1228
+  category: security
+  tags:
+  - release-hardening
+  - temp-files
+  - notarization
+  - credential-safety
+  - oss-hardening
+  month: 2026-05
+- date: '2026-05-31'
+  repo: steipete/CodexBar
+  number: 1222
+  title: '[security] fix(cli): avoid privileged temp installer script'
+  url: https://github.com/steipete/CodexBar/pull/1222
+  category: security
+  tags:
+  - cli-installer
+  - temp-files
+  - privilege-boundary
+  - local-hardening
+  - oss-hardening
+  month: 2026-05
+- date: '2026-05-31'
+  repo: steipete/CodexBar
+  number: 1226
+  title: '[security] fix(providers): require HTTPS for redirect cookies'
+  url: https://github.com/steipete/CodexBar/pull/1226
+  category: security
+  tags:
+  - redirect-cookies
+  - cleartext-downgrade
+  - provider-clients
+  - credential-safety
+  - oss-hardening
+  month: 2026-05
 - date: '2026-05-30'
   repo: HKUDS/nanobot
   number: 4106
