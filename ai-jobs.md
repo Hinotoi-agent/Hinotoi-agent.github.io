@@ -8,7 +8,7 @@ permalink: /ai-jobs/
 {% assign jobs = job_feed.jobs %}
 {% assign alerts = job_feed.alerts %}
 
-<p class="page-lede">Singapore-focused AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, incident-response support, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, and adjacent security-engineering leadership roles. The weekly refresh prioritizes senior-compensation roles, tracks new/still-open roles, checks more ATS sources, and lets you filter the ranked list directly on this page.</p>
+<p class="page-lede">A weekly, Singapore-focused shortlist of senior AI-security, AppSec, vulnerability research, and security-engineering leadership roles.</p>
 
 <div class="jobs-meta-card">
   <div class="jobs-meta-grid">
@@ -19,9 +19,6 @@ permalink: /ai-jobs/
       <div><strong>Published:</strong> top {{ job_feed.stats.published_count }}</div>
     {% endif %}
   </div>
-  <p>{{ job_feed.source_note }}</p>
-  {% if job_feed.search_behavior %}<p><strong>Search behavior:</strong> {{ job_feed.search_behavior }}</p>{% endif %}
-  {% if job_feed.minimum_score %}<p><strong>Publishing threshold:</strong> final score {{ job_feed.minimum_score }}+ before top-10 ranking.</p>{% endif %}
 </div>
 
 {% if alerts and alerts.size > 0 %}
@@ -42,7 +39,7 @@ permalink: /ai-jobs/
 
 {% if jobs and jobs.size > 0 %}
   <section class="jobs-score-model" aria-label="Ranking model">
-    <h2>How the top 10 is ranked</h2>
+    <h2>Ranking model</h2>
     <div class="score-model-grid">
       <div><strong>43%</strong><span>CV fit</span></div>
       <div><strong>27%</strong><span>AI/security relevance</span></div>
@@ -50,7 +47,7 @@ permalink: /ai-jobs/
       <div><strong>10%</strong><span>Singapore/location fit</span></div>
       <div><strong>6%</strong><span>Freshness</span></div>
     </div>
-    <p>Sales, junior-only, compliance-heavy, SOC-only, compensation-misaligned, or non-technical matches are penalized or filtered before the top 10 is selected. The page now exposes score breakdowns so poor matches can be tuned in future refreshes.</p>
+    <p>Ranked by fit, AI/security relevance, seniority, location, and freshness. Low-signal matches are filtered before publishing.</p>
   </section>
 
   <section class="jobs-category-panel" aria-label="Best matches by role type">
