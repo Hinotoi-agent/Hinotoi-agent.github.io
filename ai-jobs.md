@@ -8,12 +8,11 @@ permalink: /ai-jobs/
 {% assign jobs = job_feed.jobs %}
 {% assign alerts = job_feed.alerts %}
 
-<p class="page-lede">Singapore-focused AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, incident-response support, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, and adjacent security-engineering leadership roles. The weekly refresh now targets roles with an estimated or listed S$11k+/month onwards compensation path, tracks new/still-open roles, checks more ATS sources, and lets you filter the ranked list directly on this page.</p>
+<p class="page-lede">Singapore-focused AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, incident-response support, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, and adjacent security-engineering leadership roles. The weekly refresh prioritizes senior-compensation roles, tracks new/still-open roles, checks more ATS sources, and lets you filter the ranked list directly on this page.</p>
 
 <div class="jobs-meta-card">
   <div class="jobs-meta-grid">
     <div><strong>Location filter:</strong> {{ job_feed.location_filter | default: "Singapore" }}</div>
-    {% if job_feed.salary_target %}<div><strong>Salary target:</strong> {{ job_feed.salary_target }}</div>{% endif %}
     <div><strong>Last refreshed:</strong> {{ job_feed.updated_at | default: "pending first refresh" }}</div>
     {% if job_feed.stats %}
       <div><strong>Candidates scored:</strong> {{ job_feed.stats.candidates_scored }}</div>
@@ -51,7 +50,7 @@ permalink: /ai-jobs/
       <div><strong>10%</strong><span>Singapore/location fit</span></div>
       <div><strong>6%</strong><span>Freshness</span></div>
     </div>
-    <p>Sales, junior-only, compliance-heavy, SOC-only, below-target-compensation, or non-technical matches are penalized or filtered before the top 10 is selected. The page now exposes score breakdowns so poor matches can be tuned in future refreshes.</p>
+    <p>Sales, junior-only, compliance-heavy, SOC-only, compensation-misaligned, or non-technical matches are penalized or filtered before the top 10 is selected. The page now exposes score breakdowns so poor matches can be tuned in future refreshes.</p>
   </section>
 
   <section class="jobs-category-panel" aria-label="Best matches by role type">
@@ -143,7 +142,9 @@ permalink: /ai-jobs/
         </div>
         <h2><a href="{{ job.url }}">{{ job.title }}</a></h2>
         <div class="job-company">{{ job.company }} · {{ job.location }}</div>
-        {% if job.salary_estimate %}<div class="job-salary"><strong>Salary:</strong> {{ job.salary_estimate }}</div>{% endif %}
+        {% if job.salary_estimate %}
+          <div class="job-salary"><strong>Salary:</strong> {{ job.salary_estimate }}{% if job.salary_confidence %}<span class="job-salary-confidence">{{ job.salary_confidence }}</span>{% endif %}</div>
+        {% endif %}
 
         {% if job.categories and job.categories.size > 0 %}
           <div class="job-category-badges">

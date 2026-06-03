@@ -1268,6 +1268,19 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
   color: var(--accent);
 }
 
+.job-salary-confidence {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  display: inline-flex;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: 0.45rem;
+  padding: 0.28rem 0.48rem;
+  vertical-align: middle;
+}
+
 @media (max-width: 640px) {
   .score-model-grid,
   .jobs-category-grid { grid-template-columns: 1fr; }

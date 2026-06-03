@@ -27,6 +27,8 @@ REQUIRED_JOB_FIELDS = {
     "why_match",
     "possible_gap",
     "compensation_fit",
+    "salary_estimate",
+    "salary_confidence",
     "apply_angle",
     "skillsets_to_build",
     "learning_gaps",
@@ -36,6 +38,16 @@ REQUIRED_JOB_FIELDS = {
     "status",
 }
 ALLOWED_STATUS_BADGES = {"New this week", "Still open", "Repeated high match", "Watchlist"}
+ALLOWED_SALARY_CONFIDENCE_PREFIXES = ("Listed —", "Estimated —")
+REQUIRED_EXPANDED_SOURCES = {
+    "Greenhouse/Chainguard",
+    "Greenhouse/Databricks",
+    "Greenhouse/Zscaler",
+    "Lever/Palantir",
+    "Ashby/HackerOne",
+    "Ashby/LangChain",
+    "Ashby/Linear",
+}
 EMAIL_RE = re.compile(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", re.I)
 MAILTO_RE = re.compile(r"mailto:", re.I)
 URL_RE = re.compile(r"https?://\S+", re.I)
@@ -120,6 +132,11 @@ def main() -> int:
     source_health = data.get("source_health")
     if not isinstance(source_health, list) or not source_health:
         fail("source_health must be a non-empty list")
+    health_rows = cast(list[Any], source_health)
+    health_sources = {str(row.get("source")) for row in health_rows if isinstance(row, dict)}
+    missing_expanded_sources = REQUIRED_EXPANDED_SOURCES.difference(health_sources)
+    if missing_expanded_sources:
+        fail(f"expanded source coverage missing from source_health: {', '.join(sorted(missing_expanded_sources))}")
 
     seen_companies: dict[str, int] = {}
     for idx, raw_row in enumerate(jobs, start=1):
@@ -130,7 +147,7 @@ def main() -> int:
         if missing:
             fail(f"job #{idx} missing required fields: {', '.join(sorted(missing))}")
         label = f"job #{idx} ({row.get('company', 'unknown')} / {row.get('title', 'unknown')})"
-        for field in ["title", "company", "location", "url", "source", "why_match", "possible_gap", "apply_angle", "next_action", "status_badge"]:
+        for field in ["title", "company", "location", "url", "source", "salary_estimate", "salary_confidence", "why_match", "possible_gap", "apply_angle", "next_action", "status_badge"]:
             require_nonempty_string(row, field, label)
         for field in ["skillsets_to_build", "learning_gaps", "certifications_to_consider"]:
             require_nonempty_list(row, field, label)
@@ -142,6 +159,9 @@ def main() -> int:
             fail(f"{label} has invalid compensation_fit {compensation_fit!r}")
         if row.get("status_badge") not in ALLOWED_STATUS_BADGES:
             fail(f"{label} has unexpected status_badge {row.get('status_badge')!r}")
+        salary_confidence = str(row.get("salary_confidence") or "")
+        if not salary_confidence.startswith(ALLOWED_SALARY_CONFIDENCE_PREFIXES):
+            fail(f"{label} has unexpected salary_confidence {salary_confidence!r}")
         company_key = str(row.get("company", "")).casefold()
         seen_companies[company_key] = seen_companies.get(company_key, 0) + 1
 

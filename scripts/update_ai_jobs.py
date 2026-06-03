@@ -40,26 +40,33 @@ MIN_ANNUAL_COMPENSATION_SGD = MIN_MONTHLY_COMPENSATION_SGD * 12
 
 GREENHOUSE_BOARDS = {
     "Anthropic": "anthropic",
+    "Chainguard": "chainguard",
     "Cloudflare": "cloudflare",
     "Datadog": "datadog",
+    "Databricks": "databricks",
     "Elastic": "elastic",
     "Google DeepMind": "deepmind",
     "MongoDB": "mongodb",
     "OKX": "okx",
     "Stripe": "stripe",
     "Wiz": "wizinc",
+    "Zscaler": "zscaler",
     "Scale AI": "scaleai",
     "GitLab": "gitlab",
 }
 
 LEVER_COMPANIES = {
     "Mistral AI": "mistral",
+    "Palantir": "palantir",
 }
 
 ASHBY_BOARDS = {
     "OpenAI": "openai",
     "Cursor": "cursor",
+    "HackerOne": "hackerone",
     "Harvey": "harvey",
+    "LangChain": "langchain",
+    "Linear": "linear",
     "Perplexity": "perplexity",
     "Replit": "replit",
     "Modal": "modal",
@@ -199,6 +206,7 @@ class Job:
     published_at: str
     summary: str
     salary_estimate: str
+    salary_confidence: str
     tags: tuple[str, ...]
     score: int
     cv_score: int
@@ -626,6 +634,16 @@ def salary_estimate_for(title: str, company: str, location: str, listed_salary: 
     return fallback_salary_estimate(title, location, company)
 
 
+def salary_confidence_for(listed_salary: str, title: str, company: str, location: str) -> str:
+    """Public confidence label for the S$11k+/month compensation path."""
+    if clean_text(listed_salary):
+        return "Listed — source-provided compensation"
+    seniority = detect_seniority(title, f"{company} {location}")
+    if seniority in {"Staff/principal", "Lead/manager", "Senior"} or company_boost(company):
+        return "Estimated — seniority/company/location fallback"
+    return "Estimated — verify in recruiter screen"
+
+
 def compensation_monthly_range(salary_text: str) -> tuple[int | None, int | None]:
     """Return estimated/listed monthly SGD range from rendered compensation text."""
     text = clean_text(salary_text).lower().replace(",", "")
@@ -666,6 +684,7 @@ def build_job(title: str, company: str, location: str, url: str, source: str, pu
     if score <= 0 or not score_breakdown:
         return None
     salary_estimate = salary_estimate_for(title, company, location, listed_salary)
+    salary_confidence = salary_confidence_for(listed_salary, title, company, location)
     compensation_fit = compensation_target_score(salary_estimate)
     if compensation_fit <= 0:
         return None
@@ -677,7 +696,8 @@ def build_job(title: str, company: str, location: str, url: str, source: str, pu
         return None
     return Job(
         title=title, company=company, location=location, url=str(url), source=source, published_at=published_at,
-        summary=summary or "Role matched by title/company/location metadata.", salary_estimate=salary_estimate, tags=tuple(tags), score=score,
+        summary=summary or "Role matched by title/company/location metadata.", salary_estimate=salary_estimate,
+        salary_confidence=salary_confidence, tags=tuple(tags), score=score,
         cv_score=cv_score, fit=tuple(fit), priority=priority, why_match=why_match, possible_gap=possible_gap, compensation_fit=compensation_fit,
         categories=tuple(categories), score_breakdown=score_breakdown, seniority=seniority, apply_angle=apply_angle,
         skillsets_to_build=tuple(skillsets_to_build), learning_gaps=tuple(learning_gaps),
@@ -1003,6 +1023,7 @@ def job_to_dict(job: Job) -> dict[str, object]:
         "published_at": job.published_at,
         "summary": job.summary,
         "salary_estimate": job.salary_estimate,
+        "salary_confidence": job.salary_confidence,
         "tags": list(job.tags),
         "score": job.score,
         "cv_score": job.cv_score,
@@ -1074,10 +1095,10 @@ def main() -> int:
         "salary_target": "S$11k+/month onwards target (S$132k+/year equivalent); clear listed ranges starting below target are filtered out.",
         "minimum_monthly_compensation_sgd": MIN_MONTHLY_COMPENSATION_SGD,
         "search_focus": "Singapore AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, incident response support, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, and adjacent security-engineering leadership roles.",
-        "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, require an estimated or listed S$11k+/month compensation path, label new/still-open roles, and penalize sales, junior-only, compliance-heavy, SOC-only, or non-technical noise.",
+        "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, require a senior-compensation path, label new/still-open roles, and penalize sales, junior-only, compliance-heavy, SOC-only, or non-technical noise.",
         "minimum_score": PUBLISH_SCORE,
-        "sources": ["Greenhouse public boards", "Lever public postings", "Ashby public boards", "Remotive", "RemoteOK", "MyCareersFuture"],
-        "source_note": "Weekly top-10 public ATS/feed scan for Singapore and Singapore-eligible remote AI/security roles. Ranking is weighted against broad CV-fit signals from the uploaded CV without publishing private details: cybersecurity management, offensive security leadership, incident response support, VAPT/adversary emulation, AI security engineering, RAG/agent/MCP trust boundaries, prompt/content injection testing, vulnerability research/CVEs, Cyber Range delivery, Azure/LLM tooling, and cloud/application/product security. Links go to original job posts; verify current availability and compensation before applying.",
+        "sources": ["Expanded Greenhouse public boards", "Expanded Lever public postings", "Expanded Ashby public boards", "Remotive", "RemoteOK", "MyCareersFuture"],
+        "source_note": "Weekly top-10 public ATS/feed scan for Singapore and Singapore-eligible remote AI/security roles. Expanded coverage includes additional AI/security-relevant public boards such as Chainguard, Databricks, Zscaler, Palantir, HackerOne, LangChain, and Linear where their ATS feeds are available. Ranking is weighted against broad CV-fit signals from the uploaded CV without publishing private details: cybersecurity management, offensive security leadership, incident response support, VAPT/adversary emulation, AI security engineering, RAG/agent/MCP trust boundaries, prompt/content injection testing, vulnerability research/CVEs, Cyber Range delivery, Azure/LLM tooling, and cloud/application/product security. Salary confidence is shown per role; verify current availability and compensation before applying.",
         "stats": {
             "candidates_scored": len(ranked),
             "published_count": len(jobs),
