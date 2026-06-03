@@ -1,3 +1,29 @@
+- date: '2026-06-04'
+  repo: Hinotoi-agent/vulnweave
+  number: 6
+  title: 'Detect broader high-signal source review risks'
+  url: https://github.com/Hinotoi-agent/vulnweave/pull/6
+  category: evidence
+  tags:
+  - source-review
+  - path-validation
+  - command-execution
+  - outbound-fetch
+  - security-tooling
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-03'
+  repo: agentic-builders-collective/agentic-builders-collective.github.io
+  number: 66
+  title: 'Add Lennon Chia community profile'
+  url: https://github.com/agentic-builders-collective/agentic-builders-collective.github.io/pull/66
+  category: community
+  tags:
+  - community-profile
+  - public-identity
+  - attribution
+  - oss-network
+  month: 2026-06
 - date: '2026-05-31'
   repo: Hinotoi-agent/vulnweave
   number: 5
