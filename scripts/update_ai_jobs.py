@@ -34,7 +34,7 @@ HISTORY_OUT = ROOT / "_data" / "ai_jobs_history.json"
 USER_AGENT = "HinotoiJobWatcher/2.0 (+https://hinotoi-agent.github.io/ai-jobs/)"
 MAX_JOBS = 10
 ALERT_SCORE = 85
-PUBLISH_SCORE = 58
+PUBLISH_SCORE = 55
 MIN_MONTHLY_COMPENSATION_SGD = 11_000
 MIN_ANNUAL_COMPENSATION_SGD = MIN_MONTHLY_COMPENSATION_SGD * 12
 
@@ -138,7 +138,7 @@ SECURITY_TERMS = [
     "security", "cyber", "cybersecurity", "trust and safety", "safety", "risk", "abuse",
     "red team", "penetration testing", "penetration tester", "pentest", "offensive security",
     "adversary emulation", "attack path", "exploitability", "vapt", "cyber range",
-    "application security", "appsec", "product security", "cloud security", "detection",
+    "application security", "appsec", "product security", "cloud security", "security assurance", "detection",
     "threat", "vulnerability", "incident response", "fraud", "secure sdlc", "code review",
     "source code review", "devsecops", "security automation", "purple team",
 ]
@@ -149,12 +149,12 @@ CV_MATCH_TERMS = {
     "Offensive Security": ["offensive security", "penetration testing", "penetration tester", "pentest", "red team", "adversary emulation", "attack path", "attack-path validation", "exploitability", "vapt", "cyber range", "crto", "crtp", "oscp", "oswe"],
     "AI Security": ["ai security", "ai security manager", "ai security engineer", "agentic ai", "agent security", "llm security", "model security", "prompt injection", "content injection", "guardrail", "rag", "machine learning security", "cybersecurity ai", "adversarial ml", "ai-assisted secure code review", "mcp", "model context protocol", "azure ai foundry", "ollama"],
     "Vulnerability Research": ["vulnerability research", "vulnerability triage", "source code review", "secure code", "security research", "cve", "open-source", "oss", "product security advisory", "root cause", "variant analysis", "disclosure"],
-    "App/Product Security": ["application security", "appsec", "application security manager", "appsec manager", "application security lead", "software security manager", "product security", "product security manager", "cloud security", "cloud security manager", "secure development", "security architect", "security engineer", "secure sdlc", "devsecops", "code review", "secure code review", "security automation"],
+    "App/Product Security": ["application security", "appsec", "application security manager", "appsec manager", "application security lead", "software security manager", "product security", "product security manager", "cloud security", "cloud security manager", "security assurance", "security assurance solutions architect", "secure development", "security architect", "security engineer", "secure sdlc", "devsecops", "code review", "secure code review", "security automation"],
     "Incident Response": ["incident response", "detection engineering", "threat hunting", "threat intelligence", "forensics", "purple teaming", "mad20", "mitre attack"],
     "Leadership": ["lead", "manager", "principal", "staff", "architect", "consultant", "governance", "executive reporting", "remediation planning", "stakeholder", "program", "roadmap", "service delivery"],
 }
 
-CV_STRONG_TITLE_TERMS = ["offensive security", "penetration testing", "red team", "product security", "product security manager", "application security", "application security manager", "application security lead", "appsec", "appsec manager", "software security manager", "cloud security manager", "devsecops", "ai security", "ai security manager", "ai security engineer", "agentic ai", "llm security", "vulnerability", "incident response", "cyber range"]
+CV_STRONG_TITLE_TERMS = ["offensive security", "penetration testing", "red team", "product security", "product security manager", "application security", "application security manager", "application security lead", "appsec", "appsec manager", "software security manager", "cloud security manager", "security assurance", "security assurance solutions architect", "devsecops", "ai security", "ai security manager", "ai security engineer", "agentic ai", "llm security", "vulnerability", "incident response", "cyber range"]
 
 EXCLUDED_TITLE_TERMS = [
     "account executive", "partner manager", "field marketing", "marketing manager", "finance & strategy",
