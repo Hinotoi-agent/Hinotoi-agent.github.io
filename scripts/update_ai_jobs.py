@@ -76,7 +76,12 @@ SEARCH_QUERIES = [
     "AI safety security Singapore",
     "machine learning security Singapore",
     "application security AI Singapore",
+    "application security manager Singapore",
+    "appsec manager Singapore",
+    "application security lead Singapore",
+    "software security manager Singapore",
     "product security AI Singapore",
+    "product security manager Singapore",
     "penetration testing Singapore",
     "penetration tester Singapore",
     "red team Singapore",
@@ -89,7 +94,12 @@ SEARCH_QUERIES = [
 MYCAREERSFUTURE_QUERIES = SEARCH_QUERIES + [
     "cyber security AI",
     "application security",
+    "application security manager",
+    "appsec manager",
+    "application security lead",
+    "software security manager",
     "product security",
+    "product security manager",
     "penetration testing",
     "penetration tester",
     "red team",
@@ -118,12 +128,12 @@ CV_MATCH_TERMS = {
     "Offensive Security": ["offensive security", "penetration testing", "penetration tester", "pentest", "red team", "adversary emulation", "attack path", "exploitability", "vapt"],
     "AI Security": ["ai security", "agentic ai", "agent security", "llm security", "model security", "prompt injection", "rag", "machine learning security", "cybersecurity ai", "adversarial ml"],
     "Vulnerability Research": ["vulnerability research", "vulnerability triage", "source code review", "secure code", "security research", "cve", "open-source", "oss", "product security advisory"],
-    "App/Product Security": ["application security", "appsec", "product security", "cloud security", "secure development", "security architect", "security engineer", "secure sdlc", "code review"],
+    "App/Product Security": ["application security", "appsec", "application security manager", "appsec manager", "application security lead", "software security manager", "product security", "product security manager", "cloud security", "secure development", "security architect", "security engineer", "secure sdlc", "code review"],
     "Incident Response": ["incident response", "detection engineering", "threat hunting", "threat intelligence", "forensics", "purple teaming"],
     "Leadership": ["lead", "manager", "principal", "staff", "architect", "consultant", "governance", "executive reporting", "remediation planning"],
 }
 
-CV_STRONG_TITLE_TERMS = ["offensive security", "penetration testing", "red team", "product security", "application security", "appsec", "ai security", "agentic ai", "vulnerability", "incident response"]
+CV_STRONG_TITLE_TERMS = ["offensive security", "penetration testing", "red team", "product security", "product security manager", "application security", "application security manager", "application security lead", "appsec", "appsec manager", "software security manager", "ai security", "agentic ai", "vulnerability", "incident response"]
 
 EXCLUDED_TITLE_TERMS = [
     "account executive", "partner manager", "field marketing", "marketing manager", "finance & strategy",
@@ -1002,7 +1012,7 @@ def main() -> int:
     data = {
         "updated_at": now,
         "location_filter": "Singapore / Remote-Singapore / APAC remote eligible",
-        "search_focus": "Singapore AI job search for AI-security, LLM-security, penetration-testing, red-team, AppSec, product-security, trust/safety, vulnerability research, and adjacent security-engineering roles.",
+        "search_focus": "Singapore AI job search for AI-security, LLM-security, penetration-testing, red-team, AppSec, application-security management, product-security, trust/safety, vulnerability research, and adjacent security-engineering roles.",
         "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, label new/still-open roles, and penalize sales, junior-only, compliance-heavy, SOC-only, or non-technical noise.",
         "minimum_score": 14,
         "sources": ["Greenhouse public boards", "Lever public postings", "Ashby public boards", "Remotive", "RemoteOK", "MyCareersFuture"],

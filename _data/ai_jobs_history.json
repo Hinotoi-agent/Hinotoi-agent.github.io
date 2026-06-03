@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01T13:47:46Z",
+  "updated_at": "2026-06-03T03:17:14Z",
   "jobs": {
     "qwg42wm7i3lxcylgu3": {
       "title": "Product Security Architect — Agentic AI & Security",
@@ -38,8 +38,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 90
+      "last_seen": "2026-06-03",
+      "last_score": 89
     },
     "lcymvdcroi3ltwwz7o": {
       "title": "Security Engineer, Offensive Security",
@@ -62,23 +62,23 @@
       "company": "ENSIGN INFOSECURITY (CYBERSECURITY) PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 79
+      "last_seen": "2026-06-03",
+      "last_score": 78
     },
     "cgel4lsfu2sojxoeur": {
       "title": "Application Security Lead / Manager",
       "company": "PEOPLESEARCH PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 76
+      "last_seen": "2026-06-03",
+      "last_score": 75
     },
     "pz3dvjdptlqsai6kwc": {
       "title": "Lead Cybersecurity Specialist (Offensive Security)",
       "company": "JJ CONSULTING SERVICES",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 77
     },
     "lqiuhugqgd7lonvcwz": {
@@ -102,7 +102,7 @@
       "company": "DESAY SV AUTOMOTIVE SINGAPORE PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 72
     },
     "dsamwaxewlch2klhoe": {
@@ -110,7 +110,7 @@
       "company": "DIGITAL TREASURES CENTER PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 70
     },
     "fghc77rh2zr4b6gp65": {
@@ -166,8 +166,8 @@
       "company": "FORTIEDGE PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 67
+      "last_seen": "2026-06-03",
+      "last_score": 65
     },
     "mq6555j6cim2vggo3t": {
       "title": "Security Engineer - Threat Intel",
@@ -190,15 +190,15 @@
       "company": "SWARMNETICS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 65
+      "last_seen": "2026-06-03",
+      "last_score": 64
     },
     "zhz7zb2cj7je56qkh7": {
       "title": "Resident Security Engineer",
       "company": "FARBEN INFORMATION (SINGAPORE) PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 62
     },
     "lhin7luko2pzi27lef": {
@@ -246,7 +246,7 @@
       "company": "AIA SINGAPORE PRIVATE LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 60
     },
     "aok5zvsutnkc36y2ho": {
@@ -374,7 +374,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 53
     },
     "it52xjkyrd7bs7f36w": {
@@ -510,8 +510,8 @@
       "company": "FORTIEDGE PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 49
+      "last_seen": "2026-06-03",
+      "last_score": 47
     },
     "zi3cxwj463ehawa4sz": {
       "title": "Security Engineer II, Enterprise Security AI - Singapore",
@@ -526,7 +526,7 @@
       "company": "LANTU EMPLOYMENT AGENCY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 49
     },
     "2v6jzwafomtnywmmqm": {
@@ -566,7 +566,7 @@
       "company": "MORGAN MCKINLEY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 48
     },
     "roqtkaiauuyya46kqo": {
@@ -574,7 +574,7 @@
       "company": "SCIENTE INTERNATIONAL PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 46
     },
     "deebrwkjwx24pktr3m": {
@@ -614,7 +614,7 @@
       "company": "ZENITH INFOTECH (S) PTE LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 43
     },
     "px2besdv3gjddxixnc": {
@@ -630,7 +630,7 @@
       "company": "ANCHOR SEARCH GROUP PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 43
     },
     "6nuobdqtattdohe76j": {
@@ -678,7 +678,7 @@
       "company": "INSYGHTS SECURITY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 39
     },
     "ar3r3x5adnm6zzd7wz": {
@@ -686,23 +686,23 @@
       "company": "WEBSPARKS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 40
+      "last_seen": "2026-06-03",
+      "last_score": 38
     },
     "hx3yz2asiilu44vhli": {
       "title": "Cybersecurity Senior Engineer / Engineer",
       "company": "TECHNTEA PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 44
+      "last_seen": "2026-06-03",
+      "last_score": 43
     },
     "sfyscwk4vthklgtlpc": {
       "title": "Threat Analyst",
       "company": "CORNERSTONE GLOBAL PARTNERS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 39
     },
     "pfx4tbab5yjctarmk6": {
@@ -710,7 +710,7 @@
       "company": "TALENTVIS SINGAPORE PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 38
     },
     "53w24a7fvmfpuejfqc": {
@@ -726,7 +726,7 @@
       "company": "TOTAL EBIZ SOLUTIONS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 37
     },
     "hhv24czc72tafgah6a": {
@@ -790,15 +790,15 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 37
+      "last_seen": "2026-06-03",
+      "last_score": 36
     },
     "7fsa7z6kakz7c4ie36": {
       "title": "Junior Penetration Tester",
       "company": "LANTU EMPLOYMENT AGENCY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 35
     },
     "kqk347avvmecd3x7f3": {
@@ -806,7 +806,7 @@
       "company": "TECHKNOWLEDGEY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 35
     },
     "5qhnykmkxzoqcoytxk": {
@@ -918,15 +918,15 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 36
+      "last_seen": "2026-06-03",
+      "last_score": 35
     },
     "r5uuzx2jgquwnwgzdw": {
       "title": "Principal AI Engineer, AI Agent Development",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 33
     },
     "pgp6vt5wr65624s5op": {
@@ -942,7 +942,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 32
     },
     "jv5dbdyavifbksmruh": {
@@ -1014,7 +1014,7 @@
       "company": "OKBL PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 29
     },
     "yy63e7cisgckqiaqjr": {
@@ -1046,15 +1046,15 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 31
+      "last_seen": "2026-06-03",
+      "last_score": 30
     },
     "twxzxfhiwpocxwhcfx": {
       "title": "Senior/Staff Engineer, AI Agent Development",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 33
     },
     "nuvzn2h64vzce3nggo": {
@@ -1078,15 +1078,15 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 34
+      "last_seen": "2026-06-03",
+      "last_score": 33
     },
     "n73nasbchcopc523qr": {
       "title": "Senior Product Manager, AI Agent Products",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 31
     },
     "poostqtzrnzoxh4h63": {
@@ -1126,7 +1126,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 28
     },
     "vbxco37xoitclrrp2c": {
@@ -1134,7 +1134,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 28
     },
     "xxrnbgg3j3mhf6x2ve": {
@@ -1150,7 +1150,7 @@
       "company": "SCIENTEC CONSULTING PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 28
     },
     "zamvirm3oaxy6nuhuc": {
@@ -1158,7 +1158,7 @@
       "company": "GitLab",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 27
     },
     "bsvwnltu72332npm6n": {
@@ -1166,7 +1166,7 @@
       "company": "RECRUIT EXPERT PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 28
     },
     "2t5xzq4dq2vve2oqbn": {
@@ -1206,7 +1206,7 @@
       "company": "Google DeepMind",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 26
     },
     "i5i2akytakuxqg6vop": {
@@ -1214,7 +1214,7 @@
       "company": "SINGAPORE AIRLINES LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 25
     },
     "37r6aznz7xarbbylri": {
@@ -1222,7 +1222,7 @@
       "company": "Mistral AI",
       "source": "Lever",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 25
     },
     "x5jhkynxh67oguzssp": {
@@ -1230,8 +1230,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 27
+      "last_seen": "2026-06-03",
+      "last_score": 26
     },
     "yygqbwkwu4nkyobooc": {
       "title": "Senior Cyber Ops Specialist (Security Services) (JD#10996)",
@@ -1262,15 +1262,15 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 28
+      "last_seen": "2026-06-03",
+      "last_score": 27
     },
     "qvgk7eff4th4w4c45f": {
       "title": "Lead, AI Deployment Manager",
       "company": "OpenAI",
       "source": "Ashby",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 24
     },
     "d6qzpkvwjprgq7itzo": {
@@ -1278,7 +1278,7 @@
       "company": "OpenAI",
       "source": "Ashby",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 24
     },
     "xinvvacb5rpqfk3ri7": {
@@ -1310,15 +1310,15 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 24
+      "last_seen": "2026-06-03",
+      "last_score": 23
     },
     "vw7anobxienuvastrr": {
       "title": "Growth & AI Initiatives Manager",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 27
     },
     "dx3bwpr2t4j34sc7uf": {
@@ -1326,8 +1326,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 27
+      "last_seen": "2026-06-03",
+      "last_score": 26
     },
     "iejjd5ofzl5lazp4cl": {
       "title": "Research Engineer, Machine Learning (RL Velocity)",
@@ -1374,7 +1374,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 23
     },
     "7lglgpgqyzygskvbtc": {
@@ -1398,7 +1398,7 @@
       "company": "Mistral AI",
       "source": "Lever",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 21
     },
     "vsazrd6efgtit3vyqg": {
@@ -1414,7 +1414,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 21
     },
     "ukrtrobp2p4o5oe424": {
@@ -1462,7 +1462,7 @@
       "company": "RED ALPHA CYBERSECURITY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 20
     },
     "puwk554ji7v7n67hzi": {
@@ -1502,7 +1502,7 @@
       "company": "OpenAI",
       "source": "Ashby",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 20
     },
     "neuuyd4m2qeosbzohd": {
@@ -1534,15 +1534,15 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 22
+      "last_seen": "2026-06-03",
+      "last_score": 21
     },
     "gn2qfbot3qvpx3cmfd": {
       "title": "IT Security Officer (Public Sector)",
       "company": "WEBSPARKS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 19
     },
     "unaao3mxivbcsel3b5": {
@@ -1678,7 +1678,7 @@
       "company": "Stripe",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 16
     },
     "o4zfdgbznmp56ajvxz": {
@@ -1686,32 +1686,32 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 19
+      "last_seen": "2026-06-03",
+      "last_score": 18
     },
     "3gg3e2jbbyn7kxvo6r": {
       "title": "Senior/Principal Product Manager, DEX Trading",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 17
+      "last_seen": "2026-06-03",
+      "last_score": 16
     },
     "7vhi3fryljyzix4wwo": {
       "title": "Senior Product Manager - Risk Platform",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 19
+      "last_seen": "2026-06-03",
+      "last_score": 18
     },
     "t3g5hra4zuvosy7sr3": {
       "title": "Senior Product Manager, Risk Intelligence Product",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 19
+      "last_seen": "2026-06-03",
+      "last_score": 18
     },
     "5zpquuqqjrkmtpe7xa": {
       "title": "Program Manager - Dubai",
@@ -1774,7 +1774,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 14
     },
     "eauihq5hil34byavnr": {
@@ -1782,7 +1782,7 @@
       "company": "Elastic",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 15
     },
     "tsw5rv2vyj6x2mlipr": {
@@ -1838,8 +1838,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 18
+      "last_seen": "2026-06-03",
+      "last_score": 16
     },
     "5o7ujek46526n54dli": {
       "title": "Distinguished Engineer, Agentic SDLC & Non‑Linear Productivity",
@@ -1854,16 +1854,16 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 17
+      "last_seen": "2026-06-03",
+      "last_score": 16
     },
     "joi4mgrpofonqiuw2l": {
       "title": "Principal/Senior Product Manager, Advanced Trading Operations (Spot/Derivatives)",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
-      "last_score": 17
+      "last_seen": "2026-06-03",
+      "last_score": 16
     },
     "frknr3phnyu3to7p6b": {
       "title": "Principal Engineer, Middleware",
@@ -1878,7 +1878,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 15
     },
     "74o3ncezcbwlyznw6m": {
@@ -1886,7 +1886,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 15
     },
     "34xiaqvyp2o2o6ykp6": {
@@ -1982,7 +1982,7 @@
       "company": "VANTAGE POINT SECURITY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-18",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 79
     },
     "p23fclybschbnox4nz": {
@@ -1990,7 +1990,7 @@
       "company": "VANTAGE POINT SECURITY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-18",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 70
     },
     "fnhvdbilhcat7lnoub": {
@@ -1998,7 +1998,7 @@
       "company": "VANTAGE POINT SECURITY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-18",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 70
     },
     "bgta5slfundwafw2g5": {
@@ -2006,7 +2006,7 @@
       "company": "LICO RESOURCES PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-18",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 21
     },
     "voikhhcisi4tdcrmgg": {
@@ -2014,16 +2014,16 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-18",
-      "last_seen": "2026-06-01",
-      "last_score": 16
+      "last_seen": "2026-06-03",
+      "last_score": 15
     },
     "s5eagiivib5g6chfne": {
       "title": "Senior Staff Software Engineer, Trading Service (C++)",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-18",
-      "last_seen": "2026-06-01",
-      "last_score": 16
+      "last_seen": "2026-06-03",
+      "last_score": 15
     },
     "a3ntze3felwvvv2zht": {
       "title": "(Senior) Product Manager, DEX Institution Trading",
@@ -2038,7 +2038,7 @@
       "company": "ST LOGISTICS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 87
     },
     "4ytflxf3eqew2vh3nd": {
@@ -2046,7 +2046,7 @@
       "company": "GIC PRIVATE LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 81
     },
     "o3e5yrysjpziwku2sx": {
@@ -2054,7 +2054,7 @@
       "company": "TRUENORTH SEARCH PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 81
     },
     "ckp6gx76guf3hvwu6l": {
@@ -2062,15 +2062,15 @@
       "company": "PRICEWATERHOUSECOOPERS RISK SERVICES PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
-      "last_score": 70
+      "last_seen": "2026-06-03",
+      "last_score": 69
     },
     "vevrcloccjckw7z37e": {
       "title": "Security Consultant",
       "company": "SOFTSCHECK SINGAPORE PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 64
     },
     "i64x5ghnppok5mnm7c": {
@@ -2078,7 +2078,7 @@
       "company": "STONE CYBERSECURITY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 60
     },
     "7qzeemr44hmk4imkl2": {
@@ -2086,7 +2086,7 @@
       "company": "BYTEDANCE PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 58
     },
     "jbukilpe6i5gdyitj4": {
@@ -2094,7 +2094,7 @@
       "company": "COGNOSPHERE PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 57
     },
     "pclol5j3vo7dyuav7x": {
@@ -2102,7 +2102,7 @@
       "company": "RAFFLES MEDICAL GROUP LTD",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 54
     },
     "lli6opqsrimfbtlu45": {
@@ -2110,8 +2110,8 @@
       "company": "FORTIEDGE PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
-      "last_score": 52
+      "last_seen": "2026-06-03",
+      "last_score": 51
     },
     "eow3ylqa7jsol4f6xv": {
       "title": "Information Security Engineer, Early Career, Product Security - Singapore",
@@ -2126,7 +2126,7 @@
       "company": "OpenAI",
       "source": "Ashby",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 44
     },
     "b2yth7t3gxp2b5voss": {
@@ -2134,7 +2134,7 @@
       "company": "Ernst & Young Advisory PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 41
     },
     "pwusdlmym6hmbmqlno": {
@@ -2142,7 +2142,7 @@
       "company": "RAPSYS TECHNOLOGIES PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 39
     },
     "3hviaf5q2dw55pjwbz": {
@@ -2150,7 +2150,7 @@
       "company": "TALENT PULSE PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 37
     },
     "4gm7gii5epd7koqyfp": {
@@ -2158,7 +2158,7 @@
       "company": "PEOPLESEARCH PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 35
     },
     "aa2ftw3ctq3wl5amfd": {
@@ -2166,7 +2166,7 @@
       "company": "EVOLUTION RECRUITMENT SOLUTIONS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 33
     },
     "lq5dyqjrksspq62so5": {
@@ -2174,7 +2174,7 @@
       "company": "RAFFLES MEDICAL GROUP LTD",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 33
     },
     "5hyjcnfpxnvjl6v3a5": {
@@ -2182,7 +2182,7 @@
       "company": "LGA TELECOM PTE LTD",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 25
     },
     "siv53ef6xrwjlxyszo": {
@@ -2190,23 +2190,23 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
-      "last_score": 24
+      "last_seen": "2026-06-03",
+      "last_score": 23
     },
     "5uw6pxdwup4batkk45": {
       "title": "Senior Director/ VP, AI",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
-      "last_score": 18
+      "last_seen": "2026-06-03",
+      "last_score": 16
     },
     "6cl5cybuovxbwkirvb": {
       "title": "Staff / Senior Staff Software Engineer, Matching Engine (Java/C++)",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 15
     },
     "k3r2jclxwcd4naahgr": {
@@ -2270,7 +2270,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 15
     },
     "3iwac5derd4j3cpvb6": {
@@ -2302,7 +2302,7 @@
       "company": "TIKTOK PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 78
     },
     "dc2y3gfbppfb4dbsto": {
@@ -2310,15 +2310,15 @@
       "company": "TRINITY HR SOLUTIONS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 68
+      "last_seen": "2026-06-03",
+      "last_score": 70
     },
     "s5bpeisfj4dn4ric2c": {
       "title": "Cybersecurity Principal Engineer",
       "company": "ST ENGINEERING URBAN SOLUTIONS LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 68
     },
     "oriqm3wf6vvkzwz4lb": {
@@ -2326,7 +2326,7 @@
       "company": "ST ENGINEERING IHQ PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 68
     },
     "yap6z6idhyxcaloac7": {
@@ -2334,7 +2334,7 @@
       "company": "JOBLINE RESOURCES PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 66
     },
     "wwoyu534gruhsamffl": {
@@ -2342,7 +2342,7 @@
       "company": "ILLUMINA INTERNATIONAL GENOMICS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 59
     },
     "bxxgtnu5rovw72cl3y": {
@@ -2350,15 +2350,15 @@
       "company": "ONION SEARCH PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 50
+      "last_seen": "2026-06-03",
+      "last_score": 49
     },
     "kjvasq3xc7wen2tk4n": {
       "title": "IT Security Officer (CyberSecurity Engineer) - A26170",
       "company": "ACTIVATE INTERACTIVE PTE LTD",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 50
     },
     "nak5dqijcid5qzk2fm": {
@@ -2366,7 +2366,7 @@
       "company": "ST ENGINEERING IHQ PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 50
     },
     "w5fhaknskrr45cvuxz": {
@@ -2374,7 +2374,7 @@
       "company": "AVOTIS SECURITY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 48
     },
     "xetm3iux34lbm6v7lr": {
@@ -2382,39 +2382,39 @@
       "company": "MKI IT SOLUTIONS (ASIA PACIFIC) PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 47
+      "last_seen": "2026-06-03",
+      "last_score": 45
     },
     "pzxpb34fct42spj7fp": {
       "title": "Assistant Lead, Workforce & Identity Security",
       "company": "HYPERSCAL SOLUTIONS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 46
+      "last_seen": "2026-06-03",
+      "last_score": 45
     },
     "6wfvhneme6rfvobkr6": {
       "title": "Zero-Day Security Researcher",
       "company": "PIXIEPOINT SECURITY PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 44
+      "last_seen": "2026-06-03",
+      "last_score": 42
     },
     "wdpp6pby3enzukfq5i": {
       "title": "Senior Application Architect / Modern Apps – Public Security Division",
       "company": "ALPHAEUS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 41
+      "last_seen": "2026-06-03",
+      "last_score": 40
     },
     "rzdo2ajqa4vgqy7g2g": {
       "title": "CyberSecurity Engineer / IT Security Officer",
       "company": "K2 PARTNERING SOLUTIONS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 40
     },
     "xwdwpxfkckg3qtsbyy": {
@@ -2422,7 +2422,7 @@
       "company": "D-RON SINGAPORE PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 38
     },
     "ww7b5ukln45auuwbnj": {
@@ -2430,7 +2430,7 @@
       "company": "Google DeepMind",
       "source": "Greenhouse",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 37
     },
     "dpcuuj2bi3qxjbqhpg": {
@@ -2438,23 +2438,23 @@
       "company": "ZHONG QI FUTURE (SINGAPORE) PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 35
+      "last_seen": "2026-06-03",
+      "last_score": 34
     },
     "vegq6p5yj3ii7kzpvq": {
       "title": "Senior Security Assurance Solutions Architect",
       "company": "AMAZON WEB SERVICES SINGAPORE PRIVATE LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 34
+      "last_seen": "2026-06-03",
+      "last_score": 33
     },
     "6hurxriucifojfxq6m": {
       "title": "Consumer & Product Communications Lead, APAC",
       "company": "OpenAI",
       "source": "Ashby",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 27
     },
     "kdj2vdf7feibtu2c6d": {
@@ -2462,7 +2462,7 @@
       "company": "OpenAI",
       "source": "Ashby",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 27
     },
     "exccqst7asnqovficq": {
@@ -2470,7 +2470,7 @@
       "company": "OpenAI",
       "source": "Ashby",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 27
     },
     "rlw3ni7rhnxpgwtmk7": {
@@ -2478,15 +2478,15 @@
       "company": "Mistral AI",
       "source": "Lever",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 22
+      "last_seen": "2026-06-03",
+      "last_score": 20
     },
     "jiaer53htdn4rzedmc": {
       "title": "Oracle HCM SaaS Authorization / Security Lead",
       "company": "INTELLECT MINDS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 21
     },
     "bqulvvycls24wlvy7z": {
@@ -2494,23 +2494,23 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 17
+      "last_seen": "2026-06-03",
+      "last_score": 16
     },
     "ezqt533zdiqm42g2bb": {
       "title": "Principal / Senior Product Manager, Local Market & Growth (Latin America)",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
-      "last_score": 17
+      "last_seen": "2026-06-03",
+      "last_score": 16
     },
     "zw3bpcmzcpbgkvprhc": {
       "title": "Listing Manager",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 15
     },
     "fgvwq6bppvgfjekwo2": {
@@ -2542,7 +2542,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 15
     },
     "szrms4uugeu7g6hlst": {
@@ -2550,7 +2550,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 15
     },
     "56tw3dj3egqyqbnvm3": {
@@ -2558,7 +2558,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 15
     },
     "buojiy3knsmqv2y7b5": {
@@ -2574,7 +2574,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
       "last_score": 15
     },
     "kv4nogwipjggl7hif2": {
@@ -2582,7 +2582,87 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-01",
+      "last_seen": "2026-06-03",
+      "last_score": 14
+    },
+    "dztgeb6dk2xe2bf4ay": {
+      "title": "Cybersecurity Operations Lead",
+      "company": "Capgemini Singapore PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "last_score": 57
+    },
+    "lwdxterkhbwf7mamsr": {
+      "title": "Zero-Day Security Researcher (Browser)",
+      "company": "PIXIEPOINT SECURITY PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "last_score": 44
+    },
+    "btlnqrnsaje675omlz": {
+      "title": "Physical Security Systems Engineer - APAC",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "last_score": 40
+    },
+    "klnc5fzxne6wfv4z3i": {
+      "title": "AI Application Architect",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "last_score": 29
+    },
+    "7aatvcl22qw2pz6qrk": {
+      "title": "Content Lead, APAC",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "last_score": 27
+    },
+    "cxb62gdsozuojrxme2": {
+      "title": "Regional Manager, Ads Solutions (APAC)",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "last_score": 20
+    },
+    "zbgalkepym5j3tsptb": {
+      "title": "Regional Research Economist, Economic Research",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "last_score": 17
+    },
+    "xhlm7ucd6vo63qxsdl": {
+      "title": "Infrastructure Stability Architect",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "last_score": 16
+    },
+    "zqusc25alvw72vb6f2": {
+      "title": "Head of APAC Accounting",
+      "company": "Anthropic",
+      "source": "Greenhouse",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "last_score": 16
+    },
+    "hjftelyy2o7fxla42w": {
+      "title": "Senior Business Intelligence Project Manager",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
       "last_score": 15
     }
   }

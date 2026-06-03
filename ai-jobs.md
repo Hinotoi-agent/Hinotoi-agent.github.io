@@ -8,7 +8,7 @@ permalink: /ai-jobs/
 {% assign jobs = job_feed.jobs %}
 {% assign alerts = job_feed.alerts %}
 
-<p class="page-lede">Singapore-focused AI job search for security-adjacent roles: AI-security, LLM-security, penetration testing, red-team, AppSec, product-security, trust/safety, vulnerability research, and adjacent security engineering. The weekly refresh now tracks new/still-open roles, checks more ATS sources, and lets you filter the ranked list directly on this page.</p>
+<p class="page-lede">Singapore-focused AI job search for security-adjacent roles: AI-security, LLM-security, penetration testing, red-team, AppSec, application-security management, product-security, trust/safety, vulnerability research, and adjacent security engineering. The weekly refresh now tracks new/still-open roles, checks more ATS sources, and lets you filter the ranked list directly on this page.</p>
 
 <div class="jobs-meta-card">
   <div class="jobs-meta-grid">
