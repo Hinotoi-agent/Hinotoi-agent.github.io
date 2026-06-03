@@ -34,6 +34,9 @@ HISTORY_OUT = ROOT / "_data" / "ai_jobs_history.json"
 USER_AGENT = "HinotoiJobWatcher/2.0 (+https://hinotoi-agent.github.io/ai-jobs/)"
 MAX_JOBS = 10
 ALERT_SCORE = 85
+PUBLISH_SCORE = 58
+MIN_MONTHLY_COMPENSATION_SGD = 11_000
+MIN_ANNUAL_COMPENSATION_SGD = MIN_MONTHLY_COMPENSATION_SGD * 12
 
 GREENHOUSE_BOARDS = {
     "Anthropic": "anthropic",
@@ -70,11 +73,19 @@ PRIORITY_COMPANIES = {
 
 SEARCH_QUERIES = [
     "AI security Singapore",
+    "AI security manager Singapore",
+    "AI security engineer Singapore",
     "LLM security Singapore",
     "agent security Singapore",
     "AI red team Singapore",
     "AI safety security Singapore",
     "machine learning security Singapore",
+    "AI secure code review Singapore",
+    "AI vulnerability research Singapore",
+    "RAG security Singapore",
+    "prompt injection Singapore",
+    "DevSecOps AI Singapore",
+    "cloud security manager Singapore",
     "application security AI Singapore",
     "application security manager Singapore",
     "appsec manager Singapore",
@@ -93,6 +104,12 @@ SEARCH_QUERIES = [
 
 MYCAREERSFUTURE_QUERIES = SEARCH_QUERIES + [
     "cyber security AI",
+    "AI security engineer",
+    "AI security manager",
+    "secure code review",
+    "DevSecOps",
+    "cloud security manager",
+    "cyber range",
     "application security",
     "application security manager",
     "appsec manager",
@@ -112,28 +129,32 @@ MYCAREERSFUTURE_QUERIES = SEARCH_QUERIES + [
 AI_TERMS = [
     "ai", "artificial intelligence", "machine learning", "ml", "llm", "large language model",
     "genai", "generative ai", "agent", "agentic", "deep learning", "model security",
-    "prompt injection", "rag", "ai safety", "adversarial ml", "research engineer",
+    "prompt injection", "content injection", "guardrail", "rag", "ai safety", "adversarial ml",
+    "ai-assisted", "secure code review", "mcp", "model context protocol", "ollama", "azure ai foundry",
+    "research engineer",
 ]
 
 SECURITY_TERMS = [
     "security", "cyber", "cybersecurity", "trust and safety", "safety", "risk", "abuse",
     "red team", "penetration testing", "penetration tester", "pentest", "offensive security",
+    "adversary emulation", "attack path", "exploitability", "vapt", "cyber range",
     "application security", "appsec", "product security", "cloud security", "detection",
     "threat", "vulnerability", "incident response", "fraud", "secure sdlc", "code review",
+    "source code review", "devsecops", "security automation", "purple team",
 ]
 
 ENGINEERING_TERMS = ["engineer", "researcher", "scientist", "architect", "analyst", "manager", "lead", "specialist", "consultant"]
 
 CV_MATCH_TERMS = {
-    "Offensive Security": ["offensive security", "penetration testing", "penetration tester", "pentest", "red team", "adversary emulation", "attack path", "exploitability", "vapt"],
-    "AI Security": ["ai security", "agentic ai", "agent security", "llm security", "model security", "prompt injection", "rag", "machine learning security", "cybersecurity ai", "adversarial ml"],
-    "Vulnerability Research": ["vulnerability research", "vulnerability triage", "source code review", "secure code", "security research", "cve", "open-source", "oss", "product security advisory"],
-    "App/Product Security": ["application security", "appsec", "application security manager", "appsec manager", "application security lead", "software security manager", "product security", "product security manager", "cloud security", "secure development", "security architect", "security engineer", "secure sdlc", "code review"],
-    "Incident Response": ["incident response", "detection engineering", "threat hunting", "threat intelligence", "forensics", "purple teaming"],
-    "Leadership": ["lead", "manager", "principal", "staff", "architect", "consultant", "governance", "executive reporting", "remediation planning"],
+    "Offensive Security": ["offensive security", "penetration testing", "penetration tester", "pentest", "red team", "adversary emulation", "attack path", "attack-path validation", "exploitability", "vapt", "cyber range", "crto", "crtp", "oscp", "oswe"],
+    "AI Security": ["ai security", "ai security manager", "ai security engineer", "agentic ai", "agent security", "llm security", "model security", "prompt injection", "content injection", "guardrail", "rag", "machine learning security", "cybersecurity ai", "adversarial ml", "ai-assisted secure code review", "mcp", "model context protocol", "azure ai foundry", "ollama"],
+    "Vulnerability Research": ["vulnerability research", "vulnerability triage", "source code review", "secure code", "security research", "cve", "open-source", "oss", "product security advisory", "root cause", "variant analysis", "disclosure"],
+    "App/Product Security": ["application security", "appsec", "application security manager", "appsec manager", "application security lead", "software security manager", "product security", "product security manager", "cloud security", "cloud security manager", "secure development", "security architect", "security engineer", "secure sdlc", "devsecops", "code review", "secure code review", "security automation"],
+    "Incident Response": ["incident response", "detection engineering", "threat hunting", "threat intelligence", "forensics", "purple teaming", "mad20", "mitre attack"],
+    "Leadership": ["lead", "manager", "principal", "staff", "architect", "consultant", "governance", "executive reporting", "remediation planning", "stakeholder", "program", "roadmap", "service delivery"],
 }
 
-CV_STRONG_TITLE_TERMS = ["offensive security", "penetration testing", "red team", "product security", "product security manager", "application security", "application security manager", "application security lead", "appsec", "appsec manager", "software security manager", "ai security", "agentic ai", "vulnerability", "incident response"]
+CV_STRONG_TITLE_TERMS = ["offensive security", "penetration testing", "red team", "product security", "product security manager", "application security", "application security manager", "application security lead", "appsec", "appsec manager", "software security manager", "cloud security manager", "devsecops", "ai security", "ai security manager", "ai security engineer", "agentic ai", "llm security", "vulnerability", "incident response", "cyber range"]
 
 EXCLUDED_TITLE_TERMS = [
     "account executive", "partner manager", "field marketing", "marketing manager", "finance & strategy",
@@ -185,6 +206,7 @@ class Job:
     priority: str
     why_match: str
     possible_gap: str
+    compensation_fit: int
     categories: tuple[str, ...]
     score_breakdown: dict[str, int]
     seniority: str
@@ -604,6 +626,33 @@ def salary_estimate_for(title: str, company: str, location: str, listed_salary: 
     return fallback_salary_estimate(title, location, company)
 
 
+def compensation_monthly_range(salary_text: str) -> tuple[int | None, int | None]:
+    """Return estimated/listed monthly SGD range from rendered compensation text."""
+    text = clean_text(salary_text).lower().replace(",", "")
+    if not text:
+        return None, None
+    amounts = [float(value) * (1000 if suffix == "k" else 1) for value, suffix in re.findall(r"(\d+(?:\.\d+)?)\s*(k)?", text)]
+    if not amounts:
+        return None, None
+    low = int(min(amounts))
+    high = int(max(amounts))
+    if "/yr" in text or "year" in text or "annual" in text:
+        low, high = round(low / 12), round(high / 12)
+    return low, high
+
+
+def compensation_target_score(salary_text: str) -> int:
+    """Score against the user's S$11k+/month target; listed ranges must start at S$11k+."""
+    low, high = compensation_monthly_range(salary_text)
+    if high is None:
+        return 55
+    if high < MIN_MONTHLY_COMPENSATION_SGD:
+        return 0
+    if low is not None and low < MIN_MONTHLY_COMPENSATION_SGD:
+        return 0
+    return 100
+
+
 def build_job(title: str, company: str, location: str, url: str, source: str, published_at: str, summary: str, min_score: int, listed_salary: str = "") -> Job | None:
     title = clean_text(title)
     company = clean_text(company) or "Unknown employer"
@@ -614,13 +663,22 @@ def build_job(title: str, company: str, location: str, url: str, source: str, pu
     if not is_remote_singapore_eligible(location, f"{title} {summary}"):
         return None
     score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, certifications_to_consider, alert_reason = score_job(title, company, location, summary, published_at)
-    if score < min_score:
+    if score <= 0 or not score_breakdown:
         return None
     salary_estimate = salary_estimate_for(title, company, location, listed_salary)
+    compensation_fit = compensation_target_score(salary_estimate)
+    if compensation_fit <= 0:
+        return None
+    score = bounded(score + (6 if compensation_fit >= 100 else 2 if compensation_fit >= 72 else 0))
+    score_breakdown = {**score_breakdown, "final": score, "compensation_fit": compensation_fit, "target_monthly_sgd": MIN_MONTHLY_COMPENSATION_SGD}
+    priority, why_match, possible_gap, apply_angle = explain_match(title, fit, categories, score_breakdown, seniority)
+    alert_reason = alert_for(score, title, company, fit)
+    if score < min_score:
+        return None
     return Job(
         title=title, company=company, location=location, url=str(url), source=source, published_at=published_at,
         summary=summary or "Role matched by title/company/location metadata.", salary_estimate=salary_estimate, tags=tuple(tags), score=score,
-        cv_score=cv_score, fit=tuple(fit), priority=priority, why_match=why_match, possible_gap=possible_gap,
+        cv_score=cv_score, fit=tuple(fit), priority=priority, why_match=why_match, possible_gap=possible_gap, compensation_fit=compensation_fit,
         categories=tuple(categories), score_breakdown=score_breakdown, seniority=seniority, apply_angle=apply_angle,
         skillsets_to_build=tuple(skillsets_to_build), learning_gaps=tuple(learning_gaps),
         certifications_to_consider=tuple(certifications_to_consider), alert_reason=alert_reason,
@@ -952,6 +1010,7 @@ def job_to_dict(job: Job) -> dict[str, object]:
         "priority": job.priority,
         "why_match": job.why_match,
         "possible_gap": job.possible_gap,
+        "compensation_fit": job.compensation_fit,
         "categories": list(job.categories),
         "score_breakdown": job.score_breakdown,
         "seniority": job.seniority,
@@ -993,7 +1052,7 @@ def main() -> int:
         jobs, row = source_result(f"MyCareersFuture/{query}", lambda q=query: from_mycareersfuture(q))
         all_jobs.extend(jobs); health.append(row); time.sleep(0.15)
 
-    ranked = dedupe(all_jobs)
+    ranked = [job for job in dedupe(all_jobs) if job.score >= PUBLISH_SCORE]
     history = load_history()
     ranked, history, removed = apply_history(ranked, history, today)
     ranked = sorted(ranked, key=lambda j: (0 if j.status == "New" and j.score >= 78 else 1, -j.score, -j.cv_score, j.company.lower(), j.title.lower()))
@@ -1012,11 +1071,13 @@ def main() -> int:
     data = {
         "updated_at": now,
         "location_filter": "Singapore / Remote-Singapore / APAC remote eligible",
-        "search_focus": "Singapore AI job search for AI-security, LLM-security, penetration-testing, red-team, AppSec, application-security management, product-security, trust/safety, vulnerability research, and adjacent security-engineering roles.",
-        "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, label new/still-open roles, and penalize sales, junior-only, compliance-heavy, SOC-only, or non-technical noise.",
-        "minimum_score": 14,
+        "salary_target": "S$11k+/month onwards target (S$132k+/year equivalent); clear listed ranges starting below target are filtered out.",
+        "minimum_monthly_compensation_sgd": MIN_MONTHLY_COMPENSATION_SGD,
+        "search_focus": "Singapore AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, incident response support, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, and adjacent security-engineering leadership roles.",
+        "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, require an estimated or listed S$11k+/month compensation path, label new/still-open roles, and penalize sales, junior-only, compliance-heavy, SOC-only, or non-technical noise.",
+        "minimum_score": PUBLISH_SCORE,
         "sources": ["Greenhouse public boards", "Lever public postings", "Ashby public boards", "Remotive", "RemoteOK", "MyCareersFuture"],
-        "source_note": "Weekly top-10 public ATS/feed scan for Singapore and Singapore-eligible remote AI/security roles. Ranking is weighted against broad CV-fit signals: offensive security leadership, incident response, VAPT/adversary emulation, AI security, agent trust boundaries, vulnerability research, and cloud/application/product security. Links go to original job posts; verify current availability before applying.",
+        "source_note": "Weekly top-10 public ATS/feed scan for Singapore and Singapore-eligible remote AI/security roles. Ranking is weighted against broad CV-fit signals from the uploaded CV without publishing private details: cybersecurity management, offensive security leadership, incident response support, VAPT/adversary emulation, AI security engineering, RAG/agent/MCP trust boundaries, prompt/content injection testing, vulnerability research/CVEs, Cyber Range delivery, Azure/LLM tooling, and cloud/application/product security. Links go to original job posts; verify current availability and compensation before applying.",
         "stats": {
             "candidates_scored": len(ranked),
             "published_count": len(jobs),

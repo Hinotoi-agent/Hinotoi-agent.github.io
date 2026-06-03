@@ -26,6 +26,7 @@ REQUIRED_JOB_FIELDS = {
     "priority",
     "why_match",
     "possible_gap",
+    "compensation_fit",
     "apply_angle",
     "skillsets_to_build",
     "learning_gaps",
@@ -99,8 +100,8 @@ def main() -> int:
     if not isinstance(raw_jobs, list):
         fail("ai_jobs.json jobs must be a list")
     jobs = cast(list[Any], raw_jobs)
-    if len(jobs) != MAX_JOBS:
-        fail(f"expected {MAX_JOBS} published jobs, found {len(jobs)}")
+    if not (1 <= len(jobs) <= MAX_JOBS):
+        fail(f"expected 1-{MAX_JOBS} published jobs after strict fit/salary filtering, found {len(jobs)}")
 
     raw_alerts = data.get("alerts")
     if raw_alerts is not None and not isinstance(raw_alerts, list):
@@ -136,6 +137,9 @@ def main() -> int:
         score = row.get("score")
         if not isinstance(score, int) or not (0 <= score <= 100):
             fail(f"{label} has invalid score {score!r}")
+        compensation_fit = row.get("compensation_fit")
+        if not isinstance(compensation_fit, int) or compensation_fit < 1:
+            fail(f"{label} has invalid compensation_fit {compensation_fit!r}")
         if row.get("status_badge") not in ALLOWED_STATUS_BADGES:
             fail(f"{label} has unexpected status_badge {row.get('status_badge')!r}")
         company_key = str(row.get("company", "")).casefold()

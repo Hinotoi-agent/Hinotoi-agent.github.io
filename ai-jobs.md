@@ -8,11 +8,12 @@ permalink: /ai-jobs/
 {% assign jobs = job_feed.jobs %}
 {% assign alerts = job_feed.alerts %}
 
-<p class="page-lede">Singapore-focused AI job search for security-adjacent roles: AI-security, LLM-security, penetration testing, red-team, AppSec, application-security management, product-security, trust/safety, vulnerability research, and adjacent security engineering. The weekly refresh now tracks new/still-open roles, checks more ATS sources, and lets you filter the ranked list directly on this page.</p>
+<p class="page-lede">Singapore-focused AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, incident-response support, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, and adjacent security-engineering leadership roles. The weekly refresh now targets roles with an estimated or listed S$11k+/month onwards compensation path, tracks new/still-open roles, checks more ATS sources, and lets you filter the ranked list directly on this page.</p>
 
 <div class="jobs-meta-card">
   <div class="jobs-meta-grid">
     <div><strong>Location filter:</strong> {{ job_feed.location_filter | default: "Singapore" }}</div>
+    {% if job_feed.salary_target %}<div><strong>Salary target:</strong> {{ job_feed.salary_target }}</div>{% endif %}
     <div><strong>Last refreshed:</strong> {{ job_feed.updated_at | default: "pending first refresh" }}</div>
     {% if job_feed.stats %}
       <div><strong>Candidates scored:</strong> {{ job_feed.stats.candidates_scored }}</div>
@@ -50,7 +51,7 @@ permalink: /ai-jobs/
       <div><strong>10%</strong><span>Singapore/location fit</span></div>
       <div><strong>6%</strong><span>Freshness</span></div>
     </div>
-    <p>Sales, junior-only, compliance-heavy, SOC-only, or non-technical matches are penalized before the top 10 is selected. The page now exposes score breakdowns so poor matches can be tuned in future refreshes.</p>
+    <p>Sales, junior-only, compliance-heavy, SOC-only, below-target-compensation, or non-technical matches are penalized or filtered before the top 10 is selected. The page now exposes score breakdowns so poor matches can be tuned in future refreshes.</p>
   </section>
 
   <section class="jobs-category-panel" aria-label="Best matches by role type">
@@ -199,6 +200,7 @@ permalink: /ai-jobs/
               <span>AI/sec {{ job.score_breakdown.ai_security }}</span>
               <span>Upside {{ job.score_breakdown.career_upside }}</span>
               <span>Location {{ job.score_breakdown.location_fit }}</span>
+              <span>Comp {{ job.score_breakdown.compensation_fit }}</span>
               <span>Fresh {{ job.score_breakdown.freshness }}</span>
               <span>Noise -{{ job.score_breakdown.noise_penalty }}</span>
             </div>
