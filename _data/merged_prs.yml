@@ -1,3 +1,17 @@
+- date: '2026-06-06'
+  repo: Hinotoi-agent/vulnweave
+  number: 7
+  title: 'feat: add bounded novelty lane to review bundles'
+  url: https://github.com/Hinotoi-agent/vulnweave/pull/7
+  category: evidence
+  tags:
+  - source-review
+  - novelty-hunt
+  - review-bundles
+  - security-tooling
+  - token-efficiency
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-04'
   repo: Hinotoi-agent/vulnweave
   number: 6
