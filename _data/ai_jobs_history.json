@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-03T05:26:11Z",
+  "updated_at": "2026-06-08T12:42:19Z",
   "jobs": {
     "qwg42wm7i3lxcylgu3": {
       "title": "Product Security Architect — Agentic AI & Security",
@@ -38,7 +38,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-08",
       "last_score": 95
     },
     "lcymvdcroi3ltwwz7o": {
@@ -78,7 +78,7 @@
       "company": "JJ CONSULTING SERVICES",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-08",
       "last_score": 83
     },
     "lqiuhugqgd7lonvcwz": {
@@ -110,8 +110,8 @@
       "company": "DIGITAL TREASURES CENTER PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-03",
-      "last_score": 81
+      "last_seen": "2026-06-08",
+      "last_score": 79
     },
     "fghc77rh2zr4b6gp65": {
       "title": "Research Fellow (Agentic AI, AI security and cyber-physical security)",
@@ -246,8 +246,8 @@
       "company": "AIA SINGAPORE PRIVATE LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-03",
-      "last_score": 66
+      "last_seen": "2026-06-08",
+      "last_score": 65
     },
     "aok5zvsutnkc36y2ho": {
       "title": "Senior Government Affairs Manager",
@@ -2310,8 +2310,8 @@
       "company": "TRINITY HR SOLUTIONS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-03",
-      "last_score": 76
+      "last_seen": "2026-06-08",
+      "last_score": 75
     },
     "s5bpeisfj4dn4ric2c": {
       "title": "Cybersecurity Principal Engineer",
@@ -2446,7 +2446,7 @@
       "company": "AMAZON WEB SERVICES SINGAPORE PRIVATE LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-08",
       "last_score": 63
     },
     "6hurxriucifojfxq6m": {
@@ -2912,6 +2912,14 @@
       "first_seen": "2026-06-03",
       "last_seen": "2026-06-03",
       "last_score": 14
+    },
+    "t4zo7ufqtqyn5j3ats": {
+      "title": "Principal Security Solution Architect (Cloud Security)",
+      "company": "DYSON OPERATIONS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-06-08",
+      "last_score": 65
     }
   }
 }
