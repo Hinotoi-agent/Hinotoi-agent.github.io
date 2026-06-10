@@ -1,3 +1,29 @@
+- date: '2026-06-10'
+  repo: nanocoai/nanoclaw
+  number: 2478
+  title: '[security] fix(approvals): require admin for approval responses'
+  url: https://github.com/nanocoai/nanoclaw/pull/2478
+  category: security
+  tags:
+  - approval-authz
+  - callback-boundary
+  - responder-identity
+  - agent-control-plane
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-10'
+  repo: nanocoai/nanoclaw
+  number: 2468
+  title: '[security] fix(agent-route): reject unsafe forwarded attachments'
+  url: https://github.com/nanocoai/nanoclaw/pull/2468
+  category: security
+  tags:
+  - agent-attachments
+  - symlink-safety
+  - host-file-copy
+  - path-containment
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-08'
   repo: Hinotoi-agent/huntpack
   number: 1
