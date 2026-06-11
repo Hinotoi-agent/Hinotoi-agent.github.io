@@ -1,3 +1,68 @@
+- date: '2026-06-11'
+  repo: steipete/CodexBar
+  number: 1256
+  title: '[security] fix(providers): reject sibling HTTP endpoint overrides'
+  url: https://github.com/steipete/CodexBar/pull/1256
+  category: security
+  tags:
+  - provider-endpoints
+  - credentialed-fetches
+  - http-downgrade
+  - sibling-coverage
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-11'
+  repo: steipete/CodexBar
+  number: 1269
+  title: '[security] fix(providers): validate sibling endpoint overrides'
+  url: https://github.com/steipete/CodexBar/pull/1269
+  category: security
+  tags:
+  - provider-endpoints
+  - authority-validation
+  - credentialed-fetches
+  - compatibility-boundary
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-11'
+  repo: steipete/summarize
+  number: 237
+  title: '[security] fix(podcast): cap remote media file downloads'
+  url: https://github.com/steipete/summarize/pull/237
+  category: security
+  tags:
+  - media-downloads
+  - resource-limits
+  - temp-file-boundary
+  - streaming-cap
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-11'
+  repo: steipete/summarize
+  number: 239
+  title: '[security] fix: guard rss transcript fetches'
+  url: https://github.com/steipete/summarize/pull/239
+  category: security
+  tags:
+  - ssrf
+  - rss-transcripts
+  - redirect-validation
+  - dns-pinning
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-11'
+  repo: steipete/CodexBar
+  number: 1237
+  title: '[security] fix(providers): guard credentialed redirects'
+  url: https://github.com/steipete/CodexBar/pull/1237
+  category: security
+  tags:
+  - credentialed-redirects
+  - provider-http-client
+  - origin-boundary
+  - cookie-safety
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-10'
   repo: nanocoai/nanoclaw
   number: 2478
