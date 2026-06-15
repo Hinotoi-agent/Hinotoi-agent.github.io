@@ -1,3 +1,29 @@
+- date: '2026-06-15'
+  repo: steipete/summarize
+  number: 302
+  title: '[security] fix(core): cap remote transcript response sizes'
+  url: https://github.com/steipete/summarize/pull/302
+  category: security
+  tags:
+  - resource-limits
+  - transcript-fetches
+  - response-size-cap
+  - stream-cancellation
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-15'
+  repo: Hinotoi-agent/huntpack
+  number: 2
+  title: 'fix: require sink-side proof in candidate contracts'
+  url: https://github.com/Hinotoi-agent/huntpack/pull/2
+  category: evidence
+  tags:
+  - action-sink-proof
+  - candidate-contracts
+  - false-positive-triage
+  - security-tooling
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-12'
   repo: nesquena/hermes-webui
   number: 4023
