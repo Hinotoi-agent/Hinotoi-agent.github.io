@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T12:42:19Z",
+  "updated_at": "2026-06-15T14:35:08Z",
   "jobs": {
     "qwg42wm7i3lxcylgu3": {
       "title": "Product Security Architect — Agentic AI & Security",
@@ -38,7 +38,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-15",
       "last_score": 95
     },
     "lcymvdcroi3ltwwz7o": {
@@ -78,7 +78,7 @@
       "company": "JJ CONSULTING SERVICES",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-15",
       "last_score": 83
     },
     "lqiuhugqgd7lonvcwz": {
@@ -230,8 +230,8 @@
       "company": "SINGAPORE AIRLINES LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-05-18",
-      "last_score": 60
+      "last_seen": "2026-06-15",
+      "last_score": 68
     },
     "frjlfdp4eorj6zczig": {
       "title": "Solutions Support Engineer, (Cloud Security & AI)",
@@ -246,7 +246,7 @@
       "company": "AIA SINGAPORE PRIVATE LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-15",
       "last_score": 65
     },
     "aok5zvsutnkc36y2ho": {
@@ -2918,8 +2918,24 @@
       "company": "DYSON OPERATIONS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-08",
-      "last_score": 65
+      "last_seen": "2026-06-15",
+      "last_score": 64
+    },
+    "klglrilfcnprusp7ad": {
+      "title": "Staff Security Engineer, Enterprise Security AI - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "last_score": 74
+    },
+    "qll56greybclftmyv4": {
+      "title": "Client Security Expert/Architect",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "last_score": 56
     }
   }
 }
