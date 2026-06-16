@@ -1,3 +1,68 @@
+- date: '2026-06-16'
+  repo: Hinotoi-agent/huntpack
+  number: 4
+  title: 'improve: generalize capability chain methodology'
+  url: https://github.com/Hinotoi-agent/huntpack/pull/4
+  category: evidence
+  tags:
+  - capability-chains
+  - guard-evidence
+  - candidate-contracts
+  - security-tooling
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-16'
+  repo: HKUDS/Vibe-Trading
+  number: 245
+  title: '[security] fix(api): require auth for settings writes'
+  url: https://github.com/HKUDS/Vibe-Trading/pull/245
+  category: security
+  tags:
+  - settings-auth
+  - provider-endpoints
+  - credential-routing
+  - dns-rebinding
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-16'
+  repo: HKUDS/Vibe-Trading
+  number: 243
+  title: '[security] fix(api): require explicit opt-in for agent shell tools'
+  url: https://github.com/HKUDS/Vibe-Trading/pull/243
+  category: security
+  tags:
+  - agent-tools
+  - shell-tools
+  - explicit-opt-in
+  - loopback-trust
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-16'
+  repo: HKUDS/Vibe-Trading
+  number: 242
+  title: '[security] fix(api): reject rebound loopback hosts'
+  url: https://github.com/HKUDS/Vibe-Trading/pull/242
+  category: security
+  tags:
+  - dns-rebinding
+  - host-validation
+  - loopback-trust
+  - control-plane-auth
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-16'
+  repo: HKUDS/Vibe-Trading
+  number: 241
+  title: '[security] fix(api): require explicit auth for local shutdown'
+  url: https://github.com/HKUDS/Vibe-Trading/pull/241
+  category: security
+  tags:
+  - shutdown-auth
+  - csrf
+  - loopback-trust
+  - control-plane-auth
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-15'
   repo: steipete/summarize
   number: 302
