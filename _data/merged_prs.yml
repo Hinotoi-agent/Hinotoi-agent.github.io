@@ -1,3 +1,42 @@
+- date: '2026-06-18'
+  repo: HKUDS/Vibe-Trading
+  number: 256
+  title: '[security] fix(live): contain mandate proposal identifiers'
+  url: https://github.com/HKUDS/Vibe-Trading/pull/256
+  category: security
+  tags:
+  - live-trading
+  - proposal-identifiers
+  - path-containment
+  - state-commit
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-18'
+  repo: HKUDS/Vibe-Trading
+  number: 258
+  title: '[security] fix(mcp): contain swarm run identifiers'
+  url: https://github.com/HKUDS/Vibe-Trading/pull/258
+  category: security
+  tags:
+  - mcp
+  - swarm-runs
+  - run-identifiers
+  - path-containment
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-18'
+  repo: HKUDS/Vibe-Trading
+  number: 257
+  title: '[security] fix(memory): validate persistent memory types'
+  url: https://github.com/HKUDS/Vibe-Trading/pull/257
+  category: security
+  tags:
+  - persistent-memory
+  - memory-types
+  - path-containment
+  - agent-tools
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-16'
   repo: Hinotoi-agent/huntpack
   number: 4
