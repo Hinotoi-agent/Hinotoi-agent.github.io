@@ -1,3 +1,17 @@
+- date: '2026-06-19'
+  repo: nesquena/hermes-webui
+  number: 4410
+  title: '[security] fix(rollback): avoid symlinked checkpoint diff reads'
+  url: https://github.com/nesquena/hermes-webui/pull/4410
+  category: security
+  tags:
+  - rollback
+  - checkpoints
+  - symlink-safety
+  - path-containment
+  - file-disclosure
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-18'
   repo: HKUDS/Vibe-Trading
   number: 256
