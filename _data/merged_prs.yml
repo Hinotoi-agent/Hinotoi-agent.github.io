@@ -1,3 +1,17 @@
+- date: '2026-06-20'
+  repo: Hinotoi-agent/vulnweave
+  number: 8
+  title: 'Add CVSS assessment prompts to finding exports'
+  url: https://github.com/Hinotoi-agent/vulnweave/pull/8
+  category: evidence
+  tags:
+  - cvss
+  - finding-exports
+  - evidence-quality
+  - severity-scoring
+  - security-tooling
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-19'
   repo: nesquena/hermes-webui
   number: 4410
