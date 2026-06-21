@@ -1,3 +1,18 @@
+- date: '2026-06-21'
+  repo: HKUDS/DeepTutor
+  number: 579
+  title: '[security] fix(multi-user): deny MCP tools until explicitly granted'
+  url: https://github.com/HKUDS/DeepTutor/pull/579
+  category: security
+  tags:
+  - mcp
+  - agent-tools
+  - authorization
+  - prompt-injection
+  - host-capabilities
+  - grant-resolution
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-20'
   repo: Hinotoi-agent/vulnweave
   number: 8
