@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15T14:35:08Z",
+  "updated_at": "2026-06-22T13:44:02Z",
   "jobs": {
     "qwg42wm7i3lxcylgu3": {
       "title": "Product Security Architect — Agentic AI & Security",
@@ -38,8 +38,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-15",
-      "last_score": 95
+      "last_seen": "2026-06-22",
+      "last_score": 93
     },
     "lcymvdcroi3ltwwz7o": {
       "title": "Security Engineer, Offensive Security",
@@ -78,7 +78,7 @@
       "company": "JJ CONSULTING SERVICES",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-22",
       "last_score": 83
     },
     "lqiuhugqgd7lonvcwz": {
@@ -246,8 +246,8 @@
       "company": "AIA SINGAPORE PRIVATE LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-15",
-      "last_score": 65
+      "last_seen": "2026-06-22",
+      "last_score": 64
     },
     "aok5zvsutnkc36y2ho": {
       "title": "Senior Government Affairs Manager",
@@ -2926,16 +2926,40 @@
       "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-15",
-      "last_score": 74
+      "last_seen": "2026-06-22",
+      "last_score": 73
     },
     "qll56greybclftmyv4": {
       "title": "Client Security Expert/Architect",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-22",
       "last_score": 56
+    },
+    "r4lrgzxhfgsrcbbmxv": {
+      "title": "Information Technology - Principal Technologist (AppSec)",
+      "company": "SINGAPORE AIRLINES LIMITED",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "last_score": 81
+    },
+    "6xfapzy7hvmmdiqaq5": {
+      "title": "Principal AI Engineer",
+      "company": "BASIL TECHNOLOGIES PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "last_score": 79
+    },
+    "uxqsfjtqtfzboeeerf": {
+      "title": "Transformation Architect",
+      "company": "Zscaler",
+      "source": "Greenhouse",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "last_score": 57
     }
   }
 }
