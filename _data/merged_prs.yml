@@ -1,3 +1,59 @@
+- date: '2026-06-22'
+  repo: steipete/CodexBar
+  number: 1687
+  title: '[security] fix(provider): harden Azure OpenAI endpoint overrides'
+  url: https://github.com/steipete/CodexBar/pull/1687
+  category: security
+  tags:
+  - azure-openai
+  - provider-endpoints
+  - credential-routing
+  - api-key
+  - url-validation
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-22'
+  repo: steipete/CodexBar
+  number: 1680
+  title: '[security] fix(provider): harden endpoint overrides'
+  url: https://github.com/steipete/CodexBar/pull/1680
+  category: security
+  tags:
+  - provider-endpoints
+  - credential-routing
+  - bearer-tokens
+  - cookies
+  - url-validation
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-22'
+  repo: steipete/CodexBar
+  number: 1702
+  title: '[security] fix(codex): keep OAuth auth.json private'
+  url: https://github.com/steipete/CodexBar/pull/1702
+  category: security
+  tags:
+  - oauth
+  - credential-files
+  - file-permissions
+  - auth-json
+  - local-confidentiality
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-22'
+  repo: Hinotoi-agent/huntpack
+  number: 5
+  title: 'feat: rank loopback rebinding control-plane candidates'
+  url: https://github.com/Hinotoi-agent/huntpack/pull/5
+  category: tooling
+  tags:
+  - loopback-rebinding
+  - control-plane
+  - host-origin
+  - candidate-ranking
+  - security-tooling
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-21'
   repo: HKUDS/DeepTutor
   number: 579
