@@ -1,3 +1,33 @@
+- date: '2026-06-25'
+  repo: HKUDS/Vibe-Trading
+  number: 304
+  title: 'fix(api): allow authenticated remote same-origin UI requests'
+  url: https://github.com/HKUDS/Vibe-Trading/pull/304
+  category: security
+  tags:
+  - same-origin
+  - browser-origin
+  - csrf
+  - local-api
+  - control-plane-auth
+  - compatibility
+  - oss-hardening
+  month: 2026-06
+- date: '2026-06-23'
+  repo: HKUDS/Vibe-Trading
+  number: 293
+  title: 'fix: reject cross-site unsafe local API requests'
+  url: https://github.com/HKUDS/Vibe-Trading/pull/293
+  category: security
+  tags:
+  - loopback
+  - csrf
+  - browser-origin
+  - local-api
+  - control-plane-auth
+  - upload-safety
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-22'
   repo: steipete/CodexBar
   number: 1687
