@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T13:44:02Z",
+  "updated_at": "2026-06-29T12:42:15Z",
   "jobs": {
     "qwg42wm7i3lxcylgu3": {
       "title": "Product Security Architect — Agentic AI & Security",
@@ -38,7 +38,7 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-29",
       "last_score": 93
     },
     "lcymvdcroi3ltwwz7o": {
@@ -78,7 +78,7 @@
       "company": "JJ CONSULTING SERVICES",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-29",
       "last_score": 83
     },
     "lqiuhugqgd7lonvcwz": {
@@ -246,7 +246,7 @@
       "company": "AIA SINGAPORE PRIVATE LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-29",
       "last_score": 64
     },
     "aok5zvsutnkc36y2ho": {
@@ -2934,15 +2934,15 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-22",
-      "last_score": 56
+      "last_seen": "2026-06-29",
+      "last_score": 55
     },
     "r4lrgzxhfgsrcbbmxv": {
       "title": "Information Technology - Principal Technologist (AppSec)",
       "company": "SINGAPORE AIRLINES LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-29",
       "last_score": 81
     },
     "6xfapzy7hvmmdiqaq5": {
@@ -2950,8 +2950,8 @@
       "company": "BASIL TECHNOLOGIES PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
-      "last_score": 79
+      "last_seen": "2026-06-29",
+      "last_score": 78
     },
     "uxqsfjtqtfzboeeerf": {
       "title": "Transformation Architect",
@@ -2960,6 +2960,30 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
       "last_score": 57
+    },
+    "fveaxbp7gxatgh6bzj": {
+      "title": "AI Security Automation Engineer",
+      "company": "APAR TECHNOLOGIES PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "last_score": 82
+    },
+    "v6gf6p4cjqbd2imdsd": {
+      "title": "Engineering Manager – Healthcare Technology",
+      "company": "BEATHCHAPMAN (PTE. LTD.)",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "last_score": 64
+    },
+    "6voqgi2kerg772txdt": {
+      "title": "Senior Information Security Engineer, Product Security - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "last_score": 59
     }
   }
 }
