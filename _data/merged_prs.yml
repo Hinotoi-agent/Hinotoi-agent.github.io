@@ -1,3 +1,19 @@
+- date: '2026-06-29'
+  repo: Hinotoi-agent/huntpack
+  number: 6
+  title: 'feat: rank loopback browser CSRF candidates'
+  url: https://github.com/Hinotoi-agent/huntpack/pull/6
+  category: tooling
+  tags:
+  - loopback
+  - csrf
+  - browser-origin
+  - fetch-metadata
+  - local-api
+  - candidate-ranking
+  - security-tooling
+  - oss-hardening
+  month: 2026-06
 - date: '2026-06-25'
   repo: HKUDS/Vibe-Trading
   number: 304
