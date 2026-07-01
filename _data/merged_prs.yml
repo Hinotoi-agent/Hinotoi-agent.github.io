@@ -1,3 +1,33 @@
+- date: '2026-07-01'
+  repo: openclaw/crabfleet
+  number: 67
+  title: '[security] fix(terminal): validate browser websocket origin'
+  url: https://github.com/openclaw/crabfleet/pull/67
+  category: security
+  tags:
+  - websocket
+  - browser-origin
+  - csrf
+  - ambient-cookies
+  - terminal
+  - agent-control-plane
+  - oss-hardening
+  month: 2026-07
+- date: '2026-07-01'
+  repo: openclaw/crabfleet
+  number: 68
+  title: '[security] fix(openclaw): require owner proof to resume action work'
+  url: https://github.com/openclaw/crabfleet/pull/68
+  category: security
+  tags:
+  - github-actions
+  - owner-proof
+  - workkey
+  - session-tokens
+  - token-rotation
+  - agent-control-plane
+  - oss-hardening
+  month: 2026-07
 - date: '2026-06-29'
   repo: Hinotoi-agent/huntpack
   number: 6
