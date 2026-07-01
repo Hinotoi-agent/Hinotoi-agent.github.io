@@ -33,6 +33,8 @@ REQUIRED_JOB_FIELDS = {
     "skillsets_to_build",
     "learning_gaps",
     "certifications_to_consider",
+    "environment_note",
+    "role_focus",
     "next_action",
     "status_badge",
     "status",
@@ -147,7 +149,7 @@ def main() -> int:
         if missing:
             fail(f"job #{idx} missing required fields: {', '.join(sorted(missing))}")
         label = f"job #{idx} ({row.get('company', 'unknown')} / {row.get('title', 'unknown')})"
-        for field in ["title", "company", "location", "url", "source", "salary_estimate", "salary_confidence", "why_match", "possible_gap", "apply_angle", "next_action", "status_badge"]:
+        for field in ["title", "company", "location", "url", "source", "salary_estimate", "salary_confidence", "why_match", "possible_gap", "apply_angle", "environment_note", "role_focus", "next_action", "status_badge"]:
             require_nonempty_string(row, field, label)
         for field in ["skillsets_to_build", "learning_gaps", "certifications_to_consider"]:
             require_nonempty_list(row, field, label)

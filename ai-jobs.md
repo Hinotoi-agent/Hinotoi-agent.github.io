@@ -41,13 +41,13 @@ permalink: /ai-jobs/
   <section class="jobs-score-model" aria-label="Ranking model">
     <h2>Ranking model</h2>
     <div class="score-model-grid">
-      <div><strong>43%</strong><span>CV fit</span></div>
-      <div><strong>27%</strong><span>AI/security relevance</span></div>
-      <div><strong>14%</strong><span>Seniority/upside</span></div>
-      <div><strong>10%</strong><span>Singapore/location fit</span></div>
-      <div><strong>6%</strong><span>Freshness</span></div>
+      <div><strong>CV</strong><span>senior offensive / AI-security fit</span></div>
+      <div><strong>Role</strong><span>AI, AppSec, research, cyber-risk relevance</span></div>
+      <div><strong>Env</strong><span>structured senior-employer context</span></div>
+      <div><strong>Pay</strong><span>S$11k+/month path</span></div>
+      <div><strong>Now</strong><span>freshness and apply-now signal</span></div>
     </div>
-    <p>Ranked by fit, AI/security relevance, seniority, location, and freshness. Low-signal matches are filtered before publishing.</p>
+    <p>Ranked by professional fit, AI/security relevance, seniority, compensation path, Singapore/APAC eligibility, and employer context. Private preference logic is not shown; low-signal matches are filtered before publishing.</p>
   </section>
 
   <section class="jobs-category-panel" aria-label="Best matches by role type">
@@ -151,6 +151,8 @@ permalink: /ai-jobs/
 
         {% if job.fit and job.fit.size > 0 %}<div class="job-fit"><strong>CV fit:</strong> {{ job.fit | join: ", " }}</div>{% endif %}
         {% if job.why_match %}<p class="job-why"><strong>Why this matches:</strong> {{ job.why_match }}</p>{% endif %}
+        {% if job.environment_note %}<p class="job-why"><strong>Employer context:</strong> {{ job.environment_note }}</p>{% endif %}
+        {% if job.role_focus %}<p class="job-angle"><strong>Personal focus for this role:</strong> {{ job.role_focus }}</p>{% endif %}
 
         {% if job.next_action or job.apply_angle %}
           <div class="job-action-plan">
@@ -188,21 +190,6 @@ permalink: /ai-jobs/
               </div>
             {% endif %}
           </div>
-        {% endif %}
-
-        {% if job.score_breakdown %}
-          <details class="job-score-breakdown">
-            <summary>Score breakdown</summary>
-            <div>
-              <span>CV {{ job.score_breakdown.cv_fit }}</span>
-              <span>AI/sec {{ job.score_breakdown.ai_security }}</span>
-              <span>Upside {{ job.score_breakdown.career_upside }}</span>
-              <span>Location {{ job.score_breakdown.location_fit }}</span>
-              <span>Comp {{ job.score_breakdown.compensation_fit }}</span>
-              <span>Fresh {{ job.score_breakdown.freshness }}</span>
-              <span>Noise -{{ job.score_breakdown.noise_penalty }}</span>
-            </div>
-          </details>
         {% endif %}
 
         <p>{{ job.summary }}</p>

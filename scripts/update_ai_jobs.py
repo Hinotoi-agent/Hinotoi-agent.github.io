@@ -9,6 +9,7 @@ The generator:
 - collects public Greenhouse, Lever, Ashby, Remotive, RemoteOK, and MyCareersFuture roles;
 - allows Singapore, Remote-Singapore, APAC, Asia, UTC+8, or broad remote roles when text indicates Singapore/APAC eligibility;
 - scores against broad non-sensitive CV-fit signals instead of publishing private CV details;
+- applies a private professional-environment fit heuristic, surfaced only as neutral role guidance;
 - keeps a small history file to label new/still-open/removed roles across refreshes;
 - writes both the rendered feed and a high-priority alert subset for the page/optional digests.
 """
@@ -76,7 +77,19 @@ PRIORITY_COMPANIES = {
     "anthropic", "openai", "google deepmind", "deepmind", "cloudflare", "stripe", "wiz", "snyk",
     "hackerone", "databricks", "okx", "grab", "govtech", "keysight", "bytedance", "tiktok",
     "sea", "singtel", "st engineering", "microsoft", "amazon", "meta", "palantir", "chainguard",
+    "gic", "temasek", "monetary authority of singapore", "mas", "dbs", "ocbc", "uob",
+    "standard chartered", "citi", "jpmorgan", "goldman sachs", "hsbc", "aia", "prudential",
 }
+
+STRUCTURED_FINANCE_TERMS = [
+    "sovereign wealth", "gic", "temasek", "asset management", "investment management",
+    "bank", "banking", "financial institution", "financial services", "fintech", "capital markets",
+    "wealth", "insurance", "insurer", "reinsurance", "risk management", "model risk",
+]
+REGULATOR_GOV_TERMS = ["regulator", "regulatory", "monetary authority", "mas", "government", "govtech", "public sector", "national cyber"]
+ESTABLISHED_PRODUCT_TERMS = ["product security", "platform security", "cloud security", "security product", "enterprise software", "saas", "developer platform"]
+CONSULTING_DELIVERY_TERMS = ["big 4", "consulting", "consultant", "advisory", "client delivery", "billable", "utilization", "transformation"]
+STARTUP_RISK_TERMS = ["seed", "pre-seed", "founding", "early stage", "stealth", "startup", "series a"]
 
 SEARCH_QUERIES = [
     "AI security Singapore",
@@ -107,6 +120,15 @@ SEARCH_QUERIES = [
     "vulnerability research Singapore",
     "security engineer machine learning Singapore",
     "trust safety security Singapore",
+    "AI security bank Singapore",
+    "AI governance cyber Singapore bank",
+    "model risk cyber security Singapore",
+    "LLM security financial services Singapore",
+    "cyber AI risk Singapore insurance",
+    "sovereign wealth cyber security Singapore",
+    "GIC cyber security AI",
+    "Temasek cyber security AI",
+    "MAS AI cyber security",
 ]
 
 MYCAREERSFUTURE_QUERIES = SEARCH_QUERIES + [
@@ -159,6 +181,7 @@ CV_MATCH_TERMS = {
     "App/Product Security": ["application security", "appsec", "application security manager", "appsec manager", "application security lead", "software security manager", "product security", "product security manager", "cloud security", "cloud security manager", "security assurance", "security assurance solutions architect", "secure development", "security architect", "security engineer", "secure sdlc", "devsecops", "code review", "secure code review", "security automation"],
     "Incident Response": ["incident response", "detection engineering", "threat hunting", "threat intelligence", "forensics", "purple teaming", "mad20", "mitre attack"],
     "Leadership": ["lead", "manager", "principal", "staff", "architect", "consultant", "governance", "executive reporting", "remediation planning", "stakeholder", "program", "roadmap", "service delivery"],
+    "Financial / Public-sector Security": ["financial services", "bank", "banking", "insurance", "sovereign wealth", "asset management", "model risk", "government", "public sector", "regulator", "regulatory", "mas", "gic", "temasek"],
 }
 
 CV_STRONG_TITLE_TERMS = ["offensive security", "penetration testing", "red team", "product security", "product security manager", "application security", "application security manager", "application security lead", "appsec", "appsec manager", "software security manager", "cloud security manager", "security assurance", "security assurance solutions architect", "devsecops", "ai security", "ai security manager", "ai security engineer", "agentic ai", "llm security", "vulnerability", "incident response", "cyber range"]
@@ -222,6 +245,8 @@ class Job:
     skillsets_to_build: tuple[str, ...]
     learning_gaps: tuple[str, ...]
     certifications_to_consider: tuple[str, ...]
+    environment_note: str
+    role_focus: str
     alert_reason: str
     next_action: str = ""
     status_badge: str = ""
@@ -339,6 +364,56 @@ def company_boost(company: str) -> int:
     return 8 if any(name in lower for name in PRIORITY_COMPANIES) else 0
 
 
+def employer_context(title: str, company: str, location: str, summary: str) -> tuple[int, str, str]:
+    """Private professional-fit layer; public output stays neutral and career-oriented."""
+    text = f"{title} {company} {location} {summary}".lower()
+    score = 55
+    labels: list[str] = []
+
+    if any(term in text for term in ["sovereign wealth", "gic", "temasek", "asset management", "investment management"]):
+        score += 30
+        labels.append("long-horizon capital / structured cyber environment")
+    elif any(term in text for term in ["bank", "banking", "financial institution", "financial services", "capital markets", "model risk"]):
+        score += 24
+        labels.append("financial-services security environment")
+    elif any(term in text for term in ["insurance", "insurer", "reinsurance", "aia", "prudential"]):
+        score += 24
+        labels.append("insurance / cyber-risk environment")
+    elif any(term in text for term in REGULATOR_GOV_TERMS):
+        score += 18
+        labels.append("public-sector or regulator cyber environment")
+
+    if any(term in text for term in ESTABLISHED_PRODUCT_TERMS):
+        score += 10
+        labels.append("established product-security environment")
+    if any(term in text for term in STARTUP_RISK_TERMS):
+        score -= 18
+        labels.append("verify funding, reporting line, and security maturity")
+    company_title = f"{title} {company}".lower()
+    if any(term in company_title for term in ["big 4", "consulting", "consultant", "advisory"]) or any(term in text for term in ["client delivery", "billable", "utilization", "transformation programme"]):
+        score -= 18
+        labels.append("watch for consulting-delivery pressure and low hands-on ownership")
+    if any(term in text for term in ["sales", "presales", "pre-sales", "customer success"]):
+        score -= 20
+        labels.append("verify role is not sales-led")
+    if any(term in text for term in ["lead", "manager", "architect", "principal", "staff", "senior"]):
+        score += 6
+    if any(term in text for term in ["governance", "compliance", "audit", "grc"]) and not any(term in text for term in ["engineering", "technical", "architecture", "secure code", "product security"]):
+        score -= 12
+        labels.append("verify the role is not compliance-only")
+
+    label = "; ".join(dict.fromkeys(labels[:2])) or "general security employer context"
+    if score >= 82:
+        note = f"Excellent employer context: {label}."
+    elif score >= 70:
+        note = f"Strong employer context: {label}."
+    elif score >= 55:
+        note = f"Usable employer context: {label}; validate team maturity and scope."
+    else:
+        note = f"Watch employer context: {label}; apply only if scope, manager, and structure are strong."
+    return bounded(score), note, label
+
+
 def noise_penalty(title: str, summary: str) -> int:
     text = f"{title} {summary}".lower()
     penalty = 0
@@ -372,7 +447,7 @@ def classify_categories(title: str, summary: str, fit: list[str]) -> list[str]:
     return categories[:4] or ["Best overall match"]
 
 
-def explain_match(title: str, fit: list[str], categories: list[str], breakdown: dict[str, int], seniority: str) -> tuple[str, str, str, str]:
+def explain_match(title: str, fit: list[str], categories: list[str], breakdown: dict[str, int], seniority: str, environment_note: str = "") -> tuple[str, str, str, str]:
     if breakdown["final"] >= 85:
         priority = "High"
     elif breakdown["final"] >= 72:
@@ -428,9 +503,9 @@ def alert_for(score: int, title: str, company: str, fit: list[str], status: str 
     return ", ".join(reasons[:4])
 
 
-def learning_plan(title: str, summary: str, fit: list[str], categories: list[str]) -> tuple[list[str], list[str]]:
+def learning_plan(title: str, company: str, summary: str, fit: list[str], categories: list[str]) -> tuple[list[str], list[str]]:
     """Public, non-sensitive study guidance for improving future match scores."""
-    text = f"{title} {summary} {' '.join(fit)} {' '.join(categories)}".lower()
+    text = f"{title} {company} {summary} {' '.join(fit)} {' '.join(categories)}".lower()
     skills: list[str] = []
     gaps: list[str] = []
 
@@ -442,7 +517,10 @@ def learning_plan(title: str, summary: str, fit: list[str], categories: list[str
 
     if any(t in text for t in ["ai", "agent", "llm", "model", "machine learning", "agentic"]):
         add("AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
-            "Prepare 2-3 concrete AI-security case studies showing threat model → exploit path → mitigation → verification.")
+            "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.")
+    if any(t in text for t in STRUCTURED_FINANCE_TERMS + REGULATOR_GOV_TERMS):
+        add("Financial/public-sector AI risk framing: model-risk language, AI governance controls, secure SDLC, third-party risk, and board-ready cyber impact.",
+            "Translate offensive AI-security work into risk, control, and governance outcomes without losing technical evidence.")
     if any(t in text for t in ["product security", "application security", "appsec", "secure sdlc", "code review", "architect"]):
         add("Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
             "Build code-level security fixes and concise design-review writeups, not only assessment findings.")
@@ -468,9 +546,25 @@ def learning_plan(title: str, summary: str, fit: list[str], categories: list[str
     return skills[:4], gaps[:4]
 
 
-def certification_plan(title: str, summary: str, fit: list[str], categories: list[str]) -> list[str]:
+def role_focus_for(title: str, company: str, summary: str, environment_label: str) -> str:
+    """One-line self-improvement focus per role, safe for the public page."""
+    text = f"{title} {company} {summary} {environment_label}".lower()
+    if any(t in text for t in ["model risk", "bank", "banking", "financial", "insurance", "regulator", "sovereign", "asset management"]):
+        return "Focus on converting AI-security research into enterprise risk language: model risk, control design, regulator-ready evidence, and senior stakeholder narratives."
+    if any(t in text for t in ["ai", "agent", "llm", "rag", "model", "prompt injection"]):
+        return "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence."
+    if any(t in text for t in ["product security", "application security", "appsec", "secure sdlc", "code review"]):
+        return "Focus on code-to-control stories: secure design review, source-level root cause, minimal fixes, and engineering adoption."
+    if any(t in text for t in ["red team", "penetration", "offensive", "adversary"]):
+        return "Focus on attack-path narratives that connect exploitability to business impact and durable remediation."
+    if any(t in text for t in ["lead", "manager", "architect", "principal", "staff"]):
+        return "Focus on senior ownership: roadmap choices, prioritization, metrics, mentoring, and cross-functional influence."
+    return "Focus on proving hands-on technical depth, clear risk judgement, and practical remediation outcomes."
+
+
+def certification_plan(title: str, company: str, summary: str, fit: list[str], categories: list[str]) -> list[str]:
     """Public certification/course suggestions that make a candidate more relevant for each role type."""
-    text = f"{title} {summary} {' '.join(fit)} {' '.join(categories)}".lower()
+    text = f"{title} {company} {summary} {' '.join(fit)} {' '.join(categories)}".lower()
     certs: list[str] = []
 
     def add(item: str) -> None:
@@ -479,13 +573,12 @@ def certification_plan(title: str, summary: str, fit: list[str], categories: lis
 
     if any(t in text for t in ["ai", "agent", "llm", "model", "machine learning", "agentic", "prompt injection", "rag"]):
         add("AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.")
-        add("Cloud Security Alliance Certificate of Competence in Zero Trust or AI Governance micro-courses if the role blends AI platform risk and governance.")
+        add("AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.")
     if any(t in text for t in ["product security", "application security", "appsec", "secure sdlc", "code review", "architect"]):
         add("CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience.")
         add("AWS Security Specialty, Azure Security Engineer, or Google Professional Cloud Security Engineer for platform-heavy AppSec roles.")
     if any(t in text for t in ["penetration", "red team", "offensive", "vapt", "adversary"]):
-        add("OSCP/OSWE-style offensive certification path, prioritizing OSWE if the role emphasizes web/app exploitation and code review.")
-        add("CRTO/CARTP-style adversary-emulation training if the role asks for red-team operations or attack-path development.")
+        add("Use existing OSCP/OSWE/CRTO/CRTP as proof; add only role-specific cloud or adversary-emulation labs if the job asks for them.")
     if any(t in text for t in ["incident response", "detection", "threat hunting", "forensics", "soc"]):
         add("GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs.")
     if any(t in text for t in ["research", "fellow", "vulnerability", "cve", "cyber-physical", "security research"]):
@@ -500,7 +593,7 @@ def certification_plan(title: str, summary: str, fit: list[str], categories: lis
     return certs[:3]
 
 
-def score_job(title: str, company: str, location: str, summary: str, published_at: str = "") -> tuple[int, list[str], int, list[str], str, str, str, list[str], dict[str, int], str, str, list[str], list[str], list[str], str]:
+def score_job(title: str, company: str, location: str, summary: str, published_at: str = "") -> tuple[int, list[str], int, list[str], str, str, str, list[str], dict[str, int], str, str, list[str], list[str], list[str], str, str, str]:
     text = " ".join([title, company, location, summary])
     title_text = title.lower()
     ai_hits = term_hits(text, AI_TERMS)
@@ -510,7 +603,7 @@ def score_job(title: str, company: str, location: str, summary: str, published_a
     cv_raw, cv_labels = cv_fit_score(title, company, location, summary)
 
     if any(term in title_text for term in EXCLUDED_TITLE_TERMS):
-        return 0, [], 0, [], "Filtered", "Excluded by title noise terms.", "", [], {}, "Excluded", "", [], [], [], ""
+        return 0, [], 0, [], "Filtered", "Excluded by title noise terms.", "", [], {}, "Excluded", "", [], [], [], "", "", ""
 
     seniority = detect_seniority(title, summary)
     cv_fit = bounded(cv_raw * 2.3)
@@ -531,7 +624,8 @@ def score_job(title: str, company: str, location: str, summary: str, published_a
     freshness = freshness_score(published_at)
     penalty = noise_penalty(title, summary)
     source_company_boost = company_boost(company)
-    final = bounded((0.43 * cv_fit) + (0.27 * ai_security) + (0.14 * career_upside) + (0.10 * location_fit) + (0.06 * freshness) + source_company_boost - penalty)
+    employer_fit, environment_note, environment_label = employer_context(title, company, location, summary)
+    final = bounded((0.35 * cv_fit) + (0.23 * ai_security) + (0.12 * career_upside) + (0.09 * location_fit) + (0.05 * freshness) + (0.16 * employer_fit) + source_company_boost - penalty)
 
     tags = []
     for hit in list(dict.fromkeys(title_hits + ai_hits + security_hits + engineering_hits))[:7]:
@@ -545,13 +639,15 @@ def score_job(title: str, company: str, location: str, summary: str, published_a
         "location_fit": location_fit,
         "freshness": freshness,
         "company_boost": source_company_boost,
+        "employer_context": employer_fit,
         "noise_penalty": penalty,
     }
-    priority, why_match, possible_gap, apply_angle = explain_match(title, cv_labels, categories, breakdown, seniority)
-    skillsets_to_build, learning_gaps = learning_plan(title, summary, cv_labels, categories)
-    certifications_to_consider = certification_plan(title, summary, cv_labels, categories)
+    priority, why_match, possible_gap, apply_angle = explain_match(title, cv_labels, categories, breakdown, seniority, environment_note)
+    skillsets_to_build, learning_gaps = learning_plan(title, company, summary, cv_labels, categories)
+    certifications_to_consider = certification_plan(title, company, summary, cv_labels, categories)
+    role_focus = role_focus_for(title, company, summary, environment_label)
     alert_reason = alert_for(final, title, company, cv_labels)
-    return final, tags, cv_fit, cv_labels, priority, why_match, possible_gap, categories, breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, certifications_to_consider, alert_reason
+    return final, tags, cv_fit, cv_labels, priority, why_match, possible_gap, categories, breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, certifications_to_consider, environment_note, role_focus, alert_reason
 
 
 def money_amount(value: object) -> int | None:
@@ -680,7 +776,7 @@ def build_job(title: str, company: str, location: str, url: str, source: str, pu
         return None
     if not is_remote_singapore_eligible(location, f"{title} {summary}"):
         return None
-    score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, certifications_to_consider, alert_reason = score_job(title, company, location, summary, published_at)
+    score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, certifications_to_consider, environment_note, role_focus, alert_reason = score_job(title, company, location, summary, published_at)
     if score <= 0 or not score_breakdown:
         return None
     salary_estimate = salary_estimate_for(title, company, location, listed_salary)
@@ -690,7 +786,7 @@ def build_job(title: str, company: str, location: str, url: str, source: str, pu
         return None
     score = bounded(score + (6 if compensation_fit >= 100 else 2 if compensation_fit >= 72 else 0))
     score_breakdown = {**score_breakdown, "final": score, "compensation_fit": compensation_fit, "target_monthly_sgd": MIN_MONTHLY_COMPENSATION_SGD}
-    priority, why_match, possible_gap, apply_angle = explain_match(title, fit, categories, score_breakdown, seniority)
+    priority, why_match, possible_gap, apply_angle = explain_match(title, fit, categories, score_breakdown, seniority, environment_note)
     alert_reason = alert_for(score, title, company, fit)
     if score < min_score:
         return None
@@ -701,7 +797,8 @@ def build_job(title: str, company: str, location: str, url: str, source: str, pu
         cv_score=cv_score, fit=tuple(fit), priority=priority, why_match=why_match, possible_gap=possible_gap, compensation_fit=compensation_fit,
         categories=tuple(categories), score_breakdown=score_breakdown, seniority=seniority, apply_angle=apply_angle,
         skillsets_to_build=tuple(skillsets_to_build), learning_gaps=tuple(learning_gaps),
-        certifications_to_consider=tuple(certifications_to_consider), alert_reason=alert_reason,
+        certifications_to_consider=tuple(certifications_to_consider), environment_note=environment_note,
+        role_focus=role_focus, alert_reason=alert_reason,
     )
 
 
@@ -1039,6 +1136,8 @@ def job_to_dict(job: Job) -> dict[str, object]:
         "skillsets_to_build": list(job.skillsets_to_build),
         "learning_gaps": list(job.learning_gaps),
         "certifications_to_consider": list(job.certifications_to_consider),
+        "environment_note": job.environment_note,
+        "role_focus": job.role_focus,
         "alert_reason": job.alert_reason,
         "next_action": job.next_action,
         "status_badge": job.status_badge,
@@ -1094,8 +1193,8 @@ def main() -> int:
         "location_filter": "Singapore / Remote-Singapore / APAC remote eligible",
         "salary_target": "S$11k+/month onwards target (S$132k+/year equivalent); clear listed ranges starting below target are filtered out.",
         "minimum_monthly_compensation_sgd": MIN_MONTHLY_COMPENSATION_SGD,
-        "search_focus": "Singapore AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, incident response support, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, and adjacent security-engineering leadership roles.",
-        "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, require a senior-compensation path, label new/still-open roles, and penalize sales, junior-only, compliance-heavy, SOC-only, or non-technical noise.",
+        "search_focus": "Singapore AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, incident response support, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, financial-services/public-sector AI risk, and adjacent security-engineering leadership roles.",
+        "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, require a senior-compensation path, label new/still-open roles, and penalize sales, junior-only, compliance-only, SOC-only, chaotic startup, consulting-delivery, or non-technical noise. Employer-context guidance is summarized professionally; private fit heuristics are not published.",
         "minimum_score": PUBLISH_SCORE,
         "sources": ["Expanded Greenhouse public boards", "Expanded Lever public postings", "Expanded Ashby public boards", "Remotive", "RemoteOK", "MyCareersFuture"],
         "source_note": "Weekly top-10 public ATS/feed scan for Singapore and Singapore-eligible remote AI/security roles. Expanded coverage includes additional AI/security-relevant public boards such as Chainguard, Databricks, Zscaler, Palantir, HackerOne, LangChain, and Linear where their ATS feeds are available. Ranking is weighted against broad CV-fit signals from the uploaded CV without publishing private details: cybersecurity management, offensive security leadership, incident response support, VAPT/adversary emulation, AI security engineering, RAG/agent/MCP trust boundaries, prompt/content injection testing, vulnerability research/CVEs, Cyber Range delivery, Azure/LLM tooling, and cloud/application/product security. Salary confidence is shown per role; verify current availability and compensation before applying.",

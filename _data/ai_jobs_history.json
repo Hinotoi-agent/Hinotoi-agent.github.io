@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T12:42:15Z",
+  "updated_at": "2026-07-01T01:52:05Z",
   "jobs": {
     "qwg42wm7i3lxcylgu3": {
       "title": "Product Security Architect — Agentic AI & Security",
@@ -38,8 +38,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-29",
-      "last_score": 93
+      "last_seen": "2026-07-01",
+      "last_score": 91
     },
     "lcymvdcroi3ltwwz7o": {
       "title": "Security Engineer, Offensive Security",
@@ -78,8 +78,8 @@
       "company": "JJ CONSULTING SERVICES",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-06-29",
-      "last_score": 83
+      "last_seen": "2026-07-01",
+      "last_score": 78
     },
     "lqiuhugqgd7lonvcwz": {
       "title": "Principal Solutions Engineer - Application Security",
@@ -2918,7 +2918,7 @@
       "company": "DYSON OPERATIONS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-07-01",
       "last_score": 64
     },
     "klglrilfcnprusp7ad": {
@@ -2934,24 +2934,24 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-29",
-      "last_score": 55
+      "last_seen": "2026-07-01",
+      "last_score": 57
     },
     "r4lrgzxhfgsrcbbmxv": {
       "title": "Information Technology - Principal Technologist (AppSec)",
       "company": "SINGAPORE AIRLINES LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-29",
-      "last_score": 81
+      "last_seen": "2026-07-01",
+      "last_score": 79
     },
     "6xfapzy7hvmmdiqaq5": {
       "title": "Principal AI Engineer",
       "company": "BASIL TECHNOLOGIES PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-29",
-      "last_score": 78
+      "last_seen": "2026-07-01",
+      "last_score": 77
     },
     "uxqsfjtqtfzboeeerf": {
       "title": "Transformation Architect",
@@ -2966,24 +2966,40 @@
       "company": "APAR TECHNOLOGIES PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "last_score": 82
+      "last_seen": "2026-07-01",
+      "last_score": 79
     },
     "v6gf6p4cjqbd2imdsd": {
       "title": "Engineering Manager – Healthcare Technology",
       "company": "BEATHCHAPMAN (PTE. LTD.)",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "last_score": 64
+      "last_seen": "2026-07-01",
+      "last_score": 65
     },
     "6voqgi2kerg772txdt": {
       "title": "Senior Information Security Engineer, Product Security - Singapore",
       "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "last_score": 59
+      "last_seen": "2026-07-01",
+      "last_score": 60
+    },
+    "scyphevj3iyugiiwy6": {
+      "title": "Associate Director, Information Security Operations",
+      "company": "AIA SINGAPORE PRIVATE LIMITED",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01",
+      "last_score": 62
+    },
+    "hoxabuw5xkbfgvyxoq": {
+      "title": "IT Logistics Lead, Singapore",
+      "company": "OpenAI",
+      "source": "Ashby",
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01",
+      "last_score": 55
     }
   }
 }
