@@ -38,18 +38,6 @@ permalink: /ai-jobs/
 {% endif %}
 
 {% if jobs and jobs.size > 0 %}
-  <section class="jobs-score-model" aria-label="Ranking model">
-    <h2>Ranking model</h2>
-    <div class="score-model-grid">
-      <div><strong>CV</strong><span>senior offensive / AI-security fit</span></div>
-      <div><strong>Role</strong><span>AI, AppSec, research, cyber-risk relevance</span></div>
-      <div><strong>Env</strong><span>structured senior-employer context</span></div>
-      <div><strong>Pay</strong><span>S$11k+/month path</span></div>
-      <div><strong>Now</strong><span>freshness and apply-now signal</span></div>
-    </div>
-    <p>Ranked by professional fit, AI/security relevance, seniority, compensation path, Singapore/APAC eligibility, and employer context. Private preference logic is not shown; low-signal matches are filtered before publishing.</p>
-  </section>
-
   <section class="jobs-category-panel" aria-label="Best matches by role type">
     <h2>Best matches by category</h2>
     <div class="jobs-category-grid">
