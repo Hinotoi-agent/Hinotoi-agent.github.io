@@ -1,3 +1,17 @@
+- date: '2026-07-04'
+  repo: nanocoai/nanoclaw
+  number: 2611
+  title: '[security] fix(cli): preserve caller context after approval'
+  url: https://github.com/nanocoai/nanoclaw/pull/2611
+  category: security
+  tags:
+  - approval
+  - caller-context
+  - confused-deputy
+  - cli-dispatch
+  - agent-control-plane
+  - oss-hardening
+  month: 2026-07
 - date: '2026-07-01'
   repo: openclaw/crabfleet
   number: 67
