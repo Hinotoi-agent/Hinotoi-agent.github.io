@@ -1,110 +1,93 @@
 ---
 layout: post
-title: "Case study: approval replay must not rewrite the caller"
-date: 2026-07-05 21:00:00 +0000
+title: "2026-07-06 — Approval replay became a hunt family"
+date: 2026-07-06 15:59:56 +0800
 permalink: /2026/07/06/ai-security-case-study-approval-replay-caller-context/
-takeaway: "An approval queue should authorize the original scoped request, not replay it as a broader host action."
-categories: [case-study, ai-security]
-tags: [case-study, approval, caller-context, confused-deputy, agent-control-plane, cli-dispatch, oss-hardening]
+takeaway: "Approval replay is a candidate family: preserve the original caller proof through the queue, replay, policy check, and sink."
+categories: [daily-log, ai-security]
+tags: [approval, caller-context, confused-deputy, agent-control-plane, candidate-ranking, security-tooling, oss-hardening]
 ---
 
-Approval systems are easy to review too narrowly. The click path may be correct while the replay path quietly changes the actor that reaches the command sink.
-
-This case study is based on the public fix in [`nanocoai/nanoclaw #2611`](https://github.com/nanocoai/nanoclaw/pull/2611). The reusable boundary is approval replay: pending work must preserve the caller context that downstream policy and handlers use.
+The useful movement today was not another runtime fix. It was turning the approval-replay lesson into a repeatable hunt lane for agent, tool, workflow, and control-plane review.
 
 ## Signal
 
-A security PR fixed caller-context loss in an approval-gated CLI replay path:
+The prior caller-context approval issue became a Huntpack family: `approval-replay-caller-context`. That matters because approval bugs are easy to find too late if review starts at the prompt instead of at the replayed sink.
 
-- PR: [`nanocoai/nanoclaw #2611`](https://github.com/nanocoai/nanoclaw/pull/2611) — `[security] fix(cli): preserve caller context after approval`.
-- Merge commit: `05dc1b0a3cac085a568b1608bfd69a919b5d7239`.
-- Changed files: `src/cli/dispatch.ts`, `src/cli/dispatch.test.ts`.
-
-The issue is not an unauthorized approval-click bypass. The narrower problem is identity drift after legitimate approval: a command that entered as an agent-scoped request could be replayed with host caller semantics.
-
-## Threat model
-
-The lower-trust actor is an agent/container-originated `ncl` command. It reaches the CLI dispatcher with caller context such as `caller: agent`, `sessionId`, `agentGroupId`, and `messagingGroupId`.
-
-The higher-trust machinery is the approval queue and replay handler. Approval is allowed to resume the requested action, but it should not change the actor, session, group, or scope that the command handler sees after replay.
-
-The security-sensitive assumption is simple: if a handler branches on `ctx.caller`, session, or group fields, those fields are part of the authorization boundary and must survive the delayed handoff.
-
-## Finding and PR
-
-Public PR: [`nanocoai/nanoclaw #2611`](https://github.com/nanocoai/nanoclaw/pull/2611).
-
-Before the fix, approval-gated commands stored the request frame but not the original `CallerContext`. When the approval handler replayed the approved frame, it reconstructed the caller as `{ caller: 'host' }`.
-
-That created a confused-deputy shape. The approver reviewed an agent-originated command, but the final command handler could receive host caller context. Any command whose behavior differs for agent versus host callers could become broader after approval than it was before approval.
-
-## Exploit path
-
-The public PR describes the vulnerable chain as:
+The signal to look for is compact:
 
 ```text
-container-originated ncl request
-    -> dispatch() receives caller: agent with session/group context
-        -> approval-gated command stores only the request frame
-            -> approval handler replays the frame as caller: host
-                -> handler can take broader host behavior after approval
+lower-trust actor -> approval queue -> serialized pending work -> replay/resume dispatcher -> privileged sink
 ```
 
-The source is the agent-originated CLI request. The carrier is the approval payload that serializes pending work. The transform is replay after approval. The policy decision and sink are the command dispatch and handler behavior that branch on caller/session/group context.
+If the queue preserves the command but drops caller, session, tenant, workspace, group, or scope fields, approval can become a confused-deputy handoff.
 
-The important failure is at the carrier/transform boundary: the approval payload preserved the command text but not the actor proof. Once replay defaulted to host, the sink no longer saw the same principal that submitted the original request.
+## Merged PRs
 
-## Mitigation
+- [`Hinotoi-agent/huntpack #7`](https://github.com/Hinotoi-agent/huntpack/pull/7) — `feat: add approval replay context hunt family` (merged 2026-07-06 15:59 Singapore time).
 
-The fix preserves caller identity through the approval queue:
+## What shipped or moved
 
-- approval payloads now include the request frame and original caller context;
-- replay calls `dispatch(frame, callerContext, { approved: true })` with the preserved context;
-- the internal `approved` option prevents a recursive approval loop without skipping normal scope checks;
-- legacy pending approvals without `callerContext` keep a host fallback for compatibility.
+Huntpack gained a new approval replay/caller-context hunt family.
 
-That trade-off is the right shape for maintainer-friendly hardening: secure new approval payloads, avoid breaking old pending state, and keep replay inside the normal dispatcher rather than creating a special privileged path.
+The PR added ranking signals for:
 
-## Verification
+- approval gates and pending-work queues;
+- replay, resume, dispatch, and continuation paths;
+- caller/session/tenant/workspace scope fields;
+- privileged command, tool, workflow, file, network, or action sinks;
+- the missing link between serialized approval payloads and the actor proof used after replay.
 
-The PR added regression coverage in `src/cli/dispatch.test.ts`. The key proof shape is sink-shaped:
+The PR also added regression coverage for the candidate contract and documented the rule in the README. Validation recorded in the PR included:
 
-- register an approval-gated CLI command whose handler records the `CallerContext` it receives;
-- dispatch it as an agent with session and group context;
-- invoke the registered `cli_command` approval handler;
-- assert the final handler receives the original agent context, not `{ caller: 'host' }`;
-- assert approved replay does not queue a second approval prompt.
-
-The PR validation listed these commands:
-
-- `corepack pnpm exec vitest run src/cli/dispatch.test.ts --reporter=verbose`
-- `corepack pnpm exec vitest run src/cli/dispatch.test.ts --reporter=dot`
-- `corepack pnpm run typecheck`
-- `corepack pnpm exec eslint src/cli/dispatch.ts src/cli/dispatch.test.ts`
-- `corepack pnpm test -- --run`
-- `corepack pnpm exec prettier --check src/cli/dispatch.ts src/cli/dispatch.test.ts`
+- `python3 -m py_compile huntpack/huntpack.py`
+- `python3 huntpack/huntpack.py --help`
+- `python3 -m pytest -q` — 4 passed
+- a smoke `workflow` run that generated a map, bundles, and review prompt
 - `git diff --check`
 
-The negative proof is that approved replay no longer reaches the handler as host when the original request came from an agent. The positive compatibility path is that host-originated or legacy approval payloads without stored caller context remain bounded by the explicit fallback.
+## Observed pattern
+
+Approval is a stateful authorization handoff, not only a user-interface event.
+
+For AI agents, MCP hosts, workflow runners, CLI dispatchers, and local control planes, the dangerous drift is often between the approved prompt and the final sink. The approver may authorize an agent-scoped action, while the replay path reconstructs it as a host/local/admin action because the approval payload only stored the command frame.
+
+The reusable review question is: **which actor does the sink see after approval, and where was that actor preserved?**
+
+That question is now a first-class candidate family instead of an after-the-fact note.
+
+## External reference
+
+- Public tooling PR: [`Hinotoi-agent/huntpack #7`](https://github.com/Hinotoi-agent/huntpack/pull/7).
+- Public fix that shaped the family: [`nanocoai/nanoclaw #2611`](https://github.com/nanocoai/nanoclaw/pull/2611), which preserved caller context through an approval replay path.
+
+The external anchor is the public PR record. The method change is internal and reusable: promote approval replay from “interesting fix detail” to an early ranking signal for source-code review.
 
 ## What was learned
 
-Approval is not only a user-interface event. It is a stateful authorization handoff. The queue owns the identity evidence needed by the replayed action.
+A good hunt family names the carrier, not just the bug class.
 
-For AI-agent, MCP, workflow, and CLI control planes, the review should follow the full chain: original actor, approval payload, replay transform, policy decision, and sink-side effect. If the payload does not carry the actor fields that the sink uses, the replay path may be rebuilding authority from local defaults.
+For approval replay, the carrier is the pending approval object. It must carry the same identity evidence that downstream policy and handlers use: caller, session, group, tenant, workspace, target, and capability scope. If that evidence is rebuilt from defaults during replay, the approval queue has silently changed the security principal.
 
-The small implementation detail matters: an `approved` marker should suppress another prompt, not suppress authorization or rewrite the caller. Replay should re-enter the normal dispatcher with the original context intact.
+This also changes token discipline. Instead of asking a model to broadly inspect every command handler, Huntpack can now rank files where approval gates, replay functions, identity fields, and privileged sinks cluster together. The next review can start with a smaller candidate packet and a sharper false-positive gate.
+
+## Takeaways
+
+- Treat approval replay as an identity-preserving state transition.
+- Review the pending-approval schema against every identity or scope field consumed after replay.
+- An internal `approved` marker should suppress recursive prompts, not bypass authorization or rewrite the caller.
+- Candidate-ranking tools should encode successful bug families so future reviews spend tokens on source-to-sink proof, not rediscovery of the search shape.
 
 ## Repeat next time
 
-- For approval-gated actions, map `source -> approval payload -> replay -> policy decision -> sink` before accepting the boundary.
-- Compare the pending-approval schema with every identity field used after replay: caller, session, group, tenant, target, and capability.
-- Add a regression where a lower-trust caller receives approval but the sink still sees the lower-trust context.
-- Assert absence of sink-side widening, not only that an approval prompt appeared.
-- Keep compatibility fallbacks explicit, narrow, and tested so legacy state does not define the new security model.
+- Map `source -> approval payload -> replay/resume -> policy decision -> sink` before accepting an approval boundary.
+- Search for replay code that reconstructs context from local defaults after approval.
+- Add at least one regression where a lower-trust caller is approved but the sink still receives the lower-trust caller context.
+- Assert both visible denial/bounded behavior and absence of sink-side widening: no broader command, file, network, session, tenant, or workflow mutation.
+- When a new security lesson repeats, decide whether it belongs in Huntpack or another deterministic prefilter before spending broad review tokens again.
 
 ## Vault redirect
 
-The public-safe lesson routes back to `06 - Lessons/Takeaway - Approval replay must preserve original caller context.md` in the OSS vulnerability research vault.
+The durable private owner remains `06 - Lessons/Takeaway - Approval replay must preserve original caller context.md` in the OSS Vulnerability Research Vault.
 
-The reusable vault rule is to treat approval replay as an identity-preserving state transition. Detailed private notes, if any, stay in the vault. The public artifact is the boundary pattern, the public PR, and the verification shape.
+This public post adds only the public-safe synthesis: the Huntpack PR, the approval replay candidate family, and the review rule. The reusable observation was routed back into the vault takeaway as a 2026-07-06 materialization update so the website does not become a separate memory system.

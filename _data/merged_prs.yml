@@ -1,3 +1,18 @@
+- date: '2026-07-06'
+  repo: Hinotoi-agent/huntpack
+  number: 7
+  title: 'feat: add approval replay context hunt family'
+  url: https://github.com/Hinotoi-agent/huntpack/pull/7
+  category: tooling
+  tags:
+  - approval
+  - caller-context
+  - confused-deputy
+  - candidate-ranking
+  - agent-control-plane
+  - security-tooling
+  - oss-hardening
+  month: 2026-07
 - date: '2026-07-04'
   repo: nanocoai/nanoclaw
   number: 2611
