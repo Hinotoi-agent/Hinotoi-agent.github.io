@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-06T12:15:09Z",
+  "updated_at": "2026-07-13T11:28:44Z",
   "jobs": {
     "qwg42wm7i3lxcylgu3": {
       "title": "Product Security Architect — Agentic AI & Security",
@@ -38,8 +38,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-07-06",
-      "last_score": 93
+      "last_seen": "2026-07-13",
+      "last_score": 92
     },
     "lcymvdcroi3ltwwz7o": {
       "title": "Security Engineer, Offensive Security",
@@ -78,7 +78,7 @@
       "company": "JJ CONSULTING SERVICES",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-13",
       "last_score": 78
     },
     "lqiuhugqgd7lonvcwz": {
@@ -2934,8 +2934,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-07-06",
-      "last_score": 57
+      "last_seen": "2026-07-13",
+      "last_score": 56
     },
     "r4lrgzxhfgsrcbbmxv": {
       "title": "Information Technology - Principal Technologist (AppSec)",
@@ -2974,7 +2974,7 @@
       "company": "BEATHCHAPMAN (PTE. LTD.)",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-13",
       "last_score": 65
     },
     "6voqgi2kerg772txdt": {
@@ -2990,7 +2990,7 @@
       "company": "AIA SINGAPORE PRIVATE LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-13",
       "last_score": 62
     },
     "hoxabuw5xkbfgvyxoq": {
@@ -2998,7 +2998,7 @@
       "company": "OpenAI",
       "source": "Ashby",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-13",
       "last_score": 55
     },
     "qawpwxdbjawvfwg262": {
@@ -3006,32 +3006,48 @@
       "company": "Zscaler",
       "source": "Greenhouse",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "last_score": 79
+      "last_seen": "2026-07-13",
+      "last_score": 78
     },
     "sgmnuoabpvkqwvnvym": {
       "title": "CIO | Chief Information Officer | VP IT | IT Director | Head of IT | Oracle | AI |Cyber Security",
       "company": "RANDSTAD PTE. LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "last_score": 65
+      "last_seen": "2026-07-13",
+      "last_score": 64
     },
     "spepyenqbq4vru27ov": {
       "title": "Cybersecurity Operations Specialist (Security Services) (JD#11169)",
       "company": "SCIENTE INTERNATIONAL PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "last_score": 58
+      "last_seen": "2026-07-13",
+      "last_score": 57
     },
     "s2nfmzxsq5nf3673zr": {
       "title": "Senior/Staff Engineer, Security Platform Development",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-13",
       "last_score": 57
+    },
+    "2x6b34qoap4i2ai4wm": {
+      "title": "Principal Field Product Manager",
+      "company": "Zscaler",
+      "source": "Greenhouse",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "last_score": 60
+    },
+    "pbyouqqrxz4s2gomqe": {
+      "title": "Specialist Solutions Architect (Security)",
+      "company": "Databricks",
+      "source": "Greenhouse",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "last_score": 55
     }
   }
 }
