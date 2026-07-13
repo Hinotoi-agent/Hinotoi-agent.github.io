@@ -4,7 +4,7 @@ title: "2026-07-13 — Browser terminal WebSockets need an origin gate"
 date: 2026-07-13 05:00:26 +0800
 permalink: /2026/07/13/ai-security-case-study-browser-terminal-websocket-origin/
 takeaway: "A browser WebSocket carrier is not actor proof; cookie-authenticated terminal sockets need same-origin admission before the terminal hub accepts the connection."
-categories: [case-study, ai-security]
+categories: [daily, case-study, ai-security]
 tags: [case-study, browser-origin, websocket, csrf, terminal, control-plane, oss-hardening]
 ---
 
@@ -21,6 +21,32 @@ browser-controlled page -> cross-site WebSocket handshake -> ambient session coo
 ```
 
 For agent and automation products, terminal-like surfaces are control-plane sinks. If the route accepts a browser carrier without proving same origin, a signed-in user's session can be reused by a page they did not intend to grant terminal access to.
+
+## Merged PRs
+
+None in this window.
+
+The case-study anchor below is an earlier merge from 2026-07-01, not a merge from the closed Singapore window `2026-07-13T00:00:00+08:00` through `2026-07-14T00:00:00+08:00`.
+
+## What shipped or moved
+
+No PR merged in the target window, so `_data/merged_prs.yml` did not need an archive entry.
+
+What moved was the evidence model. This case study turned the earlier Crabfleet fix into a reusable browser-to-control-plane review chain: identify the browser carrier, separate ambient session proof from origin proof, place the admission gate before socket acceptance, and verify both the rejected side effect and the intended compatibility lanes.
+
+The vault-side owner was also made explicit. The public observation routes back to the source-code discovery workflow and the existing public-observation takeaway rather than becoming a website-only rule.
+
+## Observed pattern
+
+**A credential-bearing carrier is not actor proof.** A session cookie can establish who the server associates with a request without proving that the browser context using that cookie is allowed to reach a terminal, agent, MCP, workflow, or automation sink.
+
+For browser WebSockets, the boundary is admission order:
+
+```text
+carrier -> session proof -> browser-origin proof -> route authorization -> socket acceptance -> sink
+```
+
+If origin validation happens after the terminal hub accepts the socket, the check is too late. If compatibility is preserved through non-browser or service-authenticated paths, those lanes should be named and tested rather than left as implicit exceptions.
 
 ## Threat model
 
@@ -117,6 +143,13 @@ service-authenticated terminal: ACCEPT status=101
 
 That proves both sides of the boundary: the bad browser carrier is denied before socket acceptance, while the intended same-origin, direct/local, and service-authenticated paths still work.
 
+## External reference
+
+- [`openclaw/crabfleet #67`](https://github.com/openclaw/crabfleet/pull/67) is the public evidence anchor: affected route, mitigation, changed files, merge commit, regression cases, and redacted runtime proof.
+- [OWASP WebSocket Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/WebSocket_Security_Cheat_Sheet.html) is the method anchor for server-side origin validation and explicit WebSocket authorization.
+
+The review-method change is narrower than either source alone: map the carrier and actor proof separately, enforce the browser-origin gate before the control-plane sink accepts state, and test the deliberate compatibility paths alongside the denial.
+
 ## What was learned
 
 A WebSocket route needs its own browser-origin admission rule when the sink is authenticated by ambient browser state.
@@ -124,6 +157,13 @@ A WebSocket route needs its own browser-origin admission rule when the sink is a
 For terminal, agent, MCP, workflow, and automation surfaces, the server should not collapse "has a cookie" into "came from the product UI." The carrier and the actor are different facts. The carrier is a browser handshake; the actor proof is the authenticated session plus the origin boundary that says the browser context is allowed to use that session for this sink.
 
 The reusable review question is: **before accepting the socket or starting the side effect, what proves this browser-carried credential came from the intended origin?**
+
+## Takeaways
+
+- Treat cookie authentication and browser-origin admission as separate proofs on WebSocket control-plane routes.
+- Put the origin decision before `accept`, `upgrade`, `open`, subscription, terminal dispatch, or any other sink-side state transition.
+- A security regression should prove the cross-origin carrier is denied and that the socket, session, terminal, process, file, network, or stored-state sink was not partially reached.
+- Preserve intended same-origin, direct/local, origin-less non-browser, and service-authenticated paths with explicit positive tests rather than broad bypasses.
 
 ## Repeat next time
 
