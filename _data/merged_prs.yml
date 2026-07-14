@@ -1,3 +1,17 @@
+- date: '2026-07-14'
+  repo: OWASP/AISVS
+  number: 1095
+  title: 'Clarify C9.2 reversibility approval wording'
+  url: https://github.com/OWASP/AISVS/pull/1095
+  category: standards
+  tags:
+  - approval
+  - reversibility
+  - agentic-action
+  - security-standards
+  - policy-design
+  - ai-security
+  month: 2026-07
 - date: '2026-07-06'
   repo: Hinotoi-agent/huntpack
   number: 7
