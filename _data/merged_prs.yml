@@ -1,3 +1,18 @@
+- date: '2026-07-15'
+  repo: Hinotoi-agent/huntpack
+  number: 8
+  title: 'Require actor scope proof in candidate contracts'
+  url: https://github.com/Hinotoi-agent/huntpack/pull/8
+  category: tooling
+  tags:
+  - actor-proof
+  - authorization
+  - candidate-contract
+  - false-positive-gate
+  - agent-control-plane
+  - security-tooling
+  - oss-hardening
+  month: 2026-07
 - date: '2026-07-14'
   repo: OWASP/AISVS
   number: 1095
