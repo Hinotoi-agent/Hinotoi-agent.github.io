@@ -1,3 +1,17 @@
+- date: '2026-07-17'
+  repo: steipete/CodexBar
+  number: 2185
+  title: '[security] Fix upstream monitor script injection'
+  url: https://github.com/steipete/CodexBar/pull/2185
+  category: security
+  tags:
+  - github-actions
+  - workflow-injection
+  - script-injection
+  - untrusted-step-output
+  - issue-integrity
+  - oss-hardening
+  month: 2026-07
 - date: '2026-07-15'
   repo: Hinotoi-agent/huntpack
   number: 8
