@@ -26,6 +26,18 @@ external repository commit subject
 
 The commit subject looked like display text, but the workflow changed its type at the interpreter boundary: it became part of the program before JavaScript parsing.
 
+## Merged PRs
+
+None in this window.
+
+The finalized Singapore window was `2026-07-20 00:00` through `2026-07-21 00:00`. The case below concerns an earlier merged fix and is included because the review method and its public-safe case study moved during this window, not because a new PR merged.
+
+## What shipped or moved
+
+- Published a bounded case study for the already-merged CodexBar workflow fix, including the source-to-sink chain, least-privilege impact boundary, changed file, and sink-shaped verification.
+- Folded the reusable lesson into the vault's action-sink review rule: transport through a step output does not make a value safe when a later transform inserts it into interpreter source.
+- Kept `_data/merged_prs.yml` unchanged because the closed target window contained no new merge to index.
+
 ## Threat model
 
 The workflow periodically fetched the independently controlled Quotio repository and summarized recent commits in a CodexBar issue.
@@ -80,6 +92,12 @@ The important boundary was not `$GITHUB_OUTPUT` alone. Step outputs are valid da
 
 The practical impact was correspondingly scoped: issue creation or modification, comments, labels, state changes, disruption of the automated upstream-review queue, or reuse of the short-lived token within its restricted permissions. No claim of source-code or release modification was needed.
 
+## Observed pattern
+
+Automation frequently changes a value's security type without changing its visible text. A commit subject can move safely through Git, shell output, and a workflow carrier, then become executable when expression expansion occurs inside a JavaScript, shell, Python, SQL, or template source block.
+
+The useful review question is therefore not only “is this input untrusted?” It is “at which transform does this value stop being data?” In agentic systems, the same question applies to model summaries, tool results, issue text, generated configuration, memory content, and approval metadata whenever they cross into an interpreter or privileged action.
+
 ## Mitigation
 
 The fix passed workflow expressions through the action environment:
@@ -97,6 +115,10 @@ This preserves the value as data. Backticks, quotes, interpolation markers, and 
 The patch applied that rule consistently to all six outputs consumed by the script rather than fixing only the known commit-summary field. It also preserved the existing issue body and update behavior, pinned actions, and least-privilege token permissions.
 
 This is the right abstraction level: do not escape one payload character at a time when the safer primitive is to stop constructing source from the value.
+
+## External reference
+
+GitHub's [Security hardening for GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions#understanding-the-risk-of-script-injections) documents the script-injection risk created when attacker-controlled context is expanded into inline script source. The review-method change here is to extend that rule beyond obvious PR titles and branch names: trace external repository metadata, generated summaries, model/tool output, and step outputs through every later transform until the final interpreter and authenticated sink are visible.
 
 ## Verification
 
@@ -134,6 +156,13 @@ source -> carrier -> transform -> interpreter decision -> authenticated sink
 ```
 
 Trace the value all the way to parsing. Least privilege then limits impact, but it does not replace the data/code separation.
+
+## Takeaways
+
+- A data carrier is not a sanitization boundary; reclassify the value at every transform that can turn it into source.
+- Prefer environment variables, files, standard input, or structured serialization over inline source construction.
+- Bound the claim by the authority at the final sink. Here, `issues: write` established real impact without supporting broader source or release claims.
+- Verification should prove both inertness and compatibility: hostile syntax does not execute, while the complete value still reaches the intended report or issue body.
 
 ## Repeat next time
 
