@@ -24,6 +24,9 @@ jobs:
       - name: Refresh Singapore AI job search data
         run: python scripts/update_ai_jobs.py
 
+      - name: Test AI job matching logic
+        run: python scripts/test_ai_jobs_logic.py
+
       - name: Validate generated AI job data
         run: python scripts/validate_ai_jobs.py
 

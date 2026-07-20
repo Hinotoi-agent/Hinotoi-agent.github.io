@@ -8,7 +8,7 @@ permalink: /ai-jobs/
 {% assign jobs = job_feed.jobs %}
 {% assign alerts = job_feed.alerts %}
 
-<p class="page-lede">A weekly, Singapore-focused shortlist of senior AI-security, AppSec, vulnerability research, and security-engineering leadership roles.</p>
+<p class="page-lede">A weekly, Singapore-focused shortlist of senior AI-security roles, roles using AI to solve cybersecurity problems, AppSec, vulnerability research, and security-engineering leadership roles.</p>
 
 <div class="jobs-meta-card">
   <div class="jobs-meta-grid">
@@ -41,7 +41,7 @@ permalink: /ai-jobs/
   <section class="jobs-category-panel" aria-label="Best matches by role type">
     <h2>Best matches by category</h2>
     <div class="jobs-category-grid">
-      {% assign category_labels = "Best AI-security role|Best pentest/red-team role|Best product/AppSec role|Best research role|Best incident-response role|Best leadership role" | split: "|" %}
+      {% assign category_labels = "Best AI-security role|Best AI-enabled cybersecurity role|Best pentest/red-team role|Best product/AppSec role|Best research role|Best incident-response role|Best leadership role" | split: "|" %}
       {% for category in category_labels %}
         {% assign selected_job = nil %}
         {% for job in jobs %}
@@ -70,6 +70,7 @@ permalink: /ai-jobs/
       <select id="job-category-filter" data-job-category>
         <option value="all">All categories</option>
         <option value="Best AI-security role">AI security</option>
+        <option value="Best AI-enabled cybersecurity role">AI-enabled cybersecurity</option>
         <option value="Best pentest/red-team role">Pentest / red team</option>
         <option value="Best product/AppSec role">Product / AppSec</option>
         <option value="Best research role">Research</option>
@@ -190,7 +191,7 @@ permalink: /ai-jobs/
 {% else %}
   <div class="jobs-empty">
     <h2>No Singapore AI job search matches found in this refresh.</h2>
-    <p>The weekly scanner will try again next Monday. The feed is intentionally strict: roles must match Singapore / Remote-Singapore / APAC-eligible location metadata plus AI-security, LLM-security, penetration testing, red-team, AppSec, product-security, trust/safety, or related security-engineering signals.</p>
+    <p>The weekly scanner will try again next Monday. The feed is intentionally strict: roles must match Singapore / Remote-Singapore / APAC-eligible location metadata plus AI-security, AI-enabled cybersecurity, LLM-security, penetration testing, red-team, AppSec, product-security, trust/safety, or related security-engineering signals.</p>
   </div>
 {% endif %}
 

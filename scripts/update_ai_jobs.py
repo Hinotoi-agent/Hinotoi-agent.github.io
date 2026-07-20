@@ -129,6 +129,15 @@ SEARCH_QUERIES = [
     "GIC cyber security AI",
     "Temasek cyber security AI",
     "MAS AI cyber security",
+    "AI for cybersecurity Singapore",
+    "AI cybersecurity automation Singapore",
+    "AI security operations Singapore",
+    "AI threat detection Singapore",
+    "AI incident response Singapore",
+    "AI vulnerability management Singapore",
+    "machine learning cybersecurity Singapore",
+    "security analytics AI Singapore",
+    "cybersecurity data scientist Singapore",
 ]
 
 MYCAREERSFUTURE_QUERIES = SEARCH_QUERIES + [
@@ -160,7 +169,31 @@ AI_TERMS = [
     "genai", "generative ai", "agent", "agentic", "deep learning", "model security",
     "prompt injection", "content injection", "guardrail", "rag", "ai safety", "adversarial ml",
     "ai-assisted", "secure code review", "mcp", "model context protocol", "ollama", "azure ai foundry",
-    "research engineer",
+    "research engineer", "ai-powered", "ai driven", "ai-driven", "ai enabled", "ai-enabled",
+    "machine-learning", "ml-powered", "ml driven", "ml-driven", "ml enabled", "ml-enabled",
+    "security copilot", "copilot for security",
+]
+
+# Explicit phrases for roles that apply AI/ML to cybersecurity outcomes, rather
+# than only securing AI systems themselves. Generic cyber-problem terms are kept
+# separately and require an independent AI/ML signal.
+AI_APPLIED_CYBER_TERMS = [
+    "ai for cybersecurity", "ai-powered security", "ai driven security", "ai-driven security",
+    "ai enabled security", "ai-enabled security", "ml-powered security", "ml driven security",
+    "ml-driven security", "ml enabled security", "ml-enabled security", "security copilot",
+    "copilot for security", "ai threat detection", "machine learning threat detection",
+    "machine-learning threat detection", "ml threat detection", "ai security operations",
+    "ai soc automation", "ml security operations", "ai incident response",
+    "ai vulnerability management", "ai-powered vulnerability management",
+    "ai malware detection", "ml malware detection", "ai phishing detection",
+    "ml phishing detection", "ai fraud detection", "ml fraud detection",
+]
+
+CYBER_PROBLEM_TERMS = [
+    "threat detection", "detection engineering", "security operations", "soc", "incident response",
+    "threat hunting", "vulnerability management", "vulnerability triage", "malware", "phishing",
+    "fraud", "abuse", "security analytics", "behavior analytics", "ueba", "anomaly detection",
+    "security automation", "automated triage", "automated remediation", "attack surface",
 ]
 
 SECURITY_TERMS = [
@@ -177,6 +210,7 @@ ENGINEERING_TERMS = ["engineer", "researcher", "scientist", "architect", "analys
 CV_MATCH_TERMS = {
     "Offensive Security": ["offensive security", "penetration testing", "penetration tester", "pentest", "red team", "adversary emulation", "attack path", "attack-path validation", "exploitability", "vapt", "cyber range", "crto", "crtp", "oscp", "oswe"],
     "AI Security": ["ai security", "ai security manager", "ai security engineer", "agentic ai", "agent security", "llm security", "model security", "prompt injection", "content injection", "guardrail", "rag", "machine learning security", "cybersecurity ai", "adversarial ml", "ai-assisted secure code review", "mcp", "model context protocol", "azure ai foundry", "ollama"],
+    "AI-enabled Cybersecurity": AI_APPLIED_CYBER_TERMS,
     "Vulnerability Research": ["vulnerability research", "vulnerability triage", "source code review", "secure code", "security research", "cve", "open-source", "oss", "product security advisory", "root cause", "variant analysis", "disclosure"],
     "App/Product Security": ["application security", "appsec", "application security manager", "appsec manager", "application security lead", "software security manager", "product security", "product security manager", "cloud security", "cloud security manager", "security assurance", "security assurance solutions architect", "secure development", "security architect", "security engineer", "secure sdlc", "devsecops", "code review", "secure code review", "security automation"],
     "Incident Response": ["incident response", "detection engineering", "threat hunting", "threat intelligence", "forensics", "purple teaming", "mad20", "mitre attack"],
@@ -303,6 +337,18 @@ def term_hits(text: str, terms: Iterable[str]) -> list[str]:
     return hits
 
 
+def uses_ai_for_cybersecurity(title: str, summary: str) -> bool:
+    """Detect roles using AI/ML to solve an operational cybersecurity problem."""
+    text = f"{title} {summary}"
+    if term_hits(text, AI_APPLIED_CYBER_TERMS):
+        return True
+    return bool(
+        term_hits(text, AI_TERMS)
+        and term_hits(text, SECURITY_TERMS)
+        and term_hits(text, CYBER_PROBLEM_TERMS)
+    )
+
+
 def cv_fit_score(title: str, company: str, location: str, summary: str) -> tuple[int, list[str]]:
     text = " ".join([title, company, location, summary])
     title_text = title.lower()
@@ -316,6 +362,9 @@ def cv_fit_score(title: str, company: str, location: str, summary: str) -> tuple
         score += 5 + min(len(hits), 4) * 2
         if any(term in title_text for term in terms):
             score += 4
+    if uses_ai_for_cybersecurity(title, summary) and "AI-enabled Cybersecurity" not in labels:
+        labels.append("AI-enabled Cybersecurity")
+        score += 13
     if any(term in title_text for term in CV_STRONG_TITLE_TERMS):
         score += 7
     if any(term in title_text for term in ["manager", "lead", "architect", "principal", "staff"]):
@@ -434,6 +483,8 @@ def classify_categories(title: str, summary: str, fit: list[str]) -> list[str]:
     categories: list[str] = []
     if "AI Security" in fit or any(term in text for term in ["agentic ai", "ai security", "llm security", "prompt injection", "model security", "adversarial ml"]):
         categories.append("Best AI-security role")
+    if "AI-enabled Cybersecurity" in fit or uses_ai_for_cybersecurity(title, summary):
+        categories.append("Best AI-enabled cybersecurity role")
     if "Offensive Security" in fit or any(term in text for term in ["penetration", "pentest", "red team", "offensive security"]):
         categories.append("Best pentest/red-team role")
     if "App/Product Security" in fit or any(term in text for term in ["application security", "appsec", "product security", "secure sdlc", "code review"]):
@@ -600,6 +651,7 @@ def score_job(title: str, company: str, location: str, summary: str, published_a
     security_hits = term_hits(text, SECURITY_TERMS)
     engineering_hits = term_hits(text, ENGINEERING_TERMS)
     title_hits = term_hits(title, TITLE_RELEVANCE_TERMS)
+    applied_ai_cyber = uses_ai_for_cybersecurity(title, summary)
     cv_raw, cv_labels = cv_fit_score(title, company, location, summary)
 
     if any(term in title_text for term in EXCLUDED_TITLE_TERMS):
@@ -612,6 +664,7 @@ def score_job(title: str, company: str, location: str, summary: str, published_a
         + len(set(security_hits)) * 9
         + len(set(title_hits)) * 7
         + (18 if ai_hits and security_hits else 0)
+        + (14 if applied_ai_cyber else 0)
         + (14 if any(term in title_text for term in ["ai security", "agentic ai", "llm security", "red team", "penetration", "product security", "application security", "appsec"]) else 0)
     )
     career_upside = bounded(
@@ -1193,7 +1246,7 @@ def main() -> int:
         "location_filter": "Singapore / Remote-Singapore / APAC remote eligible",
         "salary_target": "S$11k+/month onwards target (S$132k+/year equivalent); clear listed ranges starting below target are filtered out.",
         "minimum_monthly_compensation_sgd": MIN_MONTHLY_COMPENSATION_SGD,
-        "search_focus": "Singapore AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, incident response support, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, financial-services/public-sector AI risk, and adjacent security-engineering leadership roles.",
+        "search_focus": "Singapore AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, roles applying AI/ML to cybersecurity problems such as threat detection, security operations, incident response, vulnerability management, fraud/abuse detection and remediation, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, financial-services/public-sector AI risk, and adjacent security-engineering leadership roles.",
         "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, require a senior-compensation path, label new/still-open roles, and penalize sales, junior-only, compliance-only, SOC-only, chaotic startup, consulting-delivery, or non-technical noise. Employer-context guidance is summarized professionally; private fit heuristics are not published.",
         "minimum_score": PUBLISH_SCORE,
         "sources": ["Expanded Greenhouse public boards", "Expanded Lever public postings", "Expanded Ashby public boards", "Remotive", "RemoteOK", "MyCareersFuture"],
