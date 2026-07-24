@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Refresh Singapore AI job-search leads for the Hinotoi GitHub Pages site.
+"""Refresh Singapore cybersecurity job-search leads for the Hinotoi Pages site.
 
-Static generator for a weekly, public, Singapore-focused AI/security job search.
+Static generator for a weekly, public, Singapore-focused CV-fit cybersecurity search.
 It intentionally uses public ATS/job-board JSON endpoints and the Python standard
 library only, so GitHub Actions does not need secrets or extra dependencies.
 
@@ -33,7 +33,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "_data" / "ai_jobs.json"
 HISTORY_OUT = ROOT / "_data" / "ai_jobs_history.json"
 USER_AGENT = "HinotoiJobWatcher/2.0 (+https://hinotoi-agent.github.io/ai-jobs/)"
-MAX_JOBS = 10
+MAX_JOBS = 20
 ALERT_SCORE = 85
 PUBLISH_SCORE = 55
 MIN_MONTHLY_COMPENSATION_SGD = 11_000
@@ -138,6 +138,31 @@ SEARCH_QUERIES = [
     "machine learning cybersecurity Singapore",
     "security analytics AI Singapore",
     "cybersecurity data scientist Singapore",
+    "cybersecurity manager Singapore",
+    "offensive security manager Singapore",
+    "penetration testing manager Singapore",
+    "red team manager Singapore",
+    "security architect Singapore",
+    "security architecture Singapore",
+    "security engineering manager Singapore",
+    "application security Singapore",
+    "product security Singapore",
+    "cloud security Singapore",
+    "DevSecOps Singapore",
+    "vulnerability management Singapore",
+    "incident response manager Singapore",
+    "digital forensics Singapore",
+    "DFIR Singapore",
+    "threat hunting Singapore",
+    "threat intelligence Singapore",
+    "detection engineering Singapore",
+    "purple team Singapore",
+    "adversary emulation Singapore",
+    "security assurance Singapore",
+    "security control assessment Singapore",
+    "cyber range Singapore",
+    "security program manager Singapore",
+    "secure SDLC Singapore",
 ]
 
 MYCAREERSFUTURE_QUERIES = SEARCH_QUERIES + [
@@ -162,6 +187,22 @@ MYCAREERSFUTURE_QUERIES = SEARCH_QUERIES + [
     "vulnerability research",
     "threat research",
     "secure software development",
+    "cybersecurity manager",
+    "offensive security manager",
+    "penetration testing manager",
+    "red team manager",
+    "security architect",
+    "security engineering manager",
+    "vulnerability management",
+    "incident response manager",
+    "digital forensics",
+    "DFIR",
+    "detection engineering",
+    "purple team",
+    "adversary emulation",
+    "security assurance",
+    "security control assessment",
+    "security program manager",
 ]
 
 AI_TERMS = [
@@ -213,12 +254,16 @@ CV_MATCH_TERMS = {
     "AI-enabled Cybersecurity": AI_APPLIED_CYBER_TERMS,
     "Vulnerability Research": ["vulnerability research", "vulnerability triage", "source code review", "secure code", "security research", "cve", "open-source", "oss", "product security advisory", "root cause", "variant analysis", "disclosure"],
     "App/Product Security": ["application security", "appsec", "application security manager", "appsec manager", "application security lead", "software security manager", "product security", "product security manager", "cloud security", "cloud security manager", "security assurance", "security assurance solutions architect", "secure development", "security architect", "security engineer", "secure sdlc", "devsecops", "code review", "secure code review", "security automation"],
-    "Incident Response": ["incident response", "detection engineering", "threat hunting", "threat intelligence", "forensics", "purple teaming", "mad20", "mitre attack"],
+    "Incident Response": ["incident response", "digital forensics", "dfir", "forensics", "gcfa", "containment", "post-incident"],
+    "Threat Detection / Intelligence": ["detection engineering", "threat detection", "threat hunting", "threat intelligence", "cyber threat intelligence", "security analytics", "purple team", "mitre attack"],
+    "Cloud / Platform Security": ["cloud security", "platform security", "devsecops", "kubernetes", "container security", "azure security", "aws security", "gcp security", "cloud security architect"],
+    "Security Architecture / Assurance": ["security architect", "security architecture", "security assurance", "security control assessment", "secure design", "threat modeling", "security design review"],
+    "Cyber Range / Security Enablement": ["cyber range", "security training", "cyber exercise", "tabletop exercise", "purple team", "adversary emulation"],
     "Leadership": ["lead", "manager", "principal", "staff", "architect", "consultant", "governance", "executive reporting", "remediation planning", "stakeholder", "program", "roadmap", "service delivery"],
     "Financial / Public-sector Security": ["financial services", "bank", "banking", "insurance", "sovereign wealth", "asset management", "model risk", "government", "public sector", "regulator", "regulatory", "mas", "gic", "temasek"],
 }
 
-CV_STRONG_TITLE_TERMS = ["offensive security", "penetration testing", "red team", "product security", "product security manager", "application security", "application security manager", "application security lead", "appsec", "appsec manager", "software security manager", "cloud security manager", "security assurance", "security assurance solutions architect", "devsecops", "ai security", "ai security manager", "ai security engineer", "agentic ai", "llm security", "vulnerability", "incident response", "cyber range"]
+CV_STRONG_TITLE_TERMS = ["cybersecurity manager", "security engineering manager", "offensive security", "penetration testing", "red team", "product security", "product security manager", "application security", "application security manager", "application security lead", "appsec", "appsec manager", "software security manager", "cloud security", "cloud security manager", "security architect", "security assurance", "security assurance solutions architect", "devsecops", "ai security", "ai security manager", "ai security engineer", "agentic ai", "llm security", "vulnerability", "incident response", "digital forensics", "dfir", "threat hunting", "threat intelligence", "detection engineering", "purple team", "cyber range"]
 
 EXCLUDED_TITLE_TERMS = [
     "account executive", "partner manager", "field marketing", "marketing manager", "finance & strategy",
@@ -229,12 +274,26 @@ EXCLUDED_TITLE_TERMS = [
 BAD_FIT_TERMS = [
     "sales", "account manager", "business development", "pre-sales", "presales", "customer success",
     "support specialist", "help desk", "desktop support", "soc analyst l1", "tier 1", "intern", "internship",
-    "fresh graduate", "junior", "governance", "compliance", "audit", "grc", "policy only",
+    "fresh graduate", "junior", "policy only",
 ]
 
 TITLE_RELEVANCE_TERMS = [
     *AI_TERMS, *SECURITY_TERMS, "data scientist", "data analyst", "data infra", "model risk", "quant",
     "agent infrastructure", "security research", "threat detection", "software security", "secure code",
+]
+
+ROLE_CATEGORY_ORDER = [
+    "Best cybersecurity leadership role",
+    "Best offensive/pentest role",
+    "Best product/AppSec role",
+    "Best security architecture/assurance role",
+    "Best cloud/platform/DevSecOps role",
+    "Best vulnerability-research role",
+    "Best incident-response/DFIR role",
+    "Best threat-detection/intelligence role",
+    "Best cyber-range/security-enablement role",
+    "Best AI-security role",
+    "Best AI-enabled cybersecurity role",
 ]
 
 SINGAPORE_PATTERNS = [re.compile(r"\bsingapore\b", re.I), re.compile(r"\bsg\b", re.I), re.compile(r"remote\s*-?\s*singapore", re.I)]
@@ -347,6 +406,18 @@ def uses_ai_for_cybersecurity(title: str, summary: str) -> bool:
         and term_hits(text, SECURITY_TERMS)
         and term_hits(text, CYBER_PROBLEM_TERMS)
     )
+
+
+def title_is_cv_relevant(title: str) -> bool:
+    """Keep the public feed anchored to role identity, not incidental body text."""
+    text = title.lower()
+    strong_terms = [
+        "security", "cyber", "appsec", "devsecops", "penetration", "pentest", "red team",
+        "offensive", "vulnerability", "incident response", "dfir", "forensic", "threat",
+        "detection", "security assurance", "cyber range", "purple team", "adversary emulation",
+        "technology risk", "information risk", "model risk", "attack monitoring", "soc manager",
+    ]
+    return any(term in text for term in strong_terms)
 
 
 def cv_fit_score(title: str, company: str, location: str, summary: str) -> tuple[int, list[str]]:
@@ -469,12 +540,12 @@ def noise_penalty(title: str, summary: str) -> int:
     for term in BAD_FIT_TERMS:
         if term in text:
             penalty += 14
-    if any(term in text for term in ["governance", "compliance", "audit", "grc"]):
+    if any(term in text for term in ["governance", "compliance", "audit", "grc"]) and not any(
+        term in text for term in ["technical", "engineering", "architecture", "security assurance", "security control", "secure code", "product security"]
+    ):
         penalty += 12
-    if "security" not in text and not any(term in text for term in ["red team", "penetration", "appsec", "vulnerability", "threat", "secure"]):
+    if "security" not in text and not any(term in text for term in ["cyber", "red team", "penetration", "appsec", "vulnerability", "threat", "secure", "incident response", "forensics", "dfir", "detection", "assurance", "architect"]):
         penalty += 28
-    if "ai" not in text and not any(term in text for term in ["llm", "machine learning", "agent", "model", "red team", "penetration", "appsec", "vulnerability"]):
-        penalty += 8
     return min(penalty, 75)
 
 
@@ -485,17 +556,25 @@ def classify_categories(title: str, summary: str, fit: list[str]) -> list[str]:
         categories.append("Best AI-security role")
     if "AI-enabled Cybersecurity" in fit or uses_ai_for_cybersecurity(title, summary):
         categories.append("Best AI-enabled cybersecurity role")
-    if "Offensive Security" in fit or any(term in text for term in ["penetration", "pentest", "red team", "offensive security"]):
-        categories.append("Best pentest/red-team role")
+    if "Offensive Security" in fit or any(term in text for term in ["penetration", "pentest", "red team", "offensive security", "adversary emulation"]):
+        categories.append("Best offensive/pentest role")
     if "App/Product Security" in fit or any(term in text for term in ["application security", "appsec", "product security", "secure sdlc", "code review"]):
         categories.append("Best product/AppSec role")
+    if "Security Architecture / Assurance" in fit or any(term in text for term in ["security architect", "security architecture", "security assurance", "security control assessment", "secure design"]):
+        categories.append("Best security architecture/assurance role")
+    if "Cloud / Platform Security" in fit or any(term in text for term in ["cloud security", "platform security", "devsecops", "kubernetes", "container security"]):
+        categories.append("Best cloud/platform/DevSecOps role")
     if "Vulnerability Research" in fit or any(term in text for term in ["research", "vulnerability", "source code review", "cve"]):
-        categories.append("Best research role")
-    if "Incident Response" in fit or any(term in text for term in ["incident response", "detection engineering", "threat hunting"]):
-        categories.append("Best incident-response role")
+        categories.append("Best vulnerability-research role")
+    if "Incident Response" in fit or any(term in text for term in ["incident response", "digital forensics", "dfir", "forensics"]):
+        categories.append("Best incident-response/DFIR role")
+    if "Threat Detection / Intelligence" in fit or any(term in text for term in ["detection engineering", "threat hunting", "threat intelligence", "security analytics", "purple team"]):
+        categories.append("Best threat-detection/intelligence role")
+    if "Cyber Range / Security Enablement" in fit or any(term in text for term in ["cyber range", "security training", "cyber exercise", "tabletop"]):
+        categories.append("Best cyber-range/security-enablement role")
     if "Leadership" in fit or any(term in text for term in ["lead", "manager", "architect", "principal", "staff"]):
-        categories.append("Best leadership role")
-    return categories[:4] or ["Best overall match"]
+        categories.append("Best cybersecurity leadership role")
+    return categories or ["Best overall CV match"]
 
 
 def explain_match(title: str, fit: list[str], categories: list[str], breakdown: dict[str, int], seniority: str, environment_note: str = "") -> tuple[str, str, str, str]:
@@ -512,7 +591,7 @@ def explain_match(title: str, fit: list[str], categories: list[str], breakdown: 
     category_text = ", ".join(label.replace("Best ", "").replace(" role", "") for label in categories[:2])
     why = (
         f"Strong overlap with {fit_text}. Ranked as {category_text}, with CV fit "
-        f"{breakdown['cv_fit']}/100, AI/security relevance {breakdown['ai_security']}/100, "
+        f"{breakdown['cv_fit']}/100, role/security relevance {breakdown['ai_security']}/100, "
         f"and {seniority.lower()} trajectory."
     )
 
@@ -581,6 +660,15 @@ def learning_plan(title: str, company: str, summary: str, fit: list[str], catego
     if any(t in text for t in ["incident response", "detection", "threat hunting", "forensics"]):
         add("Detection/IR fundamentals: log analysis, incident scoping, containment, cloud telemetry, and post-incident hardening.",
             "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.")
+    if any(t in text for t in ["security architect", "security architecture", "security assurance", "security control assessment", "secure design"]):
+        add("Security architecture and assurance: threat models, control design, technical assurance, exception handling, and evidence-led risk decisions.",
+            "Prepare architecture-review examples that connect a broken invariant to a practical control and verification plan.")
+    if any(t in text for t in ["threat intelligence", "detection engineering", "threat hunting", "purple team"]):
+        add("Threat-informed defence: ATT&CK mapping, detection hypotheses, threat hunting, purple-team validation, and measurable coverage improvements.",
+            "Prepare one attack-to-detection story showing telemetry, analytic logic, validation, and remediation feedback.")
+    if any(t in text for t in ["cyber range", "security training", "tabletop", "playbook"]):
+        add("Cyber-range and security enablement: realistic scenario design, exercise control, learning objectives, facilitation, and measurable outcomes.",
+            "Show how a technical attack scenario became a repeatable exercise, playbook, or organisational capability.")
     if any(t in text for t in ["research", "fellow", "vulnerability", "cve", "cyber-physical"]):
         add("Vulnerability research craft: root-cause analysis, reproducible PoCs, variant analysis, disclosure-quality writeups, and patch validation.",
             "Keep a public-safe research portfolio with sanitized PoCs, diagrams, and before/after patch evidence.")
@@ -606,6 +694,12 @@ def role_focus_for(title: str, company: str, summary: str, environment_label: st
         return "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence."
     if any(t in text for t in ["product security", "application security", "appsec", "secure sdlc", "code review"]):
         return "Focus on code-to-control stories: secure design review, source-level root cause, minimal fixes, and engineering adoption."
+    if any(t in text for t in ["security architect", "security architecture", "security assurance", "security control assessment"]):
+        return "Focus on architecture-to-evidence stories: threat models, control choices, technical assurance, exceptions, and verified risk reduction."
+    if any(t in text for t in ["incident response", "digital forensics", "dfir", "forensics", "detection engineering", "threat hunting", "threat intelligence"]):
+        return "Focus on incident and threat stories that connect signals, investigation decisions, ATT&CK-informed validation, containment, and durable hardening."
+    if any(t in text for t in ["cyber range", "security training", "tabletop", "playbook"]):
+        return "Focus on cyber-range ownership: scenario realism, exercise design, facilitation, learning outcomes, and repeatable operational playbooks."
     if any(t in text for t in ["red team", "penetration", "offensive", "adversary"]):
         return "Focus on attack-path narratives that connect exploitability to business impact and durable remediation."
     if any(t in text for t in ["lead", "manager", "architect", "principal", "staff"]):
@@ -827,6 +921,8 @@ def build_job(title: str, company: str, location: str, url: str, source: str, pu
     summary = clean_text(summary, 320)
     if not title or not url:
         return None
+    if not title_is_cv_relevant(title):
+        return None
     if not is_remote_singapore_eligible(location, f"{title} {summary}"):
         return None
     score, tags, cv_score, fit, priority, why_match, possible_gap, categories, score_breakdown, seniority, apply_angle, skillsets_to_build, learning_gaps, certifications_to_consider, environment_note, role_focus, alert_reason = score_job(title, company, location, summary, published_at)
@@ -1018,8 +1114,25 @@ def stable_key(value: str) -> str:
     return base64.b32encode(digest).decode("ascii").rstrip("=").lower()[:18]
 
 
+def canonical_company(company: str) -> str:
+    """Collapse common ATS/legal-name aliases for dedupe and company caps."""
+    lower = clean_text(company).lower()
+    for marker, canonical in {
+        "databricks": "databricks",
+        "google": "google",
+        "okx": "okx",
+        "zscaler": "zscaler",
+        "crowdstrike": "crowdstrike",
+        "singapore airlines": "singapore airlines",
+        "st engineering": "st engineering",
+    }.items():
+        if marker in lower:
+            return canonical
+    return SPACE_RE.sub(" ", re.sub(r"\b(pte\.?|ltd\.?|limited|inc\.?|corp\.?|corporation|llc|singapore branch)\b", "", lower)).strip()
+
+
 def normalized_history_key(title: str, company: str, fallback: str = "") -> str:
-    normalized_company = re.sub(r"\b(pte\.? ltd\.?|pte|ltd|limited|inc\.?|corp\.?|corporation|llc|singapore|sales)\b", "", company.lower())
+    normalized_company = canonical_company(company)
     normalized_company = SPACE_RE.sub(" ", re.sub(r"[^a-z0-9]+", " ", normalized_company)).strip()
     normalized_title = SPACE_RE.sub(" ", re.sub(r"[^a-z0-9]+", " ", title.lower())).strip()
     if normalized_company and normalized_title:
@@ -1081,21 +1194,32 @@ def dedupe(jobs: Iterable[Job]) -> list[Job]:
 
 
 def select_top_jobs(ranked: list[Job], limit: int = MAX_JOBS, per_company: int = 2) -> list[Job]:
-    """Pick a useful public top list without letting one employer dominate it."""
+    """Cover CV-fit role families, then fill by rank without employer domination."""
     selected: list[Job] = []
+    selected_keys: set[str] = set()
     company_counts: dict[str, int] = {}
-    deferred: list[Job] = []
-    for job in ranked:
-        key = clean_text(job.company).lower()
-        if company_counts.get(key, 0) < per_company:
+    for category in ROLE_CATEGORY_ORDER:
+        for job in ranked:
+            identity = job_key(job)
+            company = canonical_company(job.company)
+            if identity in selected_keys or category not in job.categories or company_counts.get(company, 0) >= per_company:
+                continue
             selected.append(job)
-            company_counts[key] = company_counts.get(key, 0) + 1
-        else:
-            deferred.append(job)
+            selected_keys.add(identity)
+            company_counts[company] = company_counts.get(company, 0) + 1
+            break
+        if len(selected) >= limit:
+            return selected[:limit]
+    for job in ranked:
+        if job_key(job) in selected_keys:
+            continue
+        company = canonical_company(job.company)
+        if company_counts.get(company, 0) < per_company:
+            selected.append(job)
+            selected_keys.add(job_key(job))
+            company_counts[company] = company_counts.get(company, 0) + 1
         if len(selected) >= limit:
             break
-    if len(selected) < limit:
-        selected.extend(deferred[: limit - len(selected)])
     return selected[:limit]
 
 
@@ -1246,11 +1370,11 @@ def main() -> int:
         "location_filter": "Singapore / Remote-Singapore / APAC remote eligible",
         "salary_target": "S$11k+/month onwards target (S$132k+/year equivalent); clear listed ranges starting below target are filtered out.",
         "minimum_monthly_compensation_sgd": MIN_MONTHLY_COMPENSATION_SGD,
-        "search_focus": "Singapore AI job search tailored to a senior cybersecurity manager / AI security engineer profile: AI-security, roles applying AI/ML to cybersecurity problems such as threat detection, security operations, incident response, vulnerability management, fraud/abuse detection and remediation, LLM/RAG/agent security, prompt/content injection, AI-assisted secure code review, offensive security, Cyber Range, AppSec/product security, vulnerability research, cloud/DevSecOps, financial-services/public-sector AI risk, and adjacent security-engineering leadership roles.",
-        "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before truncating to the top 10, require a senior-compensation path, label new/still-open roles, and penalize sales, junior-only, compliance-only, SOC-only, chaotic startup, consulting-delivery, or non-technical noise. Employer-context guidance is summarized professionally; private fit heuristics are not published.",
+        "search_focus": "Singapore cybersecurity job search tailored to the full CV: cybersecurity management, offensive security and penetration testing, AppSec/product security, vulnerability research, incident response/DFIR, threat hunting/intelligence and detection engineering, security architecture/assurance, cloud/platform security and DevSecOps, cyber range/security enablement, AI security, AI-enabled cybersecurity, and adjacent senior technical-security roles.",
+        "search_behavior": "Query public ATS and job-board feeds, allow Singapore/Remote-Singapore/APAC-eligible metadata, score all candidates before selecting a category-diverse top 20, require a senior-compensation path, label new/still-open roles, and penalize sales, junior-only, compliance-only, SOC-L1-only, chaotic startup, consulting-delivery, or non-technical noise. Employer-context guidance is summarized professionally; private fit heuristics are not published.",
         "minimum_score": PUBLISH_SCORE,
         "sources": ["Expanded Greenhouse public boards", "Expanded Lever public postings", "Expanded Ashby public boards", "Remotive", "RemoteOK", "MyCareersFuture"],
-        "source_note": "Weekly top-10 public ATS/feed scan for Singapore and Singapore-eligible remote AI/security roles. Expanded coverage includes additional AI/security-relevant public boards such as Chainguard, Databricks, Zscaler, Palantir, HackerOne, LangChain, and Linear where their ATS feeds are available. Ranking is weighted against broad CV-fit signals from the uploaded CV without publishing private details: cybersecurity management, offensive security leadership, incident response support, VAPT/adversary emulation, AI security engineering, RAG/agent/MCP trust boundaries, prompt/content injection testing, vulnerability research/CVEs, Cyber Range delivery, Azure/LLM tooling, and cloud/application/product security. Salary confidence is shown per role; verify current availability and compensation before applying.",
+        "source_note": "Weekly category-diverse top-20 public ATS/feed scan for Singapore and Singapore-eligible remote cybersecurity roles. Ranking uses broad, privacy-safe CV-fit signals: cybersecurity management, offensive security leadership, VAPT/adversary emulation, incident response and forensics, threat hunting/intelligence, security architecture and assurance, AI security engineering, vulnerability research/CVEs, Cyber Range delivery, Azure/cloud/DevSecOps, and application/product security. Salary confidence is shown per role; verify current availability and compensation before applying.",
         "stats": {
             "candidates_scored": len(ranked),
             "published_count": len(jobs),

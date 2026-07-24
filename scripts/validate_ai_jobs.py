@@ -15,7 +15,7 @@ from typing import Any, cast
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "_data" / "ai_jobs.json"
 HISTORY_PATH = ROOT / "_data" / "ai_jobs_history.json"
-MAX_JOBS = 10
+MAX_JOBS = 20
 REQUIRED_JOB_FIELDS = {
     "title",
     "company",
@@ -38,6 +38,7 @@ REQUIRED_JOB_FIELDS = {
     "next_action",
     "status_badge",
     "status",
+    "categories",
 }
 ALLOWED_STATUS_BADGES = {"New this week", "Still open", "Repeated high match", "Watchlist"}
 ALLOWED_SALARY_CONFIDENCE_PREFIXES = ("Listed —", "Estimated —")
@@ -87,6 +88,22 @@ def require_nonempty_list(row: dict[str, object], field: str, label: str) -> Non
     value = row.get(field)
     if not isinstance(value, list) or not value or not all(isinstance(item, str) and item.strip() for item in value):
         fail(f"{label} missing non-empty string list {field!r}")
+
+
+def canonical_company(company: object) -> str:
+    lower = str(company or "").casefold()
+    for marker, canonical in {
+        "databricks": "databricks",
+        "google": "google",
+        "okx": "okx",
+        "zscaler": "zscaler",
+        "crowdstrike": "crowdstrike",
+        "singapore airlines": "singapore airlines",
+        "st engineering": "st engineering",
+    }.items():
+        if marker in lower:
+            return canonical
+    return re.sub(r"\b(pte\.?|ltd\.?|limited|inc\.?|corp\.?|corporation|llc|singapore branch)\b", "", lower).strip()
 
 
 def validate_privacy(name: str, data: object) -> None:
@@ -153,6 +170,7 @@ def main() -> int:
             require_nonempty_string(row, field, label)
         for field in ["skillsets_to_build", "learning_gaps", "certifications_to_consider"]:
             require_nonempty_list(row, field, label)
+        require_nonempty_list(row, "categories", label)
         score = row.get("score")
         if not isinstance(score, int) or not (0 <= score <= 100):
             fail(f"{label} has invalid score {score!r}")
@@ -164,7 +182,7 @@ def main() -> int:
         salary_confidence = str(row.get("salary_confidence") or "")
         if not salary_confidence.startswith(ALLOWED_SALARY_CONFIDENCE_PREFIXES):
             fail(f"{label} has unexpected salary_confidence {salary_confidence!r}")
-        company_key = str(row.get("company", "")).casefold()
+        company_key = canonical_company(row.get("company", ""))
         seen_companies[company_key] = seen_companies.get(company_key, 0) + 1
 
     overrepresented = {company: count for company, count in seen_companies.items() if count > 2}

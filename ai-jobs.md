@@ -1,6 +1,6 @@
 ---
 layout: page
-title: AI job search
+title: Cybersecurity jobs
 permalink: /ai-jobs/
 ---
 
@@ -8,7 +8,7 @@ permalink: /ai-jobs/
 {% assign jobs = job_feed.jobs %}
 {% assign alerts = job_feed.alerts %}
 
-<p class="page-lede">A weekly, Singapore-focused shortlist of senior AI-security roles, roles using AI to solve cybersecurity problems, AppSec, vulnerability research, and security-engineering leadership roles.</p>
+<p class="page-lede">A weekly, Singapore-focused shortlist across the full CV: cybersecurity leadership, offensive security, AppSec/product security, vulnerability research, incident response/DFIR, threat and detection roles, security architecture/assurance, cloud/DevSecOps, cyber range, and AI security.</p>
 
 <div class="jobs-meta-card">
   <div class="jobs-meta-grid">
@@ -16,7 +16,7 @@ permalink: /ai-jobs/
     <div><strong>Last refreshed:</strong> {{ job_feed.updated_at | default: "pending first refresh" }}</div>
     {% if job_feed.stats %}
       <div><strong>Candidates scored:</strong> {{ job_feed.stats.candidates_scored }}</div>
-      <div><strong>Published:</strong> top {{ job_feed.stats.published_count }}</div>
+      <div><strong>Published:</strong> {{ job_feed.stats.published_count }} category-diverse matches</div>
     {% endif %}
   </div>
 </div>
@@ -41,7 +41,7 @@ permalink: /ai-jobs/
   <section class="jobs-category-panel" aria-label="Best matches by role type">
     <h2>Best matches by category</h2>
     <div class="jobs-category-grid">
-      {% assign category_labels = "Best AI-security role|Best AI-enabled cybersecurity role|Best pentest/red-team role|Best product/AppSec role|Best research role|Best incident-response role|Best leadership role" | split: "|" %}
+      {% assign category_labels = "Best cybersecurity leadership role|Best offensive/pentest role|Best product/AppSec role|Best security architecture/assurance role|Best cloud/platform/DevSecOps role|Best vulnerability-research role|Best incident-response/DFIR role|Best threat-detection/intelligence role|Best cyber-range/security-enablement role|Best AI-security role|Best AI-enabled cybersecurity role" | split: "|" %}
       {% for category in category_labels %}
         {% assign selected_job = nil %}
         {% for job in jobs %}
@@ -69,13 +69,17 @@ permalink: /ai-jobs/
       <label for="job-category-filter">Category</label>
       <select id="job-category-filter" data-job-category>
         <option value="all">All categories</option>
+        <option value="Best cybersecurity leadership role">Cybersecurity leadership</option>
+        <option value="Best offensive/pentest role">Offensive / pentest</option>
+        <option value="Best product/AppSec role">Product / AppSec</option>
+        <option value="Best security architecture/assurance role">Architecture / assurance</option>
+        <option value="Best cloud/platform/DevSecOps role">Cloud / platform / DevSecOps</option>
+        <option value="Best vulnerability-research role">Vulnerability research</option>
+        <option value="Best incident-response/DFIR role">Incident response / DFIR</option>
+        <option value="Best threat-detection/intelligence role">Threat / detection / intelligence</option>
+        <option value="Best cyber-range/security-enablement role">Cyber range / enablement</option>
         <option value="Best AI-security role">AI security</option>
         <option value="Best AI-enabled cybersecurity role">AI-enabled cybersecurity</option>
-        <option value="Best pentest/red-team role">Pentest / red team</option>
-        <option value="Best product/AppSec role">Product / AppSec</option>
-        <option value="Best research role">Research</option>
-        <option value="Best incident-response role">Incident response</option>
-        <option value="Best leadership role">Leadership</option>
       </select>
     </div>
     <div>
@@ -190,8 +194,8 @@ permalink: /ai-jobs/
   </div>
 {% else %}
   <div class="jobs-empty">
-    <h2>No Singapore AI job search matches found in this refresh.</h2>
-    <p>The weekly scanner will try again next Monday. The feed is intentionally strict: roles must match Singapore / Remote-Singapore / APAC-eligible location metadata plus AI-security, AI-enabled cybersecurity, LLM-security, penetration testing, red-team, AppSec, product-security, trust/safety, or related security-engineering signals.</p>
+    <h2>No Singapore cybersecurity job matches found in this refresh.</h2>
+    <p>The weekly scanner will try again next Monday. The feed is intentionally strict: roles must match Singapore / Remote-Singapore / APAC eligibility, the CV's technical-security role families, and a senior-compensation path.</p>
   </div>
 {% endif %}
 

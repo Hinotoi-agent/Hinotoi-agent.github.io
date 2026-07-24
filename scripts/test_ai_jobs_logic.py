@@ -40,10 +40,36 @@ def main() -> int:
     unrelated_title = "Machine Learning Engineer"
     unrelated_summary = "Build recommendation models for consumer shopping experiences."
     assert not MODULE.uses_ai_for_cybersecurity(unrelated_title, unrelated_summary)
+    assert not MODULE.title_is_cv_relevant(unrelated_title)
+    assert not MODULE.title_is_cv_relevant("Retail & Consumer Goods APAC Leader")
+    assert not MODULE.title_is_cv_relevant("Engineering Manager – Healthcare Technology")
+    assert MODULE.title_is_cv_relevant("Principal Security Architect")
+    assert MODULE.title_is_cv_relevant("Senior DFIR Consultant")
+    assert MODULE.canonical_company("Databricks") == MODULE.canonical_company("DATABRICKS ASIAPAC UNIFIED ANALYTICS PTE. LTD.")
+    assert MODULE.build_job(
+        "Retail & Consumer Goods APAC Leader", "Databricks", "Singapore", "https://example.invalid/job",
+        "test", "2026-07-20", "Mentions security playbooks incidentally.", 0,
+    ) is None
 
     non_ai_security_title = "Security Analytics Engineer"
     non_ai_security_summary = "Build dashboards and rule-based threat-detection reports."
     assert not MODULE.uses_ai_for_cybersecurity(non_ai_security_title, non_ai_security_summary)
+
+    broad_cv_cases = [
+        ("Cybersecurity Manager", "Lead technical security programmes, remediation planning, and executive reporting.", "Best cybersecurity leadership role"),
+        ("Principal Security Architect", "Own threat models, security control assessment, and secure design reviews.", "Best security architecture/assurance role"),
+        ("Senior DFIR Consultant", "Lead incident response, digital forensics, containment, and post-incident hardening.", "Best incident-response/DFIR role"),
+        ("Threat Hunting Lead", "Develop ATT&CK-informed threat hunts, detection engineering, and purple-team validation.", "Best threat-detection/intelligence role"),
+        ("Cyber Range Lead", "Design adversary-emulation exercises, playbooks, and measurable training outcomes.", "Best cyber-range/security-enablement role"),
+        ("Cloud Security Architect", "Secure Azure, Kubernetes, IAM, containers, and DevSecOps pipelines.", "Best cloud/platform/DevSecOps role"),
+    ]
+    for title, summary, expected_category in broad_cv_cases:
+        score, _, cv_score, fit, _, _, _, categories, breakdown, *_ = MODULE.score_job(
+            title, "Example Enterprise", "Singapore", summary, "2026-07-20"
+        )
+        assert score > 0 and cv_score > 0 and breakdown
+        assert fit
+        assert expected_category in categories, (title, categories)
     print("test_ai_jobs_logic: ok")
     return 0
 
