@@ -12,7 +12,7 @@ Resuming agent work is an authorization event, not only a lifecycle operation. A
 
 ## Signal
 
-[`openclaw/crabfleet #68`](https://github.com/openclaw/crabfleet/pull/68) fixed a GitHub Actions session-resume path where an existing `workKey` allowed registration to continue without the stable owner proof required for new work.
+The closed Singapore reporting window had no new merged PR. The useful signal was a finalized case study of [`openclaw/crabfleet #68`](https://github.com/openclaw/crabfleet/pull/68), an earlier fix for a GitHub Actions session-resume path where an existing `workKey` allowed registration to continue without the stable owner proof required for new work.
 
 The high-signal chain was:
 
@@ -25,6 +25,29 @@ service-authenticated registration
 ```
 
 The service token admitted the caller to the registration API. It did not prove that the caller owned the existing action session selected by `workKey`.
+
+## Merged PRs
+
+None in this window.
+
+## What shipped or moved
+
+- The public case-study record was finalized around the exact authorization boundary in `openclaw/crabfleet #68`: stable owner proof must precede session reset and agent-token rotation.
+- The vault's weekly maintenance pass refreshed the research cockpit and narrowed the active disclosure view without deleting canonical records or changing checklist policy.
+- The reusable owner-binding rule was confirmed in the existing vault route for public observations and the source-code discovery workflow rather than copied into a new parallel note.
+
+The movement was therefore in evidence packaging and research-state hygiene, not a new target-window code merge.
+
+## Observed pattern
+
+Agent control planes often carry two different kinds of identity in one request: a credential that admits a service to the API and an object handle that selects durable work. Neither fact alone proves that the caller may inherit the selected work's authority.
+
+The boundary is the handoff from lookup to mutation. Before a resume, retry, reconnect, restore, or replay path rotates credentials or dispatches work, it must bind the current request to the server-derived owner of the existing object. The negative proof should reach the same sink: denial is incomplete unless the session, token hash, approval, file, job, or network action remains unchanged.
+
+## External reference
+
+- The [`openclaw/crabfleet #68` PR](https://github.com/openclaw/crabfleet/pull/68) is the primary public evidence anchor: affected flow, patch scope, focused regression, full test result, and sanitized runtime proof.
+- The [OWASP Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) is a useful general review anchor for enforcing authorization consistently and validating permissions on requests. Here, that principle becomes concrete at the session-resume mutation boundary.
 
 ## Threat model
 
@@ -112,6 +135,13 @@ request credential -> object handle -> server-derived owner -> policy decision -
 ```
 
 A carrier such as `workKey`, resume token, approval payload, idempotency key, local address, or request header can locate or constrain work. It is not actor proof by itself. The proof must bind the current request to the principal whose authority is used at the sink.
+
+## Takeaways
+
+- **Concrete rule:** treat every resume-like path as a fresh authorization decision before any credential rotation, dispatch, or state reset.
+- Separate API admission, object selection, and object ownership in the boundary map; do not let a shared service credential or durable handle collapse those checks into one.
+- Make denial tests sink-shaped by asserting both the error and the absence of mutation, then preserve the intended matching-owner path as a positive control.
+- Quiet-day publishing is justified only when the work changes a durable evidence or review surface. Here, the case study and refreshed vault cockpit are the artifacts; the empty merge window is not inflated into a code-shipment claim.
 
 ## Repeat next time
 
