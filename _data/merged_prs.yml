@@ -1,3 +1,18 @@
+- date: '2026-08-06'
+  repo: microsoft/RAMPART
+  number: 60
+  title: '[FIX]: Security - Prompt Drivers: treat LLM observations as untrusted'
+  url: https://github.com/microsoft/RAMPART/pull/60
+  category: security
+  tags:
+  - prompt-injection
+  - llm-harness
+  - untrusted-observations
+  - feedback-loop
+  - prompt-driver
+  - ai-security
+  - oss-hardening
+  month: 2026-08
 - date: '2026-07-17'
   repo: steipete/CodexBar
   number: 2185
