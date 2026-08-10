@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03T11:43:48Z",
+  "updated_at": "2026-08-10T04:09:59Z",
   "jobs": {
     "pg74atzg76gq6vsdti": {
       "title": "Product Security Architect — Agentic AI & Security",
@@ -38,8 +38,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-08-03",
-      "last_score": 91
+      "last_seen": "2026-08-10",
+      "last_score": 93
     },
     "lcymvdcroi3ltwwz7o": {
       "title": "Security Engineer, Offensive Security",
@@ -2934,16 +2934,16 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-08-03",
-      "last_score": 62
+      "last_seen": "2026-08-10",
+      "last_score": 66
     },
     "2owukxdvw5d6usft76": {
       "title": "Information Technology - Principal Technologist (AppSec)",
       "company": "SINGAPORE AIRLINES LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-08-03",
-      "last_score": 82
+      "last_seen": "2026-08-10",
+      "last_score": 81
     },
     "6xfapzy7hvmmdiqaq5": {
       "title": "Principal AI Engineer",
@@ -3006,7 +3006,7 @@
       "company": "Zscaler",
       "source": "Greenhouse",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-10",
       "last_score": 79
     },
     "sgmnuoabpvkqwvnvym": {
@@ -3030,8 +3030,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-08-03",
-      "last_score": 63
+      "last_seen": "2026-08-10",
+      "last_score": 65
     },
     "2x6b34qoap4i2ai4wm": {
       "title": "Principal Field Product Manager",
@@ -3046,7 +3046,7 @@
       "company": "Databricks",
       "source": "Greenhouse",
       "first_seen": "2026-07-24",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-10",
       "last_score": 62
     },
     "niakfct7vocxsc2k5q": {
@@ -3078,8 +3078,8 @@
       "company": "SCIENTE INTERNATIONAL PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-07-24",
-      "last_seen": "2026-08-03",
-      "last_score": 73
+      "last_seen": "2026-08-10",
+      "last_score": 71
     },
     "rnqsdowwppyfbe5zbv": {
       "title": "Security Engineering Manager, Enterprise SaaS Security - Singapore",
@@ -3094,7 +3094,7 @@
       "company": "ST ENGINEERING ENTERPRISE DIGITAL PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-07-24",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-10",
       "last_score": 69
     },
     "ih3ugy3icr7fdhkzrr": {
@@ -3158,8 +3158,8 @@
       "company": "FTSE INTERNATIONAL LIMITED Singapore Branch",
       "source": "MyCareersFuture",
       "first_seen": "2026-07-24",
-      "last_seen": "2026-08-03",
-      "last_score": 60
+      "last_seen": "2026-08-10",
+      "last_score": 59
     },
     "74g5hxipwgqzo6rfin": {
       "title": "Sr. Forward Deployed Engineer",
@@ -3230,7 +3230,7 @@
       "company": "NCS PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-10",
       "last_score": 87
     },
     "kd24keslzfhjlckdn6": {
@@ -3238,7 +3238,7 @@
       "company": "OpenAI",
       "source": "Ashby",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-10",
       "last_score": 61
     },
     "klut4trdl3euofgjbd": {
@@ -3246,24 +3246,64 @@
       "company": "ELLIOTT MOSS CONSULTING PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-03",
-      "last_score": 87
+      "last_seen": "2026-08-10",
+      "last_score": 86
     },
     "skbabsaljpwp5omfbt": {
       "title": "Security Engineer, Product Security - Global Security Organisation",
       "company": "TIKTOK PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-03",
-      "last_score": 76
+      "last_seen": "2026-08-10",
+      "last_score": 75
     },
     "vcxcy75gooc5xe6yvy": {
       "title": "Security Engineer, Detection & Response - Global Security Organization",
       "company": "TIKTOK PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-03",
-      "last_score": 64
+      "last_seen": "2026-08-10",
+      "last_score": 63
+    },
+    "liempbo54makar2kbj": {
+      "title": "Senior Security Consultant",
+      "company": "LTM LIMITED Singapore Branch",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "last_score": 84
+    },
+    "wsiwvoxbvb4twjjb5h": {
+      "title": "IT Security Architect (Azure)",
+      "company": "DAULFIN GREY HR PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "last_score": 83
+    },
+    "jlxcjj4gf72jenqwkl": {
+      "title": "Staff Software Engineer, Cloud and Third-Party Platform Security - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "last_score": 70
+    },
+    "3apheas2ujdxfyedwl": {
+      "title": "Security & Compliance Engineer",
+      "company": "AMAZON WEB SERVICES SINGAPORE PRIVATE LIMITED",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "last_score": 70
+    },
+    "wtjqqa3s34x3h3sm4a": {
+      "title": "Staff Engineer, Security Platform Development",
+      "company": "OKX",
+      "source": "Greenhouse",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "last_score": 65
     }
   }
 }
