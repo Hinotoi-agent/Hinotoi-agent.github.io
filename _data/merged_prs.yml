@@ -1,3 +1,56 @@
+- date: '2026-08-11'
+  repo: Hinotoi-agent/huntpack
+  number: 12
+  title: 'feat: rank model observation feedback boundaries'
+  url: https://github.com/Hinotoi-agent/huntpack/pull/12
+  category: tooling
+  tags:
+  - prompt-injection
+  - model-observations
+  - feedback-loop
+  - candidate-ranking
+  - ai-security
+  - security-tooling
+  month: 2026-08
+- date: '2026-08-11'
+  repo: Hinotoi-agent/huntpack
+  number: 11
+  title: 'feat: add candidate stop conditions'
+  url: https://github.com/Hinotoi-agent/huntpack/pull/11
+  category: tooling
+  tags:
+  - candidate-contract
+  - stop-condition
+  - bounded-review
+  - token-efficiency
+  - security-tooling
+  month: 2026-08
+- date: '2026-08-11'
+  repo: Hinotoi-agent/huntpack
+  number: 10
+  title: 'feat: rank malformed persisted path inputs'
+  url: https://github.com/Hinotoi-agent/huntpack/pull/10
+  category: tooling
+  tags:
+  - path-safety
+  - persisted-state
+  - input-validation
+  - candidate-ranking
+  - security-tooling
+  month: 2026-08
+- date: '2026-08-11'
+  repo: Hinotoi-agent/huntpack
+  number: 9
+  title: 'feat: detect tool side-effect classification mismatches'
+  url: https://github.com/Hinotoi-agent/huntpack/pull/9
+  category: tooling
+  tags:
+  - agent-tools
+  - side-effects
+  - authorization
+  - candidate-ranking
+  - security-tooling
+  month: 2026-08
 - date: '2026-08-06'
   repo: microsoft/RAMPART
   number: 60
