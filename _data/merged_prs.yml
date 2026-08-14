@@ -1,3 +1,17 @@
+- date: '2026-08-14'
+  repo: microsoft/RAMPART
+  number: 106
+  title: '[FIX]: contain deserialized payload artifacts'
+  url: https://github.com/microsoft/RAMPART/pull/106
+  category: security
+  tags:
+  - deserialization
+  - persisted-state
+  - artifact-paths
+  - path-containment
+  - symlink-safety
+  - oss-hardening
+  month: 2026-08
 - date: '2026-08-11'
   repo: Hinotoi-agent/huntpack
   number: 12
