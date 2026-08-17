@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T09:47:31Z",
+  "updated_at": "2026-08-17T04:08:37Z",
   "jobs": {
     "pg74atzg76gq6vsdti": {
       "title": "Product Security Architect — Agentic AI & Security",
@@ -38,8 +38,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-08-10",
-      "last_score": 93
+      "last_seen": "2026-08-17",
+      "last_score": 92
     },
     "lcymvdcroi3ltwwz7o": {
       "title": "Security Engineer, Offensive Security",
@@ -78,7 +78,7 @@
       "company": "JJ CONSULTING SERVICES",
       "source": "MyCareersFuture",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-17",
       "last_score": 78
     },
     "lqiuhugqgd7lonvcwz": {
@@ -2926,16 +2926,16 @@
       "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-22",
-      "last_score": 73
+      "last_seen": "2026-08-17",
+      "last_score": 75
     },
     "qll56greybclftmyv4": {
       "title": "Client Security Expert/Architect",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-08-10",
-      "last_score": 66
+      "last_seen": "2026-08-17",
+      "last_score": 65
     },
     "2owukxdvw5d6usft76": {
       "title": "Information Technology - Principal Technologist (AppSec)",
@@ -3006,8 +3006,8 @@
       "company": "Zscaler",
       "source": "Greenhouse",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-08-10",
-      "last_score": 79
+      "last_seen": "2026-08-17",
+      "last_score": 78
     },
     "sgmnuoabpvkqwvnvym": {
       "title": "CIO | Chief Information Officer | VP IT | IT Director | Head of IT | Oracle | AI |Cyber Security",
@@ -3030,8 +3030,8 @@
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-08-10",
-      "last_score": 65
+      "last_seen": "2026-08-17",
+      "last_score": 64
     },
     "2x6b34qoap4i2ai4wm": {
       "title": "Principal Field Product Manager",
@@ -3046,8 +3046,8 @@
       "company": "Databricks",
       "source": "Greenhouse",
       "first_seen": "2026-07-24",
-      "last_seen": "2026-08-10",
-      "last_score": 62
+      "last_seen": "2026-08-17",
+      "last_score": 63
     },
     "niakfct7vocxsc2k5q": {
       "title": "Product Manager, Enterprise Cloud Security - Singapore",
@@ -3094,8 +3094,8 @@
       "company": "ST ENGINEERING ENTERPRISE DIGITAL PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-07-24",
-      "last_seen": "2026-08-10",
-      "last_score": 69
+      "last_seen": "2026-08-17",
+      "last_score": 68
     },
     "ih3ugy3icr7fdhkzrr": {
       "title": "Sr. Staff Forward Deployed Engineer",
@@ -3238,7 +3238,7 @@
       "company": "OpenAI",
       "source": "Ashby",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-17",
       "last_score": 61
     },
     "klut4trdl3euofgjbd": {
@@ -3246,7 +3246,7 @@
       "company": "ELLIOTT MOSS CONSULTING PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-17",
       "last_score": 86
     },
     "skbabsaljpwp5omfbt": {
@@ -3270,8 +3270,8 @@
       "company": "LTM LIMITED Singapore Branch",
       "source": "MyCareersFuture",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "last_score": 84
+      "last_seen": "2026-08-17",
+      "last_score": 83
     },
     "wsiwvoxbvb4twjjb5h": {
       "title": "IT Security Architect (Azure)",
@@ -3286,24 +3286,64 @@
       "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
       "source": "MyCareersFuture",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "last_score": 70
+      "last_seen": "2026-08-17",
+      "last_score": 69
     },
     "3apheas2ujdxfyedwl": {
       "title": "Security & Compliance Engineer",
       "company": "AMAZON WEB SERVICES SINGAPORE PRIVATE LIMITED",
       "source": "MyCareersFuture",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "last_score": 70
+      "last_seen": "2026-08-17",
+      "last_score": 69
     },
     "wtjqqa3s34x3h3sm4a": {
       "title": "Staff Engineer, Security Platform Development",
       "company": "OKX",
       "source": "Greenhouse",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "last_score": 65
+      "last_seen": "2026-08-17",
+      "last_score": 64
+    },
+    "ipvoqcrserc3gb7rpt": {
+      "title": "Lead Security Architect & Risk Assessment (Ref 26544)",
+      "company": "JOBLINE RESOURCES PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "last_score": 92
+    },
+    "frbm54uzagz2id3xcn": {
+      "title": "Senior Analyst, Google Threat Intelligence, Mandiant - Remote; Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "last_score": 77
+    },
+    "vt2t4esieyeld72syc": {
+      "title": "Software Engineering Manager, Cloud and Third-Party Platform Security - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "last_score": 68
+    },
+    "t5m6fzop3djvfopgjz": {
+      "title": "Senior Manager, Information Security (Security Risk Management Security Risk Management, APEC) Management), APEC",
+      "company": "STARWOOD ASIA PACIFIC HOTELS & RESORTS PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "last_score": 63
+    },
+    "a6qilv3qvgcs547eme": {
+      "title": "Senior Software Engineer, Cloud and Third Party Platform Security - Singapore",
+      "company": "GOOGLE ASIA PACIFIC PTE. LTD.",
+      "source": "MyCareersFuture",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "last_score": 58
     }
   }
 }

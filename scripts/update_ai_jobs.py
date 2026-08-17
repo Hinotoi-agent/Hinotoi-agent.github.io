@@ -24,10 +24,11 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable
+from typing import Callable, Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "_data" / "ai_jobs.json"
@@ -38,6 +39,7 @@ ALERT_SCORE = 85
 PUBLISH_SCORE = 55
 MIN_MONTHLY_COMPENSATION_SGD = 11_000
 MIN_ANNUAL_COMPENSATION_SGD = MIN_MONTHLY_COMPENSATION_SGD * 12
+MAX_SOURCE_WORKERS = 8
 
 GREENHOUSE_BOARDS = {
     "Anthropic": "anthropic",
@@ -269,6 +271,7 @@ EXCLUDED_TITLE_TERMS = [
     "account executive", "partner manager", "field marketing", "marketing manager", "finance & strategy",
     "product support", "support specialist", "account manager", "sales", "business development",
     "customer success", "solutions sales", "talent acquisition", "recruiter", "office manager",
+    "travel security", "physical security", "corporate security investigator",
 ]
 
 BAD_FIT_TERMS = [
@@ -961,6 +964,18 @@ def source_result(name: str, fn) -> tuple[list[Job], dict[str, object]]:
         return [], {"source": name, "status": "error", "count": 0, "error": clean_text(exc, 160), "seconds": round(time.time() - started, 2)}
 
 
+def collect_sources(tasks: list[tuple[str, Callable[[], list[Job]]]], max_workers: int = MAX_SOURCE_WORKERS) -> tuple[list[Job], list[dict[str, object]]]:
+    """Collect independent public feeds concurrently while preserving task order."""
+    if not tasks:
+        return [], []
+    workers = max(1, min(max_workers, len(tasks)))
+    with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="job-source") as pool:
+        results = list(pool.map(lambda task: source_result(task[0], task[1]), tasks))
+    jobs = [job for source_jobs, _ in results for job in source_jobs]
+    health = [row for _, row in results]
+    return jobs, health
+
+
 def from_greenhouse(company: str, board: str) -> list[Job]:
     payload = fetch_json(f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs?content=true")
     if not isinstance(payload, dict):
@@ -1328,26 +1343,26 @@ def main() -> int:
     now_dt = datetime.now(timezone.utc).replace(microsecond=0)
     now = now_dt.isoformat().replace("+00:00", "Z")
     today = now_dt.date().isoformat()
-    all_jobs: list[Job] = []
-    health: list[dict[str, object]] = []
-
-    for company, board in GREENHOUSE_BOARDS.items():
-        jobs, row = source_result(f"Greenhouse/{company}", lambda c=company, b=board: from_greenhouse(c, b))
-        all_jobs.extend(jobs); health.append(row); time.sleep(0.15)
-    for company, slug in LEVER_COMPANIES.items():
-        jobs, row = source_result(f"Lever/{company}", lambda c=company, s=slug: from_lever(c, s))
-        all_jobs.extend(jobs); health.append(row); time.sleep(0.15)
-    for company, board in ASHBY_BOARDS.items():
-        jobs, row = source_result(f"Ashby/{company}", lambda c=company, b=board: from_ashby(c, b))
-        all_jobs.extend(jobs); health.append(row); time.sleep(0.15)
-    for query in SEARCH_QUERIES:
-        jobs, row = source_result(f"Remotive/{query}", lambda q=query: from_remotive(q))
-        all_jobs.extend(jobs); health.append(row); time.sleep(0.15)
-    jobs, row = source_result("RemoteOK", from_remoteok)
-    all_jobs.extend(jobs); health.append(row)
-    for query in MYCAREERSFUTURE_QUERIES:
-        jobs, row = source_result(f"MyCareersFuture/{query}", lambda q=query: from_mycareersfuture(q))
-        all_jobs.extend(jobs); health.append(row); time.sleep(0.15)
+    tasks: list[tuple[str, Callable[[], list[Job]]]] = []
+    tasks.extend(
+        (f"Greenhouse/{company}", lambda c=company, b=board: from_greenhouse(c, b))
+        for company, board in GREENHOUSE_BOARDS.items()
+    )
+    tasks.extend(
+        (f"Lever/{company}", lambda c=company, s=slug: from_lever(c, s))
+        for company, slug in LEVER_COMPANIES.items()
+    )
+    tasks.extend(
+        (f"Ashby/{company}", lambda c=company, b=board: from_ashby(c, b))
+        for company, board in ASHBY_BOARDS.items()
+    )
+    tasks.extend((f"Remotive/{query}", lambda q=query: from_remotive(q)) for query in SEARCH_QUERIES)
+    tasks.append(("RemoteOK", from_remoteok))
+    tasks.extend(
+        (f"MyCareersFuture/{query}", lambda q=query: from_mycareersfuture(q))
+        for query in MYCAREERSFUTURE_QUERIES
+    )
+    all_jobs, health = collect_sources(tasks)
 
     ranked = [job for job in dedupe(all_jobs) if job.score >= PUBLISH_SCORE]
     history = load_history()

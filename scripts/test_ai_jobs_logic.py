@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import importlib.util
 import sys
+import threading
 from pathlib import Path
 
 
@@ -16,6 +17,22 @@ SPEC.loader.exec_module(MODULE)
 
 
 def main() -> int:
+    barrier = threading.Barrier(2)
+
+    def first_source() -> list[object]:
+        barrier.wait(timeout=1)
+        return []
+
+    def second_source() -> list[object]:
+        barrier.wait(timeout=1)
+        return []
+
+    _, source_health = MODULE.collect_sources(
+        [("first", first_source), ("second", second_source)], max_workers=2
+    )
+    assert [row["source"] for row in source_health] == ["first", "second"]
+    assert all(row["status"] == "ok" for row in source_health)
+
     applied_title = "Senior Cybersecurity Data Scientist"
     applied_summary = (
         "Build machine-learning systems for threat detection, security analytics, "
@@ -45,6 +62,10 @@ def main() -> int:
     assert not MODULE.title_is_cv_relevant("Engineering Manager – Healthcare Technology")
     assert MODULE.title_is_cv_relevant("Principal Security Architect")
     assert MODULE.title_is_cv_relevant("Senior DFIR Consultant")
+    excluded, *_ = MODULE.score_job(
+        "Travel Security Manager - APAC", "Example Company", "Singapore", "Manage traveler safety and protective operations."
+    )
+    assert excluded == 0
     assert MODULE.canonical_company("Databricks") == MODULE.canonical_company("DATABRICKS ASIAPAC UNIFIED ANALYTICS PTE. LTD.")
     assert MODULE.build_job(
         "Retail & Consumer Goods APAC Leader", "Databricks", "Singapore", "https://example.invalid/job",
