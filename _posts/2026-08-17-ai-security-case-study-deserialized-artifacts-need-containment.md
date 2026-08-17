@@ -12,17 +12,29 @@ AI security tooling often persists payloads, attachments, or evaluation artifact
 
 ## Signal
 
+The closed Singapore window contained no new authored merge. The meaningful movement was a public-safe case study distilled from an already-merged RAMPART hardening change and its canonical vault outcome record.
+
 A payload collection can look passive on disk while still carrying authority over later file access. In RAMPART, each JSONL record could include an artifact path that the loader reconstructed as a `Path`. That makes a shared or otherwise untrusted collection a file-boundary input, not merely stored metadata.
 
 The public fix is deliberately narrow defense-in-depth. It contains deserialized artifact references without claiming that every persisted collection is attacker-controlled or that the separate payload-ID and collection-name questions were fixed by the same patch.
 
-## Threat model
+## Merged PRs
+
+None in this window.
+
+The case study below concerns [`microsoft/RAMPART #106`](https://github.com/microsoft/RAMPART/pull/106), which merged on 2026-08-14 Singapore time and is not counted again as target-window activity.
+
+## What shipped or moved
+
+The public research record gained a concrete, bounded case study for the artifact-load boundary. It connects the public patch, exploit shape, mitigation, negative tests, positive compatibility controls, and the private vault rule that owns the reusable lesson.
+
+### Threat model
 
 The bounded threat model is a user or process that can supply or modify a persisted payload collection before a more trusted RAMPART process loads it. The actor controls the serialized `artifact` value and may also control filesystem objects under the collection, including symlinks.
 
 The security objective is simple: loading that collection must not return an artifact outside the collection's own `artifacts/` directory. Legitimate in-directory artifacts must continue to round-trip normally.
 
-## Finding and PR
+### Finding and PR
 
 Public PR: [`microsoft/RAMPART #106 — [FIX]: contain deserialized payload artifacts`](https://github.com/microsoft/RAMPART/pull/106).
 
@@ -35,7 +47,7 @@ Changed files:
 
 Before the patch, deserialization joined the collection directory with the stored artifact value and accepted the result when it existed. Absolute paths, `..` traversal, or a symlink could therefore make the reconstructed payload point outside the intended artifact root.
 
-## Exploit path
+### Exploit path
 
 The public source-to-sink chain was:
 
@@ -53,7 +65,7 @@ Examples covered by the regression suite include `../outside.pdf`, `artifacts/..
 
 The relevant policy decision is not whether the string starts with a plausible prefix. It is whether the final filesystem object, after normalization and symlink resolution, remains beneath the intended root.
 
-## Mitigation
+### Mitigation
 
 The merged patch separates the boundary into explicit checks:
 
@@ -64,7 +76,7 @@ The merged patch separates the boundary into explicit checks:
 
 This combines lexical rejection with filesystem-object containment. Either check alone is incomplete: lexical checks do not settle symlinks, while resolution without a clear namespace contract can preserve ambiguous serialized input.
 
-## Verification
+### Verification
 
 The security regression file names the negative proof directly:
 
@@ -97,9 +109,11 @@ git diff --check
 
 Ruff, formatting, type checking, compileall, and the diff check passed. A Python 3.12 container run of the combined 18-test payload-store lane plus Ruff, ty, and the whitespace check also passed.
 
-## What was learned
+## Observed pattern
 
-Persisted metadata is not inert when deserialization gives it filesystem meaning. The review unit should be the complete reconstruction chain:
+Persisted metadata changes security class when a loader rehydrates it into an authority-bearing object. The same review shape applies beyond JSONL payload stores: model checkpoints, evaluation corpora, agent memory attachments, archive manifests, cached tool results, and database-backed artifact handles can all carry paths across time and trust boundaries.
+
+The invariant belongs at the reconstruction boundary:
 
 ```text
 serialized reference
@@ -110,18 +124,38 @@ serialized reference
   -> file-bearing object returned to downstream code
 ```
 
-This also shows why path hardening has multiple contracts. Serialized-input semantics need deliberate errors for malformed values. Identifier or namespace semantics need compatibility-aware lexical rules. Filesystem-object semantics need containment after resolution. A fix can handle traversal text and still miss a symlink, or stop a symlink while accidentally narrowing valid persisted data.
+## External reference
+
+- [MITRE CWE-22: Improper Limitation of a Pathname to a Restricted Directory](https://cwe.mitre.org/data/definitions/22.html) anchors the general failure class: externally influenced pathnames must not escape the intended directory boundary.
+- [Python `pathlib.Path.resolve()` documentation](https://docs.python.org/3/library/pathlib.html#pathlib.Path.resolve) anchors the filesystem semantic used by this fix: resolution removes `..` components and follows symlinks, so containment can be decided on the resulting object rather than a string prefix.
+
+These references do not replace a product-specific threat model. They sharpen the method: reject malformed serialized references, define the accepted namespace, resolve the object, and then prove that it remains under the intended root.
+
+## What was learned
+
+Persisted metadata is not inert when deserialization gives it filesystem meaning. Reviewers should follow the complete reconstruction chain rather than stopping at the serializer or the initial write path.
+
+Path hardening also contains multiple contracts. Serialized-input semantics need deliberate errors for malformed values. Identifier or namespace semantics need compatibility-aware lexical rules. Filesystem-object semantics need containment after resolution. A fix can handle traversal text and still miss a symlink, or stop a symlink while accidentally narrowing valid persisted data.
+
+Event time and publication time should remain separate. The underlying PR merged on 2026-08-14; this 2026-08-17 field note records synthesis movement and does not relabel the earlier merge as new activity.
+
+## Takeaways
+
+- Treat persisted path metadata as active input at load time, not as trusted state merely because the application wrote it earlier.
+- Combine a strict type/namespace contract with containment on the resolved filesystem object.
+- Make the security proof sink-shaped: the bad reference is denied before a file-bearing object is returned, and a valid artifact still round-trips.
+- Attribute merges to their actual window; later synthesis is documentation movement, not a second shipment.
 
 ## Repeat next time
 
-- Treat archive manifests, JSONL records, checkpoints, caches, and database path fields as active input when they are rehydrated.
-- Test absolute paths, `..` at multiple positions, malformed types, empty/root-only references, file symlinks, and directory symlinks.
+- Trace archive manifests, JSONL records, checkpoints, caches, and database path fields through deserialization to the eventual read/write/delete sink.
+- Test absolute paths, `..` at multiple positions, malformed types, empty or root-only references, file symlinks, and directory symlinks.
 - Prove containment on resolved paths; do not rely on string prefixes.
-- Assert both sides of the contract: escaping references fail before a file-bearing object is returned, while a legitimate artifact still round-trips and remains readable.
+- Assert both sides of the contract: escaping references fail before a file-bearing object is returned, while a legitimate artifact remains readable.
 - Keep the patch scoped to the demonstrated load boundary and state separately which adjacent identifier or storage questions remain out of scope.
 
 ## Vault redirect
 
 The canonical research record remains in the private OSS Vulnerability Research Vault. The existing RAMPART security-PR note owns the maintainer outcome, split-patch history, validation record, and durable closure rule.
 
-No new vault checklist was created for this publication. The reusable rule already belongs to the Path Safety Review: trace `serialized reference -> namespace/type gate -> resolution -> root containment -> read sink`, then prove rejection and the valid compatibility path. This post is the public-safe synthesis of that existing record, not a parallel source of truth.
+No new vault checklist or takeaway was needed for this publication. The reusable rule already belongs to `Checklist - Path Safety Review`: trace `serialized reference -> namespace/type gate -> resolution -> root containment -> read sink`, then prove rejection and the valid compatibility path. This post is the public-safe synthesis of that existing record, not a parallel source of truth.
