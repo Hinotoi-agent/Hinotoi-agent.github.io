@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T04:11:28Z",
+  "updated_at": "2026-08-17T09:01:07Z",
   "location_filter": "Singapore / Remote-Singapore / APAC remote eligible",
   "salary_target": "S$11k+/month onwards target (S$132k+/year equivalent); clear listed ranges starting below target are filtered out.",
   "minimum_monthly_compensation_sgd": 11000,
@@ -46,211 +46,211 @@
       "source": "Greenhouse/Anthropic",
       "status": "ok",
       "count": 0,
-      "seconds": 1.28
+      "seconds": 2.22
     },
     {
       "source": "Greenhouse/Chainguard",
       "status": "ok",
       "count": 0,
-      "seconds": 0.29
+      "seconds": 0.26
     },
     {
       "source": "Greenhouse/Cloudflare",
       "status": "ok",
       "count": 0,
-      "seconds": 0.82
+      "seconds": 0.85
     },
     {
       "source": "Greenhouse/Datadog",
       "status": "ok",
       "count": 0,
-      "seconds": 2.85
+      "seconds": 1.93
     },
     {
       "source": "Greenhouse/Databricks",
       "status": "ok",
       "count": 1,
-      "seconds": 2.9
+      "seconds": 3.32
     },
     {
       "source": "Greenhouse/Elastic",
       "status": "ok",
       "count": 0,
-      "seconds": 2.62
+      "seconds": 3.54
     },
     {
       "source": "Greenhouse/Google DeepMind",
       "status": "ok",
       "count": 0,
-      "seconds": 0.19
+      "seconds": 0.15
     },
     {
       "source": "Greenhouse/MongoDB",
       "status": "ok",
       "count": 0,
-      "seconds": 0.87
+      "seconds": 0.55
     },
     {
       "source": "Greenhouse/OKX",
       "status": "ok",
       "count": 5,
-      "seconds": 1.5
+      "seconds": 1.12
     },
     {
       "source": "Greenhouse/Stripe",
       "status": "ok",
       "count": 0,
-      "seconds": 2.66
+      "seconds": 2.05
     },
     {
       "source": "Greenhouse/Wiz",
       "status": "ok",
       "count": 0,
-      "seconds": 0.56
+      "seconds": 0.39
     },
     {
       "source": "Greenhouse/Zscaler",
       "status": "ok",
       "count": 1,
-      "seconds": 2.89
+      "seconds": 2.31
     },
     {
       "source": "Greenhouse/Scale AI",
       "status": "ok",
       "count": 0,
-      "seconds": 1.81
+      "seconds": 0.49
     },
     {
       "source": "Greenhouse/GitLab",
       "status": "ok",
       "count": 0,
-      "seconds": 2.25
+      "seconds": 1.25
     },
     {
       "source": "Lever/Mistral AI",
       "status": "ok",
       "count": 0,
-      "seconds": 0.18
+      "seconds": 0.19
     },
     {
       "source": "Lever/Palantir",
       "status": "ok",
       "count": 0,
-      "seconds": 2.56
+      "seconds": 2.6
     },
     {
       "source": "Ashby/OpenAI",
       "status": "ok",
       "count": 2,
-      "seconds": 1.64
+      "seconds": 2.19
     },
     {
       "source": "Ashby/Cursor",
       "status": "ok",
       "count": 0,
-      "seconds": 0.27
+      "seconds": 0.14
     },
     {
       "source": "Ashby/HackerOne",
       "status": "ok",
       "count": 0,
-      "seconds": 0.21
+      "seconds": 0.24
     },
     {
       "source": "Ashby/Harvey",
       "status": "ok",
       "count": 0,
-      "seconds": 0.74
+      "seconds": 1.4
     },
     {
       "source": "Ashby/LangChain",
       "status": "ok",
       "count": 0,
-      "seconds": 0.17
+      "seconds": 1.26
     },
     {
       "source": "Ashby/Linear",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.51
     },
     {
       "source": "Ashby/Perplexity",
       "status": "ok",
       "count": 0,
-      "seconds": 0.51
+      "seconds": 0.57
     },
     {
       "source": "Ashby/Replit",
       "status": "ok",
       "count": 0,
-      "seconds": 0.69
+      "seconds": 0.44
     },
     {
       "source": "Ashby/Modal",
       "status": "ok",
       "count": 0,
-      "seconds": 0.54
+      "seconds": 0.25
     },
     {
       "source": "Remotive/AI security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.16
+      "seconds": 0.25
     },
     {
       "source": "Remotive/AI security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.14
+      "seconds": 0.23
     },
     {
       "source": "Remotive/AI security engineer Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.21
     },
     {
       "source": "Remotive/LLM security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.04
+      "seconds": 0.18
     },
     {
       "source": "Remotive/agent security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.34
     },
     {
       "source": "Remotive/AI red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.35
     },
     {
       "source": "Remotive/AI safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.03
+      "seconds": 0.33
     },
     {
       "source": "Remotive/machine learning security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.08
+      "seconds": 0.33
     },
     {
       "source": "Remotive/AI secure code review Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.34
     },
     {
       "source": "Remotive/AI vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.33
     },
     {
       "source": "Remotive/RAG security Singapore",
@@ -262,73 +262,73 @@
       "source": "Remotive/prompt injection Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.05
+      "seconds": 0.04
     },
     {
       "source": "Remotive/DevSecOps AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.04
+      "seconds": 0.12
     },
     {
       "source": "Remotive/cloud security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.05
+      "seconds": 0.1
     },
     {
       "source": "Remotive/application security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.04
+      "seconds": 0.1
     },
     {
       "source": "Remotive/application security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.05
+      "seconds": 0.11
     },
     {
       "source": "Remotive/appsec manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.39
+      "seconds": 0.11
     },
     {
       "source": "Remotive/application security lead Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.19
+      "seconds": 0.11
     },
     {
       "source": "Remotive/software security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.36
+      "seconds": 0.09
     },
     {
       "source": "Remotive/product security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.35
+      "seconds": 0.05
     },
     {
       "source": "Remotive/product security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.35
+      "seconds": 0.05
     },
     {
       "source": "Remotive/penetration testing Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.35
+      "seconds": 0.05
     },
     {
       "source": "Remotive/penetration tester Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.2
+      "seconds": 0.05
     },
     {
       "source": "Remotive/red team Singapore",
@@ -352,7 +352,7 @@
       "source": "Remotive/security engineer machine learning Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.05
     },
     {
       "source": "Remotive/trust safety security Singapore",
@@ -388,97 +388,97 @@
       "source": "Remotive/cyber AI risk Singapore insurance",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.04
     },
     {
       "source": "Remotive/sovereign wealth cyber security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.04
+      "seconds": 0.05
     },
     {
       "source": "Remotive/GIC cyber security AI",
       "status": "ok",
       "count": 0,
-      "seconds": 0.04
+      "seconds": 0.06
     },
     {
       "source": "Remotive/Temasek cyber security AI",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.04
     },
     {
       "source": "Remotive/MAS AI cyber security",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.06
     },
     {
       "source": "Remotive/AI for cybersecurity Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.05
     },
     {
       "source": "Remotive/AI cybersecurity automation Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.05
     },
     {
       "source": "Remotive/AI security operations Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.09
+      "seconds": 0.05
     },
     {
       "source": "Remotive/AI threat detection Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.05
     },
     {
       "source": "Remotive/AI incident response Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.05
+      "seconds": 0.06
     },
     {
       "source": "Remotive/AI vulnerability management Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.05
     },
     {
       "source": "Remotive/machine learning cybersecurity Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.05
     },
     {
       "source": "Remotive/security analytics AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.05
     },
     {
       "source": "Remotive/cybersecurity data scientist Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.04
+      "seconds": 0.05
     },
     {
       "source": "Remotive/cybersecurity manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.05
     },
     {
       "source": "Remotive/offensive security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.05
+      "seconds": 0.06
     },
     {
       "source": "Remotive/penetration testing manager Singapore",
@@ -490,19 +490,19 @@
       "source": "Remotive/red team manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.04
     },
     {
       "source": "Remotive/security architect Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.05
     },
     {
       "source": "Remotive/security architecture Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.04
+      "seconds": 0.05
     },
     {
       "source": "Remotive/security engineering manager Singapore",
@@ -514,31 +514,31 @@
       "source": "Remotive/application security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.04
     },
     {
       "source": "Remotive/product security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.04
+      "seconds": 0.05
     },
     {
       "source": "Remotive/cloud security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.05
     },
     {
       "source": "Remotive/DevSecOps Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.04
+      "seconds": 0.05
     },
     {
       "source": "Remotive/vulnerability management Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.04
     },
     {
       "source": "Remotive/incident response manager Singapore",
@@ -556,13 +556,13 @@
       "source": "Remotive/DFIR Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.05
     },
     {
       "source": "Remotive/threat hunting Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.05
+      "seconds": 0.06
     },
     {
       "source": "Remotive/threat intelligence Singapore",
@@ -574,13 +574,13 @@
       "source": "Remotive/detection engineering Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.05
     },
     {
       "source": "Remotive/purple team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.05
+      "seconds": 0.04
     },
     {
       "source": "Remotive/adversary emulation Singapore",
@@ -604,7 +604,7 @@
       "source": "Remotive/cyber range Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.06
+      "seconds": 0.04
     },
     {
       "source": "Remotive/security program manager Singapore",
@@ -622,655 +622,655 @@
       "source": "RemoteOK",
       "status": "ok",
       "count": 0,
-      "seconds": 0.5
+      "seconds": 0.82
     },
     {
       "source": "MyCareersFuture/AI security Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 5.57
+      "seconds": 6.02
     },
     {
       "source": "MyCareersFuture/AI security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.04
+      "seconds": 6.19
     },
     {
       "source": "MyCareersFuture/AI security engineer Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 5.22
+      "seconds": 6.11
     },
     {
       "source": "MyCareersFuture/LLM security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.41
+      "seconds": 5.44
     },
     {
       "source": "MyCareersFuture/agent security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.83
+      "seconds": 4.47
     },
     {
       "source": "MyCareersFuture/AI red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.07
+      "seconds": 6.05
     },
     {
       "source": "MyCareersFuture/AI safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.87
+      "seconds": 6.04
     },
     {
       "source": "MyCareersFuture/machine learning security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.77
+      "seconds": 6.22
     },
     {
       "source": "MyCareersFuture/AI secure code review Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.22
+      "seconds": 6.16
     },
     {
       "source": "MyCareersFuture/AI vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.97
+      "seconds": 6.73
     },
     {
       "source": "MyCareersFuture/RAG security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.64
+      "seconds": 5.97
     },
     {
       "source": "MyCareersFuture/prompt injection Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.21
+      "seconds": 4.83
     },
     {
       "source": "MyCareersFuture/DevSecOps AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.11
+      "seconds": 4.59
     },
     {
       "source": "MyCareersFuture/cloud security manager Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 5.89
+      "seconds": 7.62
     },
     {
       "source": "MyCareersFuture/application security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.62
+      "seconds": 4.85
     },
     {
       "source": "MyCareersFuture/application security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.9
+      "seconds": 6.73
     },
     {
       "source": "MyCareersFuture/appsec manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.15
+      "seconds": 4.12
     },
     {
       "source": "MyCareersFuture/application security lead Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.64
+      "seconds": 8.03
     },
     {
       "source": "MyCareersFuture/software security manager Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 6.52
+      "seconds": 9.14
     },
     {
       "source": "MyCareersFuture/product security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 6.28
+      "seconds": 6.75
     },
     {
       "source": "MyCareersFuture/product security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 6.82
+      "seconds": 7.02
     },
     {
       "source": "MyCareersFuture/penetration testing Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.92
+      "seconds": 6.33
     },
     {
       "source": "MyCareersFuture/penetration tester Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.16
+      "seconds": 6.58
     },
     {
       "source": "MyCareersFuture/red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.95
+      "seconds": 6.61
     },
     {
       "source": "MyCareersFuture/offensive security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.5
+      "seconds": 6.8
     },
     {
       "source": "MyCareersFuture/vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 6.39
+      "seconds": 4.06
     },
     {
       "source": "MyCareersFuture/security engineer machine learning Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.8
+      "seconds": 6.13
     },
     {
       "source": "MyCareersFuture/trust safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 6.68
+      "seconds": 6.02
     },
     {
       "source": "MyCareersFuture/AI security bank Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 6.59
+      "seconds": 5.73
     },
     {
       "source": "MyCareersFuture/AI governance cyber Singapore bank",
       "status": "ok",
       "count": 0,
-      "seconds": 4.38
+      "seconds": 5.86
     },
     {
       "source": "MyCareersFuture/model risk cyber security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.44
+      "seconds": 6.06
     },
     {
       "source": "MyCareersFuture/LLM security financial services Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 6.65
+      "seconds": 6.13
     },
     {
       "source": "MyCareersFuture/cyber AI risk Singapore insurance",
       "status": "ok",
       "count": 0,
-      "seconds": 7.47
+      "seconds": 6.15
     },
     {
       "source": "MyCareersFuture/sovereign wealth cyber security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 6.82
+      "seconds": 6.02
     },
     {
       "source": "MyCareersFuture/GIC cyber security AI",
       "status": "ok",
       "count": 0,
-      "seconds": 7.6
+      "seconds": 5.86
     },
     {
       "source": "MyCareersFuture/Temasek cyber security AI",
       "status": "ok",
       "count": 0,
-      "seconds": 7.43
+      "seconds": 4.69
     },
     {
       "source": "MyCareersFuture/MAS AI cyber security",
       "status": "ok",
       "count": 0,
-      "seconds": 7.35
+      "seconds": 6.33
     },
     {
       "source": "MyCareersFuture/AI for cybersecurity Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.77
+      "seconds": 5.88
     },
     {
       "source": "MyCareersFuture/AI cybersecurity automation Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.11
+      "seconds": 4.81
     },
     {
       "source": "MyCareersFuture/AI security operations Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.53
+      "seconds": 4.85
     },
     {
       "source": "MyCareersFuture/AI threat detection Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 7.88
+      "seconds": 4.63
     },
     {
       "source": "MyCareersFuture/AI incident response Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 7.57
+      "seconds": 4.67
     },
     {
       "source": "MyCareersFuture/AI vulnerability management Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.56
+      "seconds": 5.02
     },
     {
       "source": "MyCareersFuture/machine learning cybersecurity Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.19
+      "seconds": 4.95
     },
     {
       "source": "MyCareersFuture/security analytics AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.07
+      "seconds": 4.87
     },
     {
       "source": "MyCareersFuture/cybersecurity data scientist Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.27
+      "seconds": 4.79
     },
     {
       "source": "MyCareersFuture/cybersecurity manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 7.1
+      "seconds": 4.84
     },
     {
       "source": "MyCareersFuture/offensive security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.55
+      "seconds": 4.83
     },
     {
       "source": "MyCareersFuture/penetration testing manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.46
+      "seconds": 4.67
     },
     {
       "source": "MyCareersFuture/red team manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.55
+      "seconds": 5.01
     },
     {
       "source": "MyCareersFuture/security architect Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.8
+      "seconds": 4.96
     },
     {
       "source": "MyCareersFuture/security architecture Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 7.96
+      "seconds": 4.93
     },
     {
       "source": "MyCareersFuture/security engineering manager Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 8.35
+      "seconds": 5.57
     },
     {
       "source": "MyCareersFuture/application security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.37
+      "seconds": 4.81
     },
     {
       "source": "MyCareersFuture/product security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.87
+      "seconds": 5.66
     },
     {
       "source": "MyCareersFuture/cloud security Singapore",
       "status": "ok",
       "count": 6,
-      "seconds": 6.4
+      "seconds": 5.52
     },
     {
       "source": "MyCareersFuture/DevSecOps Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 7.96
+      "seconds": 5.55
     },
     {
       "source": "MyCareersFuture/vulnerability management Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.3
+      "seconds": 5.8
     },
     {
       "source": "MyCareersFuture/incident response manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.74
+      "seconds": 5.59
     },
     {
       "source": "MyCareersFuture/digital forensics Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.44
+      "seconds": 6.68
     },
     {
       "source": "MyCareersFuture/DFIR Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.18
+      "seconds": 7.14
     },
     {
       "source": "MyCareersFuture/threat hunting Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 9.14
+      "seconds": 6.82
     },
     {
       "source": "MyCareersFuture/threat intelligence Singapore",
       "status": "ok",
       "count": 2,
-      "seconds": 9.52
+      "seconds": 7.6
     },
     {
       "source": "MyCareersFuture/detection engineering Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.98
+      "seconds": 4.35
     },
     {
       "source": "MyCareersFuture/purple team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.49
+      "seconds": 7.23
     },
     {
       "source": "MyCareersFuture/adversary emulation Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 9.02
+      "seconds": 6.91
     },
     {
       "source": "MyCareersFuture/security assurance Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 10.24
+      "seconds": 4.7
     },
     {
       "source": "MyCareersFuture/security control assessment Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.88
+      "seconds": 6.8
     },
     {
       "source": "MyCareersFuture/cyber range Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 8.06
+      "seconds": 6.33
     },
     {
       "source": "MyCareersFuture/security program manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.81
+      "seconds": 4.72
     },
     {
       "source": "MyCareersFuture/secure SDLC Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 4.66
+      "seconds": 6.45
     },
     {
       "source": "MyCareersFuture/cyber security AI",
       "status": "ok",
       "count": 0,
-      "seconds": 12.09
+      "seconds": 6.07
     },
     {
       "source": "MyCareersFuture/AI security engineer",
       "status": "ok",
       "count": 1,
-      "seconds": 4.72
+      "seconds": 5.96
     },
     {
       "source": "MyCareersFuture/AI security manager",
       "status": "ok",
       "count": 0,
-      "seconds": 10.88
+      "seconds": 6.43
     },
     {
       "source": "MyCareersFuture/secure code review",
       "status": "ok",
       "count": 1,
-      "seconds": 12.07
+      "seconds": 6.51
     },
     {
       "source": "MyCareersFuture/DevSecOps",
       "status": "ok",
       "count": 0,
-      "seconds": 9.63
+      "seconds": 7.49
     },
     {
       "source": "MyCareersFuture/cloud security manager",
       "status": "ok",
       "count": 1,
-      "seconds": 10.76
+      "seconds": 5.47
     },
     {
       "source": "MyCareersFuture/cyber range",
       "status": "ok",
       "count": 0,
-      "seconds": 9.05
+      "seconds": 4.96
     },
     {
       "source": "MyCareersFuture/application security",
       "status": "ok",
       "count": 4,
-      "seconds": 11.85
+      "seconds": 8.3
     },
     {
       "source": "MyCareersFuture/application security manager",
       "status": "ok",
       "count": 0,
-      "seconds": 10.3
+      "seconds": 4.47
     },
     {
       "source": "MyCareersFuture/appsec manager",
       "status": "ok",
       "count": 0,
-      "seconds": 9.83
+      "seconds": 6.02
     },
     {
       "source": "MyCareersFuture/application security lead",
       "status": "ok",
       "count": 0,
-      "seconds": 10.0
+      "seconds": 6.9
     },
     {
       "source": "MyCareersFuture/software security manager",
       "status": "ok",
       "count": 1,
-      "seconds": 8.44
+      "seconds": 7.2
     },
     {
       "source": "MyCareersFuture/product security",
       "status": "ok",
-      "count": 5,
-      "seconds": 11.95
+      "count": 4,
+      "seconds": 9.29
     },
     {
       "source": "MyCareersFuture/product security manager",
       "status": "ok",
       "count": 0,
-      "seconds": 11.02
+      "seconds": 10.29
     },
     {
       "source": "MyCareersFuture/penetration testing",
       "status": "ok",
       "count": 1,
-      "seconds": 11.26
+      "seconds": 7.16
     },
     {
       "source": "MyCareersFuture/penetration tester",
       "status": "ok",
       "count": 0,
-      "seconds": 10.74
+      "seconds": 7.62
     },
     {
       "source": "MyCareersFuture/red team",
       "status": "ok",
       "count": 0,
-      "seconds": 10.28
+      "seconds": 8.12
     },
     {
       "source": "MyCareersFuture/offensive security",
       "status": "ok",
       "count": 2,
-      "seconds": 10.61
+      "seconds": 7.21
     },
     {
       "source": "MyCareersFuture/vulnerability research",
       "status": "ok",
       "count": 1,
-      "seconds": 9.5
+      "seconds": 7.23
     },
     {
       "source": "MyCareersFuture/threat research",
       "status": "ok",
       "count": 0,
-      "seconds": 9.74
+      "seconds": 8.05
     },
     {
       "source": "MyCareersFuture/secure software development",
       "status": "ok",
       "count": 1,
-      "seconds": 12.32
+      "seconds": 8.77
     },
     {
       "source": "MyCareersFuture/cybersecurity manager",
       "status": "ok",
       "count": 1,
-      "seconds": 10.79
+      "seconds": 7.07
     },
     {
       "source": "MyCareersFuture/offensive security manager",
       "status": "ok",
       "count": 0,
-      "seconds": 10.07
+      "seconds": 8.19
     },
     {
       "source": "MyCareersFuture/penetration testing manager",
       "status": "ok",
       "count": 0,
-      "seconds": 8.83
+      "seconds": 7.27
     },
     {
       "source": "MyCareersFuture/red team manager",
       "status": "ok",
       "count": 0,
-      "seconds": 8.65
+      "seconds": 4.64
     },
     {
       "source": "MyCareersFuture/security architect",
       "status": "ok",
       "count": 2,
-      "seconds": 12.54
+      "seconds": 11.81
     },
     {
       "source": "MyCareersFuture/security engineering manager",
       "status": "ok",
       "count": 1,
-      "seconds": 10.8
+      "seconds": 6.91
     },
     {
       "source": "MyCareersFuture/vulnerability management",
       "status": "ok",
       "count": 0,
-      "seconds": 10.61
+      "seconds": 10.02
     },
     {
       "source": "MyCareersFuture/incident response manager",
       "status": "ok",
       "count": 0,
-      "seconds": 8.53
+      "seconds": 8.17
     },
     {
       "source": "MyCareersFuture/digital forensics",
       "status": "ok",
       "count": 1,
-      "seconds": 9.9
+      "seconds": 7.91
     },
     {
       "source": "MyCareersFuture/DFIR",
       "status": "ok",
       "count": 0,
-      "seconds": 8.63
+      "seconds": 7.24
     },
     {
       "source": "MyCareersFuture/detection engineering",
       "status": "ok",
       "count": 0,
-      "seconds": 10.05
+      "seconds": 7.57
     },
     {
       "source": "MyCareersFuture/purple team",
       "status": "ok",
       "count": 0,
-      "seconds": 9.79
+      "seconds": 8.84
     },
     {
       "source": "MyCareersFuture/adversary emulation",
       "status": "ok",
       "count": 0,
-      "seconds": 8.01
+      "seconds": 7.17
     },
     {
       "source": "MyCareersFuture/security assurance",
       "status": "ok",
       "count": 3,
-      "seconds": 9.88
+      "seconds": 6.82
     },
     {
       "source": "MyCareersFuture/security control assessment",
       "status": "ok",
       "count": 0,
-      "seconds": 8.34
+      "seconds": 5.83
     },
     {
       "source": "MyCareersFuture/security program manager",
       "status": "ok",
       "count": 0,
-      "seconds": 9.32
+      "seconds": 6.26
     }
   ],
   "alerts": [
