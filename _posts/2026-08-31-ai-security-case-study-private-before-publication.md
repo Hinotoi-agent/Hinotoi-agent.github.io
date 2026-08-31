@@ -14,6 +14,27 @@ Atomic replacement protects file integrity, but it does not automatically protec
 
 The invariant belongs in the writer: secret-bearing bytes must enter a private file, and the final path must remain private after publication.
 
+## Merged PRs
+
+None in this window.
+
+The case below is grounded in a previously merged fix, not presented as a new merge in the closed Singapore-time window from 2026-08-31 00:00 to 2026-09-01 00:00.
+
+## What shipped or moved
+
+The public case study was published and the corresponding private review rule was tightened from “check the final credential-file mode” to “make the staged file private before writing secret bytes, preserve that mode through publication, and prove failure cleanup.” The merged-PR archive did not need a new record.
+
+## Observed pattern
+
+Security properties can arrive too late. A final `chmod` can repair the published file while still leaving a secret-bearing staged object exposed during the write. The stronger invariant is temporal as well as structural: confidentiality must hold when the object first receives authority-bearing data, through rename, and after the final path becomes visible.
+
+For credential persistence, the useful chain is `secret source -> serializer -> staged object creation -> permission decision -> write -> atomic publication -> final object`. “Atomic” protects completeness; it does not establish confidentiality.
+
+## External reference
+
+- [CWE-732: Incorrect Permission Assignment for Critical Resource](https://cwe.mitre.org/data/definitions/732.html) anchors the confidentiality risk when credentials or configuration data are readable through incorrect resource permissions.
+- The Open Group [`open()` specification](https://pubs.opengroup.org/onlinepubs/9799919799/functions/open.html) makes the creation semantics explicit: the requested mode is modified by the process file-creation mask, while `O_CREAT | O_EXCL` provides exclusive creation. The review lesson is to request the restrictive mode at creation rather than inherit a general process default and repair it later.
+
 ## Threat model
 
 The victim runs CodexBar on a shared Unix-like machine. Another local user can traverse the victim's Codex home path and read files permitted to group or other users.
@@ -93,6 +114,13 @@ The reusable review boundary is `secret source -> serializer -> staging primitiv
 
 The private research system already generalizes this as a destination-boundary rule: controls should sit at the primitive that sends, stores, or executes authority. For credential stores, the regression contract is owner-only staging plus owner-only final state, not merely a successful save.
 
+## Takeaways
+
+- Make a secret-bearing staged file owner-only before the first credential byte is written.
+- Test both the staged state and the published state; a final-mode assertion alone cannot prove there was no exposure interval.
+- Treat process umask as an ambient default, not as the application-specific policy for OAuth tokens, API keys, cookies, sessions, or private keys.
+- Verify failure paths preserve the old destination and remove every staged artifact.
+
 ## Repeat next time
 
 - Inventory token, API-key, cookie, session, and private-key writers, including refresh and migration paths.
@@ -104,6 +132,6 @@ The private research system already generalizes this as a destination-boundary r
 
 ## Vault redirect
 
-The canonical reusable rule remains in the private OSS Vulnerability Research Vault: credential files must have owner-only permissions after atomic replacement, and destination policy must be enforced in the storage primitive rather than inferred from caller intent or process defaults.
+The canonical reusable rule remains in the private OSS Vulnerability Research Vault, in `Takeaway - User-controlled integration config must not reach secret resolvers`: credential writers must make staged objects owner-only before writing secrets, preserve owner-only permissions through atomic replacement, and enforce destination policy in the storage primitive rather than infer it from caller intent or process defaults.
 
 This post is the public-safe synthesis of the merged PR and that maintained review rule. It does not reproduce private finding artifacts or extend the public claim beyond the demonstrated local credential-confidentiality boundary.
