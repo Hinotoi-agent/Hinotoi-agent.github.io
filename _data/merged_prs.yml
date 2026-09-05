@@ -445,6 +445,17 @@
   - oss-hardening
   month: 2026-06
 - date: '2026-06-15'
+  repo: gadievron/raptor
+  number: 652
+  title: 'feat(web): add authenticated ffuf options'
+  url: https://github.com/gadievron/raptor/pull/652
+  category: tooling
+  tags:
+  - authenticated-discovery
+  - ffuf
+  - secret-redaction
+  month: 2026-06
+- date: '2026-06-15'
   repo: Hinotoi-agent/huntpack
   number: 2
   title: 'fix: require sink-side proof in candidate contracts'
