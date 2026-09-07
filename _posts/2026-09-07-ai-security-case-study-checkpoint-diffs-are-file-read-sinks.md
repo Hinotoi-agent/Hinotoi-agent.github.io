@@ -14,6 +14,24 @@ A rollback preview looks observational. It still reads files with the server's a
 
 The revealing mistake was treating “Git listed this checkpoint-relative path” as equivalent to “opening this path cannot leave the checkpoint.” A tracked symlink breaks that equivalence.
 
+## Merged PRs
+
+None in this window.
+
+The completed reporting window is September 7, 2026, 00:00–24:00 Singapore time. The PR below merged on June 19 Singapore time; it is historical evidence, not a September 7 shipment.
+
+## What shipped or moved
+
+September 7's public artifact is this checkpoint-diff case study. It translates the existing Path Safety Review checklist into a concrete read-boundary example, separating checkpoint content, live workspace content, and restore destinations. No new runtime fix or fresh reproduction is claimed for this day.
+
+## Observed pattern
+
+A feature can be observational from the user's perspective while still exercising sensitive server-side reads. Inventory membership answers which entry was recorded; it does not establish which filesystem object a later pathname read will open. Review the content source separately from the restore destination.
+
+## External reference
+
+The evidence anchor is the merged [Hermes WebUI rollback-diff PR #4410](https://github.com/nesquena/hermes-webui/pull/4410), including its changed implementation and regression tests. The review-method change is to include preview and diff readers in the same containment inventory as write operations, without conflating their impact or proof requirements.
+
 ## Threat model
 
 The public finding concerns Hermes WebUI's authenticated rollback diff surface. The necessary conditions are a symlink in the selected checkpoint or workspace, a target file readable by the WebUI process outside that boundary, and an authenticated request that renders the diff.
@@ -86,6 +104,12 @@ Those execution results are historical evidence from the public PR, not a fresh 
 Containment is about the object whose bytes reach the sink, not the directory-shaped string used to name it. Git membership does not make an ordinary pathname open safe, and checking a stored file type does not justify later reading a mutable checkout path.
 
 The stronger design uses the stored blob for checkpoint content and the established anchored reader for live workspace content. It also keeps read and write claims separate: preventing outside-root restore writes does not prevent outside-root preview reads.
+
+## Takeaways
+
+- Treat diff and preview response bytes as a security sink even when the operation writes nothing.
+- Bind the read to the intended stored blob or anchored filesystem object; a listed path alone is not a containment guarantee.
+- Match proof to impact: exclude outside-root bytes for disclosure, assert absent destination changes for restore, and preserve a regular-content control.
 
 ## Repeat next time
 
