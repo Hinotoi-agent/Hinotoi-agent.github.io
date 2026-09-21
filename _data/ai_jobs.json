@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T15:00:59Z",
+  "updated_at": "2026-09-21T15:06:25Z",
   "location_filter": "Singapore / Remote-Singapore / APAC remote eligible",
   "salary_target": "S$11k+/month onwards target (S$132k+/year equivalent); clear listed ranges starting below target are filtered out.",
   "minimum_monthly_compensation_sgd": 11000,
@@ -16,28 +16,28 @@
   ],
   "source_note": "Weekly category-diverse top-20 public ATS/feed scan for Singapore and Singapore-eligible remote cybersecurity roles. Ranking uses broad, privacy-safe CV-fit signals: cybersecurity management, offensive security leadership, VAPT/adversary emulation, incident response and forensics, threat hunting/intelligence, security architecture and assurance, AI security engineering, vulnerability research/CVEs, Cyber Range delivery, Azure/cloud/DevSecOps, and application/product security. Salary confidence is shown per role; verify current availability and compensation before applying.",
   "stats": {
-    "candidates_scored": 27,
+    "candidates_scored": 30,
     "published_count": 20,
     "alert_count": 6,
     "removed_since_last_refresh": 20,
     "status_counts": {
-      "New": 7,
-      "Still open": 20
+      "New": 9,
+      "Still open": 21
     },
     "source_counts": {
-      "MyCareersFuture": 20,
+      "MyCareersFuture": 23,
       "Greenhouse": 7
     },
     "category_counts": {
+      "Best incident-response/DFIR role": 4,
+      "Best threat-detection/intelligence role": 5,
+      "Best cybersecurity leadership role": 26,
+      "Best product/AppSec role": 11,
+      "Best AI-security role": 3,
       "Best offensive/pentest role": 4,
-      "Best cybersecurity leadership role": 24,
-      "Best product/AppSec role": 12,
-      "Best cloud/platform/DevSecOps role": 2,
-      "Best vulnerability-research role": 4,
-      "Best security architecture/assurance role": 4,
-      "Best incident-response/DFIR role": 2,
-      "Best threat-detection/intelligence role": 3,
-      "Best AI-security role": 3
+      "Best security architecture/assurance role": 2,
+      "Best cloud/platform/DevSecOps role": 3,
+      "Best vulnerability-research role": 2
     }
   },
   "source_health": [
@@ -45,1345 +45,1496 @@
       "source": "Greenhouse/Anthropic",
       "status": "ok",
       "count": 0,
-      "seconds": 3.88
+      "seconds": 4.05
     },
     {
       "source": "Greenhouse/Chainguard",
       "status": "ok",
       "count": 0,
-      "seconds": 7.97
+      "seconds": 0.2
     },
     {
       "source": "Greenhouse/Cloudflare",
       "status": "ok",
       "count": 0,
-      "seconds": 3.17
+      "seconds": 1.06
     },
     {
       "source": "Greenhouse/Datadog",
       "status": "ok",
       "count": 0,
-      "seconds": 3.87
+      "seconds": 2.49
     },
     {
       "source": "Greenhouse/Databricks",
       "status": "ok",
-      "count": 1,
-      "seconds": 7.88
+      "count": 2,
+      "seconds": 2.02
     },
     {
       "source": "Greenhouse/Elastic",
       "status": "ok",
       "count": 0,
-      "seconds": 4.62
+      "seconds": 0.64
     },
     {
       "source": "Greenhouse/Google DeepMind",
       "status": "error",
       "count": 0,
       "error": "HTTP Error 404: Not Found",
-      "seconds": 2.44
+      "seconds": 0.13
     },
     {
       "source": "Greenhouse/MongoDB",
       "status": "ok",
       "count": 0,
-      "seconds": 2.81
+      "seconds": 6.48
     },
     {
       "source": "Greenhouse/OKX",
       "status": "ok",
-      "count": 6,
-      "seconds": 1.82
+      "count": 5,
+      "seconds": 2.54
     },
     {
       "source": "Greenhouse/Stripe",
       "status": "ok",
       "count": 0,
-      "seconds": 19.18
+      "seconds": 1.3
     },
     {
       "source": "Greenhouse/Wiz",
       "status": "ok",
       "count": 0,
-      "seconds": 1.06
+      "seconds": 0.72
     },
     {
       "source": "Greenhouse/Zscaler",
       "status": "ok",
       "count": 1,
-      "seconds": 1.17
+      "seconds": 2.61
     },
     {
       "source": "Greenhouse/Scale AI",
-      "status": "ok",
+      "status": "error",
       "count": 0,
-      "seconds": 0.92
+      "error": "The read operation timed out",
+      "seconds": 25.06
     },
     {
       "source": "Greenhouse/GitLab",
       "status": "ok",
       "count": 0,
-      "seconds": 6.25
+      "seconds": 1.39
     },
     {
       "source": "Lever/Mistral AI",
       "status": "ok",
       "count": 0,
-      "seconds": 0.33
+      "seconds": 0.43
     },
     {
       "source": "Lever/Palantir",
       "status": "ok",
       "count": 0,
-      "seconds": 1.41
+      "seconds": 2.28
     },
     {
       "source": "Ashby/OpenAI",
       "status": "ok",
       "count": 1,
-      "seconds": 0.76
+      "seconds": 0.85
     },
     {
       "source": "Ashby/Cursor",
       "status": "ok",
       "count": 0,
-      "seconds": 0.29
+      "seconds": 0.26
     },
     {
       "source": "Ashby/HackerOne",
       "status": "ok",
       "count": 0,
-      "seconds": 0.37
+      "seconds": 0.06
     },
     {
       "source": "Ashby/Harvey",
       "status": "ok",
       "count": 0,
-      "seconds": 0.5
+      "seconds": 1.23
     },
     {
       "source": "Ashby/LangChain",
       "status": "ok",
       "count": 0,
-      "seconds": 0.19
+      "seconds": 1.25
     },
     {
       "source": "Ashby/Linear",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.77
     },
     {
       "source": "Ashby/Perplexity",
       "status": "ok",
       "count": 0,
-      "seconds": 0.1
+      "seconds": 0.59
     },
     {
       "source": "Ashby/Replit",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.19
     },
     {
       "source": "Ashby/Modal",
       "status": "ok",
       "count": 0,
-      "seconds": 0.07
+      "seconds": 0.08
     },
     {
       "source": "Remotive/AI security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.2
+      "seconds": 0.58
     },
     {
       "source": "Remotive/AI security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.2
+      "seconds": 0.63
     },
     {
       "source": "Remotive/AI security engineer Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.18
+      "seconds": 0.6
     },
     {
       "source": "Remotive/LLM security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.1
+      "seconds": 0.06
     },
     {
       "source": "Remotive/agent security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.1
+      "seconds": 0.49
     },
     {
       "source": "Remotive/AI red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.16
+      "seconds": 0.06
     },
     {
       "source": "Remotive/AI safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.14
+      "seconds": 0.5
     },
     {
       "source": "Remotive/machine learning security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.56
     },
     {
       "source": "Remotive/AI secure code review Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.51
     },
     {
       "source": "Remotive/AI vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.03
     },
     {
       "source": "Remotive/RAG security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.1
+      "seconds": 0.19
     },
     {
       "source": "Remotive/prompt injection Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.04
     },
     {
       "source": "Remotive/DevSecOps AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.2
     },
     {
       "source": "Remotive/cloud security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.18
     },
     {
       "source": "Remotive/application security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.05
     },
     {
       "source": "Remotive/application security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.48
     },
     {
       "source": "Remotive/appsec manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.61
     },
     {
       "source": "Remotive/application security lead Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.05
     },
     {
       "source": "Remotive/software security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.1
+      "seconds": 0.06
     },
     {
       "source": "Remotive/product security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.62
     },
     {
       "source": "Remotive/product security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.14
+      "seconds": 0.03
     },
     {
       "source": "Remotive/penetration testing Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.2
+      "seconds": 0.04
     },
     {
       "source": "Remotive/penetration tester Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.55
     },
     {
       "source": "Remotive/red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.17
     },
     {
       "source": "Remotive/offensive security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.55
     },
     {
       "source": "Remotive/vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.14
+      "seconds": 0.17
     },
     {
       "source": "Remotive/security engineer machine learning Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.06
     },
     {
       "source": "Remotive/trust safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.48
     },
     {
       "source": "Remotive/AI security bank Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.19
     },
     {
       "source": "Remotive/AI governance cyber Singapore bank",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.56
     },
     {
       "source": "Remotive/model risk cyber security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.07
     },
     {
       "source": "Remotive/LLM security financial services Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.1
+      "seconds": 0.04
     },
     {
       "source": "Remotive/cyber AI risk Singapore insurance",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.06
     },
     {
       "source": "Remotive/sovereign wealth cyber security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.1
+      "seconds": 0.05
     },
     {
       "source": "Remotive/GIC cyber security AI",
       "status": "ok",
       "count": 0,
-      "seconds": 0.1
+      "seconds": 0.49
     },
     {
       "source": "Remotive/Temasek cyber security AI",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.18
     },
     {
       "source": "Remotive/MAS AI cyber security",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.04
     },
     {
       "source": "Remotive/AI for cybersecurity Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.17
     },
     {
       "source": "Remotive/AI cybersecurity automation Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.17
     },
     {
       "source": "Remotive/AI security operations Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.37
+      "seconds": 0.05
     },
     {
       "source": "Remotive/AI threat detection Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.67
     },
     {
       "source": "Remotive/AI incident response Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.18
     },
     {
       "source": "Remotive/AI vulnerability management Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.61
     },
     {
       "source": "Remotive/machine learning cybersecurity Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.04
     },
     {
       "source": "Remotive/security analytics AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.16
     },
     {
       "source": "Remotive/cybersecurity data scientist Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.59
     },
     {
       "source": "Remotive/cybersecurity manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.63
     },
     {
       "source": "Remotive/offensive security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.1
+      "seconds": 0.59
     },
     {
       "source": "Remotive/penetration testing manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.57
     },
     {
       "source": "Remotive/red team manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.26
+      "seconds": 0.63
     },
     {
       "source": "Remotive/security architect Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.25
+      "seconds": 0.08
     },
     {
       "source": "Remotive/security architecture Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.4
+      "seconds": 0.6
     },
     {
       "source": "Remotive/security engineering manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.3
+      "seconds": 0.05
     },
     {
       "source": "Remotive/application security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.38
+      "seconds": 0.62
     },
     {
       "source": "Remotive/product security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.31
+      "seconds": 0.04
     },
     {
       "source": "Remotive/cloud security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.28
+      "seconds": 0.05
     },
     {
       "source": "Remotive/DevSecOps Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.18
+      "seconds": 0.04
     },
     {
       "source": "Remotive/vulnerability management Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.15
+      "seconds": 0.6
     },
     {
       "source": "Remotive/incident response manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.15
+      "seconds": 0.04
     },
     {
       "source": "Remotive/digital forensics Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.14
+      "seconds": 0.5
     },
     {
       "source": "Remotive/DFIR Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.11
+      "seconds": 0.03
     },
     {
       "source": "Remotive/threat hunting Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.17
+      "seconds": 0.06
     },
     {
       "source": "Remotive/threat intelligence Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.48
     },
     {
       "source": "Remotive/detection engineering Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.04
     },
     {
       "source": "Remotive/purple team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.03
     },
     {
       "source": "Remotive/adversary emulation Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.05
     },
     {
       "source": "Remotive/security assurance Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.13
+      "seconds": 0.04
     },
     {
       "source": "Remotive/security control assessment Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.18
     },
     {
       "source": "Remotive/cyber range Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.1
+      "seconds": 0.17
     },
     {
       "source": "Remotive/security program manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.12
+      "seconds": 0.51
     },
     {
       "source": "Remotive/secure SDLC Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 0.15
+      "seconds": 0.05
     },
     {
       "source": "RemoteOK",
       "status": "ok",
       "count": 0,
-      "seconds": 0.57
+      "seconds": 4.4
     },
     {
       "source": "MyCareersFuture/AI security Singapore",
       "status": "ok",
-      "count": 0,
-      "seconds": 5.14
+      "count": 1,
+      "seconds": 6.15
     },
     {
       "source": "MyCareersFuture/AI security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.67
+      "seconds": 6.33
     },
     {
       "source": "MyCareersFuture/AI security engineer Singapore",
       "status": "ok",
-      "count": 0,
-      "seconds": 5.64
+      "count": 1,
+      "seconds": 6.35
     },
     {
       "source": "MyCareersFuture/LLM security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.25
+      "seconds": 5.84
     },
     {
       "source": "MyCareersFuture/agent security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.5
+      "seconds": 5.8
     },
     {
       "source": "MyCareersFuture/AI red team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.4
+      "seconds": 6.0
     },
     {
       "source": "MyCareersFuture/AI safety security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.66
+      "seconds": 5.35
     },
     {
       "source": "MyCareersFuture/machine learning security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.45
+      "seconds": 6.0
     },
     {
       "source": "MyCareersFuture/AI secure code review Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.35
+      "seconds": 5.84
     },
     {
       "source": "MyCareersFuture/AI vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.36
+      "seconds": 5.12
     },
     {
       "source": "MyCareersFuture/RAG security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.3
+      "seconds": 5.33
     },
     {
       "source": "MyCareersFuture/prompt injection Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.39
+      "seconds": 5.72
     },
     {
       "source": "MyCareersFuture/DevSecOps AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.1
+      "seconds": 5.16
     },
     {
       "source": "MyCareersFuture/cloud security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.4
+      "seconds": 5.39
     },
     {
       "source": "MyCareersFuture/application security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.62
+      "seconds": 6.27
     },
     {
       "source": "MyCareersFuture/application security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.83
+      "seconds": 6.02
     },
     {
       "source": "MyCareersFuture/appsec manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.39
+      "seconds": 5.21
     },
     {
       "source": "MyCareersFuture/application security lead Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.86
+      "seconds": 6.14
     },
     {
       "source": "MyCareersFuture/software security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.78
+      "seconds": 6.22
     },
     {
       "source": "MyCareersFuture/product security AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.93
+      "seconds": 6.13
     },
     {
       "source": "MyCareersFuture/product security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.93
+      "seconds": 6.37
     },
     {
       "source": "MyCareersFuture/penetration testing Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.07
+      "seconds": 5.85
     },
     {
       "source": "MyCareersFuture/penetration tester Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.23
+      "seconds": 5.46
     },
     {
       "source": "MyCareersFuture/red team Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 5.49
+      "seconds": 6.68
     },
     {
       "source": "MyCareersFuture/offensive security Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 5.41
+      "seconds": 6.44
     },
     {
       "source": "MyCareersFuture/vulnerability research Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.02
+      "seconds": 6.16
     },
     {
       "source": "MyCareersFuture/security engineer machine learning Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.6
+      "seconds": 5.79
     },
     {
       "source": "MyCareersFuture/trust safety security Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 5.56
+      "seconds": 5.81
     },
     {
       "source": "MyCareersFuture/AI security bank Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.24
+      "seconds": 6.2
     },
     {
       "source": "MyCareersFuture/AI governance cyber Singapore bank",
       "status": "ok",
       "count": 0,
-      "seconds": 5.11
+      "seconds": 5.45
     },
     {
       "source": "MyCareersFuture/model risk cyber security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.35
+      "seconds": 6.47
     },
     {
       "source": "MyCareersFuture/LLM security financial services Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.49
+      "seconds": 6.53
     },
     {
       "source": "MyCareersFuture/cyber AI risk Singapore insurance",
       "status": "ok",
       "count": 0,
-      "seconds": 5.15
+      "seconds": 5.72
     },
     {
       "source": "MyCareersFuture/sovereign wealth cyber security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.28
+      "seconds": 4.94
     },
     {
       "source": "MyCareersFuture/GIC cyber security AI",
       "status": "ok",
       "count": 0,
-      "seconds": 5.04
+      "seconds": 6.62
     },
     {
       "source": "MyCareersFuture/Temasek cyber security AI",
       "status": "ok",
       "count": 0,
-      "seconds": 5.11
+      "seconds": 6.28
     },
     {
       "source": "MyCareersFuture/MAS AI cyber security",
       "status": "ok",
       "count": 0,
-      "seconds": 5.01
+      "seconds": 6.76
     },
     {
       "source": "MyCareersFuture/AI for cybersecurity Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.21
+      "seconds": 5.64
     },
     {
       "source": "MyCareersFuture/AI cybersecurity automation Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.26
+      "seconds": 7.14
     },
     {
       "source": "MyCareersFuture/AI security operations Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.77
+      "seconds": 7.16
     },
     {
       "source": "MyCareersFuture/AI threat detection Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.39
+      "seconds": 6.95
     },
     {
       "source": "MyCareersFuture/AI incident response Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.31
+      "seconds": 6.73
     },
     {
       "source": "MyCareersFuture/AI vulnerability management Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.72
+      "seconds": 6.94
     },
     {
       "source": "MyCareersFuture/machine learning cybersecurity Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.53
+      "seconds": 7.41
     },
     {
       "source": "MyCareersFuture/security analytics AI Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.62
+      "seconds": 7.2
     },
     {
       "source": "MyCareersFuture/cybersecurity data scientist Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.31
+      "seconds": 6.24
     },
     {
       "source": "MyCareersFuture/cybersecurity manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.29
+      "seconds": 4.86
     },
     {
       "source": "MyCareersFuture/offensive security manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.57
+      "seconds": 5.67
     },
     {
       "source": "MyCareersFuture/penetration testing manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.54
+      "seconds": 6.16
     },
     {
       "source": "MyCareersFuture/red team manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.76
+      "seconds": 5.27
     },
     {
       "source": "MyCareersFuture/security architect Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.73
+      "seconds": 6.51
     },
     {
       "source": "MyCareersFuture/security architecture Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.54
+      "seconds": 6.76
     },
     {
       "source": "MyCareersFuture/security engineering manager Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 5.97
+      "seconds": 6.95
     },
     {
       "source": "MyCareersFuture/application security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.68
+      "seconds": 6.76
     },
     {
       "source": "MyCareersFuture/product security Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.66
+      "seconds": 6.44
     },
     {
       "source": "MyCareersFuture/cloud security Singapore",
       "status": "ok",
-      "count": 0,
-      "seconds": 5.3
+      "count": 1,
+      "seconds": 5.45
     },
     {
       "source": "MyCareersFuture/DevSecOps Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.24
+      "seconds": 6.25
     },
     {
       "source": "MyCareersFuture/vulnerability management Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.46
+      "seconds": 6.49
     },
     {
       "source": "MyCareersFuture/incident response manager Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.52
+      "seconds": 6.76
     },
     {
       "source": "MyCareersFuture/digital forensics Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.46
+      "seconds": 6.79
     },
     {
       "source": "MyCareersFuture/DFIR Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.24
+      "seconds": 6.66
     },
     {
       "source": "MyCareersFuture/threat hunting Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.39
+      "seconds": 6.46
     },
     {
       "source": "MyCareersFuture/threat intelligence Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 5.28
+      "seconds": 6.99
     },
     {
       "source": "MyCareersFuture/detection engineering Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.45
+      "seconds": 4.98
     },
     {
       "source": "MyCareersFuture/purple team Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.58
+      "seconds": 6.67
     },
     {
       "source": "MyCareersFuture/adversary emulation Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.19
+      "seconds": 6.71
     },
     {
       "source": "MyCareersFuture/security assurance Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.53
+      "seconds": 7.33
     },
     {
       "source": "MyCareersFuture/security control assessment Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.77
+      "seconds": 5.32
     },
     {
       "source": "MyCareersFuture/cyber range Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.22
+      "seconds": 6.07
     },
     {
       "source": "MyCareersFuture/security program manager Singapore",
       "status": "ok",
       "count": 1,
-      "seconds": 5.89
+      "seconds": 9.06
     },
     {
       "source": "MyCareersFuture/secure SDLC Singapore",
       "status": "ok",
       "count": 0,
-      "seconds": 5.46
+      "seconds": 7.01
     },
     {
       "source": "MyCareersFuture/cyber security AI",
       "status": "ok",
       "count": 0,
-      "seconds": 5.13
+      "seconds": 7.32
     },
     {
       "source": "MyCareersFuture/AI security engineer",
       "status": "ok",
-      "count": 0,
-      "seconds": 5.64
+      "count": 1,
+      "seconds": 9.22
     },
     {
       "source": "MyCareersFuture/AI security manager",
       "status": "ok",
       "count": 0,
-      "seconds": 6.0
+      "seconds": 7.04
     },
     {
       "source": "MyCareersFuture/secure code review",
       "status": "ok",
       "count": 0,
-      "seconds": 5.65
+      "seconds": 8.23
     },
     {
       "source": "MyCareersFuture/DevSecOps",
       "status": "ok",
-      "count": 0,
-      "seconds": 5.85
+      "count": 1,
+      "seconds": 9.96
     },
     {
       "source": "MyCareersFuture/cloud security manager",
       "status": "ok",
       "count": 0,
-      "seconds": 5.68
+      "seconds": 7.89
     },
     {
       "source": "MyCareersFuture/cyber range",
       "status": "ok",
       "count": 0,
-      "seconds": 5.32
+      "seconds": 6.58
     },
     {
       "source": "MyCareersFuture/application security",
       "status": "ok",
-      "count": 5,
-      "seconds": 6.6
+      "count": 2,
+      "seconds": 8.23
     },
     {
       "source": "MyCareersFuture/application security manager",
       "status": "ok",
       "count": 0,
-      "seconds": 5.79
+      "seconds": 6.16
     },
     {
       "source": "MyCareersFuture/appsec manager",
       "status": "ok",
       "count": 0,
-      "seconds": 5.12
+      "seconds": 5.59
     },
     {
       "source": "MyCareersFuture/application security lead",
       "status": "ok",
       "count": 0,
-      "seconds": 5.71
+      "seconds": 5.86
     },
     {
       "source": "MyCareersFuture/software security manager",
       "status": "ok",
       "count": 0,
-      "seconds": 5.64
+      "seconds": 6.11
     },
     {
       "source": "MyCareersFuture/product security",
       "status": "ok",
       "count": 2,
-      "seconds": 6.89
+      "seconds": 6.58
     },
     {
       "source": "MyCareersFuture/product security manager",
       "status": "ok",
       "count": 0,
-      "seconds": 6.3
+      "seconds": 7.22
     },
     {
       "source": "MyCareersFuture/penetration testing",
       "status": "ok",
       "count": 4,
-      "seconds": 6.12
+      "seconds": 6.96
     },
     {
       "source": "MyCareersFuture/penetration tester",
       "status": "ok",
       "count": 1,
-      "seconds": 5.51
+      "seconds": 6.88
     },
     {
       "source": "MyCareersFuture/red team",
       "status": "ok",
       "count": 2,
-      "seconds": 6.28
+      "seconds": 7.53
     },
     {
       "source": "MyCareersFuture/offensive security",
       "status": "ok",
       "count": 5,
-      "seconds": 6.17
+      "seconds": 6.33
     },
     {
       "source": "MyCareersFuture/vulnerability research",
       "status": "ok",
-      "count": 3,
-      "seconds": 5.5
+      "count": 2,
+      "seconds": 5.34
     },
     {
       "source": "MyCareersFuture/threat research",
       "status": "ok",
       "count": 1,
-      "seconds": 5.57
+      "seconds": 6.09
     },
     {
       "source": "MyCareersFuture/secure software development",
       "status": "ok",
       "count": 4,
-      "seconds": 6.63
+      "seconds": 8.09
     },
     {
       "source": "MyCareersFuture/cybersecurity manager",
       "status": "ok",
-      "count": 2,
-      "seconds": 6.25
+      "count": 1,
+      "seconds": 7.34
     },
     {
       "source": "MyCareersFuture/offensive security manager",
       "status": "ok",
       "count": 0,
-      "seconds": 5.38
+      "seconds": 5.34
     },
     {
       "source": "MyCareersFuture/penetration testing manager",
       "status": "ok",
       "count": 0,
-      "seconds": 5.36
+      "seconds": 6.07
     },
     {
       "source": "MyCareersFuture/red team manager",
       "status": "ok",
       "count": 0,
-      "seconds": 5.46
+      "seconds": 6.04
     },
     {
       "source": "MyCareersFuture/security architect",
       "status": "ok",
       "count": 6,
-      "seconds": 7.68
+      "seconds": 7.43
     },
     {
       "source": "MyCareersFuture/security engineering manager",
       "status": "ok",
-      "count": 2,
-      "seconds": 6.22
+      "count": 1,
+      "seconds": 6.59
     },
     {
       "source": "MyCareersFuture/vulnerability management",
       "status": "ok",
-      "count": 1,
-      "seconds": 6.09
+      "count": 0,
+      "seconds": 7.75
     },
     {
       "source": "MyCareersFuture/incident response manager",
       "status": "ok",
       "count": 1,
-      "seconds": 5.39
+      "seconds": 5.99
     },
     {
       "source": "MyCareersFuture/digital forensics",
       "status": "ok",
       "count": 0,
-      "seconds": 5.86
+      "seconds": 6.28
     },
     {
       "source": "MyCareersFuture/DFIR",
       "status": "ok",
       "count": 0,
-      "seconds": 5.45
+      "seconds": 6.22
     },
     {
       "source": "MyCareersFuture/detection engineering",
       "status": "ok",
-      "count": 3,
-      "seconds": 6.33
+      "count": 8,
+      "seconds": 8.08
     },
     {
       "source": "MyCareersFuture/purple team",
       "status": "ok",
       "count": 2,
-      "seconds": 5.59
+      "seconds": 6.62
     },
     {
       "source": "MyCareersFuture/adversary emulation",
       "status": "ok",
       "count": 1,
-      "seconds": 5.41
+      "seconds": 6.15
     },
     {
       "source": "MyCareersFuture/security assurance",
       "status": "ok",
       "count": 1,
-      "seconds": 6.2
+      "seconds": 6.65
     },
     {
       "source": "MyCareersFuture/security control assessment",
       "status": "ok",
       "count": 0,
-      "seconds": 5.48
+      "seconds": 5.35
     },
     {
       "source": "MyCareersFuture/security program manager",
       "status": "ok",
       "count": 1,
-      "seconds": 5.94
+      "seconds": 6.39
     }
   ],
   "alerts": [
     {
-      "title": "26984754 Senior Penetration Tester (Cyber Security)",
-      "company": "CITIBANK N.A.",
-      "location": "Singapore · East",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/26984754-senior-penetration-tester-citibank-na-e08c690a5c3155d4548a61f91d382bc9",
+      "title": "Senior Threat Intelligence Manager",
+      "company": "ADVANCED MICRO DEVICES (SINGAPORE) PTE LTD",
+      "location": "Singapore · Islandwide",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/senior-threat-intelligence-manager-advanced-micro-devices-67c057ac83fdc85e886edf93857681e6",
       "source": "MyCareersFuture",
-      "published_at": "2026-09-10",
-      "summary": "Discover your future at Citi Citi is a preeminent banking partner for institutions with cross-border needs, a global leader in wealth management, and a valued personal bank in its home market of the United States. Citi does business in more than 160 countries and jurisdictions, providing corporations, governments, inv…",
-      "salary_estimate": "Listed SGD 12k–17,500/mo",
+      "published_at": "2026-09-15",
+      "summary": "THE ROLE: AMD is seeking a Senior Threat Intelligence Manager to lead and mature the enterprise Threat Intelligence program as a strategic capability supporting cyber defense, incident response, executive decision-making, and business risk reduction. This leader will be responsible for building an intelligence-driven…",
+      "salary_estimate": "Listed SGD 14k–18k/mo",
       "salary_confidence": "Listed — source-provided compensation",
       "tags": [
-        "Security",
+        "Threat",
         "Cyber",
-        "Penetration Tester",
+        "Risk",
+        "Incident Response",
+        "Manager",
         "Lead"
       ],
-      "score": 90,
-      "cv_score": 67,
+      "score": 89,
+      "cv_score": 100,
       "fit": [
-        "Offensive Security",
-        "Leadership",
-        "Financial / Public-sector Security"
+        "Incident Response",
+        "Threat Detection / Intelligence",
+        "Leadership"
       ],
       "priority": "High",
-      "why_match": "Strong overlap with Offensive Security, Leadership, Financial / Public-sector Security. Ranked as offensive/pentest, cybersecurity leadership, with CV fit 67/100, role/security relevance 62/100, and lead/manager trajectory.",
-      "possible_gap": "Confirm the work includes modern application/cloud targets and is not a narrow checklist testing role.",
+      "why_match": "Strong overlap with Incident Response, Threat Detection / Intelligence, Leadership. Ranked as incident-response/DFIR, threat-detection/intelligence, with CV fit 100/100, role/security relevance 43/100, and lead/manager trajectory.",
+      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
       "compensation_fit": 100,
       "categories": [
-        "Best offensive/pentest role",
+        "Best incident-response/DFIR role",
+        "Best threat-detection/intelligence role",
         "Best cybersecurity leadership role"
       ],
       "score_breakdown": {
-        "final": 90,
-        "cv_fit": 67,
-        "ai_security": 62,
-        "career_upside": 70,
+        "final": 89,
+        "cv_fit": 100,
+        "ai_security": 43,
+        "career_upside": 62,
         "location_fit": 100,
         "freshness": 100,
-        "company_boost": 8,
-        "employer_context": 85,
+        "company_boost": 0,
+        "employer_context": 91,
         "noise_penalty": 0,
         "compensation_fit": 100,
         "target_monthly_sgd": 11000,
         "source_boost": 2
       },
       "seniority": "Lead/manager",
-      "apply_angle": "Lead with offensive-security delivery, exploitability judgement, adversary emulation, and clear remediation guidance.",
+      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
       "skillsets_to_build": [
         "Financial/public-sector AI risk framing: model-risk language, AI governance controls, secure SDLC, third-party risk, and board-ready cyber impact.",
-        "Offensive security delivery: web/cloud/API testing, adversary emulation, reporting, and risk-ranked remediation guidance.",
+        "Detection/IR fundamentals: log analysis, incident scoping, containment, cloud telemetry, and post-incident hardening.",
+        "Threat-informed defence: ATT&CK mapping, detection hypotheses, threat hunting, purple-team validation, and measurable coverage improvements.",
         "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
       ],
       "learning_gaps": [
         "Translate offensive AI-security work into risk, control, and governance outcomes without losing technical evidence.",
-        "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
+        "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.",
+        "Prepare one attack-to-detection story showing telemetry, analytic logic, validation, and remediation feedback.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
       ],
       "certifications_to_consider": [
-        "Use existing OSCP/OSWE/CRTO/CRTP as proof; add only role-specific cloud or adversary-emulation labs if the job asks for them.",
+        "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs.",
         "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
       ],
-      "environment_note": "Excellent employer context: financial-services security environment.",
-      "role_focus": "Focus on converting AI-security research into enterprise risk language: model risk, control design, regulator-ready evidence, and senior stakeholder narratives.",
-      "alert_reason": "score ≥ 85, offensive-security signal, priority employer, new this week",
-      "next_action": "Apply this refresh: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
+      "environment_note": "Excellent employer context: long-horizon capital / structured cyber environment.",
+      "role_focus": "Focus on incident and threat stories that connect signals, investigation decisions, ATT&CK-informed validation, containment, and durable hardening.",
+      "alert_reason": "score ≥ 85, new this week",
+      "next_action": "Apply this refresh: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
       "status_badge": "New this week",
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
       "status": "New"
     },
     {
-      "title": "Cloud Architect – (AWS Cloud Architecture, Cloud Security Controls, Terraform, PowerShell, IAC, Cloud Infrastructure and Network Management).",
-      "company": "NEPTUNEZ SINGAPORE PTE. LTD.",
+      "title": "Senior Threat Intelligence Manager",
+      "company": "XILINX ASIA PACIFIC PTE. LTD.",
       "location": "Singapore · Islandwide",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/cloud-architect-%E2%80%93-neptunez-singapore-3e3c6a00b4764663c31a2ef3a1eb1bd8",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/senior-threat-intelligence-manager-xilinx-asia-pacific-691043ab0d7480fbba53638b759e49dd",
       "source": "MyCareersFuture",
-      "published_at": "2026-09-08",
-      "summary": "Responsibilities: Design and implement scalable and secure cloud architecture solutions using AWS for enterprise applications. Develop cloud solution designs covering cloud infrastructure, networking, security, storage, connectivity, and deployment requirements. Design, deploy, configure, and maintain AWS cloud infras…",
-      "salary_estimate": "Listed SGD 12k–14k/mo",
+      "published_at": "2026-09-15",
+      "summary": "THE ROLE: AMD is seeking a Senior Threat Intelligence Manager to lead and mature the enterprise Threat Intelligence program as a strategic capability supporting cyber defense, incident response, executive decision-making, and business risk reduction. This leader will be responsible for building an intelligence-driven…",
+      "salary_estimate": "Listed SGD 14k–18k/mo",
       "salary_confidence": "Listed — source-provided compensation",
       "tags": [
-        "Security",
-        "Cloud Security",
-        "Architect"
+        "Threat",
+        "Cyber",
+        "Risk",
+        "Incident Response",
+        "Manager",
+        "Lead"
       ],
-      "score": 85,
+      "score": 89,
       "cv_score": 100,
       "fit": [
-        "App/Product Security",
-        "Cloud / Platform Security",
+        "Incident Response",
+        "Threat Detection / Intelligence",
         "Leadership"
       ],
-      "priority": "Medium-high",
-      "why_match": "Strong overlap with App/Product Security, Cloud / Platform Security, Leadership. Ranked as product/AppSec, cloud/platform/DevSecOps, with CV fit 100/100, role/security relevance 32/100, and lead/manager trajectory.",
+      "priority": "High",
+      "why_match": "Strong overlap with Incident Response, Threat Detection / Intelligence, Leadership. Ranked as incident-response/DFIR, threat-detection/intelligence, with CV fit 100/100, role/security relevance 43/100, and lead/manager trajectory.",
+      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
+      "compensation_fit": 100,
+      "categories": [
+        "Best incident-response/DFIR role",
+        "Best threat-detection/intelligence role",
+        "Best cybersecurity leadership role"
+      ],
+      "score_breakdown": {
+        "final": 89,
+        "cv_fit": 100,
+        "ai_security": 43,
+        "career_upside": 62,
+        "location_fit": 100,
+        "freshness": 100,
+        "company_boost": 0,
+        "employer_context": 91,
+        "noise_penalty": 0,
+        "compensation_fit": 100,
+        "target_monthly_sgd": 11000,
+        "source_boost": 2
+      },
+      "seniority": "Lead/manager",
+      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
+      "skillsets_to_build": [
+        "Financial/public-sector AI risk framing: model-risk language, AI governance controls, secure SDLC, third-party risk, and board-ready cyber impact.",
+        "Detection/IR fundamentals: log analysis, incident scoping, containment, cloud telemetry, and post-incident hardening.",
+        "Threat-informed defence: ATT&CK mapping, detection hypotheses, threat hunting, purple-team validation, and measurable coverage improvements.",
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
+      ],
+      "learning_gaps": [
+        "Translate offensive AI-security work into risk, control, and governance outcomes without losing technical evidence.",
+        "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.",
+        "Prepare one attack-to-detection story showing telemetry, analytic logic, validation, and remediation feedback.",
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs.",
+        "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
+      ],
+      "environment_note": "Excellent employer context: long-horizon capital / structured cyber environment.",
+      "role_focus": "Focus on incident and threat stories that connect signals, investigation decisions, ATT&CK-informed validation, containment, and durable hardening.",
+      "alert_reason": "score ≥ 85, new this week",
+      "next_action": "Apply this refresh: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
+      "status_badge": "New this week",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "New"
+    },
+    {
+      "title": "Staff Security Software Engineer, Agentic Security Engineering",
+      "company": "Databricks",
+      "location": "Remote - California",
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=7882009002",
+      "source": "Greenhouse",
+      "published_at": "2026-09-15",
+      "summary": "RDQ226R605 This role can be based remotely anywhere in the United States. About Databricks Databricks is the data and AI company. More than 12,000 organizations worldwide — including Comcast, Condé Nast, Grammarly, and over 50% of the Fortune 500 — rely on the Databricks Data Intelligence Platform to unify and democra…",
+      "salary_estimate": "Est. SGD 209k–375k/yr",
+      "salary_confidence": "Estimated — seniority/company/location fallback",
+      "tags": [
+        "Agent",
+        "Agentic",
+        "Security",
+        "AI",
+        "Engineer"
+      ],
+      "score": 86,
+      "cv_score": 60,
+      "fit": [
+        "App/Product Security",
+        "Leadership"
+      ],
+      "priority": "High",
+      "why_match": "Strong overlap with App/Product Security, Leadership. Ranked as product/AppSec, cybersecurity leadership, with CV fit 60/100, role/security relevance 81/100, and staff/principal trajectory.",
       "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
       "compensation_fit": 100,
       "categories": [
         "Best product/AppSec role",
-        "Best cloud/platform/DevSecOps role",
         "Best cybersecurity leadership role"
       ],
       "score_breakdown": {
-        "final": 85,
-        "cv_fit": 100,
-        "ai_security": 32,
-        "career_upside": 74,
+        "final": 86,
+        "cv_fit": 60,
+        "ai_security": 81,
+        "career_upside": 82,
+        "location_fit": 86,
+        "freshness": 100,
+        "company_boost": 8,
+        "employer_context": 61,
+        "noise_penalty": 0,
+        "compensation_fit": 100,
+        "target_monthly_sgd": 11000
+      },
+      "seniority": "Staff/principal",
+      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
+      "skillsets_to_build": [
+        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
+        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
+      ],
+      "learning_gaps": [
+        "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
+        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
+      ],
+      "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
+      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
+      "alert_reason": "score ≥ 85, priority employer, new this week",
+      "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
+      "status_badge": "New this week",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "New"
+    },
+    {
+      "title": "Security Solution Architect, APJC Customer Security, APJC Customer Security",
+      "company": "AMAZON WEB SERVICES SINGAPORE PRIVATE LIMITED",
+      "location": "Singapore · Central",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/security-solution-architect-apjc-customer-security-apjc-customer-security-amazon-web-services-singapore-431b0ec4a46dcd7020da19fcd0c8062d",
+      "source": "MyCareersFuture",
+      "published_at": "2026-09-17",
+      "summary": "Amazon Web Services (AWS) is seeking a Secure AI Solution Architect to join our APJC Customer Security team in a content-and-frameworks role. Customers across the region are asking the same questions about building securely with AI — how to give autonomous agents an identity, how to defend against prompt injection, ho…",
+      "salary_estimate": "Listed SGD 11k–16k/mo",
+      "salary_confidence": "Listed — source-provided compensation",
+      "tags": [
+        "Security",
+        "AI",
+        "Agent",
+        "Prompt Injection",
+        "Architect"
+      ],
+      "score": 83,
+      "cv_score": 51,
+      "fit": [
+        "AI Security",
+        "Leadership"
+      ],
+      "priority": "Medium-high",
+      "why_match": "Strong overlap with AI Security, Leadership. Ranked as AI-security, cybersecurity leadership, with CV fit 51/100, role/security relevance 67/100, and lead/manager trajectory.",
+      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
+      "compensation_fit": 100,
+      "categories": [
+        "Best AI-security role",
+        "Best cybersecurity leadership role"
+      ],
+      "score_breakdown": {
+        "final": 83,
+        "cv_fit": 51,
+        "ai_security": 67,
+        "career_upside": 82,
         "location_fit": 100,
         "freshness": 100,
-        "company_boost": 0,
-        "employer_context": 71,
+        "company_boost": 8,
+        "employer_context": 61,
         "noise_penalty": 0,
         "compensation_fit": 100,
         "target_monthly_sgd": 11000,
@@ -1408,87 +1559,13 @@
         "AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.",
         "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
       ],
-      "environment_note": "Strong employer context: established product-security environment.",
-      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
-      "alert_reason": "score ≥ 85, new this week",
-      "next_action": "Apply this refresh: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
-      "status_badge": "New this week",
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
-      "status": "New"
-    },
-    {
-      "title": "Cybersecurity Engineering Manager (MNC / High Bonuses)",
-      "company": "CAREERALLY PTE. LTD.",
-      "location": "Singapore · Islandwide",
-      "url": "https://www.mycareersfuture.gov.sg/job/consulting/cybersecurity-engineering-manager-careerally-8b98d193959e5ad15b1c646f7f6e6ad2",
-      "source": "MyCareersFuture",
-      "published_at": "2026-09-13",
-      "summary": "☑ Good Bonuses ☑ Near MRT ☑ Family Friendly Environment Job Description: Lead the architecture, implementation, operation and continuous improvement of enterprise information security platforms and solutions, including PAM, SIEM, SOAR, EDR/XDR, NDR, DLP, WAF and vulnerability management. Ensure effective implementatio…",
-      "salary_estimate": "Listed SGD 11k–14k/mo",
-      "salary_confidence": "Listed — source-provided compensation",
-      "tags": [
-        "Security",
-        "Cyber",
-        "Cybersecurity",
-        "Vulnerability",
-        "Engineer",
-        "Architect",
-        "Manager"
-      ],
-      "score": 84,
-      "cv_score": 85,
-      "fit": [
-        "App/Product Security",
-        "Leadership"
-      ],
-      "priority": "Medium-high",
-      "why_match": "Strong overlap with App/Product Security, Leadership. Ranked as product/AppSec, vulnerability-research, with CV fit 85/100, role/security relevance 57/100, and lead/manager trajectory.",
-      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
-      "compensation_fit": 100,
-      "categories": [
-        "Best product/AppSec role",
-        "Best vulnerability-research role",
-        "Best cybersecurity leadership role"
-      ],
-      "score_breakdown": {
-        "final": 84,
-        "cv_fit": 85,
-        "ai_security": 57,
-        "career_upside": 74,
-        "location_fit": 100,
-        "freshness": 100,
-        "company_boost": 0,
-        "employer_context": 61,
-        "noise_penalty": 0,
-        "compensation_fit": 100,
-        "target_monthly_sgd": 11000,
-        "source_boost": 2
-      },
-      "seniority": "Lead/manager",
-      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
-      "skillsets_to_build": [
-        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
-        "Vulnerability research craft: root-cause analysis, reproducible PoCs, variant analysis, disclosure-quality writeups, and patch validation.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
-      ],
-      "learning_gaps": [
-        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
-        "Keep a public-safe research portfolio with sanitized PoCs, diagrams, and before/after patch evidence.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
-      ],
-      "certifications_to_consider": [
-        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience.",
-        "AWS Security Specialty, Azure Security Engineer, or Google Professional Cloud Security Engineer for platform-heavy AppSec roles.",
-        "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice."
-      ],
       "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
-      "role_focus": "Focus on senior ownership: roadmap choices, prioritization, metrics, mentoring, and cross-functional influence.",
-      "alert_reason": "new this week",
-      "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
+      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
+      "alert_reason": "AI-security signal, priority employer, new this week",
+      "next_action": "Shortlist: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
       "status_badge": "New this week",
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
       "status": "New"
     },
     {
@@ -1533,7 +1610,7 @@
         "ai_security": 78,
         "career_upside": 70,
         "location_fit": 100,
-        "freshness": 100,
+        "freshness": 82,
         "company_boost": 8,
         "employer_context": 91,
         "noise_penalty": 0,
@@ -1566,7 +1643,7 @@
       "next_action": "Prioritize follow-up: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
       "status_badge": "Repeated high match",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
       "status": "Still open"
     },
     {
@@ -1588,7 +1665,7 @@
         "Threat",
         "Incident Response"
       ],
-      "score": 95,
+      "score": 94,
       "cv_score": 100,
       "fit": [
         "Offensive Security",
@@ -1607,12 +1684,12 @@
         "Best cybersecurity leadership role"
       ],
       "score_breakdown": {
-        "final": 95,
+        "final": 94,
         "cv_fit": 100,
         "ai_security": 98,
         "career_upside": 74,
         "location_fit": 100,
-        "freshness": 100,
+        "freshness": 82,
         "company_boost": 0,
         "employer_context": 43,
         "noise_penalty": 0,
@@ -1645,84 +1722,7 @@
       "next_action": "Prioritize follow-up: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
       "status_badge": "Repeated high match",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-14",
-      "status": "Still open"
-    },
-    {
-      "title": "Principal Architect – Application Security",
-      "company": "TRITON AI PTE. LTD.",
-      "location": "Singapore · Central",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/principal-architect-%E2%80%93-application-security-triton-ai-9dd6aa147d05960cf0980aab30a45113",
-      "source": "MyCareersFuture",
-      "published_at": "2026-08-18",
-      "summary": "Responsibilities: Team Leadership: Direct threat modeling and architecture reviews for identity flows, APIs, and AI integrations Shift-Left Automation: Integrate AppSec tools into CI/CD pipelines and scale the Security Champions program Identity Architecture: Secure multi-cloud environments and build identity framewor…",
-      "salary_estimate": "Listed SGD 12k–15k/mo",
-      "salary_confidence": "Listed — source-provided compensation",
-      "tags": [
-        "Security",
-        "Application Security",
-        "AI",
-        "Appsec",
-        "Threat",
-        "Architect",
-        "Lead"
-      ],
-      "score": 95,
-      "cv_score": 100,
-      "fit": [
-        "App/Product Security",
-        "Security Architecture / Assurance",
-        "Leadership"
-      ],
-      "priority": "High",
-      "why_match": "Strong overlap with App/Product Security, Security Architecture / Assurance, Leadership. Ranked as product/AppSec, security architecture/assurance, with CV fit 100/100, role/security relevance 93/100, and staff/principal trajectory.",
-      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
-      "compensation_fit": 100,
-      "categories": [
-        "Best product/AppSec role",
-        "Best security architecture/assurance role",
-        "Best cybersecurity leadership role"
-      ],
-      "score_breakdown": {
-        "final": 95,
-        "cv_fit": 100,
-        "ai_security": 93,
-        "career_upside": 74,
-        "location_fit": 100,
-        "freshness": 58,
-        "company_boost": 0,
-        "employer_context": 61,
-        "noise_penalty": 0,
-        "compensation_fit": 100,
-        "target_monthly_sgd": 11000,
-        "source_boost": 2
-      },
-      "seniority": "Staff/principal",
-      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
-      "skillsets_to_build": [
-        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
-        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
-        "Security architecture and assurance: threat models, control design, technical assurance, exception handling, and evidence-led risk decisions.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
-      ],
-      "learning_gaps": [
-        "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
-        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
-        "Prepare architecture-review examples that connect a broken invariant to a practical control and verification plan.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
-      ],
-      "certifications_to_consider": [
-        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
-        "AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.",
-        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
-      ],
-      "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
-      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
-      "alert_reason": "score ≥ 85",
-      "next_action": "Prioritize follow-up: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
-      "status_badge": "Repeated high match",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
       "status": "Still open"
     }
   ],
@@ -1746,6 +1746,11 @@
       "title": "Product Security Engineer — Security & Agentic AI 2",
       "company": "KEYSIGHT TECHNOLOGIES SINGAPORE (SALES) PTE. LTD.",
       "last_seen": "2026-05-18"
+    },
+    {
+      "title": "AI Agent Security Research Engineer",
+      "company": "OKX",
+      "last_seen": "2026-09-14"
     },
     {
       "title": "Security Engineer, Offensive Security",
@@ -1821,82 +1826,82 @@
       "title": "Senior Penetration Tester/Team Lead",
       "company": "FORTIEDGE PTE. LTD.",
       "last_seen": "2026-06-03"
-    },
-    {
-      "title": "Security Engineer - Threat Intel",
-      "company": "Anthropic",
-      "last_seen": "2026-05-17"
     }
   ],
   "jobs": [
     {
-      "title": "26984754 Senior Penetration Tester (Cyber Security)",
-      "company": "CITIBANK N.A.",
-      "location": "Singapore · East",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/26984754-senior-penetration-tester-citibank-na-e08c690a5c3155d4548a61f91d382bc9",
+      "title": "Senior Threat Intelligence Manager",
+      "company": "ADVANCED MICRO DEVICES (SINGAPORE) PTE LTD",
+      "location": "Singapore · Islandwide",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/senior-threat-intelligence-manager-advanced-micro-devices-67c057ac83fdc85e886edf93857681e6",
       "source": "MyCareersFuture",
-      "published_at": "2026-09-10",
-      "summary": "Discover your future at Citi Citi is a preeminent banking partner for institutions with cross-border needs, a global leader in wealth management, and a valued personal bank in its home market of the United States. Citi does business in more than 160 countries and jurisdictions, providing corporations, governments, inv…",
-      "salary_estimate": "Listed SGD 12k–17,500/mo",
+      "published_at": "2026-09-15",
+      "summary": "THE ROLE: AMD is seeking a Senior Threat Intelligence Manager to lead and mature the enterprise Threat Intelligence program as a strategic capability supporting cyber defense, incident response, executive decision-making, and business risk reduction. This leader will be responsible for building an intelligence-driven…",
+      "salary_estimate": "Listed SGD 14k–18k/mo",
       "salary_confidence": "Listed — source-provided compensation",
       "tags": [
-        "Security",
+        "Threat",
         "Cyber",
-        "Penetration Tester",
+        "Risk",
+        "Incident Response",
+        "Manager",
         "Lead"
       ],
-      "score": 90,
-      "cv_score": 67,
+      "score": 89,
+      "cv_score": 100,
       "fit": [
-        "Offensive Security",
-        "Leadership",
-        "Financial / Public-sector Security"
+        "Incident Response",
+        "Threat Detection / Intelligence",
+        "Leadership"
       ],
       "priority": "High",
-      "why_match": "Strong overlap with Offensive Security, Leadership, Financial / Public-sector Security. Ranked as offensive/pentest, cybersecurity leadership, with CV fit 67/100, role/security relevance 62/100, and lead/manager trajectory.",
-      "possible_gap": "Confirm the work includes modern application/cloud targets and is not a narrow checklist testing role.",
+      "why_match": "Strong overlap with Incident Response, Threat Detection / Intelligence, Leadership. Ranked as incident-response/DFIR, threat-detection/intelligence, with CV fit 100/100, role/security relevance 43/100, and lead/manager trajectory.",
+      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
       "compensation_fit": 100,
       "categories": [
-        "Best offensive/pentest role",
+        "Best incident-response/DFIR role",
+        "Best threat-detection/intelligence role",
         "Best cybersecurity leadership role"
       ],
       "score_breakdown": {
-        "final": 90,
-        "cv_fit": 67,
-        "ai_security": 62,
-        "career_upside": 70,
+        "final": 89,
+        "cv_fit": 100,
+        "ai_security": 43,
+        "career_upside": 62,
         "location_fit": 100,
         "freshness": 100,
-        "company_boost": 8,
-        "employer_context": 85,
+        "company_boost": 0,
+        "employer_context": 91,
         "noise_penalty": 0,
         "compensation_fit": 100,
         "target_monthly_sgd": 11000,
         "source_boost": 2
       },
       "seniority": "Lead/manager",
-      "apply_angle": "Lead with offensive-security delivery, exploitability judgement, adversary emulation, and clear remediation guidance.",
+      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
       "skillsets_to_build": [
         "Financial/public-sector AI risk framing: model-risk language, AI governance controls, secure SDLC, third-party risk, and board-ready cyber impact.",
-        "Offensive security delivery: web/cloud/API testing, adversary emulation, reporting, and risk-ranked remediation guidance.",
+        "Detection/IR fundamentals: log analysis, incident scoping, containment, cloud telemetry, and post-incident hardening.",
+        "Threat-informed defence: ATT&CK mapping, detection hypotheses, threat hunting, purple-team validation, and measurable coverage improvements.",
         "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
       ],
       "learning_gaps": [
         "Translate offensive AI-security work into risk, control, and governance outcomes without losing technical evidence.",
-        "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
+        "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.",
+        "Prepare one attack-to-detection story showing telemetry, analytic logic, validation, and remediation feedback.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
       ],
       "certifications_to_consider": [
-        "Use existing OSCP/OSWE/CRTO/CRTP as proof; add only role-specific cloud or adversary-emulation labs if the job asks for them.",
+        "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs.",
         "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
       ],
-      "environment_note": "Excellent employer context: financial-services security environment.",
-      "role_focus": "Focus on converting AI-security research into enterprise risk language: model risk, control design, regulator-ready evidence, and senior stakeholder narratives.",
-      "alert_reason": "score ≥ 85, offensive-security signal, priority employer, new this week",
-      "next_action": "Apply this refresh: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
+      "environment_note": "Excellent employer context: long-horizon capital / structured cyber environment.",
+      "role_focus": "Focus on incident and threat stories that connect signals, investigation decisions, ATT&CK-informed validation, containment, and durable hardening.",
+      "alert_reason": "score ≥ 85, new this week",
+      "next_action": "Apply this refresh: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
       "status_badge": "New this week",
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
       "status": "New"
     },
     {
@@ -1941,7 +1946,7 @@
         "ai_security": 78,
         "career_upside": 70,
         "location_fit": 100,
-        "freshness": 100,
+        "freshness": 82,
         "company_boost": 8,
         "employer_context": 91,
         "noise_penalty": 0,
@@ -1974,8 +1979,152 @@
       "next_action": "Prioritize follow-up: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
       "status_badge": "Repeated high match",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
       "status": "Still open"
+    },
+    {
+      "title": "Staff Security Software Engineer, Agentic Security Engineering",
+      "company": "Databricks",
+      "location": "Remote - California",
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=7882009002",
+      "source": "Greenhouse",
+      "published_at": "2026-09-15",
+      "summary": "RDQ226R605 This role can be based remotely anywhere in the United States. About Databricks Databricks is the data and AI company. More than 12,000 organizations worldwide — including Comcast, Condé Nast, Grammarly, and over 50% of the Fortune 500 — rely on the Databricks Data Intelligence Platform to unify and democra…",
+      "salary_estimate": "Est. SGD 209k–375k/yr",
+      "salary_confidence": "Estimated — seniority/company/location fallback",
+      "tags": [
+        "Agent",
+        "Agentic",
+        "Security",
+        "AI",
+        "Engineer"
+      ],
+      "score": 86,
+      "cv_score": 60,
+      "fit": [
+        "App/Product Security",
+        "Leadership"
+      ],
+      "priority": "High",
+      "why_match": "Strong overlap with App/Product Security, Leadership. Ranked as product/AppSec, cybersecurity leadership, with CV fit 60/100, role/security relevance 81/100, and staff/principal trajectory.",
+      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
+      "compensation_fit": 100,
+      "categories": [
+        "Best product/AppSec role",
+        "Best cybersecurity leadership role"
+      ],
+      "score_breakdown": {
+        "final": 86,
+        "cv_fit": 60,
+        "ai_security": 81,
+        "career_upside": 82,
+        "location_fit": 86,
+        "freshness": 100,
+        "company_boost": 8,
+        "employer_context": 61,
+        "noise_penalty": 0,
+        "compensation_fit": 100,
+        "target_monthly_sgd": 11000
+      },
+      "seniority": "Staff/principal",
+      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
+      "skillsets_to_build": [
+        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
+        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
+      ],
+      "learning_gaps": [
+        "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
+        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
+      ],
+      "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
+      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
+      "alert_reason": "score ≥ 85, priority employer, new this week",
+      "next_action": "Apply this refresh: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
+      "status_badge": "New this week",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "New"
+    },
+    {
+      "title": "Group Head of Cybersecurity (MNC / East) [EL]",
+      "company": "WECRUIT PTE. LTD.",
+      "location": "Singapore · Islandwide",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/group-head-cybersecurity-el-wecruit-861e328432358591ad06d39424c2cbc7",
+      "source": "MyCareersFuture",
+      "published_at": "2026-09-19",
+      "summary": "Responsibilities Define and implement the Group’s global cybersecurity operating model, including governance, decision rights, responsibilities, escalation protocols and regional coordination. Develop the Group cybersecurity architecture and strategic roadmap covering network security, zero-trust access, endpoint and…",
+      "salary_estimate": "Listed SGD 17k–25k/mo",
+      "salary_confidence": "Listed — source-provided compensation",
+      "tags": [
+        "Security",
+        "Cyber",
+        "Cybersecurity",
+        "Architect"
+      ],
+      "score": 77,
+      "cv_score": 62,
+      "fit": [
+        "App/Product Security",
+        "Security Architecture / Assurance",
+        "Leadership"
+      ],
+      "priority": "Medium-high",
+      "why_match": "Strong overlap with App/Product Security, Security Architecture / Assurance, Leadership. Ranked as product/AppSec, security architecture/assurance, with CV fit 62/100, role/security relevance 48/100, and staff/principal trajectory.",
+      "possible_gap": "Verify the day-to-day scope is technical and not mostly compliance, sales, or generic security operations.",
+      "compensation_fit": 100,
+      "categories": [
+        "Best product/AppSec role",
+        "Best security architecture/assurance role",
+        "Best cybersecurity leadership role"
+      ],
+      "score_breakdown": {
+        "final": 77,
+        "cv_fit": 62,
+        "ai_security": 48,
+        "career_upside": 62,
+        "location_fit": 100,
+        "freshness": 100,
+        "company_boost": 0,
+        "employer_context": 91,
+        "noise_penalty": 0,
+        "compensation_fit": 100,
+        "target_monthly_sgd": 11000,
+        "source_boost": 2
+      },
+      "seniority": "Staff/principal",
+      "apply_angle": "Frame the pitch around technical security judgement, practical fixes, and ability to work across engineering teams.",
+      "skillsets_to_build": [
+        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
+        "Financial/public-sector AI risk framing: model-risk language, AI governance controls, secure SDLC, third-party risk, and board-ready cyber impact.",
+        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
+        "Security architecture and assurance: threat models, control design, technical assurance, exception handling, and evidence-led risk decisions."
+      ],
+      "learning_gaps": [
+        "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
+        "Translate offensive AI-security work into risk, control, and governance outcomes without losing technical evidence.",
+        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
+        "Prepare architecture-review examples that connect a broken invariant to a practical control and verification plan."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
+      ],
+      "environment_note": "Excellent employer context: long-horizon capital / structured cyber environment.",
+      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
+      "alert_reason": "new this week",
+      "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
+      "status_badge": "New this week",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "New"
     },
     {
       "title": "Cloud Architect – (AWS Cloud Architecture, Cloud Security Controls, Terraform, PowerShell, IAC, Cloud Infrastructure and Network Management).",
@@ -1992,7 +2141,7 @@
         "Cloud Security",
         "Architect"
       ],
-      "score": 85,
+      "score": 84,
       "cv_score": 100,
       "fit": [
         "App/Product Security",
@@ -2009,12 +2158,12 @@
         "Best cybersecurity leadership role"
       ],
       "score_breakdown": {
-        "final": 85,
+        "final": 84,
         "cv_fit": 100,
         "ai_security": 32,
         "career_upside": 74,
         "location_fit": 100,
-        "freshness": 100,
+        "freshness": 82,
         "company_boost": 0,
         "employer_context": 71,
         "noise_penalty": 0,
@@ -2043,171 +2192,20 @@
       ],
       "environment_note": "Strong employer context: established product-security environment.",
       "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
-      "alert_reason": "score ≥ 85, new this week",
-      "next_action": "Apply this refresh: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
-      "status_badge": "New this week",
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
-      "status": "New"
-    },
-    {
-      "title": "Principal Architect – Application Security",
-      "company": "TRITON AI PTE. LTD.",
-      "location": "Singapore · Central",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/principal-architect-%E2%80%93-application-security-triton-ai-9dd6aa147d05960cf0980aab30a45113",
-      "source": "MyCareersFuture",
-      "published_at": "2026-08-18",
-      "summary": "Responsibilities: Team Leadership: Direct threat modeling and architecture reviews for identity flows, APIs, and AI integrations Shift-Left Automation: Integrate AppSec tools into CI/CD pipelines and scale the Security Champions program Identity Architecture: Secure multi-cloud environments and build identity framewor…",
-      "salary_estimate": "Listed SGD 12k–15k/mo",
-      "salary_confidence": "Listed — source-provided compensation",
-      "tags": [
-        "Security",
-        "Application Security",
-        "AI",
-        "Appsec",
-        "Threat",
-        "Architect",
-        "Lead"
-      ],
-      "score": 95,
-      "cv_score": 100,
-      "fit": [
-        "App/Product Security",
-        "Security Architecture / Assurance",
-        "Leadership"
-      ],
-      "priority": "High",
-      "why_match": "Strong overlap with App/Product Security, Security Architecture / Assurance, Leadership. Ranked as product/AppSec, security architecture/assurance, with CV fit 100/100, role/security relevance 93/100, and staff/principal trajectory.",
-      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
-      "compensation_fit": 100,
-      "categories": [
-        "Best product/AppSec role",
-        "Best security architecture/assurance role",
-        "Best cybersecurity leadership role"
-      ],
-      "score_breakdown": {
-        "final": 95,
-        "cv_fit": 100,
-        "ai_security": 93,
-        "career_upside": 74,
-        "location_fit": 100,
-        "freshness": 58,
-        "company_boost": 0,
-        "employer_context": 61,
-        "noise_penalty": 0,
-        "compensation_fit": 100,
-        "target_monthly_sgd": 11000,
-        "source_boost": 2
-      },
-      "seniority": "Staff/principal",
-      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
-      "skillsets_to_build": [
-        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
-        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
-        "Security architecture and assurance: threat models, control design, technical assurance, exception handling, and evidence-led risk decisions.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
-      ],
-      "learning_gaps": [
-        "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
-        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
-        "Prepare architecture-review examples that connect a broken invariant to a practical control and verification plan.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
-      ],
-      "certifications_to_consider": [
-        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
-        "AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.",
-        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
-      ],
-      "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
-      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
-      "alert_reason": "score ≥ 85",
-      "next_action": "Prioritize follow-up: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
-      "status_badge": "Repeated high match",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-09-14",
-      "status": "Still open"
-    },
-    {
-      "title": "Detection Focused Senior Cloud Security Consultant - JAPAC",
-      "company": "CROWDSTRIKE SINGAPORE PTE. LTD.",
-      "location": "Singapore · Islandwide",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/detection-focused-senior-cloud-security-consultant-japac-crowdstrike-singapore-b1999012e0c43efa2a8849eecb1951e1",
-      "source": "MyCareersFuture",
-      "published_at": "2026-09-11",
-      "summary": "About the Role: CrowdStrike is looking for a technically strong, self-directed cloud security professional to join our Professional Services team in the JAPAC region. This is a hands-on role for someone with genuine curiosity about cloud attack techniques and a drive to build the detection and defensive capability to…",
-      "salary_estimate": "Listed SGD 13,333–19,166/mo",
-      "salary_confidence": "Listed — source-provided compensation",
-      "tags": [
-        "Security",
-        "Cloud Security",
-        "Detection",
-        "Consultant"
-      ],
-      "score": 83,
-      "cv_score": 92,
-      "fit": [
-        "App/Product Security",
-        "Cloud / Platform Security",
-        "Leadership"
-      ],
-      "priority": "Medium-high",
-      "why_match": "Strong overlap with App/Product Security, Cloud / Platform Security, Leadership. Ranked as product/AppSec, cloud/platform/DevSecOps, with CV fit 92/100, role/security relevance 48/100, and senior trajectory.",
-      "possible_gap": "Verify the day-to-day scope is technical and not mostly compliance, sales, or generic security operations.",
-      "compensation_fit": 100,
-      "categories": [
-        "Best product/AppSec role",
-        "Best cloud/platform/DevSecOps role",
-        "Best cybersecurity leadership role"
-      ],
-      "score_breakdown": {
-        "final": 83,
-        "cv_fit": 92,
-        "ai_security": 48,
-        "career_upside": 74,
-        "location_fit": 100,
-        "freshness": 100,
-        "company_boost": 0,
-        "employer_context": 53,
-        "noise_penalty": 0,
-        "compensation_fit": 100,
-        "target_monthly_sgd": 11000,
-        "source_boost": 2
-      },
-      "seniority": "Senior",
-      "apply_angle": "Frame the pitch around technical security judgement, practical fixes, and ability to work across engineering teams.",
-      "skillsets_to_build": [
-        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
-        "Detection/IR fundamentals: log analysis, incident scoping, containment, cloud telemetry, and post-incident hardening.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design.",
-        "Cloud/platform security: IAM, Kubernetes/container boundaries, CI/CD, secrets handling, and cloud-native detection."
-      ],
-      "learning_gaps": [
-        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
-        "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes.",
-        "Strengthen cloud threat-model examples and hands-on validation across at least one major cloud stack."
-      ],
-      "certifications_to_consider": [
-        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience.",
-        "AWS Security Specialty, Azure Security Engineer, or Google Professional Cloud Security Engineer for platform-heavy AppSec roles.",
-        "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs."
-      ],
-      "environment_note": "Watch employer context: established product-security environment; watch for consulting-delivery pressure and low hands-on ownership; apply only if scope, manager, and structure are strong.",
-      "role_focus": "Focus on proving hands-on technical depth, clear risk judgement, and practical remediation outcomes.",
       "alert_reason": "",
       "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
       "status_badge": "Still open",
-      "first_seen": "2026-07-20",
-      "last_seen": "2026-09-14",
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
       "status": "Still open"
     },
     {
       "title": "Cybersecurity Engineering Manager (MNC / High Bonuses)",
       "company": "CAREERALLY PTE. LTD.",
       "location": "Singapore · Islandwide",
-      "url": "https://www.mycareersfuture.gov.sg/job/consulting/cybersecurity-engineering-manager-careerally-8b98d193959e5ad15b1c646f7f6e6ad2",
+      "url": "https://www.mycareersfuture.gov.sg/job/consulting/cybersecurity-engineering-manager-careerally-38e3bd41f076e3ceb192865cae1c019b",
       "source": "MyCareersFuture",
-      "published_at": "2026-09-13",
+      "published_at": "2026-09-17",
       "summary": "☑ Good Bonuses ☑ Near MRT ☑ Family Friendly Environment Job Description: Lead the architecture, implementation, operation and continuous improvement of enterprise information security platforms and solutions, including PAM, SIEM, SOAR, EDR/XDR, NDR, DLP, WAF and vulnerability management. Ensure effective implementatio…",
       "salary_estimate": "Listed SGD 11k–14k/mo",
       "salary_confidence": "Listed — source-provided compensation",
@@ -2268,11 +2266,86 @@
       ],
       "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
       "role_focus": "Focus on senior ownership: roadmap choices, prioritization, metrics, mentoring, and cross-functional influence.",
-      "alert_reason": "new this week",
+      "alert_reason": "",
       "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
-      "status_badge": "New this week",
+      "status_badge": "Still open",
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
+      "status": "Still open"
+    },
+    {
+      "title": "Senior Threat Intelligence Manager",
+      "company": "XILINX ASIA PACIFIC PTE. LTD.",
+      "location": "Singapore · Islandwide",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/senior-threat-intelligence-manager-xilinx-asia-pacific-691043ab0d7480fbba53638b759e49dd",
+      "source": "MyCareersFuture",
+      "published_at": "2026-09-15",
+      "summary": "THE ROLE: AMD is seeking a Senior Threat Intelligence Manager to lead and mature the enterprise Threat Intelligence program as a strategic capability supporting cyber defense, incident response, executive decision-making, and business risk reduction. This leader will be responsible for building an intelligence-driven…",
+      "salary_estimate": "Listed SGD 14k–18k/mo",
+      "salary_confidence": "Listed — source-provided compensation",
+      "tags": [
+        "Threat",
+        "Cyber",
+        "Risk",
+        "Incident Response",
+        "Manager",
+        "Lead"
+      ],
+      "score": 89,
+      "cv_score": 100,
+      "fit": [
+        "Incident Response",
+        "Threat Detection / Intelligence",
+        "Leadership"
+      ],
+      "priority": "High",
+      "why_match": "Strong overlap with Incident Response, Threat Detection / Intelligence, Leadership. Ranked as incident-response/DFIR, threat-detection/intelligence, with CV fit 100/100, role/security relevance 43/100, and lead/manager trajectory.",
+      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
+      "compensation_fit": 100,
+      "categories": [
+        "Best incident-response/DFIR role",
+        "Best threat-detection/intelligence role",
+        "Best cybersecurity leadership role"
+      ],
+      "score_breakdown": {
+        "final": 89,
+        "cv_fit": 100,
+        "ai_security": 43,
+        "career_upside": 62,
+        "location_fit": 100,
+        "freshness": 100,
+        "company_boost": 0,
+        "employer_context": 91,
+        "noise_penalty": 0,
+        "compensation_fit": 100,
+        "target_monthly_sgd": 11000,
+        "source_boost": 2
+      },
+      "seniority": "Lead/manager",
+      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
+      "skillsets_to_build": [
+        "Financial/public-sector AI risk framing: model-risk language, AI governance controls, secure SDLC, third-party risk, and board-ready cyber impact.",
+        "Detection/IR fundamentals: log analysis, incident scoping, containment, cloud telemetry, and post-incident hardening.",
+        "Threat-informed defence: ATT&CK mapping, detection hypotheses, threat hunting, purple-team validation, and measurable coverage improvements.",
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
+      ],
+      "learning_gaps": [
+        "Translate offensive AI-security work into risk, control, and governance outcomes without losing technical evidence.",
+        "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.",
+        "Prepare one attack-to-detection story showing telemetry, analytic logic, validation, and remediation feedback.",
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs.",
+        "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
+      ],
+      "environment_note": "Excellent employer context: long-horizon capital / structured cyber environment.",
+      "role_focus": "Focus on incident and threat stories that connect signals, investigation decisions, ATT&CK-informed validation, containment, and durable hardening.",
+      "alert_reason": "score ≥ 85, new this week",
+      "next_action": "Apply this refresh: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
+      "status_badge": "New this week",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
       "status": "New"
     },
     {
@@ -2294,7 +2367,7 @@
         "Threat",
         "Incident Response"
       ],
-      "score": 95,
+      "score": 94,
       "cv_score": 100,
       "fit": [
         "Offensive Security",
@@ -2313,12 +2386,12 @@
         "Best cybersecurity leadership role"
       ],
       "score_breakdown": {
-        "final": 95,
+        "final": 94,
         "cv_fit": 100,
         "ai_security": 98,
         "career_upside": 74,
         "location_fit": 100,
-        "freshness": 100,
+        "freshness": 82,
         "company_boost": 0,
         "employer_context": 43,
         "noise_penalty": 0,
@@ -2351,50 +2424,48 @@
       "next_action": "Prioritize follow-up: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
       "status_badge": "Repeated high match",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
       "status": "Still open"
     },
     {
-      "title": "Security Operations Lead – Global Hedge Fund - J13140",
-      "company": "PINPOINT ASIA INFOTECH PTE. LTD.",
+      "title": "Security Solution Architect, APJC Customer Security, APJC Customer Security",
+      "company": "AMAZON WEB SERVICES SINGAPORE PRIVATE LIMITED",
       "location": "Singapore · Central",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/security-operations-lead-%E2%80%93-global-hedge-fund-j13140-pinpoint-asia-infotech-358c201fdbcfb97a2f66413264fe89d8",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/security-solution-architect-apjc-customer-security-apjc-customer-security-amazon-web-services-singapore-431b0ec4a46dcd7020da19fcd0c8062d",
       "source": "MyCareersFuture",
-      "published_at": "2026-08-28",
-      "summary": "A global hedge fund is hiring a hands-on Security Operations Lead. You will own the Security Operations (SOC) function, manage an external 24/7 managed SOC, and remain technically involved across Sentinel, Defender XDR, detection engineering, and incident response. Key Responsibilities Own monitoring and detection, th…",
-      "salary_estimate": "Listed SGD 11k–15k/mo",
+      "published_at": "2026-09-17",
+      "summary": "Amazon Web Services (AWS) is seeking a Secure AI Solution Architect to join our APJC Customer Security team in a content-and-frameworks role. Customers across the region are asking the same questions about building securely with AI — how to give autonomous agents an identity, how to defend against prompt injection, ho…",
+      "salary_estimate": "Listed SGD 11k–16k/mo",
       "salary_confidence": "Listed — source-provided compensation",
       "tags": [
         "Security",
-        "Detection",
-        "Incident Response",
-        "Engineer",
-        "Lead"
+        "AI",
+        "Agent",
+        "Prompt Injection",
+        "Architect"
       ],
-      "score": 70,
-      "cv_score": 67,
+      "score": 83,
+      "cv_score": 51,
       "fit": [
-        "Incident Response",
-        "Threat Detection / Intelligence",
+        "AI Security",
         "Leadership"
       ],
-      "priority": "Medium",
-      "why_match": "Strong overlap with Incident Response, Threat Detection / Intelligence, Leadership. Ranked as incident-response/DFIR, threat-detection/intelligence, with CV fit 67/100, role/security relevance 34/100, and lead/manager trajectory.",
+      "priority": "Medium-high",
+      "why_match": "Strong overlap with AI Security, Leadership. Ranked as AI-security, cybersecurity leadership, with CV fit 51/100, role/security relevance 67/100, and lead/manager trajectory.",
       "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
       "compensation_fit": 100,
       "categories": [
-        "Best incident-response/DFIR role",
-        "Best threat-detection/intelligence role",
+        "Best AI-security role",
         "Best cybersecurity leadership role"
       ],
       "score_breakdown": {
-        "final": 70,
-        "cv_fit": 67,
-        "ai_security": 34,
-        "career_upside": 62,
+        "final": 83,
+        "cv_fit": 51,
+        "ai_security": 67,
+        "career_upside": 82,
         "location_fit": 100,
-        "freshness": 82,
-        "company_boost": 0,
+        "freshness": 100,
+        "company_boost": 8,
         "employer_context": 61,
         "noise_penalty": 0,
         "compensation_fit": 100,
@@ -2405,92 +2476,15 @@
       "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
       "skillsets_to_build": [
         "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
-        "Detection/IR fundamentals: log analysis, incident scoping, containment, cloud telemetry, and post-incident hardening.",
-        "Threat-informed defence: ATT&CK mapping, detection hypotheses, threat hunting, purple-team validation, and measurable coverage improvements.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
-      ],
-      "learning_gaps": [
-        "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
-        "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.",
-        "Prepare one attack-to-detection story showing telemetry, analytic logic, validation, and remediation feedback.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
-      ],
-      "certifications_to_consider": [
-        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
-        "AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.",
-        "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs."
-      ],
-      "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
-      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
-      "alert_reason": "",
-      "next_action": "Watch: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
-      "status_badge": "Still open",
-      "first_seen": "2026-08-31",
-      "last_seen": "2026-09-14",
-      "status": "Still open"
-    },
-    {
-      "title": "AI Security Architect - Associate Director",
-      "company": "MSD INTERNATIONAL GMBH (SINGAPORE BRANCH)",
-      "location": "Singapore · Central",
-      "url": "https://www.mycareersfuture.gov.sg/job/security/ai-security-architect-associate-director-msd-international-gmbh-00a460f7d838a276bf0d7d879429ca46",
-      "source": "MyCareersFuture",
-      "published_at": "2026-08-20",
-      "summary": "Join our Security Architecture team and help shape the future of secure AI adoption across the enterprise. As an AI Security Architect , you will lead the design and implementation of security strategies, architectures, and controls that enable the safe adoption of AI technologies, AI agents, foundation models, and ge…",
-      "salary_estimate": "Listed SGD 11k–12,500/mo",
-      "salary_confidence": "Listed — source-provided compensation",
-      "tags": [
-        "AI",
-        "Security",
-        "Agent",
-        "Architect",
-        "Lead"
-      ],
-      "score": 91,
-      "cv_score": 100,
-      "fit": [
-        "AI Security",
-        "App/Product Security",
-        "Security Architecture / Assurance",
-        "Leadership"
-      ],
-      "priority": "High",
-      "why_match": "Strong overlap with AI Security, App/Product Security, Security Architecture / Assurance. Ranked as AI-security, product/AppSec, with CV fit 100/100, role/security relevance 77/100, and staff/principal trajectory.",
-      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
-      "compensation_fit": 100,
-      "categories": [
-        "Best AI-security role",
-        "Best product/AppSec role",
-        "Best security architecture/assurance role",
-        "Best cybersecurity leadership role"
-      ],
-      "score_breakdown": {
-        "final": 91,
-        "cv_fit": 100,
-        "ai_security": 77,
-        "career_upside": 74,
-        "location_fit": 100,
-        "freshness": 58,
-        "company_boost": 0,
-        "employer_context": 61,
-        "noise_penalty": 0,
-        "compensation_fit": 100,
-        "target_monthly_sgd": 11000,
-        "source_boost": 2
-      },
-      "seniority": "Staff/principal",
-      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
-      "skillsets_to_build": [
-        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
         "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
-        "Security architecture and assurance: threat models, control design, technical assurance, exception handling, and evidence-led risk decisions.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design.",
+        "Cloud/platform security: IAM, Kubernetes/container boundaries, CI/CD, secrets handling, and cloud-native detection."
       ],
       "learning_gaps": [
         "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
         "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
-        "Prepare architecture-review examples that connect a broken invariant to a practical control and verification plan.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes.",
+        "Strengthen cloud threat-model examples and hands-on validation across at least one major cloud stack."
       ],
       "certifications_to_consider": [
         "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
@@ -2499,155 +2493,155 @@
       ],
       "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
       "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
-      "alert_reason": "score ≥ 85, AI-security signal",
-      "next_action": "Prioritize follow-up: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "Repeated high match",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-09-14",
-      "status": "Still open"
+      "alert_reason": "AI-security signal, priority employer, new this week",
+      "next_action": "Shortlist: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
+      "status_badge": "New this week",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "New"
     },
     {
-      "title": "AI Agent Security Research Engineer",
-      "company": "OKX",
-      "location": "APAC; Hong Kong, Hong Kong SAR; Singapore, Singapore",
-      "url": "https://job-boards.greenhouse.io/okx/jobs/7650023003",
-      "source": "Greenhouse",
-      "published_at": "2026-08-07",
-      "summary": "Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (dApps). OKX is also a trusted brand by hu…",
-      "salary_estimate": "Est. SGD 150k–230k/yr",
-      "salary_confidence": "Estimated — seniority/company/location fallback",
-      "tags": [
-        "AI",
-        "Agent",
-        "Research Engineer",
-        "Security",
-        "Security Research",
-        "Engineer",
-        "Lead"
-      ],
-      "score": 91,
-      "cv_score": 67,
-      "fit": [
-        "AI Security",
-        "Vulnerability Research",
-        "Leadership"
-      ],
-      "priority": "High",
-      "why_match": "Strong overlap with AI Security, Vulnerability Research, Leadership. Ranked as AI-security, vulnerability-research, with CV fit 67/100, role/security relevance 95/100, and lead/manager trajectory.",
-      "possible_gap": "Check contract length, publication expectations, and whether the role values hands-on offensive security work.",
-      "compensation_fit": 100,
-      "categories": [
-        "Best AI-security role",
-        "Best vulnerability-research role",
-        "Best cybersecurity leadership role"
-      ],
-      "score_breakdown": {
-        "final": 91,
-        "cv_fit": 67,
-        "ai_security": 95,
-        "career_upside": 82,
-        "location_fit": 100,
-        "freshness": 58,
-        "company_boost": 8,
-        "employer_context": 61,
-        "noise_penalty": 0,
-        "compensation_fit": 100,
-        "target_monthly_sgd": 11000
-      },
-      "seniority": "Lead/manager",
-      "apply_angle": "Lead with vulnerability research, threat-model depth, and examples that translated research into practical mitigations.",
-      "skillsets_to_build": [
-        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
-        "Vulnerability research craft: root-cause analysis, reproducible PoCs, variant analysis, disclosure-quality writeups, and patch validation.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
-      ],
-      "learning_gaps": [
-        "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
-        "Keep a public-safe research portfolio with sanitized PoCs, diagrams, and before/after patch evidence.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
-      ],
-      "certifications_to_consider": [
-        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
-        "AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.",
-        "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice."
-      ],
-      "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
-      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
-      "alert_reason": "score ≥ 85, AI-security signal, priority employer",
-      "next_action": "Prioritize follow-up: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
-      "status_badge": "Repeated high match",
-      "first_seen": "2026-05-17",
-      "last_seen": "2026-09-14",
-      "status": "Still open"
-    },
-    {
-      "title": "Head of Cybersecurity / Security Engineering Manager",
-      "company": "CHARTERHOUSE PTE. LTD.",
-      "location": "Singapore · Central",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/head-cybersecurity-security-engineering-manager-charterhouse-1651773b06d2514217c4c67f73a9c9c4",
+      "title": "26984754 Senior Penetration Tester (Cyber Security)",
+      "company": "CITIBANK N.A.",
+      "location": "Singapore · East",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/26984754-senior-penetration-tester-citibank-na-e08c690a5c3155d4548a61f91d382bc9",
       "source": "MyCareersFuture",
-      "published_at": "2026-08-20",
-      "summary": "Our client is seeking an experienced Cybersecurity Manager to drive enterprise security strategy, operations, and engineering capabilities within a complex and highly regulated environment. This role will be responsible for strengthening security posture, leading security programs, managing security technologies, and…",
-      "salary_estimate": "Listed SGD 11k–14k/mo",
+      "published_at": "2026-09-10",
+      "summary": "Discover your future at Citi Citi is a preeminent banking partner for institutions with cross-border needs, a global leader in wealth management, and a valued personal bank in its home market of the United States. Citi does business in more than 160 countries and jurisdictions, providing corporations, governments, inv…",
+      "salary_estimate": "Listed SGD 12k–17,500/mo",
       "salary_confidence": "Listed — source-provided compensation",
       "tags": [
         "Security",
         "Cyber",
-        "Cybersecurity",
-        "Engineer",
-        "Manager",
+        "Penetration Tester",
         "Lead"
       ],
-      "score": 79,
-      "cv_score": 85,
+      "score": 89,
+      "cv_score": 67,
       "fit": [
-        "App/Product Security",
-        "Leadership"
+        "Offensive Security",
+        "Leadership",
+        "Financial / Public-sector Security"
       ],
-      "priority": "Medium-high",
-      "why_match": "Strong overlap with App/Product Security, Leadership. Ranked as product/AppSec, cybersecurity leadership, with CV fit 85/100, role/security relevance 48/100, and staff/principal trajectory.",
-      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
+      "priority": "High",
+      "why_match": "Strong overlap with Offensive Security, Leadership, Financial / Public-sector Security. Ranked as offensive/pentest, cybersecurity leadership, with CV fit 67/100, role/security relevance 62/100, and lead/manager trajectory.",
+      "possible_gap": "Confirm the work includes modern application/cloud targets and is not a narrow checklist testing role.",
       "compensation_fit": 100,
       "categories": [
-        "Best product/AppSec role",
+        "Best offensive/pentest role",
         "Best cybersecurity leadership role"
       ],
       "score_breakdown": {
-        "final": 79,
-        "cv_fit": 85,
-        "ai_security": 48,
-        "career_upside": 74,
+        "final": 89,
+        "cv_fit": 67,
+        "ai_security": 62,
+        "career_upside": 70,
         "location_fit": 100,
-        "freshness": 58,
-        "company_boost": 0,
-        "employer_context": 61,
+        "freshness": 82,
+        "company_boost": 8,
+        "employer_context": 85,
         "noise_penalty": 0,
         "compensation_fit": 100,
         "target_monthly_sgd": 11000,
         "source_boost": 2
       },
-      "seniority": "Staff/principal",
-      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
+      "seniority": "Lead/manager",
+      "apply_angle": "Lead with offensive-security delivery, exploitability judgement, adversary emulation, and clear remediation guidance.",
       "skillsets_to_build": [
-        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
+        "Financial/public-sector AI risk framing: model-risk language, AI governance controls, secure SDLC, third-party risk, and board-ready cyber impact.",
+        "Offensive security delivery: web/cloud/API testing, adversary emulation, reporting, and risk-ranked remediation guidance.",
         "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
       ],
       "learning_gaps": [
-        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
+        "Translate offensive AI-security work into risk, control, and governance outcomes without losing technical evidence.",
+        "Add evidence of modern cloud/API targets and business-impact exploit chains so the profile reads beyond checklist pentesting.",
         "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "Use existing OSCP/OSWE/CRTO/CRTP as proof; add only role-specific cloud or adversary-emulation labs if the job asks for them.",
+        "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
+      ],
+      "environment_note": "Excellent employer context: financial-services security environment.",
+      "role_focus": "Focus on converting AI-security research into enterprise risk language: model risk, control design, regulator-ready evidence, and senior stakeholder narratives.",
+      "alert_reason": "score ≥ 85, offensive-security signal, priority employer",
+      "next_action": "Prioritize follow-up: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
+      "status_badge": "Repeated high match",
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
+      "status": "Still open"
+    },
+    {
+      "title": "Detection Focused Senior Cloud Security Consultant - JAPAC",
+      "company": "CROWDSTRIKE SINGAPORE PTE. LTD.",
+      "location": "Singapore · Islandwide",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/detection-focused-senior-cloud-security-consultant-japac-crowdstrike-singapore-b1999012e0c43efa2a8849eecb1951e1",
+      "source": "MyCareersFuture",
+      "published_at": "2026-09-11",
+      "summary": "About the Role: CrowdStrike is looking for a technically strong, self-directed cloud security professional to join our Professional Services team in the JAPAC region. This is a hands-on role for someone with genuine curiosity about cloud attack techniques and a drive to build the detection and defensive capability to…",
+      "salary_estimate": "Listed SGD 13,333–19,166/mo",
+      "salary_confidence": "Listed — source-provided compensation",
+      "tags": [
+        "Security",
+        "Cloud Security",
+        "Detection",
+        "Consultant"
+      ],
+      "score": 82,
+      "cv_score": 92,
+      "fit": [
+        "App/Product Security",
+        "Cloud / Platform Security",
+        "Leadership"
+      ],
+      "priority": "Medium-high",
+      "why_match": "Strong overlap with App/Product Security, Cloud / Platform Security, Leadership. Ranked as product/AppSec, cloud/platform/DevSecOps, with CV fit 92/100, role/security relevance 48/100, and senior trajectory.",
+      "possible_gap": "Verify the day-to-day scope is technical and not mostly compliance, sales, or generic security operations.",
+      "compensation_fit": 100,
+      "categories": [
+        "Best product/AppSec role",
+        "Best cloud/platform/DevSecOps role",
+        "Best cybersecurity leadership role"
+      ],
+      "score_breakdown": {
+        "final": 82,
+        "cv_fit": 92,
+        "ai_security": 48,
+        "career_upside": 74,
+        "location_fit": 100,
+        "freshness": 82,
+        "company_boost": 0,
+        "employer_context": 53,
+        "noise_penalty": 0,
+        "compensation_fit": 100,
+        "target_monthly_sgd": 11000,
+        "source_boost": 2
+      },
+      "seniority": "Senior",
+      "apply_angle": "Frame the pitch around technical security judgement, practical fixes, and ability to work across engineering teams.",
+      "skillsets_to_build": [
+        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
+        "Detection/IR fundamentals: log analysis, incident scoping, containment, cloud telemetry, and post-incident hardening.",
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design.",
+        "Cloud/platform security: IAM, Kubernetes/container boundaries, CI/CD, secrets handling, and cloud-native detection."
+      ],
+      "learning_gaps": [
+        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
+        "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.",
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes.",
+        "Strengthen cloud threat-model examples and hands-on validation across at least one major cloud stack."
       ],
       "certifications_to_consider": [
         "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience.",
         "AWS Security Specialty, Azure Security Engineer, or Google Professional Cloud Security Engineer for platform-heavy AppSec roles.",
-        "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
+        "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs."
       ],
-      "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
-      "role_focus": "Focus on senior ownership: roadmap choices, prioritization, metrics, mentoring, and cross-functional influence.",
+      "environment_note": "Watch employer context: established product-security environment; watch for consulting-delivery pressure and low hands-on ownership; apply only if scope, manager, and structure are strong.",
+      "role_focus": "Focus on proving hands-on technical depth, clear risk judgement, and practical remediation outcomes.",
       "alert_reason": "",
       "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
       "status_badge": "Still open",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-09-14",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-09-21",
       "status": "Still open"
     },
     {
@@ -2656,7 +2650,7 @@
       "location": "Singapore, SGP",
       "url": "https://job-boards.greenhouse.io/zscaler/jobs/5174745007",
       "source": "Greenhouse",
-      "published_at": "2026-08-19",
+      "published_at": "2026-09-18",
       "summary": "Zscaler (NASDAQ: ZS) accelerates digital transformation so customers can be more agile, efficient, resilient, and secure. The Zscaler Zero Trust Exchange™️ platform protects thousands of customers from cyberattacks and data loss by securely connecting users, devices, and applications in any location. Distributed acros…",
       "salary_estimate": "Est. SGD 190k–300k/yr",
       "salary_confidence": "Estimated — seniority/company/location fallback",
@@ -2666,7 +2660,7 @@
         "Cyber",
         "Specialist"
       ],
-      "score": 79,
+      "score": 81,
       "cv_score": 76,
       "fit": [
         "AI Security",
@@ -2681,12 +2675,12 @@
         "Best cybersecurity leadership role"
       ],
       "score_breakdown": {
-        "final": 79,
+        "final": 81,
         "cv_fit": 76,
         "ai_security": 75,
         "career_upside": 62,
         "location_fit": 100,
-        "freshness": 58,
+        "freshness": 100,
         "company_boost": 0,
         "employer_context": 61,
         "noise_penalty": 0,
@@ -2714,7 +2708,7 @@
       "next_action": "Shortlist: lead with AI/LLM trust-boundary testing, prompt-injection/RAG abuse cases, and concrete mitigation evidence.",
       "status_badge": "Still open",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
       "status": "Still open"
     },
     {
@@ -2723,7 +2717,7 @@
       "location": "Singapore · Islandwide",
       "url": "https://www.mycareersfuture.gov.sg/job/information-technology/lead-cybersecurity-specialist-jj-consulting-services-a5480adbabb0e2ded32689bafd54f66f",
       "source": "MyCareersFuture",
-      "published_at": "2026-09-13",
+      "published_at": "2026-09-21",
       "summary": "​ Our Client is an established company in Singapore, who is seeking to recruit a Lead Cybersecurity Specialist (Offensive Security). Lead Cybersecurity Specialist (Offensive Security) As the Cybersecurity Specialist (Offensive Security) within the CISO Office, you will be the domain expert responsible for elevating th…",
       "salary_estimate": "Listed SGD 12k–15k/mo",
       "salary_confidence": "Listed — source-provided compensation",
@@ -2786,7 +2780,7 @@
       "next_action": "Shortlist: lead with offensive-security delivery, impact-based exploit chains, and remediation guidance.",
       "status_badge": "Still open",
       "first_seen": "2026-05-17",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
       "status": "Still open"
     },
     {
@@ -2856,72 +2850,68 @@
       ],
       "environment_note": "Usable employer context: financial-services security environment; watch for consulting-delivery pressure and low hands-on ownership; validate team maturity and scope.",
       "role_focus": "Focus on converting AI-security research into enterprise risk language: model risk, control design, regulator-ready evidence, and senior stakeholder narratives.",
-      "alert_reason": "new this week",
+      "alert_reason": "",
       "next_action": "Shortlist: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
-      "status_badge": "New this week",
+      "status_badge": "Still open",
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
-      "status": "New"
+      "last_seen": "2026-09-21",
+      "status": "Still open"
     },
     {
-      "title": "Information Technology - Principal Technologist (Application Security Architect)",
-      "company": "SINGAPORE AIRLINES LIMITED",
-      "location": "Singapore · East",
-      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/information-technology-principal-technologist-singapore-airlines-979bb44cef672caab3a13c4a378c4b5f",
+      "title": "Senior Security Solution Architect, APJC Customer Security, APJC Customer Security",
+      "company": "AMAZON WEB SERVICES SINGAPORE PRIVATE LIMITED",
+      "location": "Singapore · Central",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/senior-security-solution-architect-apjc-customer-security-apjc-customer-security-amazon-web-services-singapore-818d5d3e02a0d2e0340a3b6179f0aa33",
       "source": "MyCareersFuture",
-      "published_at": "2026-08-19",
-      "summary": "We are seeking a Software Security Architect with a strongdevelopment and solution background to lead our internal security consultingteam and design security solutions that enable business outcomes whilemaintaining robust security postures. This role reports to CISO. Key Responsibilities Application Security Reviews…",
-      "salary_estimate": "Listed SGD 12k–24k/mo",
+      "published_at": "2026-09-17",
+      "summary": "Amazon Web Services (AWS) is seeking a Senior Secure AI Solution Architect to join our APJC Customer Security team. This is a builder's role. Customers across the region are moving fast on AI and seeking guidance on challenges they have not faced before — how to give autonomous agents an identity, how to defend agains…",
+      "salary_estimate": "Listed SGD 15,500–24k/mo",
       "salary_confidence": "Listed — source-provided compensation",
       "tags": [
         "Security",
-        "Application Security",
-        "Architect",
-        "Lead"
+        "AI",
+        "Agent",
+        "Architect"
       ],
-      "score": 70,
-      "cv_score": 100,
+      "score": 74,
+      "cv_score": 34,
       "fit": [
-        "App/Product Security",
-        "Security Architecture / Assurance",
         "Leadership"
       ],
-      "priority": "Medium",
-      "why_match": "Strong overlap with App/Product Security, Security Architecture / Assurance, Leadership. Ranked as product/AppSec, security architecture/assurance, with CV fit 100/100, role/security relevance 46/100, and staff/principal trajectory.",
+      "priority": "Medium-high",
+      "why_match": "Strong overlap with Leadership. Ranked as cybersecurity leadership, with CV fit 34/100, role/security relevance 56/100, and lead/manager trajectory.",
       "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
       "compensation_fit": 100,
       "categories": [
-        "Best product/AppSec role",
-        "Best security architecture/assurance role",
         "Best cybersecurity leadership role"
       ],
       "score_breakdown": {
-        "final": 70,
-        "cv_fit": 100,
-        "ai_security": 46,
-        "career_upside": 74,
+        "final": 74,
+        "cv_fit": 34,
+        "ai_security": 56,
+        "career_upside": 82,
         "location_fit": 100,
-        "freshness": 58,
-        "company_boost": 0,
+        "freshness": 100,
+        "company_boost": 8,
         "employer_context": 61,
-        "noise_penalty": 14,
+        "noise_penalty": 0,
         "compensation_fit": 100,
         "target_monthly_sgd": 11000,
         "source_boost": 2
       },
-      "seniority": "Staff/principal",
+      "seniority": "Lead/manager",
       "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
       "skillsets_to_build": [
         "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
         "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
-        "Security architecture and assurance: threat models, control design, technical assurance, exception handling, and evidence-led risk decisions.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design.",
+        "Cloud/platform security: IAM, Kubernetes/container boundaries, CI/CD, secrets handling, and cloud-native detection."
       ],
       "learning_gaps": [
         "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
         "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
-        "Prepare architecture-review examples that connect a broken invariant to a practical control and verification plan.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes.",
+        "Strengthen cloud threat-model examples and hands-on validation across at least one major cloud stack."
       ],
       "certifications_to_consider": [
         "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
@@ -2930,12 +2920,156 @@
       ],
       "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
       "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
+      "alert_reason": "priority employer, new this week",
+      "next_action": "Shortlist: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
+      "status_badge": "New this week",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "New"
+    },
+    {
+      "title": "Security Operations Lead – Global Hedge Fund - J13140",
+      "company": "PINPOINT ASIA INFOTECH PTE. LTD.",
+      "location": "Singapore · Central",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/security-operations-lead-%E2%80%93-global-hedge-fund-j13140-pinpoint-asia-infotech-358c201fdbcfb97a2f66413264fe89d8",
+      "source": "MyCareersFuture",
+      "published_at": "2026-08-28",
+      "summary": "A global hedge fund is hiring a hands-on Security Operations Lead. You will own the Security Operations (SOC) function, manage an external 24/7 managed SOC, and remain technically involved across Sentinel, Defender XDR, detection engineering, and incident response. Key Responsibilities Own monitoring and detection, th…",
+      "salary_estimate": "Listed SGD 11k–15k/mo",
+      "salary_confidence": "Listed — source-provided compensation",
+      "tags": [
+        "Security",
+        "Detection",
+        "Incident Response",
+        "Engineer",
+        "Lead"
+      ],
+      "score": 68,
+      "cv_score": 67,
+      "fit": [
+        "Incident Response",
+        "Threat Detection / Intelligence",
+        "Leadership"
+      ],
+      "priority": "Medium",
+      "why_match": "Strong overlap with Incident Response, Threat Detection / Intelligence, Leadership. Ranked as incident-response/DFIR, threat-detection/intelligence, with CV fit 67/100, role/security relevance 34/100, and lead/manager trajectory.",
+      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
+      "compensation_fit": 100,
+      "categories": [
+        "Best incident-response/DFIR role",
+        "Best threat-detection/intelligence role",
+        "Best cybersecurity leadership role"
+      ],
+      "score_breakdown": {
+        "final": 68,
+        "cv_fit": 67,
+        "ai_security": 34,
+        "career_upside": 62,
+        "location_fit": 100,
+        "freshness": 58,
+        "company_boost": 0,
+        "employer_context": 61,
+        "noise_penalty": 0,
+        "compensation_fit": 100,
+        "target_monthly_sgd": 11000,
+        "source_boost": 2
+      },
+      "seniority": "Lead/manager",
+      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
+      "skillsets_to_build": [
+        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
+        "Detection/IR fundamentals: log analysis, incident scoping, containment, cloud telemetry, and post-incident hardening.",
+        "Threat-informed defence: ATT&CK mapping, detection hypotheses, threat hunting, purple-team validation, and measurable coverage improvements.",
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
+      ],
+      "learning_gaps": [
+        "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
+        "Prepare one IR/detection story with signals used, investigation decisions, and hardening outcome.",
+        "Prepare one attack-to-detection story showing telemetry, analytic logic, validation, and remediation feedback.",
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.",
+        "GCIA/GCIH/GCFA-style detection and incident-response training, or equivalent hands-on cloud telemetry labs."
+      ],
+      "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
+      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
       "alert_reason": "",
-      "next_action": "Watch: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
+      "next_action": "Watch: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
       "status_badge": "Still open",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-09-14",
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-21",
       "status": "Still open"
+    },
+    {
+      "title": "DevSecOps Engineer (EdTech Company)",
+      "company": "TAIDII PTE. LTD.",
+      "location": "Singapore · Central",
+      "url": "https://www.mycareersfuture.gov.sg/job/information-technology/devsecops-engineer-taidii-fabe5438a241abb2760e197ff0441d70",
+      "source": "MyCareersFuture",
+      "published_at": "2026-09-16",
+      "summary": "About Us We are a fast-growing SaaS company serving the education sector across Southeast Asia. Our platform supports thousands of educators, administrators, and parents daily. As we continue to scale, we are looking for a hands-on DevSecOps Engineer to strengthen our cloud infrastructure, security posture, automation…",
+      "salary_estimate": "Listed SGD 11k–20k/mo",
+      "salary_confidence": "Listed — source-provided compensation",
+      "tags": [
+        "Devsecops",
+        "Security",
+        "Engineer"
+      ],
+      "score": 68,
+      "cv_score": 67,
+      "fit": [
+        "App/Product Security",
+        "Cloud / Platform Security"
+      ],
+      "priority": "Medium",
+      "why_match": "Strong overlap with App/Product Security, Cloud / Platform Security. Ranked as product/AppSec, cloud/platform/DevSecOps, with CV fit 67/100, role/security relevance 25/100, and mid/senior trajectory.",
+      "possible_gap": "Verify the day-to-day scope is technical and not mostly compliance, sales, or generic security operations.",
+      "compensation_fit": 100,
+      "categories": [
+        "Best product/AppSec role",
+        "Best cloud/platform/DevSecOps role"
+      ],
+      "score_breakdown": {
+        "final": 68,
+        "cv_fit": 67,
+        "ai_security": 25,
+        "career_upside": 52,
+        "location_fit": 100,
+        "freshness": 100,
+        "company_boost": 0,
+        "employer_context": 65,
+        "noise_penalty": 0,
+        "compensation_fit": 100,
+        "target_monthly_sgd": 11000,
+        "source_boost": 2
+      },
+      "seniority": "Mid/senior",
+      "apply_angle": "Frame the pitch around technical security judgement, practical fixes, and ability to work across engineering teams.",
+      "skillsets_to_build": [
+        "AI/LLM security testing: prompt injection, tool-use boundaries, RAG abuse cases, model/data leakage, and agent sandboxing.",
+        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
+        "Cloud/platform security: IAM, Kubernetes/container boundaries, CI/CD, secrets handling, and cloud-native detection."
+      ],
+      "learning_gaps": [
+        "Package 2-3 concise AI-security case studies showing threat model → exploit path → mitigation → verification.",
+        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
+        "Strengthen cloud threat-model examples and hands-on validation across at least one major cloud stack."
+      ],
+      "certifications_to_consider": [
+        "AI/LLM security specialization: OWASP Top 10 for LLM Apps, MITRE ATLAS, prompt-injection labs, and one public agent/RAG security writeup.",
+        "AI governance/model-risk track: NIST AI RMF, ISO/IEC 42001 awareness, and practical AI control mapping if the role is financial-services or regulator-facing.",
+        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience."
+      ],
+      "environment_note": "Usable employer context: established product-security environment; validate team maturity and scope.",
+      "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
+      "alert_reason": "new this week",
+      "next_action": "Watch: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
+      "status_badge": "New this week",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "New"
     },
     {
       "title": "Security Engineer, Google Threat Intelligence - Sydney or Singapore",
@@ -2952,7 +3086,7 @@
         "Threat",
         "Engineer"
       ],
-      "score": 68,
+      "score": 67,
       "cv_score": 67,
       "fit": [
         "App/Product Security",
@@ -2967,12 +3101,12 @@
         "Best threat-detection/intelligence role"
       ],
       "score_breakdown": {
-        "final": 68,
+        "final": 67,
         "cv_fit": 67,
         "ai_security": 32,
         "career_upside": 52,
         "location_fit": 100,
-        "freshness": 100,
+        "freshness": 82,
         "company_boost": 0,
         "employer_context": 55,
         "noise_penalty": 0,
@@ -3001,74 +3135,11 @@
       ],
       "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
       "role_focus": "Focus on a portfolio of AI-security proofs: prompt/RAG abuse, agent tool boundaries, mitigation design, and verification evidence.",
-      "alert_reason": "new this week",
+      "alert_reason": "",
       "next_action": "Watch: lead with AppSec/product-security stories: code review, exploitability triage, and engineering-ready fixes.",
-      "status_badge": "New this week",
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
-      "status": "New"
-    },
-    {
-      "title": "Security Operations Vice President, Vulnerability Management",
-      "company": "JPMORGAN CHASE BANK, N.A.",
-      "location": "Singapore · Islandwide",
-      "url": "https://www.mycareersfuture.gov.sg/job/banking-finance/security-operations-vice-president-vulnerability-management-jpmorgan-chase-bank-na-6441e54d798303d709ebc3bd0d5d0084",
-      "source": "MyCareersFuture",
-      "published_at": "2026-09-02",
-      "summary": "Vulnerability Management Operations is responsible for the firm-wide impact analysis, overall risk assessment, and coordination/communication of critical vulnerabilities identified as impacting JPMorgan Chase applications and/or infrastructure components. This function is performed globally and at the scale of which J…",
-      "salary_estimate": "Listed SGD 11k–22k/mo",
-      "salary_confidence": "Listed — source-provided compensation",
-      "tags": [
-        "Security",
-        "Vulnerability",
-        "Risk"
-      ],
-      "score": 68,
-      "cv_score": 32,
-      "fit": [
-        "Financial / Public-sector Security"
-      ],
-      "priority": "Medium",
-      "why_match": "Strong overlap with Financial / Public-sector Security. Ranked as vulnerability-research, with CV fit 32/100, role/security relevance 41/100, and mid/senior trajectory.",
-      "possible_gap": "Verify the day-to-day scope is technical and not mostly compliance, sales, or generic security operations.",
-      "compensation_fit": 100,
-      "categories": [
-        "Best vulnerability-research role"
-      ],
-      "score_breakdown": {
-        "final": 68,
-        "cv_fit": 32,
-        "ai_security": 41,
-        "career_upside": 48,
-        "location_fit": 100,
-        "freshness": 82,
-        "company_boost": 8,
-        "employer_context": 79,
-        "noise_penalty": 0,
-        "compensation_fit": 100,
-        "target_monthly_sgd": 11000,
-        "source_boost": 2
-      },
-      "seniority": "Mid/senior",
-      "apply_angle": "Frame the pitch around technical security judgement, practical fixes, and ability to work across engineering teams.",
-      "skillsets_to_build": [
-        "Financial/public-sector AI risk framing: model-risk language, AI governance controls, secure SDLC, third-party risk, and board-ready cyber impact.",
-        "Vulnerability research craft: root-cause analysis, reproducible PoCs, variant analysis, disclosure-quality writeups, and patch validation."
-      ],
-      "learning_gaps": [
-        "Translate offensive AI-security work into risk, control, and governance outcomes without losing technical evidence.",
-        "Keep a public-safe research portfolio with sanitized PoCs, diagrams, and before/after patch evidence."
-      ],
-      "certifications_to_consider": [
-        "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice."
-      ],
-      "environment_note": "Strong employer context: financial-services security environment.",
-      "role_focus": "Focus on converting AI-security research into enterprise risk language: model risk, control design, regulator-ready evidence, and senior stakeholder narratives.",
-      "alert_reason": "priority employer",
-      "next_action": "Watch: lead with vulnerability research craft: root cause, reproducible evidence, variant analysis, and patch validation.",
       "status_badge": "Still open",
-      "first_seen": "2026-09-07",
-      "last_seen": "2026-09-14",
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
       "status": "Still open"
     },
     {
@@ -3135,31 +3206,31 @@
       "next_action": "Watch: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
       "status_badge": "Still open",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-21",
       "status": "Still open"
     },
     {
-      "title": "Specialist Solutions Architect (Security)",
-      "company": "Databricks",
-      "location": "Singapore",
-      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8622164002",
+      "title": "Senior/Staff Engineer, Security Platform Development",
+      "company": "OKX",
+      "location": "Hong Kong, Hong Kong SAR; Singapore, Singapore",
+      "url": "https://job-boards.greenhouse.io/okx/jobs/7795714003",
       "source": "Greenhouse",
-      "published_at": "2026-09-10",
-      "summary": "FEQ327R528 As a Specialist Solutions Architect (SSA), you will guide customers in building big data solutions on Databricks that span a large variety of use cases. These are customer-facing roles, working with and supporting the Solution Architects, requiring hands-on production experience with cloud infrastructure an…",
+      "published_at": "2026-08-25",
+      "summary": "OKX will be prioritising applicants who have a current right to work in Singapore, and do not require OKX's sponsorship of a visa. Who We Are At OKX, we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OK…",
       "salary_estimate": "Est. SGD 190k–300k/yr",
       "salary_confidence": "Estimated — seniority/company/location fallback",
       "tags": [
         "Security",
-        "Architect",
-        "Specialist"
+        "Engineer",
+        "Lead"
       ],
       "score": 63,
-      "cv_score": 34,
+      "cv_score": 39,
       "fit": [
         "Leadership"
       ],
       "priority": "Medium",
-      "why_match": "Strong overlap with Leadership. Ranked as cybersecurity leadership, with CV fit 34/100, role/security relevance 16/100, and lead/manager trajectory.",
+      "why_match": "Strong overlap with Leadership. Ranked as cybersecurity leadership, with CV fit 39/100, role/security relevance 16/100, and staff/principal trajectory.",
       "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
       "compensation_fit": 100,
       "categories": [
@@ -3167,32 +3238,26 @@
       ],
       "score_breakdown": {
         "final": 63,
-        "cv_fit": 34,
+        "cv_fit": 39,
         "ai_security": 16,
         "career_upside": 82,
         "location_fit": 100,
-        "freshness": 100,
+        "freshness": 58,
         "company_boost": 8,
         "employer_context": 61,
         "noise_penalty": 0,
         "compensation_fit": 100,
         "target_monthly_sgd": 11000
       },
-      "seniority": "Lead/manager",
+      "seniority": "Staff/principal",
       "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
       "skillsets_to_build": [
-        "Product/AppSec depth: secure design reviews, source-code review, exploitability triage, threat modeling, and engineering remediation.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design.",
-        "Cloud/platform security: IAM, Kubernetes/container boundaries, CI/CD, secrets handling, and cloud-native detection."
+        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
       ],
       "learning_gaps": [
-        "Build code-level security fixes and concise design-review writeups, not only assessment findings.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes.",
-        "Strengthen cloud threat-model examples and hands-on validation across at least one major cloud stack."
+        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
       ],
       "certifications_to_consider": [
-        "CSSLP or a secure-code-review course to signal product-security and SDLC depth beyond testing-only experience.",
-        "AWS Security Specialty, Azure Security Engineer, or Google Professional Cloud Security Engineer for platform-heavy AppSec roles.",
         "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
       ],
       "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
@@ -3200,78 +3265,9 @@
       "alert_reason": "priority employer",
       "next_action": "Watch: lead with senior ownership, roadmap tradeoffs, stakeholder influence, and durable security-program improvements.",
       "status_badge": "Still open",
-      "first_seen": "2026-07-24",
-      "last_seen": "2026-09-14",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-09-21",
       "status": "Still open"
-    },
-    {
-      "title": "SENIOR MANAGER, INFORMATION SECURITY (SECURITY RISK MANAGEMENT), APEC",
-      "company": "STARWOOD ASIA PACIFIC HOTELS & RESORTS PTE. LTD.",
-      "location": "Singapore · Central",
-      "url": "https://www.mycareersfuture.gov.sg/job/security/senior-manager-information-security-apec-starwood-asia-pacific-hotels-resorts-1dffc5449505dde61f6adce89781e39b",
-      "source": "MyCareersFuture",
-      "published_at": "2026-09-08",
-      "summary": "The candidate will be responsible for governing vendor security risk management and cyber risk management for Asia Pacific excluding China, including conducting risk assessments and periodic re-assessments, reviewing security assessments and vulnerability reports, recommending remediation measures, and evaluating cybe…",
-      "salary_estimate": "Listed SGD 11k–12,500/mo",
-      "salary_confidence": "Listed — source-provided compensation",
-      "tags": [
-        "Security",
-        "Risk",
-        "Cyber",
-        "Vulnerability",
-        "Manager"
-      ],
-      "score": 63,
-      "cv_score": 34,
-      "fit": [
-        "Leadership"
-      ],
-      "priority": "Medium",
-      "why_match": "Strong overlap with Leadership. Ranked as vulnerability-research, cybersecurity leadership, with CV fit 34/100, role/security relevance 50/100, and lead/manager trajectory.",
-      "possible_gap": "Be ready to show senior ownership, stakeholder influence, and examples of turning findings into durable engineering fixes.",
-      "compensation_fit": 100,
-      "categories": [
-        "Best vulnerability-research role",
-        "Best cybersecurity leadership role"
-      ],
-      "score_breakdown": {
-        "final": 63,
-        "cv_fit": 34,
-        "ai_security": 50,
-        "career_upside": 62,
-        "location_fit": 100,
-        "freshness": 100,
-        "company_boost": 0,
-        "employer_context": 61,
-        "noise_penalty": 0,
-        "compensation_fit": 100,
-        "target_monthly_sgd": 11000,
-        "source_boost": 2
-      },
-      "seniority": "Lead/manager",
-      "apply_angle": "Position around senior security ownership: prioritization, cross-functional influence, and durable remediation plans.",
-      "skillsets_to_build": [
-        "Financial/public-sector AI risk framing: model-risk language, AI governance controls, secure SDLC, third-party risk, and board-ready cyber impact.",
-        "Vulnerability research craft: root-cause analysis, reproducible PoCs, variant analysis, disclosure-quality writeups, and patch validation.",
-        "Senior influence: prioritization, stakeholder management, roadmap ownership, metrics, and mentoring/security-program design."
-      ],
-      "learning_gaps": [
-        "Translate offensive AI-security work into risk, control, and governance outcomes without losing technical evidence.",
-        "Keep a public-safe research portfolio with sanitized PoCs, diagrams, and before/after patch evidence.",
-        "Collect examples where you influenced teams, set security direction, and converted findings into durable process or platform changes."
-      ],
-      "certifications_to_consider": [
-        "Exploit-development / vulnerability-research track: source-code auditing, fuzzing, root-cause analysis, and disclosure-quality report practice.",
-        "Security leadership signal: CISSP/CISM only if the role explicitly values program ownership, governance, or senior stakeholder management."
-      ],
-      "environment_note": "Usable employer context: general security employer context; validate team maturity and scope.",
-      "role_focus": "Focus on senior ownership: roadmap choices, prioritization, metrics, mentoring, and cross-functional influence.",
-      "alert_reason": "new this week",
-      "next_action": "Watch: lead with vulnerability research craft: root cause, reproducible evidence, variant analysis, and patch validation.",
-      "status_badge": "New this week",
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
-      "status": "New"
     }
   ]
 }
