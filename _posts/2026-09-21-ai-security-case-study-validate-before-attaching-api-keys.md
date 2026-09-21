@@ -14,6 +14,26 @@ A provider endpoint looks like configuration until the client attaches an API ke
 
 The useful change was not a new parser. It was applying the existing shared endpoint policy at both configuration resolution and the request builder.
 
+## Merged PRs
+
+None in this window.
+
+Reporting window: September 21, 2026, 00:00–24:00 Singapore time. The June PR below is historical evidence, not a merge in this window.
+
+## What shipped or moved
+
+September 21's publication was this retrospective of an accepted endpoint-hardening fix, not a new product-code shipment. The concrete contribution is a bounded account of where validation runs, what the regression proves, and which trust questions remain outside the fix.
+
+The review lesson is already recorded in the vault's integration-configuration takeaway: check the credentialed request boundary directly, including callers that bypass settings parsing. This article makes that existing rule concrete without adding a duplicate checklist.
+
+## Observed pattern
+
+Configuration validity and permission to release a credential are different decisions. The shared destination policy belongs at the request builder as well as the settings layer. A denial test should establish that transport was never invoked, while positive controls preserve supported configuration behavior.
+
+## External reference
+
+[CodexBar PR #1687](https://github.com/steipete/CodexBar/pull/1687) is the public evidence anchor for the mitigation and historical validation below. Its merge date is June 22, 2026. HTTPS policy, destination ownership, and control over endpoint configuration remain separate questions; the fix does not establish all three.
+
 ## Threat model
 
 The protected asset is the configured Azure OpenAI API key. The relevant influence is over the endpoint setting or environment override used by the provider client. This is a configuration-assisted scenario: it requires the endpoint to be changed or accepted through an operator's setup process. The public PR does not establish unauthenticated remote control of that setting.
@@ -92,6 +112,12 @@ These are historical results reported by the PR, not new application test execut
 The settings parser and the request builder answer different questions. One produces configuration; the other releases a credential. A shared policy must reach the second boundary even when the first is bypassed by a legitimate direct caller.
 
 The compatibility trade-off is equally concrete: preserve supported HTTPS proxies and existing normalization, reject plaintext credential transport, and leave invalid settings visible enough to repair. A secure default is easier to retain when its failure is understandable.
+
+## Takeaways
+
+- Validate at the credential-release boundary, not only when settings are parsed.
+- Prove denial before transport invocation; an error after sending the request is too late.
+- Keep the claim narrow: requiring HTTPS does not prove endpoint ownership or lower-trust control of configuration.
 
 ## Repeat next time
 
