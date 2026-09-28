@@ -14,6 +14,26 @@ A proposal identifier should select an existing proposal, not expand the set of 
 
 This retrospective examines a June fix in Vibe-Trading. It is not a new September finding or a claim about the current release.
 
+## Merged PRs
+
+None in this window.
+
+The completed reporting window is September 28, 2026, 00:00–24:00 Singapore time. The June PR below is historical evidence, not a September merge.
+
+## What shipped or moved
+
+The day's publication was this retrospective on proposal identifiers and persisted authority. Vault maintenance also refreshed the research and disclosure dashboard verification dates and recorded its checks. It did not introduce a new security policy or checklist change. Those record updates are not evidence of a new fix or disclosure outcome.
+
+This finalization preserves the existing case study rather than publishing a second post for the same date. The merged-PR archive needs no new entry.
+
+## Observed pattern
+
+A selector's meaning must survive the move from an interface into storage. Format checks and containment protect the lookup boundary; ownership checks answer a different question. Keep those claims separate, and measure rejection by the state that remains unchanged.
+
+## External reference
+
+The evidence anchor is the public [Vibe-Trading proposal-identifier fix, PR #256](https://github.com/HKUDS/Vibe-Trading/pull/256). Its useful review lesson is to enforce the identifier contract in the shared storage helper and preserve a valid-flow regression alongside denial checks. The detailed retrospective below retains the original assumptions and historical verification limits.
+
 ## Threat model
 
 The public report assumes a caller already admitted to the mandate-commit interface, plus suitable caller-influenced JSON outside the pending-proposal store. It does not establish unauthenticated access or independently prove how that external file was planted.
@@ -79,6 +99,12 @@ It reports **69 passed, 2 warnings**. For this publication, the public PR body a
 The useful review unit is the state transition, not the parameter name. A value called an ID becomes a path input when storage interprets it that way. When the selected content subsequently controls an approval or commitment, path validation also protects the provenance of the decision.
 
 The strongest denial assertion follows the consequence: no committed state. An exception alone would leave open whether a write happened before the error.
+
+## Takeaways
+
+- Enforce a selector's storage contract at the shared helper, not only at the interface.
+- A rejected operation should leave protected state unchanged; test that consequence explicitly.
+- Keep historical fix evidence, today's publication, and maintenance-record updates distinct. None implies a fresh runtime validation or new disclosure outcome.
 
 ## Repeat next time
 
