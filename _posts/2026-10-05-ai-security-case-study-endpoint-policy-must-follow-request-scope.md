@@ -14,6 +14,26 @@ A provider client can have a correct URL validator and still apply it to the wro
 
 CodexBar's Deepgram, z.ai, and MiMo endpoint-hardening PR makes those distinctions concrete. This is a retrospective of a June fix, not a new October vulnerability or merge.
 
+## Merged PRs
+
+None in this window.
+
+Reporting window: October 5, 2026, 00:00–24:00 Singapore time. The June PR discussed below is historical evidence, not a merge in this window.
+
+## What shipped or moved
+
+The October 5 case-study review refined the existing integration-configuration takeaway in the research vault. The review rule now separates operation-scoped endpoint checks, final request-URL assertions, and fallback paths that fail before credential resolution. This is a research-method update, not a new runtime patch or a fresh reproduction.
+
+This entry also serves as the completed daily record; the case-study evidence and its limitations remain below rather than being duplicated in another post.
+
+## Observed pattern
+
+A helper-level check and an end-to-end guarantee are different claims. A destination can pass normalization without the request builder using the normalized result. A policy error can prohibit fallback while an earlier credential error still takes another branch. Review the complete operation, including precedence and early exits, before claiming that its network behavior is covered.
+
+## External reference
+
+[CodexBar PR #1680](https://github.com/steipete/CodexBar/pull/1680), merged June 22, 2026, anchors this retrospective. Its implementation, regressions, and review feedback are used to distinguish rejection evidence from compatibility evidence. Historical test results are attributed to that record; they were not rerun for this daily finalization.
+
 ## Threat model
 
 The protected assets are provider API credentials and MiMo session cookies. The modeled actor can influence the local launch environment or configuration supplying endpoint overrides, and the user subsequently runs a usage probe with credentials available.
@@ -90,6 +110,12 @@ That feedback limits the compatibility claim. Reviewers identified a pre-cookie 
 The interesting boundary is the complete operation, not the configuration dictionary. Resolve which destinations it will use, validate them before the first credentialed side effect, and carry the normalized value through to the actual request builder.
 
 Error handling deserves its own proof. A non-fallbackable endpoint error protects one branch; it does not prove that an earlier missing-cookie error cannot select cached data. Likewise, a passing parser test does not prove the transport receives the intended URL.
+
+## Takeaways
+
+- For combined operations, validate every destination before the first credentialed request; for single-purpose calls, resolve the effective destination rather than rejecting unused configuration.
+- Assert the final transport URL as well as validator acceptance. Normalization is only useful if the request builder consumes its result.
+- Test fallback before and after credential resolution, and keep denial, no-side-effect, and compatibility evidence separate.
 
 ## Repeat next time
 
