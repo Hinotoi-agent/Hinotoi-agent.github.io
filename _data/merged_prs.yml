@@ -942,6 +942,22 @@
   month: 2026-05
 - date: '2026-05-16'
   repo: HKUDS/OpenHarness
+  number: 253
+  title: '[security] fix(commands): keep diff local-only by default'
+  url: https://github.com/HKUDS/OpenHarness/pull/253
+  category: security
+  tags: [remote-command, local-only]
+  month: 2026-05
+- date: '2026-05-16'
+  repo: HKUDS/OpenHarness
+  number: 252
+  title: '[security] fix(commands): keep tasks local-only by default'
+  url: https://github.com/HKUDS/OpenHarness/pull/252
+  category: security
+  tags: [remote-command, local-only]
+  month: 2026-05
+- date: '2026-05-16'
+  repo: HKUDS/OpenHarness
   number: 258
   title: '[security] fix(commands): keep autopilot local-only by default'
   url: https://github.com/HKUDS/OpenHarness/pull/258
@@ -1073,6 +1089,14 @@
   - verifymate
   month: 2026-05
 - date: '2026-05-14'
+  repo: PaddlePaddle/PaddleOCR
+  number: 17930
+  title: 'fix: use safe YAML loaders for config parsing'
+  url: https://github.com/PaddlePaddle/PaddleOCR/pull/17930
+  category: security
+  tags: [yaml, deserialization]
+  month: 2026-05
+- date: '2026-05-14'
   repo: Hinotoi-agent/Verifymate
   number: 3
   title: 'feat: add structured checker gates'
@@ -1157,6 +1181,14 @@
   - verifymate
   month: 2026-05
 - date: '2026-05-13'
+  repo: PaddlePaddle/PaddleOCR
+  number: 17931
+  title: '[security] fix(data): restrict TableMaster LMDB pickle loading'
+  url: https://github.com/PaddlePaddle/PaddleOCR/pull/17931
+  category: security
+  tags: [pickle, deserialization]
+  month: 2026-05
+- date: '2026-05-13'
   repo: steipete/summarize
   number: 220
   title: '[security] fix(daemon): keep slide output under user directory'
@@ -1167,6 +1199,14 @@
   - path
   - filesystem
   - local-control-plane
+  month: 2026-05
+- date: '2026-05-13'
+  repo: PaddlePaddle/PaddleOCR
+  number: 17950
+  title: '[security] fix(data): restrict LaTeXOCR pickle loading'
+  url: https://github.com/PaddlePaddle/PaddleOCR/pull/17950
+  category: security
+  tags: [pickle, deserialization]
   month: 2026-05
 - date: '2026-05-11'
   repo: openclaw/crabbox
