@@ -14,6 +14,24 @@ A tool called `get_run_result` sounds observational. That name says nothing abou
 
 This retrospective examines Vibe-Trading's June MCP swarm fix. It is not a new October vulnerability or a claim about the current release. The useful distinction from a conventional path lookup is the write hidden behind a status read.
 
+## Merged PRs
+
+None in this window.
+
+Daily close: October 12, 2026, 00:00–24:00 Singapore time. The June PR below is a retrospective evidence anchor, not a merge from this reporting window.
+
+## What shipped or moved
+
+The day's movement was an evidence review, not a new runtime patch. The case study below was published and the canonical research finding gained a record of its proof limits: which regression observes outside artifacts, which checks only denial, and which compatibility tests preserve intended recovery. Historical test results remain labeled as historical rather than presented as a fresh validation run.
+
+## Observed pattern
+
+A read-shaped tool can load state and then repair it. Review the full call chain before assigning a read-only capability: authorization and input validation must precede any reconciliation that can persist changes. An error response alone does not establish that the write sink stayed untouched.
+
+## External reference
+
+The public [Vibe-Trading PR #258](https://github.com/HKUDS/Vibe-Trading/pull/258) anchors this retrospective. Its storage guard and result-path regression inform the review rule: inspect shared helpers across interfaces, then name the exact side effects the negative test excludes. The detailed case below retains the original threat model and evidence limits.
+
 ## Threat model
 
 The public report assumes a caller with access to the configured MCP swarm tools. The caller controls a run identifier. Exploitation also requires an outside directory containing a parseable swarm `run.json`, with the relevant artifact destinations writable by the application.
@@ -80,6 +98,12 @@ The negative result test proves absence of the named task/event artifacts, not b
 Classify an operation by its strongest reachable side effect, not its verb. Status hydration, recovery, reconciliation, and lazy repair deserve the same sink tracing as explicit writes.
 
 Interface parity also matters. An HTTP route's validation cannot protect an MCP wrapper that reaches the same helper independently. The shared storage contract is the useful place to stop that drift.
+
+## Takeaways
+
+- Classify tools by reachable side effects, not read-style names. State hydration can be a write operation.
+- State exactly what a denial regression observes. Absence of task and event artifacts does not prove every outside file was unchanged.
+- Keep a historical fix separate from today's activity: the October movement was evidence clarification, not a new patch or a fresh reproduction.
 
 ## Repeat next time
 
