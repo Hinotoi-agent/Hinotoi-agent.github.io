@@ -14,6 +14,24 @@ The title was sanitized. The category was not. Both became part of the same memo
 
 This retrospective examines a June fix in Vibe-Trading, not a newly discovered October issue. Its useful lesson is about composition: hardening one input does not make a filename safe when a second input can still supply path separators.
 
+## Merged PRs
+
+None in this window.
+
+Daily record finalized for October 19, 2026, 00:00–24:00 Singapore time. The June merge below is historical context, not work merged in this reporting window.
+
+## What shipped or moved
+
+The day's publication revisited the persistent-memory fix and recorded a more precise evidence boundary in the canonical finding: wrapper denial, direct-storage rejection, outside-file absence, and valid-category compatibility are separate claims. No new runtime fix shipped in this window, and application tests were not rerun for publication.
+
+## Observed pattern
+
+A filename can remain unsafe after its most obvious input is sanitized. Review category prefixes and other semantic labels as filesystem inputs whenever they participate in destination construction. The enforcement point matters more than the schema's description of allowed values.
+
+## External reference
+
+The public evidence anchor is [Vibe-Trading PR #257](https://github.com/HKUDS/Vibe-Trading/pull/257). Read its storage guard and regression diff together: the review-method change is to distinguish what a test actually asserts from what its name appears to promise.
+
 ## Threat model
 
 The public report assumes an already-admitted caller that can invoke the `remember` tool with crafted arguments. The caller controls `memory_type`, title, and content. The destination outside the configured memory directory must already exist and be writable by the application.
@@ -76,6 +94,11 @@ The negative wrapper test proves that the named outside file is not created. It 
 A schema can describe allowed arguments without making every execution path enforce them. The component that turns those arguments into a write destination needs its own invariant.
 
 Review the whole filename expression. Prefixes, category labels, identifiers, and extensions deserve the same scrutiny as the obvious title or path field. A narrow semantic allowlist can preserve the intended feature without accepting arbitrary path syntax.
+
+## Takeaways
+
+- Validate every caller-controlled filename component at the storage boundary; sanitizing the title alone does not constrain a category prefix.
+- Keep rejection, absence of a new outside file, and preservation of an existing file as distinct proof obligations. Report only the assertions the tests actually make.
 
 ## Repeat next time
 
