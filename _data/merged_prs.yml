@@ -1393,6 +1393,20 @@
   - secrets
   - gateway
   month: 2026-05
+- date: '2026-05-06'
+  repo: volcengine/OpenViking
+  number: 1624
+  title: '[security] fix(admin): restrict privileged roles in register_user'
+  url: https://github.com/volcengine/OpenViking/pull/1624
+  category: security
+  tags:
+  - authz
+  - privileged-roles
+  - account-admin
+  - api-keys
+  - privilege-escalation
+  - oss-hardening
+  month: 2026-05
 - date: '2026-05-05'
   repo: gadievron/raptor
   number: 308
@@ -1465,10 +1479,10 @@
   - ssrf
   month: 2026-05
 - date: '2026-05-01'
-  repo: qwibitai/nanoclaw
+  repo: nanocoai/nanoclaw
   number: 2001
   title: '[security] fix(container): prevent host file read/delete via container-controlled outbox paths'
-  url: https://github.com/qwibitai/nanoclaw/pull/2001
+  url: https://github.com/nanocoai/nanoclaw/pull/2001
   category: security
   tags:
   - path
@@ -1615,10 +1629,10 @@
   - docs
   month: 2026-04
 - date: '2026-04-25'
-  repo: berabuddies/agentflow
+  repo: agentenv/agentflow
   number: 18
   title: 'fix: harden web API pipeline loading and request validation'
-  url: https://github.com/berabuddies/agentflow/pull/18
+  url: https://github.com/agentenv/agentflow/pull/18
   category: security
   tags:
   - agent
