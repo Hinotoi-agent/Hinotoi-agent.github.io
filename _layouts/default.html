@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
   </head>
-  <body class="layout-{{ page.layout | default: 'default' }}">
+  <body class="layout-{{ page.layout | default: 'default' }}{% if page.body_class %} {{ page.body_class }}{% endif %}">
     <div class="site-shell">
       <header class="topbar">
         <div class="topbar-inner">

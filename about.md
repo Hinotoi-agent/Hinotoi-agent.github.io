@@ -1,95 +1,289 @@
 ---
-layout: page
-title: About
+layout: default
+title: Lennon Chia — AI & Offensive Security
 permalink: /about/
-excerpt: Lennon Chia is a Singapore-based defensive security researcher working on AI security, open-source vulnerability research, and fixes that ship.
+body_class: portfolio-anime
+excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across offensive security, AI-assisted penetration testing, agentic controls, and open-source vulnerability research.
 ---
 
 {% assign merged_prs = site.data.merged_prs %}
 {% assign security_prs = merged_prs | where: "category", "security" %}
 {% assign repos = merged_prs | group_by: "repo" %}
 
-<section class="about-hero">
-  <div class="about-hero-copy">
-    <div class="about-kicker">Lennon Chia · Singapore</div>
-    <h2>Security research that turns small signals into fixes.</h2>
-    <p class="about-lede">I’m a defensive security researcher and open-source contributor focused on AI systems, agent tooling, and the trust boundaries where untrusted content can reach files, credentials, browsers, network calls, or host actions.</p>
-    <p>My work sits between vulnerability research and secure engineering: trace the real source-to-sink path, reproduce the issue, check for duplicates, build the smallest safe patch, add regression coverage, and leave maintainers with evidence they can act on.</p>
-    <div class="about-actions">
-      <a class="button button-primary" href="{{ '/merged-prs/' | relative_url }}">View merged PRs</a>
-      <a class="button button-secondary" href="{{ '/selected-work/' | relative_url }}">Selected work</a>
+<a class="anime-skip" href="#profile-main">Skip to profile</a>
+
+<div class="anime-portfolio">
+  <nav class="anime-nav" aria-label="Profile navigation">
+    <a class="anime-wordmark" href="{{ '/' | relative_url }}" aria-label="Hinotoi home">
+      <span class="anime-wordmark-sigil" aria-hidden="true">H</span>
+      <span><strong>LENNON CHIA</strong><small>HINOTOI // NIGHT SIGNAL</small></span>
+    </a>
+    <div class="anime-nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#operations">Operations</a>
+      <a href="#proof">Public work</a>
+      <a class="anime-nav-cta" href="https://github.com/Hinotoi-agent" rel="me">GitHub ↗</a>
     </div>
-  </div>
-  <div class="about-portrait-wrap">
-    <img class="about-portrait" src="https://avatars.githubusercontent.com/u/275430060?v=4" alt="Lennon Chia’s GitHub avatar">
-    <span>Hinotoi-agent</span>
-  </div>
-</section>
+  </nav>
 
-<div class="about-stat-grid" aria-label="Public work indexed on this site">
-  <div class="about-stat">
-    <strong>{{ merged_prs | size }}</strong>
-    <span>Merged PRs indexed</span>
-  </div>
-  <div class="about-stat">
-    <strong>{{ security_prs | size }}</strong>
-    <span>Security and hardening PRs</span>
-  </div>
-  <div class="about-stat">
-    <strong>{{ repos | size }}</strong>
-    <span>Open-source repositories</span>
-  </div>
+  <main id="profile-main">
+    <section class="anime-hero" aria-labelledby="anime-hero-title">
+      <div class="anime-grid-glow" aria-hidden="true"></div>
+      <div class="anime-hero-copy">
+        <div class="anime-status"><span aria-hidden="true"></span> SYSTEM ONLINE // SINGAPORE</div>
+        <p class="anime-overline">CYBERSECURITY MANAGER · OFFENSIVE SECURITY · AI INNOVATION</p>
+        <h1 id="anime-hero-title">Security,<br><em>augmented.</em><br>Judgment, retained.</h1>
+        <p class="anime-hero-lede">I lead AI innovation and penetration-testing teams, build human-validated security workflows, and research the trust boundaries where software gains authority.</p>
+        <div class="anime-hero-actions">
+          <a class="anime-button anime-button-primary" href="#operations">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="anime-button anime-button-secondary" href="https://www.linkedin.com/in/lennon-chia/" rel="me">LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="anime-tag-row" aria-label="Specialisms">
+          <span>AI security</span><span>Penetration testing</span><span>Agentic controls</span><span>OSS research</span>
+        </div>
+      </div>
+
+      <figure class="anime-portrait-frame">
+        <div class="anime-portrait-halo" aria-hidden="true"></div>
+        <div class="anime-portrait-panel">
+          <img src="{{ '/assets/img/lennon-avatar.png' | relative_url }}" alt="Anime-style profile avatar used by Lennon Chia">
+          <div class="anime-scan-line" aria-hidden="true"></div>
+          <span class="anime-corner anime-corner-one" aria-hidden="true"></span>
+          <span class="anime-corner anime-corner-two" aria-hidden="true"></span>
+        </div>
+        <figcaption>
+          <span>SUBJECT // 01</span>
+          <strong>LENNON CHIA</strong>
+          <small>Human validation required</small>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="anime-evidence" aria-label="Career and public-work highlights">
+      <div><strong>11+</strong><span>Years in cybersecurity</span></div>
+      <div><strong>02</strong><span>Teams led across AI and penetration testing</span></div>
+      <div><strong>≈50%</strong><span>Lower effort in selected AI-assisted trials</span></div>
+      <a href="{{ '/merged-prs/' | relative_url }}"><strong>{{ merged_prs | size }}</strong><span>Merged PRs indexed <b aria-hidden="true">↗</b></span></a>
+    </section>
+
+    <section id="about" class="anime-section anime-about">
+      <header class="anime-section-heading">
+        <span>CHAPTER 01 // PROFILE</span>
+        <h2>Offense. AI. Assurance.</h2>
+      </header>
+      <div class="anime-about-grid">
+        <div class="anime-about-copy">
+          <p class="anime-drop-lede">I’m a Singapore-based cybersecurity professional working where offensive security, practical AI, and secure engineering meet.</p>
+          <p>As a Cybersecurity Manager at EY, I lead an AI innovation team and a penetration-testing delivery team across government and multinational environments. My role combines technical direction, methodology, finding validation, delivery quality, demonstrations, workshops, and client engagement.</p>
+          <p>I treat AI as a force multiplier—not a substitute for experienced security practitioners. The systems I build keep human review at the decision boundary, especially when a model can influence testing, triage, exploitation, or remediation advice.</p>
+        </div>
+        <aside class="anime-identity-card" aria-label="Profile summary">
+          <div class="anime-identity-label">IDENTITY FILE // LC-01</div>
+          <dl>
+            <div><dt>Base</dt><dd>Singapore</dd></div>
+            <div><dt>Current role</dt><dd>Cybersecurity Manager, EY</dd></div>
+            <div><dt>Primary lens</dt><dd>Offensive security + AI</dd></div>
+            <div><dt>Research mode</dt><dd>Evidence → patch → regression proof</dd></div>
+          </dl>
+          <blockquote>“The useful question is not whether AI can act. It is where its output gains authority—and how a human stays in control.”</blockquote>
+        </aside>
+      </div>
+    </section>
+
+    <section id="experience" class="anime-section anime-experience">
+      <header class="anime-section-heading">
+        <span>CHAPTER 02 // CAREER</span>
+        <h2>Building capability, then proving it.</h2>
+      </header>
+      <div class="anime-timeline">
+        <article class="anime-role anime-role-featured">
+          <div class="anime-role-meta">
+            <span>OCT 2021 — PRESENT</span>
+            <b>EY · SINGAPORE</b>
+          </div>
+          <div class="anime-role-body">
+            <p class="anime-role-index">ROLE // 01</p>
+            <h3>Cybersecurity Manager</h3>
+            <ul>
+              <li>Lead an AI innovation team and a penetration-testing delivery team.</li>
+              <li>Own the architecture and ground-up development of an AI-assisted penetration-testing accelerator built on locally hosted language models.</li>
+              <li>Integrate AI into attack-path analysis, cyber risk assessment, secure code review, web testing, vulnerability triage, exploit validation, and remediation guidance.</li>
+              <li>Engineer agentic controls around least privilege, approval gates, auditability, rollback, and human oversight.</li>
+              <li>Set technical direction, validate findings, and assure delivery quality across the penetration-testing lifecycle.</li>
+            </ul>
+            <div class="anime-trial-note"><strong>Selected trial signal</strong><span>Approximately 50% lower analyst effort and triage time for selected AI-assisted activities, with findings and conclusions still human-validated.</span></div>
+          </div>
+        </article>
+
+        <article class="anime-role">
+          <div class="anime-role-meta">
+            <span>APR 2015 — OCT 2021</span>
+            <b>EY · SINGAPORE</b>
+          </div>
+          <div class="anime-role-body">
+            <p class="anime-role-index">ROLE // 02</p>
+            <h3>Senior Information Security Consultant</h3>
+            <p>Built the technical foundation for more than six years of penetration testing, vulnerability assessment, offensive security delivery, and client-facing security work before moving into management.</p>
+          </div>
+        </article>
+
+        <article class="anime-role anime-role-education">
+          <div class="anime-role-meta">
+            <span>2013 — 2015</span>
+            <b>EDUCATION</b>
+          </div>
+          <div class="anime-role-body">
+            <p class="anime-role-index">BASE // 01</p>
+            <h3>University of Wollongong</h3>
+            <p>Academic foundation supporting a career in information security, technical delivery, and systems thinking.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="operations" class="anime-section anime-operations">
+      <header class="anime-section-heading">
+        <span>CHAPTER 03 // OPERATIONS</span>
+        <h2>What I build and lead.</h2>
+      </header>
+      <div class="anime-operation-grid">
+        <article class="anime-operation-card anime-operation-wide">
+          <span class="anime-operation-number">01</span>
+          <p class="anime-operation-kicker">AI-ASSISTED OFFENSIVE SECURITY</p>
+          <h3>Local models. Real workflows. Human decisions.</h3>
+          <p>I’m building a locally hosted penetration-testing accelerator using high-performance model serving with SGLang and speculative decoding. It supports practitioners across analysis, review, testing, triage, validation, and remediation without treating model output as ground truth.</p>
+          <div class="anime-flow" aria-label="AI-assisted security workflow">
+            <span>CONTEXT</span><i aria-hidden="true"></i><span>MODEL</span><i aria-hidden="true"></i><span>CONTROL</span><i aria-hidden="true"></i><span>HUMAN</span>
+          </div>
+        </article>
+
+        <article class="anime-operation-card">
+          <span class="anime-operation-number">02</span>
+          <p class="anime-operation-kicker">SECURE AGENTIC CONTROLS</p>
+          <h3>Authority is designed, not assumed.</h3>
+          <p>Least privilege, explicit approvals, traceable audit records, safe rollback, and continuous human oversight define the operating boundary.</p>
+        </article>
+
+        <article class="anime-operation-card">
+          <span class="anime-operation-number">03</span>
+          <p class="anime-operation-kicker">PENETRATION-TESTING DELIVERY</p>
+          <h3>Methodology through quality assurance.</h3>
+          <p>I lead technical delivery, set methodology and direction, validate findings, and translate technical evidence into decisions.</p>
+        </article>
+
+        <article class="anime-operation-card">
+          <span class="anime-operation-number">04</span>
+          <p class="anime-operation-kicker">OPEN-SOURCE SECURITY RESEARCH</p>
+          <h3>Trace the boundary. Ship the fix.</h3>
+          <p>I reproduce source-to-sink paths, check for duplicates, contribute focused patches with regression tests, and turn shipped work into reusable research patterns.</p>
+          <div class="anime-project-links">
+            <a href="https://github.com/Hinotoi-agent/vulnweave">VulnWeave ↗</a>
+            <a href="https://github.com/Hinotoi-agent/Verifymate">Verifymate ↗</a>
+            <a href="{{ '/selected-work/' | relative_url }}">Selected work →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="anime-section anime-controls">
+      <header class="anime-section-heading anime-section-heading-compact">
+        <span>CONTROL MODEL // HUMAN-IN-THE-LOOP</span>
+        <h2>Guardrails before autonomy.</h2>
+      </header>
+      <ol class="anime-control-sequence">
+        <li><b>01</b><strong>Least privilege</strong><span>Give each model and tool only the authority the task requires.</span></li>
+        <li><b>02</b><strong>Approval gates</strong><span>Pause before sensitive, irreversible, or externally visible actions.</span></li>
+        <li><b>03</b><strong>Audit trails</strong><span>Preserve what was requested, decided, executed, and returned.</span></li>
+        <li><b>04</b><strong>Rollback paths</strong><span>Design recovery before granting an agent the ability to change state.</span></li>
+        <li><b>05</b><strong>Human oversight</strong><span>Keep findings and conclusions accountable to an experienced reviewer.</span></li>
+      </ol>
+    </section>
+
+    <section id="proof" class="anime-section anime-proof">
+      <header class="anime-section-heading">
+        <span>CHAPTER 04 // PUBLIC RECORD</span>
+        <h2>Proof in the open.</h2>
+      </header>
+      <div class="anime-proof-stats">
+        <a href="{{ '/merged-prs/' | relative_url }}"><strong>{{ merged_prs | size }}</strong><span>Merged upstream PRs</span></a>
+        <a href="{{ '/merged-prs/' | relative_url }}"><strong>{{ security_prs | size }}</strong><span>Security / hardening PRs</span></a>
+        <a href="{{ '/selected-work/' | relative_url }}"><strong>{{ repos | size }}</strong><span>Repositories touched</span></a>
+      </div>
+
+      <div class="anime-disclosure-grid">
+        <a class="anime-disclosure" href="https://osv.dev/vulnerability/CVE-2026-22207">
+          <span>CVE-2026-22207</span><strong>OpenViking broken access control</strong><small>Missing root API key allowed anonymous ROOT access.</small>
+        </a>
+        <a class="anime-disclosure" href="https://nvd.nist.gov/vuln/detail/CVE-2026-25858">
+          <span>CVE-2026-25858</span><strong>macrozheng mall account takeover</strong><small>Password-reset OTP exposure enabled unauthenticated resets.</small>
+        </a>
+        <a class="anime-disclosure" href="https://nvd.nist.gov/vuln/detail/CVE-2026-25870">
+          <span>CVE-2026-25870</span><strong>DoraCMS server-side request forgery</strong><small>Remote-image fetching lacked destination restrictions.</small>
+        </a>
+        <a class="anime-disclosure" href="https://nvd.nist.gov/vuln/detail/CVE-2026-26218">
+          <span>CVE-2026-26218</span><strong>newbee-mall default administrator credentials</strong><small>Predictable pre-seeded credentials exposed administrative access.</small>
+        </a>
+        <a class="anime-disclosure anime-disclosure-wide" href="https://www.yalehome.com/global/legal-and-privacy/product-advisory/Yale-PA-2023-01.pdf">
+          <span>PRODUCT ADVISORY // YALE</span><strong>MIFARE Classic cloning research</strong><small>Responsible disclosure and collaboration on affected smart-lock RFID implementations.</small>
+        </a>
+      </div>
+    </section>
+
+    <section class="anime-section anime-background">
+      <article class="anime-speaking">
+        <p class="anime-operation-kicker">SPEAKING // MILIPOL TECHX 2026</p>
+        <h2>Using AI as a Force Multiplier to Augment Offensive Security</h2>
+        <p>A lightning talk on applying AI to offensive-security workflows while retaining practitioner control, verification, and accountability.</p>
+        <a href="https://www.linkedin.com/posts/lennon-chia_happy-to-share-that-at-milipol-techx-2026-activity-7457275024522121216-IF5F">View the talk post on LinkedIn ↗</a>
+      </article>
+      <article class="anime-certifications">
+        <p class="anime-operation-kicker">SELECTED CREDENTIALS</p>
+        <h2>Technical foundations</h2>
+        <div class="anime-cert-grid" aria-label="Selected certifications earned">
+          <span><b>CRTO</b>Certified Red Team Operator</span>
+          <span><b>CRTP</b>Certified Red Team Professional</span>
+          <span><b>OSWE</b>Offensive Security Web Expert</span>
+          <span><b>OSWP</b>Offensive Security Wireless Professional</span>
+          <span><b>OSCP</b>Offensive Security Certified Professional</span>
+          <span><b>AZ-500</b>Azure Security Engineer Associate</span>
+        </div>
+        <small>Credentials listed as earned; current status is maintained on LinkedIn.</small>
+      </article>
+    </section>
+
+    <section class="anime-section anime-notes">
+      <header class="anime-section-heading anime-section-heading-compact">
+        <span>FIELD SIGNALS // LATEST NOTES</span>
+        <h2>Research that compounds.</h2>
+      </header>
+      <div class="anime-note-list">
+        {% for post in site.posts limit: 3 %}
+          <a href="{{ post.url | relative_url }}">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+            <strong>{{ post.title }}</strong>
+            <span>{{ post.excerpt | strip_html | strip_newlines | truncate: 135 }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="anime-contact" aria-labelledby="anime-contact-title">
+      <p class="anime-overline">END FRAME // OPEN CHANNEL</p>
+      <h2 id="anime-contact-title">Have a security boundary worth testing?</h2>
+      <p>Explore my public work, follow the field notes, or connect with me professionally.</p>
+      <div class="anime-hero-actions anime-contact-actions">
+        <a class="anime-button anime-button-primary" href="https://www.linkedin.com/in/lennon-chia/" rel="me">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+        <a class="anime-button anime-button-secondary" href="https://github.com/Hinotoi-agent" rel="me">Explore GitHub <span aria-hidden="true">↗</span></a>
+        <a class="anime-button anime-button-secondary" href="{{ '/feed.xml' | relative_url }}">Follow RSS <span aria-hidden="true">↗</span></a>
+      </div>
+      <small>Independent research and opinions published here are my own. No private client information or uncoordinated findings are included.</small>
+    </section>
+  </main>
+
+  <footer class="anime-footer">
+    <a href="{{ '/' | relative_url }}">HINOTOI // AI SECURITY NOTES</a>
+    <span>Designed around evidence, control, and fixes that ship.</span>
+    <a href="#profile-main">Back to top ↑</a>
+  </footer>
 </div>
-
-## What I do
-
-<div class="about-grid">
-  <article class="about-card">
-    <div class="about-card-number">01</div>
-    <h3>AI and agent security</h3>
-    <p>I review AI agents, MCP-style integrations, local control planes, approval flows, memory, uploads, and tool execution—especially when model-controlled or retrieved content can trigger a privileged action.</p>
-  </article>
-  <article class="about-card">
-    <div class="about-card-number">02</div>
-    <h3>Open-source vulnerability research</h3>
-    <p>I trace attacker-controlled input to consequential sinks, validate the issue in isolation, check advisories and project history for duplicates, and contribute focused fixes with regression tests.</p>
-  </article>
-  <article class="about-card">
-    <div class="about-card-number">03</div>
-    <h3>Security tooling and workflows</h3>
-    <p>I build repeatable research workflows and public tools such as <a href="https://github.com/Hinotoi-agent/vulnweave">VulnWeave</a>, <a href="https://github.com/Hinotoi-agent/huntpack">Huntpack</a>, and <a href="https://github.com/Hinotoi-agent/Verifymate">Verifymate</a> to structure evidence and reduce review drift.</p>
-  </article>
-  <article class="about-card">
-    <div class="about-card-number">04</div>
-    <h3>Field notes that compound</h3>
-    <p>I turn shipped fixes, maintainer feedback, and external research into concise public patterns. The goal is not to publish more—it is to make the next review more precise.</p>
-  </article>
-</div>
-
-## How I work
-
-<div class="about-principles">
-  <div><strong>Boundary first</strong><span>Define the actor, controlled input, transformation path, authority, and sink before making an impact claim.</span></div>
-  <div><strong>Evidence over drama</strong><span>Prefer a reproducible path and scoped severity over a broad claim the evidence cannot support.</span></div>
-  <div><strong>Small patches</strong><span>Preserve compatibility where possible and change only the invariant that is actually broken.</span></div>
-  <div><strong>Ship the lesson</strong><span>A useful result includes tests, maintainer-ready context, and a reusable review pattern—not just a report.</span></div>
-</div>
-
-## Current focus
-
-- AI-agent and MCP trust boundaries
-- prompt and content injection that crosses into tools or host actions
-- upload, document-parser, URL-fetch, SSRF, path, and symlink safety
-- browser-to-local-service authorization and control-plane hardening
-- evidence quality for AI-assisted vulnerability discovery
-
-## Find my work
-
-<div class="about-links">
-  <a class="button button-primary" href="https://github.com/Hinotoi-agent" rel="me">GitHub</a>
-  <a class="button button-secondary" href="https://www.linkedin.com/in/lennon-chia/" rel="me">LinkedIn</a>
-  <a class="button button-secondary" href="{{ '/ai-security-patterns/' | relative_url }}">Security patterns</a>
-  <a class="button button-secondary" href="{{ '/research-method/' | relative_url }}">Research method</a>
-</div>
-
-This site is my public notebook for work that is ready to share. It records merged contributions and reusable lessons without publishing private research notes, uncoordinated findings, or unsupported claims.
