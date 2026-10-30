@@ -48,7 +48,10 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <figure class="anime-portrait-frame">
         <div class="anime-portrait-halo" aria-hidden="true"></div>
         <div class="anime-portrait-panel">
-          <img src="{{ '/assets/img/frieren-anime-hero.jpg' | relative_url }}" width="1280" height="800" alt="Frieren in a moonlit anime scene, with silver hair, elven ears, green eyes, and garnet earrings">
+          <picture>
+            <source type="image/webp" srcset="{{ '/assets/img/frieren-anime-hero-hd.webp' | relative_url }}">
+            <img src="{{ '/assets/img/frieren-anime-hero-hd.jpg' | relative_url }}" width="1920" height="1080" decoding="async" fetchpriority="high" alt="Frieren beneath a clear blue sky, holding her staff in canonical white-and-gold mage clothing">
+          </picture>
           <div class="anime-scan-line" aria-hidden="true"></div>
           <span class="anime-corner anime-corner-one" aria-hidden="true"></span>
           <span class="anime-corner anime-corner-two" aria-hidden="true"></span>
@@ -68,9 +71,12 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <a href="{{ '/merged-prs/' | relative_url }}"><strong>{{ merged_prs | size }}</strong><span>Merged PRs indexed <b aria-hidden="true">↗</b></span></a>
     </section>
 
-    <figure class="anime-cinematic anime-cinematic-magic-circle">
-      <img src="{{ '/assets/img/frieren-fern-magic-circle.jpg' | relative_url }}" width="1280" height="640" loading="lazy" decoding="async" alt="Frieren and Fern standing before a luminous blue-white magic circle with their staffs ready">
-      <figcaption><span>Frieren &amp; Fern · disciplined spellwork</span><strong>Measured power. Deliberate judgment.</strong></figcaption>
+    <figure class="anime-cinematic anime-cinematic-frieren-hd">
+      <picture>
+        <source type="image/webp" srcset="{{ '/assets/img/frieren-anime-closeup-1600.webp' | relative_url }} 1600w, {{ '/assets/img/frieren-anime-closeup-3200.webp' | relative_url }} 3200w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 1320px) calc(100vw - 4rem), 1240px">
+        <img src="{{ '/assets/img/frieren-anime-closeup-hd.jpg' | relative_url }}" width="7680" height="4320" loading="lazy" decoding="async" alt="Frieren in an anime close-up, with silver hair, pointed elven ears, green eyes, and garnet earrings">
+      </picture>
+      <figcaption><span>Frieren · power held in reserve</span><strong>Measured power. Deliberate judgment.</strong></figcaption>
     </figure>
 
     <section id="about" class="anime-section anime-about">

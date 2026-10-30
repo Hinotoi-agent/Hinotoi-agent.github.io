@@ -3253,7 +3253,7 @@ body.frieren-portfolio {
   background: rgba(230, 237, 249, 0.48);
 }
 :root[data-theme="dark"] .frieren-portfolio .anime-proof-stats a { background: rgba(18, 32, 54, 0.54); }
-.frieren-portfolio .anime-cinematic-magic-circle {
+.frieren-portfolio .anime-cinematic-frieren-hd {
   position: relative;
   margin-top: clamp(1rem, 2vw, 1.5rem);
   border: 1px solid rgba(161, 207, 238, 0.5);
@@ -3261,7 +3261,7 @@ body.frieren-portfolio {
   background: #071326;
   box-shadow: 0 30px 90px rgba(13, 24, 58, 0.25), inset 0 0 0 5px rgba(209, 238, 255, 0.05);
 }
-.frieren-portfolio .anime-cinematic-magic-circle::after {
+.frieren-portfolio .anime-cinematic-frieren-hd::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -3269,17 +3269,17 @@ body.frieren-portfolio {
   border-radius: inherit;
   background: linear-gradient(90deg, rgba(6, 15, 34, 0.08), transparent 46%, rgba(61, 134, 194, 0.12));
 }
-.frieren-portfolio .anime-cinematic-magic-circle img {
+.frieren-portfolio .anime-cinematic-frieren-hd img {
   width: 100%;
   max-height: 34rem;
   object-fit: cover;
   object-position: center;
 }
-.frieren-portfolio .anime-cinematic-magic-circle figcaption {
+.frieren-portfolio .anime-cinematic-frieren-hd figcaption {
   border-top-color: rgba(164, 213, 243, 0.32);
   background: linear-gradient(90deg, rgba(7, 17, 34, 0.96), rgba(12, 31, 56, 0.9));
 }
-.frieren-portfolio .anime-cinematic-magic-circle figcaption span { color: #a9e0f7; }
+.frieren-portfolio .anime-cinematic-frieren-hd figcaption span { color: #a9e0f7; }
 .frieren-portfolio .frieren-chapter-break {
   display: grid;
   grid-template-columns: minmax(2rem, 1fr) auto minmax(2rem, 1fr);
@@ -3331,14 +3331,14 @@ body.frieren-portfolio {
   border-radius: 1rem 1rem 0.35rem 0.35rem;
   background:
     linear-gradient(90deg, rgba(14, 25, 45, 0.94) 0 50%, rgba(24, 28, 56, 0.58) 78%),
-    url("/assets/img/frieren-fern-magic-circle.jpg") center / cover no-repeat;
+    url("/assets/img/frieren-anime-closeup-3200.webp") center / cover no-repeat;
   color: #f9f1dc;
   box-shadow: 0 30px 90px rgba(14, 14, 36, 0.3), inset 0 0 0 6px rgba(255, 248, 224, 0.04);
 }
 :root[data-theme="dark"] .frieren-portfolio .anime-contact {
   background:
     linear-gradient(90deg, rgba(5, 12, 26, 0.96) 0 50%, rgba(8, 10, 31, 0.72) 78%),
-    url("/assets/img/frieren-fern-magic-circle.jpg") center / cover no-repeat;
+    url("/assets/img/frieren-anime-closeup-3200.webp") center / cover no-repeat;
 }
 .frieren-portfolio .anime-contact h2,
 .frieren-portfolio .anime-contact p,
@@ -3378,7 +3378,7 @@ body.frieren-portfolio {
   .frieren-portfolio .anime-contact {
     background:
       linear-gradient(180deg, rgba(8, 18, 37, 0.92), rgba(8, 13, 35, 0.78)),
-      url("/assets/img/frieren-fern-magic-circle.jpg") center / cover no-repeat;
+      url("/assets/img/frieren-anime-closeup-3200.webp") center / cover no-repeat;
   }
 }
 
@@ -3548,7 +3548,7 @@ body.frieren-portfolio {
 :root[data-theme="dark"] .frieren-portfolio .anime-drop-lede::first-letter {
   color: #e49ab1;
 }
-.frieren-portfolio .anime-cinematic-magic-circle {
+.frieren-portfolio .anime-cinematic-frieren-hd {
   border: 3px double rgba(175, 222, 247, 0.66);
   box-shadow: 0 34px 100px rgba(8, 20, 50, 0.32), 0 0 52px rgba(104, 191, 235, 0.13), inset 0 0 0 5px rgba(243, 238, 215, 0.045);
 }
@@ -4148,4 +4148,117 @@ body.frieren-portfolio {
   .score-model-grid,
   .jobs-category-grid { grid-template-columns: 1fr; }
   .job-card { padding: 0.9rem; }
+}
+
+/* HD Frieren still: cleaner framing, responsive delivery, quieter hierarchy. */
+.frieren-portfolio .anime-nav {
+  box-shadow: 0 1px 0 rgba(104, 151, 194, 0.14), 0 12px 36px rgba(9, 21, 45, 0.06);
+  backdrop-filter: blur(18px) saturate(1.08);
+}
+.frieren-portfolio .anime-hero-lede {
+  max-width: 58ch;
+  line-height: 1.72;
+}
+.frieren-portfolio .anime-portrait-panel picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.frieren-portfolio .anime-portrait-panel img {
+  filter: brightness(1.02) saturate(0.98) contrast(1.02);
+}
+.frieren-portfolio .anime-cinematic-frieren-hd {
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(182, 222, 246, 0.66);
+  border-radius: 1rem;
+  background: #071224;
+  box-shadow: 0 34px 96px rgba(7, 18, 44, 0.3), 0 0 0 5px rgba(219, 239, 252, 0.045);
+}
+.frieren-portfolio .anime-cinematic-frieren-hd picture {
+  display: block;
+  line-height: 0;
+}
+.frieren-portfolio .anime-cinematic-frieren-hd img {
+  display: block;
+  width: 100%;
+  max-height: none;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 38%;
+  filter: brightness(1.04) saturate(0.92) contrast(1.04);
+}
+.frieren-portfolio .anime-cinematic-frieren-hd::after {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(4, 11, 25, 0.42), transparent 54%),
+    linear-gradient(0deg, rgba(4, 10, 22, 0.58), transparent 48%);
+}
+.frieren-portfolio .anime-cinematic-frieren-hd figcaption {
+  right: auto;
+  bottom: clamp(1.1rem, 2.6vw, 2.1rem);
+  left: clamp(1.1rem, 2.6vw, 2.1rem);
+  display: grid;
+  gap: 0.38rem;
+  width: calc(100% - 2.2rem);
+  max-width: 35rem;
+  padding: 1rem 1.15rem 1.08rem;
+  border: 1px solid rgba(195, 227, 247, 0.34);
+  border-left: 3px solid var(--frieren-gold);
+  border-radius: 0.55rem;
+  background: linear-gradient(135deg, rgba(5, 14, 31, 0.82), rgba(12, 27, 50, 0.7));
+  box-shadow: 0 14px 34px rgba(1, 6, 18, 0.28);
+  backdrop-filter: blur(14px) saturate(1.05);
+}
+.frieren-portfolio .anime-cinematic-frieren-hd figcaption span {
+  color: var(--frieren-moon);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+.frieren-portfolio .anime-cinematic-frieren-hd figcaption strong {
+  max-width: 25ch;
+  color: var(--frieren-ivory);
+  font-size: clamp(1.35rem, 2.6vw, 2.25rem);
+  line-height: 1.08;
+  text-align: left;
+  text-wrap: balance;
+}
+.frieren-portfolio .anime-contact {
+  background-position: 68% 34%;
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-cinematic-frieren-hd {
+  border-color: rgba(174, 220, 246, 0.42);
+  box-shadow: 0 34px 96px rgba(0, 5, 18, 0.5), 0 0 56px rgba(97, 179, 224, 0.1);
+}
+
+@media (max-width: 720px) {
+  .frieren-portfolio .anime-cinematic-frieren-hd {
+    margin-top: 1.25rem;
+    border-radius: 0.72rem;
+  }
+  .frieren-portfolio .anime-cinematic-frieren-hd img {
+    aspect-ratio: 4 / 3;
+    object-position: center 36%;
+  }
+  .frieren-portfolio .anime-cinematic-frieren-hd figcaption {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    max-width: none;
+    padding: 0.82rem 0.9rem 0.9rem;
+    border: 0;
+    border-top: 1px solid rgba(195, 227, 247, 0.32);
+    border-left: 3px solid var(--frieren-gold);
+    border-radius: 0;
+    backdrop-filter: none;
+  }
+  .frieren-portfolio .anime-cinematic-frieren-hd figcaption span { font-size: 0.64rem; }
+  .frieren-portfolio .anime-cinematic-frieren-hd figcaption strong { font-size: 1.18rem; }
+  .frieren-portfolio .anime-contact { background-position: 58% 32%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frieren-portfolio .anime-cinematic-frieren-hd img { transform: none; }
 }
