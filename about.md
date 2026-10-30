@@ -19,9 +19,9 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <span><strong>LENNON CHIA</strong><small>Hinotoi · Security across the long journey</small></span>
     </a>
     <div class="anime-nav-links">
-      <a href="#about">About</a>
+      <a href="#about">Profile</a>
       <a href="#experience">Journey</a>
-      <a href="#operations">Craft</a>
+      <a href="#operations">Grimoire</a>
       <a href="#proof">Archive</a>
       <a class="anime-nav-cta" href="https://github.com/Hinotoi-agent" rel="me">GitHub ↗</a>
     </div>
@@ -32,12 +32,12 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <div class="anime-grid-glow" aria-hidden="true"></div>
       <div class="anime-memory-motes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="anime-hero-copy">
-        <div class="anime-status"><span aria-hidden="true"></span> A long journey, still in progress · Singapore</div>
-        <p class="anime-overline">Security craft · human judgment · responsible AI</p>
+        <div class="anime-status"><span aria-hidden="true"></span> Chapter XI · the journey continues · Singapore</div>
+        <p class="anime-overline">Offensive security · responsible AI · the craft that endures</p>
         <h1 id="anime-hero-title">Security,<br><em>remembered.</em><br>Judgment, retained.</h1>
         <p class="anime-hero-lede">I lead AI innovation and penetration-testing teams, build human-validated security workflows, and research the trust boundaries where software gains authority.</p>
         <div class="anime-hero-actions">
-          <a class="anime-button anime-button-primary" href="#operations">Open the spellbook <span aria-hidden="true">↘</span></a>
+          <a class="anime-button anime-button-primary" href="#operations">Open the grimoire <span aria-hidden="true">↘</span></a>
           <a class="anime-button anime-button-secondary" href="https://www.linkedin.com/in/lennon-chia/" rel="me">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
         <div class="anime-tag-row" aria-label="Specialisms">
@@ -54,7 +54,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
           <span class="anime-corner anime-corner-two" aria-hidden="true"></span>
         </div>
         <figcaption>
-          <span>Moonlit archivist · 01</span>
+          <span>Elven archivist · moonlit record</span>
           <strong>LENNON CHIA</strong>
           <small>Every finding needs human judgment</small>
         </figcaption>
@@ -80,7 +80,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
           <p>I treat AI as a force multiplier—not a substitute for experienced security practitioners. The systems I build keep human review at the decision boundary, especially when a model can influence testing, triage, exploitation, or remediation advice.</p>
         </div>
         <aside class="anime-identity-card" aria-label="Profile summary">
-          <div class="anime-identity-label">Adventurer record · LC-01</div>
+          <div class="anime-identity-label">Adventurer’s record · LC-01</div>
           <dl>
             <div><dt>Base</dt><dd>Singapore</dd></div>
             <div><dt>Current role</dt><dd>Cybersecurity Manager, EY</dd></div>
@@ -150,7 +150,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
     <section id="operations" class="anime-section anime-operations">
       <header class="anime-section-heading">
         <span>Scroll III · Practice</span>
-        <h2>A grimoire for practical security.</h2>
+        <h2>A grimoire of practical security.</h2>
       </header>
       <div class="anime-operation-grid">
         <article class="anime-operation-card anime-operation-wide">
@@ -159,7 +159,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
           <h3>Local models. Deliberate control. Human decisions.</h3>
           <p>I’m building a locally hosted penetration-testing accelerator using high-performance model serving with SGLang and speculative decoding. It supports practitioners across analysis, review, testing, triage, validation, and remediation without treating model output as ground truth.</p>
           <div class="anime-flow" aria-label="AI-assisted security workflow">
-            <span>CONTEXT</span><i aria-hidden="true"></i><span>MODEL</span><i aria-hidden="true"></i><span>CONTROL</span><i aria-hidden="true"></i><span>HUMAN</span>
+            <span>CONTEXT</span><i aria-hidden="true"></i><span>MODEL</span><i aria-hidden="true"></i><span>WARDS</span><i aria-hidden="true"></i><span>JUDGMENT</span>
           </div>
         </article>
 
@@ -283,7 +283,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
     </figure>
 
     <section class="anime-contact" aria-labelledby="anime-contact-title">
-      <p class="anime-overline">Campfire · Open channel</p>
+      <p class="anime-overline">Campfire · End of this chapter</p>
       <h2 id="anime-contact-title">What boundary lies ahead?</h2>
       <p>Explore my public work, follow the field notes, or connect with me professionally.</p>
       <div class="anime-hero-actions anime-contact-actions">

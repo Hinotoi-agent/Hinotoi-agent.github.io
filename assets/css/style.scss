@@ -2819,6 +2819,386 @@ body.frieren-portfolio { background-color: #171a38; }
   .frieren-portfolio .anime-section { padding-inline: 1.1rem; }
 }
 
+/* Frieren storybook pass: parchment, old magic, flowers, and time. */
+body.frieren-portfolio {
+  --anime-bg: #eee8da;
+  --anime-panel: #f8f3e6;
+  --anime-panel-2: #e6eadf;
+  --anime-ink: #26372f;
+  --anime-muted: #647168;
+  --anime-line: rgba(100, 92, 70, 0.26);
+  --anime-pink: #a87945;
+  --anime-pink-soft: rgba(168, 121, 69, 0.14);
+  --anime-cyan: #527966;
+  --anime-cyan-soft: rgba(82, 121, 102, 0.14);
+  --anime-violet: #77749a;
+  --anime-green: #5d815d;
+}
+:root[data-theme="dark"] body.frieren-portfolio {
+  --anime-bg: #111915;
+  --anime-panel: #18231d;
+  --anime-panel-2: #223027;
+  --anime-ink: #f0ecdf;
+  --anime-muted: #b5bbae;
+  --anime-line: rgba(216, 204, 169, 0.2);
+  --anime-pink: #d0ad73;
+  --anime-pink-soft: rgba(208, 173, 115, 0.12);
+  --anime-cyan: #9ac6aa;
+  --anime-cyan-soft: rgba(154, 198, 170, 0.12);
+  --anime-violet: #b2aad3;
+  --anime-green: #a7cb95;
+}
+.frieren-portfolio .anime-grid-glow { display: none; }
+.frieren-portfolio .anime-nav {
+  min-height: 5rem;
+  border-bottom: 1px solid rgba(157, 126, 79, 0.34);
+  box-shadow: 0 10px 34px rgba(54, 45, 32, 0.08);
+}
+.frieren-portfolio .anime-wordmark-sigil {
+  width: 2.65rem;
+  height: 2.65rem;
+  border: 3px double var(--anime-pink);
+  border-radius: 50% 50% 44% 44%;
+  background: rgba(248, 243, 230, 0.72);
+  color: #805b35;
+  box-shadow: 0 0 0 4px rgba(168, 121, 69, 0.09);
+  font-family: Georgia, "Times New Roman", serif;
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-wordmark-sigil {
+  background: rgba(24, 35, 29, 0.78);
+  color: var(--anime-pink);
+}
+.frieren-portfolio .anime-wordmark strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+}
+.frieren-portfolio .anime-wordmark small {
+  color: var(--anime-muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.68rem;
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+.frieren-portfolio .anime-nav-links a {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  text-transform: none;
+}
+.frieren-portfolio .anime-nav-links a::before {
+  content: "✦";
+  margin-right: 0.35rem;
+  color: var(--anime-pink);
+  font-size: 0.52rem;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+.frieren-portfolio .anime-nav-links a:hover::before { opacity: 0.9; }
+.frieren-portfolio .anime-nav-links .anime-nav-cta {
+  border: 3px double var(--anime-pink);
+  border-radius: 0.35rem;
+  background: var(--anime-pink-soft);
+}
+.frieren-portfolio .anime-hero {
+  border: 1px solid rgba(230, 213, 173, 0.38);
+  border-radius: 1.2rem 1.2rem 0.45rem 0.45rem;
+  box-shadow: 0 32px 90px rgba(18, 18, 41, 0.23), inset 0 0 0 5px rgba(255, 252, 236, 0.05);
+}
+.frieren-portfolio .anime-hero::before {
+  content: "✦  ❦  ✦";
+  top: 1.15rem;
+  right: 1.5rem;
+  left: auto;
+  z-index: 3;
+  color: rgba(255, 235, 193, 0.78);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  opacity: 1;
+}
+.frieren-portfolio .anime-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0.7rem;
+  border: 1px solid rgba(255, 239, 202, 0.18);
+  border-radius: 0.85rem 0.85rem 0.2rem 0.2rem;
+  pointer-events: none;
+}
+.frieren-portfolio .anime-hero-copy,
+.frieren-portfolio .anime-portrait-frame { position: relative; z-index: 2; }
+.frieren-portfolio .anime-status {
+  color: #e8d5a6;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+}
+.frieren-portfolio .anime-status span {
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 1px solid #f2dfad;
+  border-radius: 0;
+  background: rgba(206, 231, 204, 0.85);
+  box-shadow: 0 0 1rem rgba(206, 231, 204, 0.72);
+  transform: rotate(45deg);
+}
+.frieren-portfolio .anime-overline,
+.frieren-portfolio .anime-operation-kicker,
+.frieren-portfolio .anime-role-index,
+.frieren-portfolio .anime-identity-label {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  letter-spacing: 0.055em;
+  text-transform: none;
+}
+.frieren-portfolio .anime-hero .anime-overline { color: #e8d5a6 !important; }
+.frieren-portfolio .anime-hero h1 {
+  max-width: 10.5ch;
+  font-size: clamp(3.75rem, 6.3vw, 6.2rem);
+  font-weight: 500;
+  letter-spacing: -0.048em;
+  line-height: 0.96;
+}
+.frieren-portfolio .anime-hero h1 em {
+  color: #c9e1d2;
+  font-weight: 400;
+}
+.frieren-portfolio .anime-button {
+  border-radius: 0.35rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+}
+.frieren-portfolio .anime-hero .anime-button-primary {
+  border: 3px double #d6c08b;
+  background: linear-gradient(180deg, #fffdf3, #e9e1ca);
+  color: #33483d !important;
+  box-shadow: 0 10px 25px rgba(12, 20, 35, 0.2);
+}
+.frieren-portfolio .anime-hero .anime-button-secondary {
+  border: 1px solid rgba(234, 216, 174, 0.66);
+  border-radius: 0.35rem;
+  background: rgba(30, 43, 50, 0.4);
+}
+.frieren-portfolio .anime-hero .anime-tag-row span {
+  border-color: rgba(234, 216, 174, 0.42);
+  border-radius: 0.2rem;
+  background: rgba(27, 41, 43, 0.5);
+  color: #f7f0dd;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.02em;
+}
+.frieren-portfolio .anime-portrait-halo { display: none; }
+.frieren-portfolio .anime-portrait-panel {
+  padding: 0.48rem;
+  border: 4px double rgba(231, 211, 166, 0.76);
+  border-radius: 48% 48% 1.25rem 1.25rem / 35% 35% 1.25rem 1.25rem;
+  background: rgba(19, 28, 47, 0.62);
+  box-shadow: 0 30px 85px rgba(4, 8, 22, 0.45), 0 0 0 7px rgba(255, 247, 219, 0.05);
+}
+.frieren-portfolio .anime-portrait-panel img {
+  border-radius: 47% 47% 0.85rem 0.85rem / 34% 34% 0.85rem 0.85rem;
+  filter: saturate(0.82) contrast(1.03);
+}
+.frieren-portfolio .anime-portrait-frame figcaption {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(235, 216, 173, 0.5);
+  font-family: Georgia, "Times New Roman", serif;
+}
+.frieren-portfolio .anime-portrait-frame figcaption span { color: #e9c98a; }
+.frieren-portfolio .anime-evidence {
+  position: relative;
+  border: 4px double rgba(161, 132, 88, 0.45);
+  border-radius: 0.45rem;
+  background:
+    linear-gradient(rgba(249, 245, 232, 0.91), rgba(242, 236, 219, 0.88)),
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(123, 108, 74, 0.04) 28px);
+}
+.frieren-portfolio .anime-evidence::before {
+  content: "✦  ❦  ✦";
+  position: absolute;
+  top: -0.82rem;
+  left: 50%;
+  padding: 0 0.8rem;
+  color: #9b7041;
+  background: #f5efdf;
+  font-family: Georgia, "Times New Roman", serif;
+  transform: translateX(-50%);
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-evidence {
+  background:
+    linear-gradient(rgba(24, 35, 29, 0.92), rgba(20, 30, 26, 0.9)),
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(220, 204, 168, 0.03) 28px);
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-evidence::before { background: #18231d; color: var(--anime-pink); }
+.frieren-portfolio .anime-evidence strong,
+.frieren-portfolio .anime-proof-stats strong { color: var(--anime-cyan); }
+.frieren-portfolio .anime-section {
+  position: relative;
+  border: 1px solid rgba(153, 126, 83, 0.38);
+  border-radius: 0.55rem;
+  background:
+    linear-gradient(rgba(249, 246, 235, 0.9), rgba(244, 239, 224, 0.86)),
+    repeating-linear-gradient(0deg, transparent 0 31px, rgba(116, 100, 69, 0.04) 32px);
+  box-shadow: 0 30px 90px rgba(43, 35, 45, 0.13), inset 0 0 0 5px rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px) saturate(1.04);
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-section {
+  border-color: rgba(216, 204, 169, 0.2);
+  background:
+    linear-gradient(rgba(21, 31, 26, 0.9), rgba(16, 25, 22, 0.88)),
+    repeating-linear-gradient(0deg, transparent 0 31px, rgba(220, 204, 168, 0.03) 32px);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3), inset 0 0 0 5px rgba(214, 203, 171, 0.025);
+}
+.frieren-portfolio .anime-section::after {
+  content: "❦";
+  position: absolute;
+  top: 1.35rem;
+  right: 1.55rem;
+  color: var(--anime-pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  opacity: 0.66;
+}
+.frieren-portfolio .anime-section-heading {
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(146, 119, 78, 0.22);
+}
+.frieren-portfolio .anime-section-heading > span {
+  color: var(--anime-pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.83rem;
+  font-style: italic;
+  letter-spacing: 0.055em;
+  text-transform: none;
+}
+.frieren-portfolio .anime-section-heading h2 {
+  color: var(--anime-ink);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+.frieren-portfolio .anime-drop-lede::first-letter { color: var(--anime-pink); }
+.frieren-portfolio .anime-identity-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(157, 127, 80, 0.36);
+  border-left: 4px double var(--anime-pink);
+  border-radius: 0.35rem;
+  background: rgba(248, 242, 224, 0.58);
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-identity-card { background: rgba(29, 42, 34, 0.55); }
+.frieren-portfolio .anime-role {
+  position: relative;
+  border-color: rgba(148, 121, 80, 0.32);
+}
+.frieren-portfolio .anime-role::before {
+  content: "✦";
+  position: absolute;
+  top: 1.3rem;
+  left: -0.25rem;
+  color: var(--anime-pink);
+  font-size: 0.7rem;
+}
+.frieren-portfolio .anime-role-meta,
+.frieren-portfolio .anime-role-meta span,
+.frieren-portfolio .anime-role-meta b {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.04em;
+}
+.frieren-portfolio .anime-operation-card {
+  border-color: rgba(148, 121, 80, 0.32);
+}
+.frieren-portfolio .anime-operation-number {
+  color: var(--anime-pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+.frieren-portfolio .anime-flow span {
+  border: 1px solid rgba(157, 127, 80, 0.35);
+  border-radius: 50%;
+  background: var(--anime-pink-soft);
+  color: var(--anime-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.025em;
+}
+.frieren-portfolio .anime-flow i { background: linear-gradient(90deg, var(--anime-pink), var(--anime-cyan)); }
+.frieren-portfolio .anime-control-sequence li,
+.frieren-portfolio .anime-disclosure,
+.frieren-portfolio .anime-note-list a,
+.frieren-portfolio .anime-cert-grid span {
+  border-color: rgba(148, 121, 80, 0.3);
+  border-radius: 0.35rem;
+  background: rgba(249, 244, 229, 0.48);
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-control-sequence li,
+:root[data-theme="dark"] .frieren-portfolio .anime-disclosure,
+:root[data-theme="dark"] .frieren-portfolio .anime-note-list a,
+:root[data-theme="dark"] .frieren-portfolio .anime-cert-grid span { background: rgba(29, 42, 34, 0.52); }
+.frieren-portfolio .anime-control-sequence li b {
+  border: 1px solid var(--anime-pink);
+  border-radius: 50%;
+  color: var(--anime-pink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+.frieren-portfolio .anime-proof-stats a {
+  border: 3px double rgba(148, 121, 80, 0.34);
+  border-radius: 50% 50% 0.6rem 0.6rem / 18% 18% 0.6rem 0.6rem;
+  background: rgba(248, 242, 224, 0.42);
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-proof-stats a { background: rgba(29, 42, 34, 0.5); }
+.frieren-portfolio .anime-contact {
+  border: 1px solid rgba(231, 211, 166, 0.42);
+  border-radius: 1rem 1rem 0.35rem 0.35rem;
+  background:
+    linear-gradient(90deg, rgba(20, 31, 34, 0.94) 0 50%, rgba(24, 28, 47, 0.56) 78%),
+    url("/assets/img/frieren-memory-tree-background.jpg") center 68% / cover no-repeat;
+  color: #f9f1dc;
+  box-shadow: 0 30px 90px rgba(14, 14, 36, 0.3), inset 0 0 0 6px rgba(255, 248, 224, 0.04);
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-contact {
+  background:
+    linear-gradient(90deg, rgba(8, 15, 18, 0.96) 0 50%, rgba(10, 12, 27, 0.68) 78%),
+    url("/assets/img/frieren-memory-tree-background.jpg") center 68% / cover no-repeat;
+}
+.frieren-portfolio .anime-contact h2,
+.frieren-portfolio .anime-contact p,
+.frieren-portfolio .anime-contact small { color: #f9f1dc; }
+.frieren-portfolio .anime-contact .anime-overline { color: #e7c98e !important; }
+.frieren-portfolio .anime-contact .anime-button-primary {
+  border: 3px double #d6c08b;
+  background: linear-gradient(180deg, #fffdf3, #e9e1ca);
+  color: #33483d !important;
+}
+.frieren-portfolio .anime-contact .anime-button-secondary {
+  border-color: rgba(235, 216, 173, 0.58);
+  background: rgba(19, 30, 35, 0.46);
+  color: #fff8e9 !important;
+}
+.frieren-portfolio .anime-footer {
+  border: 1px solid rgba(153, 126, 83, 0.34);
+  border-radius: 0.4rem 0.4rem 0 0;
+  background: rgba(246, 239, 220, 0.88);
+  font-family: Georgia, "Times New Roman", serif;
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-footer { background: rgba(18, 27, 23, 0.9); }
+
+@media (max-width: 720px) {
+  .frieren-portfolio .anime-hero { border-radius: 0.8rem 0.8rem 0.25rem 0.25rem; }
+  .frieren-portfolio .anime-hero::before { top: 0.72rem; right: 0.7rem; font-size: 0.72rem; }
+  .frieren-portfolio .anime-hero::after { inset: 0.45rem; }
+  .frieren-portfolio .anime-hero h1 { font-size: clamp(3.15rem, 13vw, 4.25rem); line-height: 0.98; }
+  .frieren-portfolio .anime-section::after { top: 1rem; right: 1rem; font-size: 1rem; }
+  .frieren-portfolio .anime-flow span { border-radius: 0.35rem; }
+  .frieren-portfolio .anime-contact {
+    background:
+      linear-gradient(180deg, rgba(12, 21, 25, 0.92), rgba(12, 17, 30, 0.75)),
+      url("/assets/img/frieren-memory-tree-background.jpg") 58% center / cover no-repeat;
+  }
+}
+
 /* Traveling party: original chibi fan art crossing every page. */
 .journey-party-route {
   position: fixed;
