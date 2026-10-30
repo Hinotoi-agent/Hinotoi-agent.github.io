@@ -3583,38 +3583,42 @@ body.frieren-portfolio {
   .frieren-portfolio .anime-portrait-halo { inset: -7%; }
 }
 
-/* Spinning Frieren crossing the lower edge. */
+/* A small Frieren icon crossing the lower edge. */
 .journey-party-route {
   position: fixed;
-  left: -7rem;
+  left: -6rem;
   bottom: env(safe-area-inset-bottom, 0px);
   z-index: 35;
-  width: clamp(72px, 6vw, 90px);
+  width: clamp(68px, 5.5vw, 84px);
   pointer-events: none;
   will-change: left;
-  animation: journey-party-cross 26s linear infinite;
+  animation: journey-party-cross 42s linear infinite;
 }
 .journey-party-art {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 200 / 179;
+  aspect-ratio: 1;
   object-fit: contain;
+  border: 1px solid rgba(150, 141, 156, 0.38);
+  border-radius: 24%;
   opacity: 0.98;
-  filter: drop-shadow(0 5px 8px rgba(32, 43, 83, 0.28));
+  background: #f8f6f2;
+  box-shadow: 0 5px 12px rgba(32, 43, 83, 0.22);
 }
 :root[data-theme="dark"] .journey-party-art {
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.5));
+  border-color: rgba(207, 204, 221, 0.45);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.46);
 }
 @keyframes journey-party-cross {
-  from { left: -7rem; }
+  from { left: -6rem; }
   to { left: calc(100vw + 1rem); }
 }
 
 @media (max-width: 720px) {
   .journey-party-route {
-    width: 64px;
-    animation-duration: 20s;
+    width: 60px;
+    animation-duration: 32s;
   }
 }
 @media (prefers-reduced-motion: reduce) {
