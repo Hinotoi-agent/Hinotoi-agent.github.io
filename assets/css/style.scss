@@ -3583,13 +3583,13 @@ body.frieren-portfolio {
   .frieren-portfolio .anime-portrait-halo { inset: -7%; }
 }
 
-/* Frieren crossing the lower edge. */
+/* Frieren's party walking across the lower edge. */
 .journey-party-route {
   position: fixed;
   left: -15rem;
   bottom: env(safe-area-inset-bottom, 0px);
   z-index: 35;
-  width: clamp(84px, 8vw, 112px);
+  width: clamp(176px, 15vw, 220px);
   pointer-events: none;
   will-change: left;
   animation: journey-party-cross 38s linear infinite;
@@ -3597,33 +3597,36 @@ body.frieren-portfolio {
 .journey-party-art {
   display: block;
   width: 100%;
-  aspect-ratio: 1;
+  height: auto;
+  aspect-ratio: 440 / 248;
   object-fit: cover;
   object-position: center;
-  border: 1px solid rgba(220, 231, 255, 0.75);
-  border-radius: 48% 48% 42% 42%;
-  opacity: 0.94;
-  box-shadow: 0 6px 18px rgba(32, 43, 83, 0.24);
-  transform-origin: center bottom;
+  border: 1px solid rgba(220, 231, 255, 0.76);
+  border-radius: 0.7rem;
+  opacity: 0.97;
+  background: #151626;
+  box-shadow: 0 8px 24px rgba(32, 43, 83, 0.3);
+  transform-origin: center;
   will-change: transform;
-  animation: journey-frieren-bob 1.1s ease-in-out infinite alternate;
+  animation: journey-party-face 38s steps(1, end) infinite;
 }
 :root[data-theme="dark"] .journey-party-art {
-  border-color: rgba(175, 198, 236, 0.48);
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.44);
+  border-color: rgba(175, 198, 236, 0.5);
+  box-shadow: 0 9px 26px rgba(0, 0, 0, 0.48);
 }
 @keyframes journey-party-cross {
   0% { left: -15rem; }
   47%, 50% { left: calc(100vw + 1rem); }
   97%, 100% { left: -15rem; }
 }
-@keyframes journey-frieren-bob {
-  from { transform: translateY(0) rotate(-1deg); }
-  to { transform: translateY(-6px) rotate(1deg); }
+@keyframes journey-party-face {
+  0%, 49.99% { transform: scaleX(1); }
+  50%, 99.99% { transform: scaleX(-1); }
+  100% { transform: scaleX(1); }
 }
 
 @media (max-width: 720px) {
-  .journey-party-route { width: 76px; }
+  .journey-party-route { width: 135px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .journey-party-route { display: none; }
