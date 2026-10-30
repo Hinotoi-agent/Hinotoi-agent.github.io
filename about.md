@@ -110,10 +110,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
           <label><span>Assertive <strong>64%</strong></span><progress max="100" value="64">64%</progress></label>
         </div>
       </aside>
-      <figure class="anime-cinematic anime-cinematic-path">
-        <img src="{{ '/assets/img/long-journey-landscape.svg' | relative_url }}" alt="An original fantasy landscape with a winding road, distant ruins, mountains, and blue flowers">
-        <figcaption><span>The road continues</span><strong>Small lessons accumulate into lasting judgment.</strong></figcaption>
-      </figure>
+      <div class="frieren-chapter-break" aria-hidden="true"><span>✦</span><b>Blue-moon weed</b><span>✦</span></div>
     </section>
 
     <section id="experience" class="anime-section anime-experience">
@@ -209,10 +206,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
           </div>
         </article>
       </div>
-      <figure class="anime-cinematic anime-cinematic-companions">
-        <img src="{{ '/assets/img/companions-campfire.svg' | relative_url }}" alt="An original twilight illustration of four travelers sharing a quiet meal beside a fire">
-        <figcaption><span>Companions of the craft</span><strong>The strongest security work is learned, reviewed, and delivered together.</strong></figcaption>
-      </figure>
+      <div class="frieren-chapter-break" aria-hidden="true"><span>✦</span><b>The party continues</b><span>✦</span></div>
     </section>
 
     <section class="anime-section anime-controls">
@@ -297,13 +291,10 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       </div>
     </section>
 
-    <figure class="anime-cinematic anime-cinematic-meteors">
-      <img src="{{ '/assets/img/era-meteors.svg' | relative_url }}" alt="An original night landscape with travelers watching meteors above distant mountains and ruins">
-      <figcaption><span>What remains</span><strong>The work passes. The lessons become part of the next journey.</strong></figcaption>
-    </figure>
+    <div class="frieren-chapter-break frieren-chapter-break-final" aria-hidden="true"><span>✦</span><b>A spell remembered</b><span>✦</span></div>
 
     <section class="anime-contact" aria-labelledby="anime-contact-title">
-      <p class="anime-overline">Campfire · End of this chapter</p>
+      <p class="anime-overline">Spellwork · End of this chapter</p>
       <h2 id="anime-contact-title">What boundary lies ahead?</h2>
       <p>Explore my public work, follow the field notes, or connect with me professionally.</p>
       <div class="anime-hero-actions anime-contact-actions">

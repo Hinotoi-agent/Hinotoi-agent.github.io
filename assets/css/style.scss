@@ -2099,14 +2099,14 @@ body.frieren-portfolio {
   border-radius: 2.5rem;
   background:
     linear-gradient(90deg, color-mix(in srgb, var(--anime-panel) 26%, transparent) 0 46%, transparent 74%),
-    url("/assets/img/long-journey-landscape.svg") center / cover no-repeat;
+    url("/assets/img/frieren-memory-tree-background.jpg") center / cover no-repeat;
   box-shadow: 0 34px 100px rgba(55, 76, 62, 0.18);
 }
 :root[data-theme="dark"] .frieren-portfolio .anime-hero {
   background:
     linear-gradient(90deg, rgba(11, 25, 21, 0.42) 0 46%, rgba(11, 25, 21, 0.08) 74%),
     linear-gradient(rgba(12, 25, 22, 0.24), rgba(12, 25, 22, 0.48)),
-    url("/assets/img/long-journey-landscape.svg") center / cover no-repeat;
+    url("/assets/img/frieren-memory-tree-background.jpg") center / cover no-repeat;
 }
 .frieren-portfolio .anime-hero::after {
   content: "";
@@ -2296,13 +2296,13 @@ body.frieren-portfolio {
   border-color: color-mix(in srgb, var(--anime-pink) 55%, transparent);
   background:
     linear-gradient(90deg, color-mix(in srgb, var(--anime-panel) 95%, transparent) 0 47%, color-mix(in srgb, var(--anime-panel) 56%, transparent) 72%),
-    url("/assets/img/long-journey-landscape.svg") center 64% / cover no-repeat;
+    url("/assets/img/frieren-memory-tree-background.jpg") center 64% / cover no-repeat;
 }
 :root[data-theme="dark"] .frieren-portfolio .anime-contact {
   background:
     linear-gradient(90deg, rgba(24, 36, 31, 0.96) 0 47%, rgba(24, 36, 31, 0.55) 72%),
     linear-gradient(rgba(11, 24, 20, 0.28), rgba(11, 24, 20, 0.42)),
-    url("/assets/img/long-journey-landscape.svg") center 64% / cover no-repeat;
+    url("/assets/img/frieren-memory-tree-background.jpg") center 64% / cover no-repeat;
 }
 .frieren-portfolio .anime-contact::after { content: "✦"; opacity: 0.9; }
 
@@ -2328,12 +2328,12 @@ body.frieren-portfolio {
     border-radius: 1.6rem;
     background:
       linear-gradient(180deg, rgba(251, 248, 239, 0.18), rgba(251, 248, 239, 0.38)),
-      url("/assets/img/long-journey-landscape.svg") 61% center / cover no-repeat;
+      url("/assets/img/frieren-memory-tree-background.jpg") 61% center / cover no-repeat;
   }
   :root[data-theme="dark"] .frieren-portfolio .anime-hero {
     background:
       linear-gradient(180deg, rgba(11, 25, 21, 0.22), rgba(11, 25, 21, 0.54)),
-      url("/assets/img/long-journey-landscape.svg") 61% center / cover no-repeat;
+      url("/assets/img/frieren-memory-tree-background.jpg") 61% center / cover no-repeat;
   }
   .frieren-portfolio .anime-hero-copy {
     padding: 1.25rem;
@@ -2386,13 +2386,13 @@ body.frieren-portfolio {
   border-radius: 0.85rem;
   background:
     linear-gradient(90deg, rgba(20, 35, 30, 0.9) 0%, rgba(20, 35, 30, 0.66) 38%, rgba(20, 35, 30, 0.13) 72%),
-    url("/assets/img/long-journey-landscape.svg") center / cover no-repeat;
+    url("/assets/img/frieren-memory-tree-background.jpg") center / cover no-repeat;
   box-shadow: none;
 }
 :root[data-theme="dark"] .frieren-portfolio .anime-hero {
   background:
     linear-gradient(90deg, rgba(9, 19, 16, 0.94) 0%, rgba(9, 19, 16, 0.73) 40%, rgba(9, 19, 16, 0.28) 74%),
-    url("/assets/img/long-journey-landscape.svg") center / cover no-repeat;
+    url("/assets/img/frieren-memory-tree-background.jpg") center / cover no-repeat;
 }
 .frieren-portfolio .anime-hero-copy {
   max-width: 650px;
@@ -2582,12 +2582,12 @@ body.frieren-portfolio {
     min-height: 0;
     background:
       linear-gradient(180deg, rgba(15, 29, 24, 0.83) 0%, rgba(15, 29, 24, 0.53) 60%, rgba(15, 29, 24, 0.7) 100%),
-      url("/assets/img/long-journey-landscape.svg") 61% center / cover no-repeat;
+      url("/assets/img/frieren-memory-tree-background.jpg") 61% center / cover no-repeat;
   }
   :root[data-theme="dark"] .frieren-portfolio .anime-hero {
     background:
       linear-gradient(180deg, rgba(8, 18, 15, 0.9), rgba(8, 18, 15, 0.64)),
-      url("/assets/img/long-journey-landscape.svg") 61% center / cover no-repeat;
+      url("/assets/img/frieren-memory-tree-background.jpg") 61% center / cover no-repeat;
   }
   .frieren-portfolio .anime-hero-copy { padding: 0.5rem; background: transparent; }
   .frieren-portfolio .anime-section-heading { grid-template-columns: 1fr; }
@@ -3280,19 +3280,65 @@ body.frieren-portfolio {
   background: linear-gradient(90deg, rgba(7, 17, 34, 0.96), rgba(12, 31, 56, 0.9));
 }
 .frieren-portfolio .anime-cinematic-magic-circle figcaption span { color: #a9e0f7; }
+.frieren-portfolio .frieren-chapter-break {
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) auto minmax(2rem, 1fr);
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.4rem);
+  width: 88%;
+  max-width: 44rem;
+  margin: clamp(2.2rem, 5vw, 4.4rem) auto 0;
+  color: var(--anime-violet);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.77rem;
+  font-style: italic;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.frieren-portfolio .frieren-chapter-break::before,
+.frieren-portfolio .frieren-chapter-break::after {
+  content: "";
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99, 126, 185, 0.55));
+}
+.frieren-portfolio .frieren-chapter-break::after { transform: scaleX(-1); }
+.frieren-portfolio .frieren-chapter-break span {
+  display: none;
+}
+.frieren-portfolio .frieren-chapter-break b {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+}
+.frieren-portfolio .frieren-chapter-break b::before,
+.frieren-portfolio .frieren-chapter-break b::after {
+  content: "✦";
+  display: grid;
+  width: 1.8rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 3px double rgba(108, 137, 197, 0.48);
+  border-radius: 50%;
+  color: var(--anime-cyan);
+  font-style: normal;
+  font-size: 0.68rem;
+}
+.frieren-portfolio .frieren-chapter-break-final { margin-top: clamp(1.5rem, 3vw, 2.6rem); }
 .frieren-portfolio .anime-contact {
   border: 1px solid rgba(178, 214, 242, 0.44);
   border-radius: 1rem 1rem 0.35rem 0.35rem;
   background:
     linear-gradient(90deg, rgba(14, 25, 45, 0.94) 0 50%, rgba(24, 28, 56, 0.58) 78%),
-    url("/assets/img/frieren-memory-tree-background.jpg") center 68% / cover no-repeat;
+    url("/assets/img/frieren-fern-magic-circle.jpg") center / cover no-repeat;
   color: #f9f1dc;
   box-shadow: 0 30px 90px rgba(14, 14, 36, 0.3), inset 0 0 0 6px rgba(255, 248, 224, 0.04);
 }
 :root[data-theme="dark"] .frieren-portfolio .anime-contact {
   background:
     linear-gradient(90deg, rgba(5, 12, 26, 0.96) 0 50%, rgba(8, 10, 31, 0.72) 78%),
-    url("/assets/img/frieren-memory-tree-background.jpg") center 68% / cover no-repeat;
+    url("/assets/img/frieren-fern-magic-circle.jpg") center / cover no-repeat;
 }
 .frieren-portfolio .anime-contact h2,
 .frieren-portfolio .anime-contact p,
@@ -3332,51 +3378,8 @@ body.frieren-portfolio {
   .frieren-portfolio .anime-contact {
     background:
       linear-gradient(180deg, rgba(8, 18, 37, 0.92), rgba(8, 13, 35, 0.78)),
-      url("/assets/img/frieren-memory-tree-background.jpg") 58% center / cover no-repeat;
+      url("/assets/img/frieren-fern-magic-circle.jpg") center / cover no-repeat;
   }
-}
-
-/* Traveling party: original chibi fan art crossing every page. */
-.journey-party-route {
-  position: fixed;
-  left: -32rem;
-  bottom: env(safe-area-inset-bottom, 0px);
-  z-index: 35;
-  width: clamp(300px, 31vw, 460px);
-  pointer-events: none;
-  will-change: left;
-  animation: journey-party-cross 38s linear infinite;
-}
-.journey-party-art {
-  display: block;
-  width: 100%;
-  height: auto;
-  opacity: 0.96;
-  filter: drop-shadow(0 8px 7px rgba(28, 43, 35, 0.18));
-  transform-origin: center bottom;
-  will-change: transform;
-  animation: journey-party-facing 38s steps(1, end) infinite;
-}
-:root[data-theme="dark"] .journey-party-art {
-  filter: drop-shadow(0 9px 8px rgba(0, 0, 0, 0.42)) saturate(0.92) brightness(0.94);
-}
-@keyframes journey-party-cross {
-  0% { left: -32rem; }
-  47%, 50% { left: calc(100vw + 2rem); }
-  97%, 100% { left: -32rem; }
-}
-@keyframes journey-party-facing {
-  0%, 49.99% { transform: scaleX(1); }
-  50%, 100% { transform: scaleX(-1); }
-}
-@media (max-width: 720px) {
-  .journey-party-route { width: 280px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .journey-party-route { display: none; }
-}
-@media print {
-  .journey-party-route { display: none !important; }
 }
 
 .post-nav { display: grid; gap: 0.75rem; margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid var(--border); }
