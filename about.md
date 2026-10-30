@@ -48,15 +48,15 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <figure class="anime-portrait-frame">
         <div class="anime-portrait-halo" aria-hidden="true"></div>
         <div class="anime-portrait-panel">
-          <img src="{{ '/assets/img/moonlit-elf-portrait.svg' | relative_url }}" alt="Original moonlit portrait of a silver-haired elven archivist with luminous green eyes">
+          <img src="{{ '/assets/img/frieren-moonlit-closeup.jpg' | relative_url }}" width="1280" height="800" alt="Moonlit close-up of Frieren with silver hair, elven ears, green eyes, and garnet earrings">
           <div class="anime-scan-line" aria-hidden="true"></div>
           <span class="anime-corner anime-corner-one" aria-hidden="true"></span>
           <span class="anime-corner anime-corner-two" aria-hidden="true"></span>
         </div>
         <figcaption>
-          <span>Elven archivist · moonlit record</span>
-          <strong>LENNON CHIA</strong>
-          <small>Every finding needs human judgment</small>
+          <span>Archive frame · Frieren</span>
+          <strong>BEYOND THE JOURNEY</strong>
+          <small>Power is made useful through judgment</small>
         </figcaption>
       </figure>
     </section>
@@ -67,6 +67,11 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <div><strong>≈50%</strong><span>Lower effort in selected AI-assisted trials</span></div>
       <a href="{{ '/merged-prs/' | relative_url }}"><strong>{{ merged_prs | size }}</strong><span>Merged PRs indexed <b aria-hidden="true">↗</b></span></a>
     </section>
+
+    <figure class="anime-cinematic anime-cinematic-magic-circle">
+      <img src="{{ '/assets/img/frieren-fern-magic-circle.jpg' | relative_url }}" width="1280" height="640" loading="lazy" decoding="async" alt="Frieren and Fern standing before a luminous blue-white magic circle with their staffs ready">
+      <figcaption><span>Frieren &amp; Fern · disciplined spellwork</span><strong>Measured power. Deliberate judgment.</strong></figcaption>
+    </figure>
 
     <section id="about" class="anime-section anime-about">
       <header class="anime-section-heading">
