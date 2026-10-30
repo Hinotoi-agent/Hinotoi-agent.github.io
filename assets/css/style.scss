@@ -3382,6 +3382,49 @@ body.frieren-portfolio {
   }
 }
 
+/* Small decorative Frieren party crossing the lower edge. */
+.journey-party-route {
+  position: fixed;
+  left: -15rem;
+  bottom: env(safe-area-inset-bottom, 0px);
+  z-index: 35;
+  width: clamp(150px, 15vw, 220px);
+  pointer-events: none;
+  will-change: left;
+  animation: journey-party-cross 38s linear infinite;
+}
+.journey-party-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.94;
+  filter: drop-shadow(0 5px 5px rgba(28, 43, 35, 0.2));
+  transform-origin: center bottom;
+  will-change: transform;
+  animation: journey-party-facing 38s steps(1, end) infinite;
+}
+:root[data-theme="dark"] .journey-party-art {
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.42)) saturate(0.92) brightness(0.94);
+}
+@keyframes journey-party-cross {
+  0% { left: -15rem; }
+  47%, 50% { left: calc(100vw + 1rem); }
+  97%, 100% { left: -15rem; }
+}
+@keyframes journey-party-facing {
+  0%, 49.99% { transform: scaleX(1); }
+  50%, 100% { transform: scaleX(-1); }
+}
+@media (max-width: 720px) {
+  .journey-party-route { width: 135px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-party-route { display: none; }
+}
+@media print {
+  .journey-party-route { display: none !important; }
+}
+
 .post-nav { display: grid; gap: 0.75rem; margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid var(--border); }
 .post-nav-link { display: block; padding: 0.8rem 0.95rem; border: 1px solid var(--border); border-radius: 12px; background: var(--surface-alt); font-weight: 600; }
 .post-nav-home { text-align: center; }
