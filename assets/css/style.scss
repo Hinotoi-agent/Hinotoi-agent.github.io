@@ -2608,6 +2608,148 @@ body.frieren-portfolio {
   .frieren-portfolio .anime-role-meta { border-bottom: 1px solid var(--anime-line); }
 }
 
+/* Twilight memory pass: moonlit portrait, luminous tree, drifting magic. */
+.frieren-portfolio {
+  --anime-cyan: #70bcb6;
+  --anime-cyan-soft: rgba(112, 188, 182, 0.14);
+  --anime-pink: #ba719d;
+  --anime-pink-soft: rgba(186, 113, 157, 0.13);
+}
+:root[data-theme="dark"] .frieren-portfolio {
+  --anime-cyan: #8ad8d0;
+  --anime-cyan-soft: rgba(138, 216, 208, 0.13);
+  --anime-pink: #d18ab6;
+  --anime-pink-soft: rgba(209, 138, 182, 0.13);
+}
+.frieren-portfolio .anime-portfolio::before {
+  background:
+    radial-gradient(circle at 73% 14%, rgba(111, 100, 184, 0.15), transparent 28rem),
+    radial-gradient(circle at 88% 39%, rgba(112, 188, 182, 0.12), transparent 24rem),
+    radial-gradient(circle at 12% 71%, rgba(186, 113, 157, 0.1), transparent 30rem);
+}
+.frieren-portfolio .anime-hero {
+  min-height: 760px;
+  isolation: isolate;
+  background:
+    linear-gradient(90deg, rgba(12, 20, 39, 0.94) 0%, rgba(18, 26, 50, 0.71) 39%, rgba(22, 26, 53, 0.16) 72%),
+    linear-gradient(180deg, rgba(15, 19, 44, 0.08), rgba(20, 24, 53, 0.26)),
+    url("/assets/img/memory-tree-landscape.svg") 60% center / cover no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(220, 221, 245, 0.16), 0 34px 90px rgba(42, 37, 83, 0.16);
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-hero {
+  background:
+    linear-gradient(90deg, rgba(7, 12, 28, 0.97) 0%, rgba(10, 16, 35, 0.78) 40%, rgba(10, 13, 32, 0.3) 75%),
+    linear-gradient(180deg, rgba(4, 7, 18, 0.08), rgba(4, 8, 19, 0.35)),
+    url("/assets/img/memory-tree-landscape.svg") 60% center / cover no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(197, 204, 235, 0.13), 0 34px 90px rgba(0, 0, 0, 0.34);
+}
+.frieren-portfolio .anime-grid-glow {
+  z-index: 0;
+  background:
+    radial-gradient(circle at 65% 39%, rgba(151, 219, 218, 0.2), transparent 18rem),
+    radial-gradient(circle at 75% 22%, rgba(221, 146, 193, 0.16), transparent 15rem);
+  opacity: 1;
+  mix-blend-mode: screen;
+}
+.frieren-portfolio .anime-memory-motes {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.frieren-portfolio .anime-memory-motes i {
+  position: absolute;
+  width: 13px;
+  height: 9px;
+  opacity: 0;
+  animation: memory-mote-drift 13s ease-in-out infinite;
+}
+.frieren-portfolio .anime-memory-motes i::before,
+.frieren-portfolio .anime-memory-motes i::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  width: 8px;
+  height: 7px;
+  border-radius: 80% 12% 80% 12%;
+  background: rgba(198, 239, 232, 0.76);
+  box-shadow: 0 0 11px rgba(134, 224, 214, 0.6);
+}
+.frieren-portfolio .anime-memory-motes i::before { left: 0; transform: rotate(27deg); }
+.frieren-portfolio .anime-memory-motes i::after { right: 0; transform: scaleX(-1) rotate(27deg); }
+.frieren-portfolio .anime-memory-motes i:nth-child(1) { left: 49%; bottom: 12%; animation-delay: -2s; }
+.frieren-portfolio .anime-memory-motes i:nth-child(2) { left: 58%; bottom: 23%; animation-delay: -7s; animation-duration: 15s; }
+.frieren-portfolio .anime-memory-motes i:nth-child(3) { left: 68%; bottom: 9%; animation-delay: -5s; animation-duration: 12s; }
+.frieren-portfolio .anime-memory-motes i:nth-child(4) { left: 77%; bottom: 31%; animation-delay: -11s; animation-duration: 17s; }
+.frieren-portfolio .anime-memory-motes i:nth-child(5) { left: 86%; bottom: 16%; animation-delay: -3s; animation-duration: 14s; }
+.frieren-portfolio .anime-memory-motes i:nth-child(6) { left: 42%; bottom: 38%; animation-delay: -9s; animation-duration: 16s; }
+.frieren-portfolio .anime-memory-motes i:nth-child(7) { left: 91%; bottom: 44%; animation-delay: -6s; animation-duration: 18s; }
+@keyframes memory-mote-drift {
+  0% { opacity: 0; transform: translate3d(-12px, 42px, 0) rotate(-9deg) scale(0.72); }
+  18% { opacity: 0.86; }
+  52% { transform: translate3d(32px, -54px, 0) rotate(13deg) scale(1); }
+  82% { opacity: 0.62; }
+  100% { opacity: 0; transform: translate3d(-19px, -128px, 0) rotate(-14deg) scale(0.76); }
+}
+.frieren-portfolio .anime-portrait-frame { max-width: 390px; }
+.frieren-portfolio .anime-portrait-halo {
+  inset: -10%;
+  border-color: rgba(143, 220, 212, 0.48);
+  box-shadow: 0 0 72px rgba(123, 203, 198, 0.18), inset 0 0 48px rgba(194, 132, 182, 0.12);
+}
+.frieren-portfolio .anime-portrait-halo::after { border-color: rgba(211, 133, 181, 0.58); }
+.frieren-portfolio .anime-portrait-panel {
+  aspect-ratio: 1;
+  border: 1px solid rgba(221, 229, 239, 0.38);
+  border-radius: 1.2rem;
+  background: #12192e;
+  clip-path: none;
+  box-shadow: 0 30px 90px rgba(5, 8, 22, 0.48), 0 0 54px rgba(106, 189, 185, 0.12);
+}
+.frieren-portfolio .anime-portrait-panel img { object-position: center; }
+.frieren-portfolio .anime-portrait-panel::after {
+  background: linear-gradient(180deg, rgba(145, 201, 220, 0.08), transparent 45%, rgba(12, 18, 40, 0.34));
+  mix-blend-mode: soft-light;
+}
+.frieren-portfolio .anime-scan-line,
+.frieren-portfolio .anime-corner { display: none; }
+.frieren-portfolio .anime-portrait-frame figcaption span { color: #efb3d0; }
+.frieren-portfolio .anime-portrait-frame figcaption strong { color: #fffdf3; }
+.frieren-portfolio .anime-portrait-frame figcaption small { color: rgba(255, 253, 243, 0.72); }
+.frieren-portfolio .anime-evidence {
+  box-shadow: 0 24px 70px rgba(43, 39, 79, 0.1);
+}
+.frieren-portfolio .anime-section-heading > span { color: var(--anime-pink); }
+.frieren-portfolio .anime-cinematic {
+  box-shadow: 0 28px 75px rgba(38, 45, 74, 0.14);
+}
+
+@media (max-width: 720px) {
+  .frieren-portfolio .anime-hero {
+    min-height: 0;
+    background:
+      linear-gradient(180deg, rgba(9, 15, 33, 0.86) 0%, rgba(12, 18, 40, 0.58) 52%, rgba(10, 15, 34, 0.82) 100%),
+      url("/assets/img/memory-tree-landscape.svg") 61% center / cover no-repeat;
+  }
+  :root[data-theme="dark"] .frieren-portfolio .anime-hero {
+    background:
+      linear-gradient(180deg, rgba(5, 9, 22, 0.91), rgba(7, 11, 27, 0.68)),
+      url("/assets/img/memory-tree-landscape.svg") 61% center / cover no-repeat;
+  }
+  .frieren-portfolio .anime-memory-motes i:nth-child(-n+2) { display: none; }
+  .frieren-portfolio .anime-portrait-frame { width: 94%; }
+  .frieren-portfolio .anime-portrait-frame figcaption { grid-template-columns: 1fr; }
+  .frieren-portfolio .anime-portrait-frame figcaption small {
+    grid-row: auto;
+    grid-column: 1;
+    margin-top: 0.2rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .frieren-portfolio .anime-memory-motes i { animation: none; opacity: 0; }
+}
+
 /* Traveling party: original chibi fan art crossing every page. */
 .journey-party-route {
   position: fixed;

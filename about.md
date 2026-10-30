@@ -30,6 +30,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
   <main id="profile-main">
     <section class="anime-hero" aria-labelledby="anime-hero-title">
       <div class="anime-grid-glow" aria-hidden="true"></div>
+      <div class="anime-memory-motes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="anime-hero-copy">
         <div class="anime-status"><span aria-hidden="true"></span> A long journey, still in progress · Singapore</div>
         <p class="anime-overline">Security craft · human judgment · responsible AI</p>
@@ -47,13 +48,13 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <figure class="anime-portrait-frame">
         <div class="anime-portrait-halo" aria-hidden="true"></div>
         <div class="anime-portrait-panel">
-          <img src="{{ '/assets/img/fantasy-archivist.svg' | relative_url }}" alt="Original fantasy archivist illustration representing Lennon Chia’s security research journey">
+          <img src="{{ '/assets/img/moonlit-elf-portrait.svg' | relative_url }}" alt="Original moonlit portrait of a silver-haired elven archivist with luminous green eyes">
           <div class="anime-scan-line" aria-hidden="true"></div>
           <span class="anime-corner anime-corner-one" aria-hidden="true"></span>
           <span class="anime-corner anime-corner-two" aria-hidden="true"></span>
         </div>
         <figcaption>
-          <span>Archivist · 01</span>
+          <span>Moonlit archivist · 01</span>
           <strong>LENNON CHIA</strong>
           <small>Every finding needs human judgment</small>
         </figcaption>
