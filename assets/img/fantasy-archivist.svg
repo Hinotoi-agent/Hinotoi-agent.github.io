@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
   <title id="title">Fantasy security archivist</title>
-  <desc id="desc">An original elven archivist with a floating grimoire, moonlit forest, and protective magic circles.</desc>
+  <desc id="desc">An original elven archivist with a floating grimoire, pastel forest, and protective magic circles.</desc>
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#172c2b"/>
-      <stop offset="0.58" stop-color="#29473d"/>
-      <stop offset="1" stop-color="#506b57"/>
+      <stop offset="0" stop-color="#8eb6c2"/>
+      <stop offset="0.58" stop-color="#b9d0c7"/>
+      <stop offset="1" stop-color="#dce3c8"/>
     </linearGradient>
     <radialGradient id="moon" cx="50%" cy="50%" r="50%">
       <stop offset="0" stop-color="#fffde8"/>
@@ -40,16 +40,16 @@
     <circle cx="610" cy="168" r="170" fill="url(#moon)" opacity="0.92"/>
     <circle cx="610" cy="168" r="95" fill="#f5f0d1" opacity="0.82"/>
 
-    <g fill="#10251f" opacity="0.72">
+    <g fill="#3e6456" opacity="0.68">
       <path d="M0 610 112 425 210 610Z"/><path d="M112 630 258 360 390 630Z"/>
       <path d="M476 630 610 378 760 630Z"/><path d="M630 630 748 432 850 630Z"/>
     </g>
-    <g fill="#789179" opacity="0.24" filter="url(#soft)">
+    <g fill="#f4f0d7" opacity="0.22" filter="url(#soft)">
       <circle cx="92" cy="214" r="74"/><circle cx="163" cy="274" r="94"/>
       <circle cx="718" cy="340" r="72"/><circle cx="645" cy="390" r="104"/>
     </g>
 
-    <g fill="none" stroke="#c9d9bf" opacity="0.42">
+    <g fill="none" stroke="#eef2dc" opacity="0.55">
       <circle cx="398" cy="370" r="270" stroke-width="2"/>
       <circle cx="398" cy="370" r="226" stroke-width="1.5" stroke-dasharray="7 13"/>
       <path d="M398 93 638 507 158 507Z" stroke-width="1.5"/>

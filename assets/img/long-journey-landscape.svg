@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">A long fantasy journey</title>
+  <desc id="desc">An original pastel landscape with a winding road, distant ruins, blue flowers, and a protective magic circle in the sky.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8d8e4"/>
+      <stop offset="0.54" stop-color="#e9e8d8"/>
+      <stop offset="1" stop-color="#f3e8c9"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fffbe7" stop-opacity="0.96"/>
+      <stop offset="0.48" stop-color="#f8e8ac" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#f8e8ac" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="farHills" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ca69a"/>
+      <stop offset="1" stop-color="#b6c3a5"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aebd88"/>
+      <stop offset="0.55" stop-color="#7e9b6c"/>
+      <stop offset="1" stop-color="#4f7459"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6d8b2"/>
+      <stop offset="1" stop-color="#b99b70"/>
+    </linearGradient>
+    <filter id="cloud" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <symbol id="flower" viewBox="-14 -14 28 28">
+      <g fill="#809fc9" stroke="#edf3ef" stroke-width="0.8">
+        <ellipse cy="-6" rx="4" ry="7"/><ellipse cy="6" rx="4" ry="7"/>
+        <ellipse cx="-6" rx="7" ry="4"/><ellipse cx="6" rx="7" ry="4"/>
+      </g>
+      <circle r="3" fill="#e8cc77"/>
+    </symbol>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1275" cy="205" r="215" fill="url(#sun)"/>
+
+  <g fill="#fffdf2" opacity="0.38" filter="url(#cloud)">
+    <path d="M90 180c72-56 162-40 196 24 52-40 150-27 172 43-133 19-269 16-399-7 2-26 12-46 31-60Z"/>
+    <path d="M820 116c58-43 134-34 166 18 48-30 124-12 138 46-115 14-234 11-347-10 2-24 16-42 43-54Z"/>
+  </g>
+
+  <g fill="none" stroke="#748da0" opacity="0.34">
+    <circle cx="1275" cy="205" r="124" stroke-width="2"/>
+    <circle cx="1275" cy="205" r="90" stroke-width="1.5" stroke-dasharray="7 13"/>
+    <path d="m1275 85 104 180h-208Z" stroke-width="1.5"/>
+    <path d="M1275 81v248M1160 267h230" stroke-width="1"/>
+  </g>
+  <g fill="#fff4c5" filter="url(#softGlow)">
+    <circle cx="1275" cy="85" r="4"/><circle cx="1171" cy="265" r="4"/><circle cx="1379" cy="265" r="4"/>
+    <path d="M1452 121h18m-9-9v18M1098 154h14m-7-7v14" stroke="#fff4c5" stroke-width="3"/>
+  </g>
+
+  <path d="M0 522 186 368l154 130 195-232 228 238 162-176 223 187 171-196 281 224v168H0Z" fill="#91a8a0" opacity="0.62"/>
+  <path d="M0 555 194 421l158 104 192-168 206 177 178-112 197 132 214-157 261 174v161H0Z" fill="url(#farHills)"/>
+
+  <!-- Distant weathered ruins -->
+  <g transform="translate(190 328)" fill="#d5d5c0" stroke="#8d9787" stroke-width="4" opacity="0.9">
+    <path d="M0 205V70h52V34h42v171Z"/>
+    <path d="M94 205V0h66v205ZM160 205V92h62v113Z"/>
+    <path d="m10 70 18-20 17 20m61-70 21-24L150 0m20 92 19-22 20 22" fill="#c6c9b7"/>
+    <path d="M22 108h22v48H22Zm93-58h26v54h-26Zm73 76h18v42h-18Z" fill="#788d80" stroke="none"/>
+    <path d="M15 177c37-26 61-9 86-35 22-24 56-23 83-5 15 10 26 9 41 4" fill="none" stroke="#728a6d" stroke-width="7"/>
+  </g>
+
+  <path d="M0 653c238-90 423-44 612 6 185 49 313-37 503-61 173-22 325 7 485 75v327H0Z" fill="#91aa73"/>
+  <path d="M0 746c238-75 438-57 625-6 184 50 342-17 526-49 169-30 310-13 449 40v269H0Z" fill="url(#field)"/>
+
+  <!-- Winding path into the long distance -->
+  <path d="M793 1000c-117-86-169-151-112-224 41-53 175-61 206-111 24-40-27-72-73-96-23-12-37-22-39-32 42 12 89 35 119 62 69 62 43 110-42 151-76 36-91 73-47 111 33 29 95 67 142 139Z" fill="url(#path)" opacity="0.92"/>
+  <path d="M793 1000c-117-86-169-151-112-224" fill="none" stroke="#f2e2bc" stroke-width="5" opacity="0.45"/>
+
+  <g fill="none" stroke="#d2e0cb" stroke-width="3" opacity="0.34">
+    <path d="M0 842c189-71 358-54 523-8M1102 819c180-44 334-29 498 28"/>
+    <path d="M66 907c172-61 303-48 430-12M1175 894c146-30 278-16 425 28"/>
+  </g>
+
+  <!-- Blue flowers, a recurring memory along the road -->
+  <g>
+    <use href="#flower" x="188" y="797" width="36" height="36"/>
+    <use href="#flower" x="245" y="846" width="28" height="28"/>
+    <use href="#flower" x="354" y="769" width="31" height="31"/>
+    <use href="#flower" x="474" y="902" width="42" height="42"/>
+    <use href="#flower" x="1113" y="786" width="31" height="31"/>
+    <use href="#flower" x="1224" y="858" width="42" height="42"/>
+    <use href="#flower" x="1365" y="763" width="29" height="29"/>
+    <use href="#flower" x="1452" y="918" width="38" height="38"/>
+    <use href="#flower" x="1038" y="941" width="30" height="30"/>
+  </g>
+
+  <g fill="#425e55" opacity="0.72">
+    <path d="M1070 232c21-13 39-13 58 0-19-6-38-6-58 0Zm72 31c18-11 34-11 50 0-16-5-32-5-50 0ZM680 176c17-10 31-10 47 0-15-5-30-5-47 0Z"/>
+  </g>
+
+  <rect y="0" width="1600" height="1000" fill="none" stroke="#f5efd9" stroke-width="18" opacity="0.28"/>
+</svg>
