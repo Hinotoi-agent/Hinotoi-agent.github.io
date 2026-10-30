@@ -2367,6 +2367,247 @@ body.frieren-portfolio {
   }
 }
 
+/* Editorial cinema pass inspired by the supplied layout reference. */
+body.frieren-portfolio {
+  --anime-bg: #f8f7f2;
+  --anime-panel: #fffef9;
+  --anime-panel-2: #eef1e7;
+}
+:root[data-theme="dark"] body.frieren-portfolio {
+  --anime-bg: #111916;
+  --anime-panel: #17211d;
+  --anime-panel-2: #202d27;
+}
+.frieren-portfolio .anime-portfolio { background: var(--anime-bg); }
+.frieren-portfolio .anime-portfolio::before { opacity: 0.46; }
+.frieren-portfolio .anime-hero {
+  min-height: 720px;
+  border: 0;
+  border-radius: 0.85rem;
+  background:
+    linear-gradient(90deg, rgba(20, 35, 30, 0.9) 0%, rgba(20, 35, 30, 0.66) 38%, rgba(20, 35, 30, 0.13) 72%),
+    url("/assets/img/long-journey-landscape.svg") center / cover no-repeat;
+  box-shadow: none;
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-hero {
+  background:
+    linear-gradient(90deg, rgba(9, 19, 16, 0.94) 0%, rgba(9, 19, 16, 0.73) 40%, rgba(9, 19, 16, 0.28) 74%),
+    url("/assets/img/long-journey-landscape.svg") center / cover no-repeat;
+}
+.frieren-portfolio .anime-hero-copy {
+  max-width: 650px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.frieren-portfolio .anime-hero h1 {
+  max-width: 9.5ch;
+  color: #fffdf3;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.24);
+}
+.frieren-portfolio .anime-hero h1 em { color: #c9e1d2; }
+.frieren-portfolio .anime-hero-lede {
+  color: rgba(255, 253, 243, 0.88) !important;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.24);
+}
+.frieren-portfolio .anime-hero .anime-status,
+.frieren-portfolio .anime-hero .anime-overline { color: #f0d49a !important; }
+.frieren-portfolio .anime-hero .anime-status span {
+  background: #d9e8ce;
+  box-shadow: 0 0 0 0.25rem rgba(217, 232, 206, 0.16), 0 0 1rem rgba(217, 232, 206, 0.66);
+}
+.frieren-portfolio .anime-hero .anime-button-primary {
+  border-color: #fffdf3;
+  background: #fffdf3;
+  color: #253a31 !important;
+}
+.frieren-portfolio .anime-hero .anime-button-secondary {
+  border-color: rgba(255, 253, 243, 0.7);
+  background: rgba(255, 253, 243, 0.08);
+  color: #fffdf3 !important;
+  backdrop-filter: blur(8px);
+}
+.frieren-portfolio .anime-hero .anime-tag-row span {
+  border-color: rgba(255, 253, 243, 0.3);
+  background: rgba(20, 35, 30, 0.32);
+  color: #fffdf3;
+  backdrop-filter: blur(8px);
+}
+.frieren-portfolio .anime-portrait-frame { max-width: 355px; }
+.frieren-portfolio .anime-portrait-panel {
+  background: rgba(255, 253, 243, 0.12);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.25);
+}
+.frieren-portfolio .anime-portrait-frame figcaption { color: #fffdf3; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.42); }
+.frieren-portfolio .anime-portrait-frame figcaption span { color: #f0d49a; }
+.frieren-portfolio .anime-evidence {
+  border: 0;
+  border-radius: 0.7rem;
+  background: var(--anime-panel);
+}
+.frieren-portfolio .anime-section {
+  border-bottom: 0;
+  padding-block: clamp(6rem, 10vw, 9rem);
+}
+.frieren-portfolio .anime-section::before { display: none; }
+.frieren-portfolio .anime-section-heading {
+  grid-template-columns: minmax(8rem, 0.28fr) minmax(0, 1fr);
+  margin-bottom: clamp(2.6rem, 5vw, 4.8rem);
+}
+.frieren-portfolio .anime-section-heading h2 {
+  max-width: 16ch;
+  font-size: clamp(3rem, 5.6vw, 5.5rem);
+}
+.frieren-portfolio .anime-about-grid { align-items: start; }
+.frieren-portfolio .anime-identity-card {
+  border: 0;
+  border-left: 2px solid var(--anime-pink);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.frieren-portfolio .anime-cinematic {
+  position: relative;
+  overflow: hidden;
+  margin: clamp(3.5rem, 7vw, 6rem) 0 0;
+  border-radius: 0.8rem;
+  background: var(--anime-panel-2);
+}
+.frieren-portfolio .anime-cinematic img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7.8;
+  object-fit: cover;
+}
+.frieren-portfolio .anime-cinematic::after {
+  content: "";
+  position: absolute;
+  inset: 42% 0 0;
+  background: linear-gradient(0deg, rgba(13, 25, 21, 0.72), transparent);
+  pointer-events: none;
+}
+.frieren-portfolio .anime-cinematic figcaption {
+  position: absolute;
+  z-index: 2;
+  right: clamp(1.2rem, 3vw, 2.5rem);
+  bottom: clamp(1.2rem, 3vw, 2.4rem);
+  left: clamp(1.2rem, 3vw, 2.5rem);
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  color: #fffdf3;
+}
+.frieren-portfolio .anime-cinematic figcaption span {
+  color: #f0d49a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  font-style: italic;
+  letter-spacing: 0.08em;
+}
+.frieren-portfolio .anime-cinematic figcaption strong {
+  max-width: 28ch;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.7vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.08;
+  text-align: right;
+}
+.frieren-portfolio .anime-cinematic-path {
+  width: 72%;
+  margin-left: auto;
+}
+.frieren-portfolio .anime-cinematic-companions img { aspect-ratio: 16 / 8.5; }
+.frieren-portfolio .anime-cinematic-meteors {
+  width: 82%;
+  margin: 1rem auto clamp(6rem, 10vw, 9rem);
+}
+.frieren-portfolio .anime-timeline { display: grid; gap: 1.1rem; }
+.frieren-portfolio .anime-role {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--anime-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.frieren-portfolio .anime-role:last-child { border-bottom: 1px solid var(--anime-line); }
+.frieren-portfolio .anime-role-meta { background: transparent; }
+.frieren-portfolio .anime-role-featured .anime-role-body { background: transparent; }
+.frieren-portfolio .anime-operation-grid {
+  display: block;
+}
+.frieren-portfolio .anime-operation-card {
+  min-height: 0;
+  margin: 0;
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(0.2rem, 2vw, 1.5rem);
+  border: 0;
+  border-top: 1px solid var(--anime-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.frieren-portfolio .anime-operation-card:last-child { border-bottom: 1px solid var(--anime-line); }
+.frieren-portfolio .anime-operation-card:hover {
+  transform: none;
+  border-color: var(--anime-cyan);
+  background: var(--anime-cyan-soft);
+  box-shadow: none;
+}
+.frieren-portfolio .anime-operation-number { top: 1rem; right: 1rem; }
+.frieren-portfolio .anime-control-sequence li,
+.frieren-portfolio .anime-proof-stats a,
+.frieren-portfolio .anime-disclosure,
+.frieren-portfolio .anime-speaking,
+.frieren-portfolio .anime-certifications {
+  box-shadow: none;
+}
+.frieren-portfolio .anime-note-list a {
+  border-width: 0 0 1px;
+  border-radius: 0;
+  background: transparent;
+}
+.frieren-portfolio .anime-note-list a:hover { transform: translateX(0.35rem); }
+.frieren-portfolio .anime-contact {
+  border: 0;
+  border-radius: 0.85rem;
+}
+
+@media (max-width: 720px) {
+  .frieren-portfolio .anime-hero {
+    min-height: 0;
+    background:
+      linear-gradient(180deg, rgba(15, 29, 24, 0.83) 0%, rgba(15, 29, 24, 0.53) 60%, rgba(15, 29, 24, 0.7) 100%),
+      url("/assets/img/long-journey-landscape.svg") 61% center / cover no-repeat;
+  }
+  :root[data-theme="dark"] .frieren-portfolio .anime-hero {
+    background:
+      linear-gradient(180deg, rgba(8, 18, 15, 0.9), rgba(8, 18, 15, 0.64)),
+      url("/assets/img/long-journey-landscape.svg") 61% center / cover no-repeat;
+  }
+  .frieren-portfolio .anime-hero-copy { padding: 0.5rem; background: transparent; }
+  .frieren-portfolio .anime-section-heading { grid-template-columns: 1fr; }
+  .frieren-portfolio .anime-cinematic,
+  .frieren-portfolio .anime-cinematic-path,
+  .frieren-portfolio .anime-cinematic-meteors { width: 100%; }
+  .frieren-portfolio .anime-cinematic img { aspect-ratio: 4 / 3; }
+  .frieren-portfolio .anime-cinematic figcaption {
+    display: block;
+  }
+  .frieren-portfolio .anime-cinematic figcaption strong {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 1.35rem;
+    text-align: left;
+  }
+  .frieren-portfolio .anime-role { grid-template-columns: 1fr; }
+  .frieren-portfolio .anime-role-meta { border-bottom: 1px solid var(--anime-line); }
+}
+
 .post-nav { display: grid; gap: 0.75rem; margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid var(--border); }
 .post-nav-link { display: block; padding: 0.8rem 0.95rem; border: 1px solid var(--border); border-radius: 12px; background: var(--surface-alt); font-weight: 600; }
 .post-nav-home { text-align: center; }

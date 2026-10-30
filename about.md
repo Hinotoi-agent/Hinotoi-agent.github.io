@@ -89,6 +89,10 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
           <blockquote>“The useful question is not whether AI can act. It is where its output gains authority—and how a human stays in control.”</blockquote>
         </aside>
       </div>
+      <figure class="anime-cinematic anime-cinematic-path">
+        <img src="{{ '/assets/img/long-journey-landscape.svg' | relative_url }}" alt="An original fantasy landscape with a winding road, distant ruins, mountains, and blue flowers">
+        <figcaption><span>The road continues</span><strong>Small lessons accumulate into lasting judgment.</strong></figcaption>
+      </figure>
     </section>
 
     <section id="experience" class="anime-section anime-experience">
@@ -184,6 +188,10 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
           </div>
         </article>
       </div>
+      <figure class="anime-cinematic anime-cinematic-companions">
+        <img src="{{ '/assets/img/companions-campfire.svg' | relative_url }}" alt="An original twilight illustration of four travelers sharing a quiet meal beside a fire">
+        <figcaption><span>Companions of the craft</span><strong>The strongest security work is learned, reviewed, and delivered together.</strong></figcaption>
+      </figure>
     </section>
 
     <section class="anime-section anime-controls">
@@ -267,6 +275,11 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
         {% endfor %}
       </div>
     </section>
+
+    <figure class="anime-cinematic anime-cinematic-meteors">
+      <img src="{{ '/assets/img/era-meteors.svg' | relative_url }}" alt="An original night landscape with travelers watching meteors above distant mountains and ruins">
+      <figcaption><span>What remains</span><strong>The work passes. The lessons become part of the next journey.</strong></figcaption>
+    </figure>
 
     <section class="anime-contact" aria-labelledby="anime-contact-title">
       <p class="anime-overline">Campfire · Open channel</p>

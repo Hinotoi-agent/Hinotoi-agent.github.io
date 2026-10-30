@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 850" role="img" aria-labelledby="title desc">
+  <title id="title">Companions at the evening camp</title>
+  <desc id="desc">An original twilight illustration of four travelers sharing a quiet meal beside a fire.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#304d5b"/><stop offset=".58" stop-color="#796b70"/><stop offset="1" stop-color="#d49a70"/></linearGradient>
+    <radialGradient id="fire"><stop stop-color="#fff4b8"/><stop offset=".36" stop-color="#efb45b" stop-opacity=".9"/><stop offset="1" stop-color="#d26d42" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#42564b"/><stop offset="1" stop-color="#1c2f2b"/></linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1600" height="850" fill="url(#sky)"/>
+  <circle cx="1280" cy="170" r="90" fill="#f4e8c7" opacity=".78"/>
+  <g fill="#f8f3dd" opacity=".72"><circle cx="140" cy="124" r="3"/><circle cx="278" cy="82" r="2"/><circle cx="510" cy="150" r="3"/><circle cx="705" cy="74" r="2"/><circle cx="1015" cy="125" r="3"/><circle cx="1450" cy="88" r="2"/></g>
+  <path d="M0 448 185 307l142 111 194-180 181 184 187-126 178 144 190-176 343 208v132H0Z" fill="#263f3b" opacity=".82"/>
+  <g fill="#2b3732">
+    <path d="M60 492V305h180v187Zm24-136h38v49H84Zm72 0h38v49h-38Z"/>
+    <path d="M1290 500V278h222v222Zm34-164h44v60h-44Zm85 0h44v60h-44Z"/>
+  </g>
+  <g fill="#e9b569" opacity=".82"><rect x="84" y="356" width="38" height="49" rx="2"/><rect x="156" y="356" width="38" height="49" rx="2"/><rect x="1324" y="336" width="44" height="60" rx="2"/><rect x="1409" y="336" width="44" height="60" rx="2"/></g>
+  <path d="M0 535c250-74 465-33 671 9 213 44 430-30 929-12v318H0Z" fill="url(#ground)"/>
+  <ellipse cx="800" cy="635" rx="250" ry="168" fill="url(#fire)" opacity=".58" filter="url(#glow)"/>
+  <ellipse cx="800" cy="699" rx="250" ry="64" fill="#13231f" opacity=".48"/>
+  <path d="m749 709 52-103 50 103Z" fill="#df7a42"/><path d="m772 704 31-70 28 70Z" fill="#ffd083"/>
+  <g stroke="#49352c" stroke-width="20" stroke-linecap="round"><path d="m707 727 176-61"/><path d="m713 666 168 61"/></g>
+  <!-- Four original traveler silhouettes -->
+  <g stroke="#d2c7a7" stroke-width="4">
+    <g fill="#435d53"><circle cx="560" cy="527" r="42"/><path d="M495 691c3-102 21-147 66-147s67 49 70 147Z"/><path d="m523 545-45-18 39 55M598 546l49-22-43 58" fill="#bdc8bd"/></g>
+    <g fill="#5b6479"><circle cx="684" cy="493" r="38"/><path d="M632 667c2-95 18-136 53-136 45 0 63 44 66 136Z"/><path d="M646 465c22-41 62-46 85-7-35-13-58-11-85 7Z" fill="#d8d8cf"/></g>
+    <g fill="#6c5545"><circle cx="990" cy="515" r="43"/><path d="M925 688c3-101 21-146 66-146s67 49 70 146Z"/><path d="m954 477 37-30 38 29" fill="#8d8174"/></g>
+    <g fill="#576f51"><circle cx="1114" cy="540" r="35"/><path d="M1060 697c2-89 18-127 55-127 39 0 57 41 59 127Z"/><path d="M1084 507h60"/></g>
+  </g>
+  <path d="M0 780c230-42 438-30 603 2 228 44 491-20 997-8v76H0Z" fill="#152622"/>
+  <g fill="#f3d891"><path d="M415 643h18m-9-9v18M1192 617h16m-8-8v16M1328 690h12m-6-6v12"/></g>
+</svg>
