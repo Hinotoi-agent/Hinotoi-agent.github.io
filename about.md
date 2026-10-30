@@ -48,15 +48,15 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <figure class="anime-portrait-frame">
         <div class="anime-portrait-halo" aria-hidden="true"></div>
         <div class="anime-portrait-panel">
-          <img src="{{ '/assets/img/frieren-moonlit-closeup.jpg' | relative_url }}" width="1280" height="800" alt="Moonlit close-up of Frieren with silver hair, elven ears, green eyes, and garnet earrings">
+          <img src="{{ '/assets/img/frieren-anime-hero.jpg' | relative_url }}" width="1280" height="800" alt="Frieren in a moonlit anime scene, with silver hair, elven ears, green eyes, and garnet earrings">
           <div class="anime-scan-line" aria-hidden="true"></div>
           <span class="anime-corner anime-corner-one" aria-hidden="true"></span>
           <span class="anime-corner anime-corner-two" aria-hidden="true"></span>
         </div>
         <figcaption>
-          <span>Archive frame · Frieren</span>
-          <strong>BEYOND THE JOURNEY</strong>
-          <small>Power is made useful through judgment</small>
+          <span>Frieren · Beyond Journey’s End</span>
+          <strong>A JOURNEY OF MEMORY</strong>
+          <small>Quiet judgment outlasts raw power</small>
         </figcaption>
       </figure>
     </section>
