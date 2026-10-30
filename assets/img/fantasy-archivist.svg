@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Fantasy security archivist</title>
+  <desc id="desc">An original elven archivist with a floating grimoire, moonlit forest, and protective magic circles.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#172c2b"/>
+      <stop offset="0.58" stop-color="#29473d"/>
+      <stop offset="1" stop-color="#506b57"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fffde8"/>
+      <stop offset="0.72" stop-color="#e9e4c2"/>
+      <stop offset="1" stop-color="#c7c8ad" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f5e8"/>
+      <stop offset="0.55" stop-color="#d9dcd2"/>
+      <stop offset="1" stop-color="#9fa9a5"/>
+    </linearGradient>
+    <linearGradient id="cloak" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#87a58b"/>
+      <stop offset="1" stop-color="#3d5e4d"/>
+    </linearGradient>
+    <linearGradient id="book" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8955d"/>
+      <stop offset="1" stop-color="#6d4d32"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <clipPath id="frame"><rect width="800" height="800" rx="30"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="800" height="800" fill="url(#sky)"/>
+    <circle cx="610" cy="168" r="170" fill="url(#moon)" opacity="0.92"/>
+    <circle cx="610" cy="168" r="95" fill="#f5f0d1" opacity="0.82"/>
+
+    <g fill="#10251f" opacity="0.72">
+      <path d="M0 610 112 425 210 610Z"/><path d="M112 630 258 360 390 630Z"/>
+      <path d="M476 630 610 378 760 630Z"/><path d="M630 630 748 432 850 630Z"/>
+    </g>
+    <g fill="#789179" opacity="0.24" filter="url(#soft)">
+      <circle cx="92" cy="214" r="74"/><circle cx="163" cy="274" r="94"/>
+      <circle cx="718" cy="340" r="72"/><circle cx="645" cy="390" r="104"/>
+    </g>
+
+    <g fill="none" stroke="#c9d9bf" opacity="0.42">
+      <circle cx="398" cy="370" r="270" stroke-width="2"/>
+      <circle cx="398" cy="370" r="226" stroke-width="1.5" stroke-dasharray="7 13"/>
+      <path d="M398 93 638 507 158 507Z" stroke-width="1.5"/>
+      <path d="M398 93V647M158 507 638 507" stroke-width="1"/>
+    </g>
+    <g fill="#f2d48d" filter="url(#glow)">
+      <circle cx="398" cy="93" r="5"/><circle cx="158" cy="507" r="5"/><circle cx="638" cy="507" r="5"/>
+      <path d="M122 145h18m-9-9v18M690 254h22m-11-11v22M708 98h12m-6-6v12" stroke="#f2d48d" stroke-width="3"/>
+    </g>
+
+    <!-- Original elven archivist -->
+    <path d="M242 698c20-158 58-262 156-276 103 13 151 120 170 276Z" fill="url(#cloak)" stroke="#b5c8ad" stroke-width="4"/>
+    <path d="M306 478c-42-49-43-152-16-222 26-68 86-103 147-91 77 15 112 94 93 178-15 68-39 104-70 134-53 34-112 33-154 1Z" fill="url(#hair)" stroke="#dfe4d8" stroke-width="4"/>
+    <path d="m294 307-74-13 68 57M505 304l78-21-70 65" fill="#efc5a7" stroke="#c88f78" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="401" cy="327" rx="104" ry="122" fill="#efc5a7" stroke="#c88f78" stroke-width="4"/>
+    <path d="M314 282c34-91 151-111 200-29-23-24-59-36-90-29-35 7-63 31-110 58Z" fill="url(#hair)"/>
+    <path d="M325 292c-10 96 11 161 44 188-60-27-88-101-72-178 12-55 42-96 81-117-31 34-46 67-53 107ZM480 236c39 53 24 170-22 241 53-26 83-102 78-173-4-56-27-101-67-126 9 18 13 36 11 58Z" fill="url(#hair)"/>
+    <path d="M339 335c18-15 39-14 57 0M414 335c18-15 39-14 57 0" fill="none" stroke="#49544e" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="368" cy="341" rx="10" ry="15" fill="#5a7565"/><ellipse cx="443" cy="341" rx="10" ry="15" fill="#5a7565"/>
+    <circle cx="371" cy="337" r="3" fill="#f9f6df"/><circle cx="446" cy="337" r="3" fill="#f9f6df"/>
+    <path d="M391 368c9 5 18 5 27 0M377 396c18 13 43 13 61-1" fill="none" stroke="#aa6b67" stroke-width="4" stroke-linecap="round"/>
+    <path d="M307 458c40 37 143 37 190-3l-22 91-74 42-72-40Z" fill="#e9e6d9" stroke="#c7c9bd" stroke-width="4"/>
+    <path d="M351 474 401 530 450 473" fill="none" stroke="#8b7652" stroke-width="5"/>
+    <circle cx="401" cy="530" r="15" fill="#caa96a" stroke="#f0d394" stroke-width="4"/>
+
+    <!-- Floating grimoire and security ward -->
+    <g transform="translate(0 18)">
+      <ellipse cx="402" cy="704" rx="184" ry="42" fill="#98c2a4" opacity="0.25" filter="url(#glow)"/>
+      <path d="M225 648c63-25 125-12 176 29v93c-57-36-114-44-176-18Z" fill="#f3e7c5" stroke="#8e6a42" stroke-width="5"/>
+      <path d="M579 648c-63-25-125-12-178 29v93c59-36 116-44 178-18Z" fill="#f3e7c5" stroke="#8e6a42" stroke-width="5"/>
+      <path d="M401 677v93" stroke="#8e6a42" stroke-width="5"/>
+      <path d="M246 675c44-12 88-3 125 20M246 704c44-12 88-3 125 20M558 675c-45-12-89-3-126 20M558 704c-45-12-89-3-126 20" fill="none" stroke="#b69a67" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="401" cy="664" r="42" fill="none" stroke="#d8c078" stroke-width="3" filter="url(#glow)"/>
+      <path d="m401 633 9 20 22 2-17 15 5 21-19-11-19 11 5-21-17-15 22-2Z" fill="#e6cf8e" opacity="0.9"/>
+    </g>
+
+    <g fill="#d7e6ca" opacity="0.78">
+      <circle cx="108" cy="106" r="3"/><circle cx="174" cy="182" r="2"/><circle cx="684" cy="490" r="3"/>
+      <circle cx="92" cy="384" r="2"/><circle cx="724" cy="601" r="2"/><circle cx="584" cy="86" r="2"/>
+    </g>
+  </g>
+</svg>

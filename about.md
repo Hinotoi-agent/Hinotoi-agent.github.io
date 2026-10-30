@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Lennon Chia — AI & Offensive Security
+title: Lennon Chia — Security Across the Long Journey
 permalink: /about/
-body_class: portfolio-anime
+body_class: portfolio-anime frieren-portfolio
 excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across offensive security, AI-assisted penetration testing, agentic controls, and open-source vulnerability research.
 ---
 
@@ -16,13 +16,13 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
   <nav class="anime-nav" aria-label="Profile navigation">
     <a class="anime-wordmark" href="{{ '/' | relative_url }}" aria-label="Hinotoi home">
       <span class="anime-wordmark-sigil" aria-hidden="true">H</span>
-      <span><strong>LENNON CHIA</strong><small>HINOTOI // NIGHT SIGNAL</small></span>
+      <span><strong>LENNON CHIA</strong><small>HINOTOI // ARCANE FIELD NOTES</small></span>
     </a>
     <div class="anime-nav-links">
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#operations">Operations</a>
-      <a href="#proof">Public work</a>
+      <a href="#experience">Journey</a>
+      <a href="#operations">Craft</a>
+      <a href="#proof">Archive</a>
       <a class="anime-nav-cta" href="https://github.com/Hinotoi-agent" rel="me">GitHub ↗</a>
     </div>
   </nav>
@@ -31,9 +31,9 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
     <section class="anime-hero" aria-labelledby="anime-hero-title">
       <div class="anime-grid-glow" aria-hidden="true"></div>
       <div class="anime-hero-copy">
-        <div class="anime-status"><span aria-hidden="true"></span> SYSTEM ONLINE // SINGAPORE</div>
-        <p class="anime-overline">CYBERSECURITY MANAGER · OFFENSIVE SECURITY · AI INNOVATION</p>
-        <h1 id="anime-hero-title">Security,<br><em>augmented.</em><br>Judgment, retained.</h1>
+        <div class="anime-status"><span aria-hidden="true"></span> MANA TRACE ACTIVE // SINGAPORE</div>
+        <p class="anime-overline">CYBERSECURITY MANAGER · OFFENSIVE SECURITY · RESPONSIBLE AI</p>
+        <h1 id="anime-hero-title">Security,<br><em>remembered.</em><br>Judgment, retained.</h1>
         <p class="anime-hero-lede">I lead AI innovation and penetration-testing teams, build human-validated security workflows, and research the trust boundaries where software gains authority.</p>
         <div class="anime-hero-actions">
           <a class="anime-button anime-button-primary" href="#operations">Explore my work <span aria-hidden="true">↘</span></a>
@@ -47,30 +47,30 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <figure class="anime-portrait-frame">
         <div class="anime-portrait-halo" aria-hidden="true"></div>
         <div class="anime-portrait-panel">
-          <img src="{{ '/assets/img/lennon-avatar.png' | relative_url }}" alt="Anime-style profile avatar used by Lennon Chia">
+          <img src="{{ '/assets/img/fantasy-archivist.svg' | relative_url }}" alt="Original fantasy archivist illustration representing Lennon Chia’s security research journey">
           <div class="anime-scan-line" aria-hidden="true"></div>
           <span class="anime-corner anime-corner-one" aria-hidden="true"></span>
           <span class="anime-corner anime-corner-two" aria-hidden="true"></span>
         </div>
         <figcaption>
-          <span>SUBJECT // 01</span>
+          <span>ARCHIVIST // 01</span>
           <strong>LENNON CHIA</strong>
-          <small>Human validation required</small>
+          <small>Every finding needs human judgment</small>
         </figcaption>
       </figure>
     </section>
 
     <section class="anime-evidence" aria-label="Career and public-work highlights">
-      <div><strong>11+</strong><span>Years in cybersecurity</span></div>
-      <div><strong>02</strong><span>Teams led across AI and penetration testing</span></div>
+      <div><strong>11+</strong><span>Years on the security journey</span></div>
+      <div><strong>02</strong><span>Teams guided across AI and penetration testing</span></div>
       <div><strong>≈50%</strong><span>Lower effort in selected AI-assisted trials</span></div>
       <a href="{{ '/merged-prs/' | relative_url }}"><strong>{{ merged_prs | size }}</strong><span>Merged PRs indexed <b aria-hidden="true">↗</b></span></a>
     </section>
 
     <section id="about" class="anime-section anime-about">
       <header class="anime-section-heading">
-        <span>CHAPTER 01 // PROFILE</span>
-        <h2>Offense. AI. Assurance.</h2>
+        <span>SCROLL I // PROFILE</span>
+        <h2>Quiet craft. Long memory.</h2>
       </header>
       <div class="anime-about-grid">
         <div class="anime-about-copy">
@@ -79,7 +79,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
           <p>I treat AI as a force multiplier—not a substitute for experienced security practitioners. The systems I build keep human review at the decision boundary, especially when a model can influence testing, triage, exploitation, or remediation advice.</p>
         </div>
         <aside class="anime-identity-card" aria-label="Profile summary">
-          <div class="anime-identity-label">IDENTITY FILE // LC-01</div>
+          <div class="anime-identity-label">ADVENTURER RECORD // LC-01</div>
           <dl>
             <div><dt>Base</dt><dd>Singapore</dd></div>
             <div><dt>Current role</dt><dd>Cybersecurity Manager, EY</dd></div>
@@ -93,8 +93,8 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
 
     <section id="experience" class="anime-section anime-experience">
       <header class="anime-section-heading">
-        <span>CHAPTER 02 // CAREER</span>
-        <h2>Building capability, then proving it.</h2>
+        <span>SCROLL II // JOURNEY</span>
+        <h2>A career measured in what endures.</h2>
       </header>
       <div class="anime-timeline">
         <article class="anime-role anime-role-featured">
@@ -103,7 +103,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
             <b>EY · SINGAPORE</b>
           </div>
           <div class="anime-role-body">
-            <p class="anime-role-index">ROLE // 01</p>
+            <p class="anime-role-index">JOURNEY // 01</p>
             <h3>Cybersecurity Manager</h3>
             <ul>
               <li>Lead an AI innovation team and a penetration-testing delivery team.</li>
@@ -122,7 +122,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
             <b>EY · SINGAPORE</b>
           </div>
           <div class="anime-role-body">
-            <p class="anime-role-index">ROLE // 02</p>
+            <p class="anime-role-index">JOURNEY // 02</p>
             <h3>Senior Information Security Consultant</h3>
             <p>Built the technical foundation for more than six years of penetration testing, vulnerability assessment, offensive security delivery, and client-facing security work before moving into management.</p>
           </div>
@@ -134,7 +134,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
             <b>EDUCATION</b>
           </div>
           <div class="anime-role-body">
-            <p class="anime-role-index">BASE // 01</p>
+            <p class="anime-role-index">FOUNDATION // 01</p>
             <h3>University of Wollongong</h3>
             <p>Academic foundation supporting a career in information security, technical delivery, and systems thinking.</p>
           </div>
@@ -144,14 +144,14 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
 
     <section id="operations" class="anime-section anime-operations">
       <header class="anime-section-heading">
-        <span>CHAPTER 03 // OPERATIONS</span>
-        <h2>What I build and lead.</h2>
+        <span>SCROLL III // PRACTICE</span>
+        <h2>The practical spellbook.</h2>
       </header>
       <div class="anime-operation-grid">
         <article class="anime-operation-card anime-operation-wide">
           <span class="anime-operation-number">01</span>
-          <p class="anime-operation-kicker">AI-ASSISTED OFFENSIVE SECURITY</p>
-          <h3>Local models. Real workflows. Human decisions.</h3>
+          <p class="anime-operation-kicker">AUGMENTATION // AI-ASSISTED OFFENSIVE SECURITY</p>
+          <h3>Local models. Deliberate control. Human decisions.</h3>
           <p>I’m building a locally hosted penetration-testing accelerator using high-performance model serving with SGLang and speculative decoding. It supports practitioners across analysis, review, testing, triage, validation, and remediation without treating model output as ground truth.</p>
           <div class="anime-flow" aria-label="AI-assisted security workflow">
             <span>CONTEXT</span><i aria-hidden="true"></i><span>MODEL</span><i aria-hidden="true"></i><span>CONTROL</span><i aria-hidden="true"></i><span>HUMAN</span>
@@ -160,21 +160,21 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
 
         <article class="anime-operation-card">
           <span class="anime-operation-number">02</span>
-          <p class="anime-operation-kicker">SECURE AGENTIC CONTROLS</p>
+          <p class="anime-operation-kicker">FIVE-WARD CONTROL MODEL</p>
           <h3>Authority is designed, not assumed.</h3>
           <p>Least privilege, explicit approvals, traceable audit records, safe rollback, and continuous human oversight define the operating boundary.</p>
         </article>
 
         <article class="anime-operation-card">
           <span class="anime-operation-number">03</span>
-          <p class="anime-operation-kicker">PENETRATION-TESTING DELIVERY</p>
+          <p class="anime-operation-kicker">FIELD PRACTICE // PENETRATION TESTING</p>
           <h3>Methodology through quality assurance.</h3>
           <p>I lead technical delivery, set methodology and direction, validate findings, and translate technical evidence into decisions.</p>
         </article>
 
         <article class="anime-operation-card">
           <span class="anime-operation-number">04</span>
-          <p class="anime-operation-kicker">OPEN-SOURCE SECURITY RESEARCH</p>
+          <p class="anime-operation-kicker">OPEN-SOURCE RESEARCH GRIMOIRE</p>
           <h3>Trace the boundary. Ship the fix.</h3>
           <p>I reproduce source-to-sink paths, check for duplicates, contribute focused patches with regression tests, and turn shipped work into reusable research patterns.</p>
           <div class="anime-project-links">
@@ -188,7 +188,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
 
     <section class="anime-section anime-controls">
       <header class="anime-section-heading anime-section-heading-compact">
-        <span>CONTROL MODEL // HUMAN-IN-THE-LOOP</span>
+        <span>FIVE WARDS // HUMAN-IN-THE-LOOP</span>
         <h2>Guardrails before autonomy.</h2>
       </header>
       <ol class="anime-control-sequence">
@@ -202,8 +202,8 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
 
     <section id="proof" class="anime-section anime-proof">
       <header class="anime-section-heading">
-        <span>CHAPTER 04 // PUBLIC RECORD</span>
-        <h2>Proof in the open.</h2>
+        <span>SCROLL IV // OPEN ARCHIVE</span>
+        <h2>Evidence, preserved in the open.</h2>
       </header>
       <div class="anime-proof-stats">
         <a href="{{ '/merged-prs/' | relative_url }}"><strong>{{ merged_prs | size }}</strong><span>Merged upstream PRs</span></a>
@@ -232,13 +232,13 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
 
     <section class="anime-section anime-background">
       <article class="anime-speaking">
-        <p class="anime-operation-kicker">SPEAKING // MILIPOL TECHX 2026</p>
+        <p class="anime-operation-kicker">GATHERING // MILIPOL TECHX 2026</p>
         <h2>Using AI as a Force Multiplier to Augment Offensive Security</h2>
         <p>A lightning talk on applying AI to offensive-security workflows while retaining practitioner control, verification, and accountability.</p>
         <a href="https://www.linkedin.com/posts/lennon-chia_happy-to-share-that-at-milipol-techx-2026-activity-7457275024522121216-IF5F">View the talk post on LinkedIn ↗</a>
       </article>
       <article class="anime-certifications">
-        <p class="anime-operation-kicker">SELECTED CREDENTIALS</p>
+        <p class="anime-operation-kicker">GRIMOIRE // SELECTED CREDENTIALS</p>
         <h2>Technical foundations</h2>
         <div class="anime-cert-grid" aria-label="Selected certifications earned">
           <span><b>CRTO</b>Certified Red Team Operator</span>
@@ -254,8 +254,8 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
 
     <section class="anime-section anime-notes">
       <header class="anime-section-heading anime-section-heading-compact">
-        <span>FIELD SIGNALS // LATEST NOTES</span>
-        <h2>Research that compounds.</h2>
+        <span>FIELD JOURNAL // LATEST NOTES</span>
+        <h2>Knowledge gathered along the way.</h2>
       </header>
       <div class="anime-note-list">
         {% for post in site.posts limit: 3 %}
@@ -269,7 +269,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
     </section>
 
     <section class="anime-contact" aria-labelledby="anime-contact-title">
-      <p class="anime-overline">END FRAME // OPEN CHANNEL</p>
+      <p class="anime-overline">CAMPFIRE // OPEN CHANNEL</p>
       <h2 id="anime-contact-title">Have a security boundary worth testing?</h2>
       <p>Explore my public work, follow the field notes, or connect with me professionally.</p>
       <div class="anime-hero-actions anime-contact-actions">
@@ -282,8 +282,8 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
   </main>
 
   <footer class="anime-footer">
-    <a href="{{ '/' | relative_url }}">HINOTOI // AI SECURITY NOTES</a>
-    <span>Designed around evidence, control, and fixes that ship.</span>
+    <a href="{{ '/' | relative_url }}">HINOTOI // ARCANE SECURITY NOTES</a>
+    <span>Quiet craft, long memory, and fixes that endure.</span>
     <a href="#profile-main">Back to top ↑</a>
   </footer>
 </div>
