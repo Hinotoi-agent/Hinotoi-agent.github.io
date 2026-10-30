@@ -95,6 +95,21 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
           <blockquote>“The useful question is not whether AI can act. It is where its output gains authority—and how a human stays in control.”</blockquote>
         </aside>
       </div>
+      <aside class="anime-personality" aria-labelledby="personality-title">
+        <div class="anime-personality-copy">
+          <span>Working-style snapshot · 22 May 2020</span>
+          <h3 id="personality-title">Architect <em>INTJ-A</em></h3>
+          <p>Independent, strategic, and systems-minded: a useful personal lens for how I plan, investigate, and turn ambiguous security boundaries into deliberate action.</p>
+          <small>This dated 16Personalities result is personal context—not a professional qualification or fixed definition.</small>
+        </div>
+        <div class="anime-traits" aria-label="Personality trait results">
+          <label><span>Introverted <strong>76%</strong></span><progress max="100" value="76">76%</progress></label>
+          <label><span>Intuitive <strong>56%</strong></span><progress max="100" value="56">56%</progress></label>
+          <label><span>Thinking <strong>72%</strong></span><progress max="100" value="72">72%</progress></label>
+          <label><span>Judging <strong>63%</strong></span><progress max="100" value="63">63%</progress></label>
+          <label><span>Assertive <strong>64%</strong></span><progress max="100" value="64">64%</progress></label>
+        </div>
+      </aside>
       <figure class="anime-cinematic anime-cinematic-path">
         <img src="{{ '/assets/img/long-journey-landscape.svg' | relative_url }}" alt="An original fantasy landscape with a winding road, distant ruins, mountains, and blue flowers">
         <figcaption><span>The road continues</span><strong>Small lessons accumulate into lasting judgment.</strong></figcaption>

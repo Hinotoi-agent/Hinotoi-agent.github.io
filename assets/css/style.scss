@@ -3092,6 +3092,108 @@ body.frieren-portfolio {
   background: rgba(232, 238, 249, 0.62);
 }
 :root[data-theme="dark"] .frieren-portfolio .anime-identity-card { background: rgba(18, 32, 54, 0.58); }
+.frieren-portfolio .anime-personality {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(22rem, 1.18fr);
+  gap: clamp(1.6rem, 4vw, 3.5rem);
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+  overflow: hidden;
+  border: 3px double rgba(112, 126, 178, 0.34);
+  border-radius: 0.65rem;
+  background:
+    radial-gradient(circle at 0 0, rgba(169, 71, 100, 0.1), transparent 38%),
+    linear-gradient(135deg, rgba(237, 240, 250, 0.9), rgba(225, 232, 246, 0.76));
+}
+.frieren-portfolio .anime-personality::after {
+  content: "INTJ-A";
+  position: absolute;
+  right: -0.04em;
+  bottom: -0.2em;
+  color: rgba(91, 103, 161, 0.07);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 700;
+  line-height: 0.8;
+  pointer-events: none;
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-personality {
+  background:
+    radial-gradient(circle at 0 0, rgba(225, 127, 156, 0.1), transparent 38%),
+    linear-gradient(135deg, rgba(17, 31, 53, 0.94), rgba(11, 23, 42, 0.88));
+}
+:root[data-theme="dark"] .frieren-portfolio .anime-personality::after { color: rgba(184, 194, 235, 0.055); }
+.frieren-portfolio .anime-personality-copy,
+.frieren-portfolio .anime-traits { position: relative; z-index: 1; }
+.frieren-portfolio .anime-personality-copy > span {
+  color: var(--anime-pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.75rem;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+.frieren-portfolio .anime-personality h3 {
+  margin: 0.5rem 0 0.8rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+.frieren-portfolio .anime-personality h3 em {
+  display: inline-flex;
+  margin-left: 0.35rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid rgba(112, 126, 178, 0.34);
+  border-radius: 999px;
+  color: var(--anime-violet);
+  font-family: system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-style: normal;
+  letter-spacing: 0.12em;
+  vertical-align: middle;
+}
+.frieren-portfolio .anime-personality-copy p { margin: 0; color: var(--anime-ink); }
+.frieren-portfolio .anime-personality-copy small {
+  display: block;
+  margin-top: 1rem;
+  color: var(--anime-muted);
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+.frieren-portfolio .anime-traits {
+  display: grid;
+  gap: 0.85rem;
+  align-content: center;
+}
+.frieren-portfolio .anime-traits label {
+  --trait: #5b9fb9;
+  display: grid;
+  gap: 0.34rem;
+  color: var(--anime-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.frieren-portfolio .anime-traits label:nth-child(2) { --trait: #c3983e; }
+.frieren-portfolio .anime-traits label:nth-child(3) { --trait: #5689b2; }
+.frieren-portfolio .anime-traits label:nth-child(4) { --trait: #7772b4; }
+.frieren-portfolio .anime-traits label:nth-child(5) { --trait: #b75d77; }
+.frieren-portfolio .anime-traits label > span { display: flex; justify-content: space-between; gap: 1rem; }
+.frieren-portfolio .anime-traits strong { color: var(--trait); }
+.frieren-portfolio .anime-traits progress {
+  width: 100%;
+  height: 0.52rem;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(79, 94, 131, 0.14);
+  color: var(--trait);
+  accent-color: var(--trait);
+}
+.frieren-portfolio .anime-traits progress::-webkit-progress-bar { background: rgba(79, 94, 131, 0.14); border-radius: inherit; }
+.frieren-portfolio .anime-traits progress::-webkit-progress-value { background: var(--trait); border-radius: inherit; }
+.frieren-portfolio .anime-traits progress::-moz-progress-bar { background: var(--trait); border-radius: inherit; }
 .frieren-portfolio .anime-role {
   position: relative;
   border-color: rgba(88, 113, 170, 0.3);
@@ -3221,6 +3323,12 @@ body.frieren-portfolio {
   .frieren-portfolio .anime-hero h1 { font-size: clamp(3.15rem, 13vw, 4.25rem); line-height: 0.98; }
   .frieren-portfolio .anime-section::after { top: 1rem; right: 1rem; font-size: 1rem; }
   .frieren-portfolio .anime-flow span { border-radius: 0.35rem; }
+  .frieren-portfolio .anime-personality {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 1.35rem;
+  }
+  .frieren-portfolio .anime-personality::after { font-size: 5rem; }
   .frieren-portfolio .anime-contact {
     background:
       linear-gradient(180deg, rgba(8, 18, 37, 0.92), rgba(8, 13, 35, 0.78)),
