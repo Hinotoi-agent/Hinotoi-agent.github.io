@@ -197,9 +197,11 @@
       </footer>
     </div>
 
-    <div class="journey-party-route" aria-hidden="true">
-      <img class="journey-party-art" src="{{ '/assets/img/frieren-shy-route-icon.jpg' | relative_url }}" width="498" height="434" alt="">
-    </div>
+    {% unless page.profile_page %}
+      <div class="journey-party-route" aria-hidden="true">
+        <img class="journey-party-art" src="{{ '/assets/img/frieren-shy-route-icon.jpg' | relative_url }}" width="498" height="434" alt="">
+      </div>
+    {% endunless %}
 
     <script>
       (function () {

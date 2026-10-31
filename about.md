@@ -116,6 +116,12 @@ social_image: /assets/img/frieren-anime-hero-hd.jpg
       </div>
     </section>
 
+    <div class="journey-party-route-track" aria-hidden="true">
+      <div class="journey-party-route">
+        <img class="journey-party-art" src="{{ '/assets/img/frieren-shy-route-icon.jpg' | relative_url }}" width="498" height="434" alt="">
+      </div>
+    </div>
+
     <figure class="anime-cinematic anime-cinematic-frieren-hd">
       <picture>
         <source type="image/webp" srcset="{{ '/assets/img/frieren-anime-closeup-1600.webp' | relative_url }} 1600w, {{ '/assets/img/frieren-anime-closeup-3200.webp' | relative_url }} 3200w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 1320px) calc(100vw - 4rem), 1240px">

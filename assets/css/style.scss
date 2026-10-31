@@ -4613,3 +4613,48 @@ body:not(.portfolio-anime) .footer {
   }
   .frieren-portfolio .anime-footer { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom)); }
 }
+
+/* A dedicated route keeps the traveller clear of readable content. */
+.frieren-portfolio .journey-party-route-track {
+  position: relative;
+  z-index: 4;
+  width: calc(100% - 2rem);
+  max-width: 1240px;
+  height: 100px;
+  overflow: hidden;
+  margin: 0.75rem auto;
+  border-block: 1px solid var(--anime-line);
+  background:
+    radial-gradient(circle at 12% 50%, var(--anime-cyan-soft), transparent 18%),
+    radial-gradient(circle at 82% 50%, var(--anime-pink-soft), transparent 20%);
+}
+.frieren-portfolio .journey-party-route-track::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 23px;
+  left: 0;
+  border-top: 1px dashed color-mix(in srgb, var(--anime-cyan) 48%, transparent);
+}
+.frieren-portfolio .journey-party-route-track .journey-party-route {
+  position: absolute;
+  bottom: 8px;
+  z-index: 1;
+  animation-name: journey-party-track-cross;
+}
+@keyframes journey-party-track-cross {
+  from { left: -6rem; }
+  to { left: calc(100% + 1rem); }
+}
+
+@media (max-width: 720px) {
+  .frieren-portfolio .journey-party-route-track {
+    width: calc(100% - 1rem);
+    height: 76px;
+    margin-block: 0.4rem;
+  }
+  .frieren-portfolio .journey-party-route-track::after { bottom: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .frieren-portfolio .journey-party-route-track { display: none; }
+}
