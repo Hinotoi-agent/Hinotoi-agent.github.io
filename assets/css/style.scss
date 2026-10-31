@@ -3331,14 +3331,14 @@ body.frieren-portfolio {
   border-radius: 1rem 1rem 0.35rem 0.35rem;
   background:
     linear-gradient(90deg, rgba(14, 25, 45, 0.94) 0 50%, rgba(24, 28, 56, 0.58) 78%),
-    url("/assets/img/frieren-anime-closeup-3200.webp") center / cover no-repeat;
+    url("/assets/img/frieren-anime-closeup-1600.webp") center / cover no-repeat;
   color: #f9f1dc;
   box-shadow: 0 30px 90px rgba(14, 14, 36, 0.3), inset 0 0 0 6px rgba(255, 248, 224, 0.04);
 }
 :root[data-theme="dark"] .frieren-portfolio .anime-contact {
   background:
     linear-gradient(90deg, rgba(5, 12, 26, 0.96) 0 50%, rgba(8, 10, 31, 0.72) 78%),
-    url("/assets/img/frieren-anime-closeup-3200.webp") center / cover no-repeat;
+    url("/assets/img/frieren-anime-closeup-1600.webp") center / cover no-repeat;
 }
 .frieren-portfolio .anime-contact h2,
 .frieren-portfolio .anime-contact p,
@@ -3378,7 +3378,7 @@ body.frieren-portfolio {
   .frieren-portfolio .anime-contact {
     background:
       linear-gradient(180deg, rgba(8, 18, 37, 0.92), rgba(8, 13, 35, 0.78)),
-      url("/assets/img/frieren-anime-closeup-3200.webp") center / cover no-repeat;
+      url("/assets/img/frieren-anime-closeup-1600.webp") center / cover no-repeat;
   }
 }
 
@@ -4257,4 +4257,359 @@ body.frieren-portfolio {
 
 @media (prefers-reduced-motion: reduce) {
   .frieren-portfolio .anime-cinematic-frieren-hd img { transform: none; }
+}
+
+/* About-page structure, accessibility, and responsive density pass. */
+.frieren-portfolio .anime-hero h1 > span,
+.frieren-portfolio .anime-hero h1 > em {
+  display: block;
+}
+
+.anime-mobile-menu { display: none; }
+.anime-mobile-menu summary {
+  min-height: 2.6rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.8rem;
+  border: 1px solid var(--anime-pink);
+  border-radius: 999px;
+  background: var(--anime-pink-soft);
+  color: var(--anime-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.anime-mobile-menu summary::-webkit-details-marker { display: none; }
+.anime-mobile-menu summary::after { content: "⌄"; margin-left: 0.45rem; }
+.anime-mobile-menu[open] summary::after { content: "⌃"; }
+.anime-mobile-menu > div {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  width: calc(100vw - 2rem);
+  max-width: 18rem;
+  padding: 0.55rem;
+  border: 1px solid var(--anime-line);
+  border-radius: 0.8rem;
+  background: color-mix(in srgb, var(--anime-bg) 96%, transparent);
+  box-shadow: 0 18px 48px rgba(4, 11, 29, 0.24);
+  backdrop-filter: blur(18px);
+}
+.anime-mobile-menu > div a {
+  min-height: 2.65rem;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--anime-ink);
+  text-decoration: none;
+}
+.anime-mobile-menu > div a:hover { background: var(--anime-cyan-soft); }
+
+.frieren-portfolio .anime-personality {
+  display: block;
+  padding: 0;
+}
+.frieren-portfolio .anime-personality::after { content: none; }
+.frieren-portfolio .anime-personality > summary,
+.frieren-portfolio .anime-journey-more > summary {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.3rem;
+  color: var(--anime-ink);
+  cursor: pointer;
+  list-style: none;
+}
+.frieren-portfolio .anime-personality > summary::-webkit-details-marker,
+.frieren-portfolio .anime-journey-more > summary::-webkit-details-marker { display: none; }
+.frieren-portfolio .anime-personality > summary span,
+.frieren-portfolio .anime-journey-more > summary span {
+  color: var(--anime-pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  font-style: italic;
+}
+.frieren-portfolio .anime-personality > summary strong,
+.frieren-portfolio .anime-journey-more > summary strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  text-align: right;
+}
+.frieren-portfolio .anime-personality > summary::after,
+.frieren-portfolio .anime-journey-more > summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  color: var(--anime-cyan);
+  font-size: 1.2rem;
+}
+.frieren-portfolio .anime-personality[open] > summary::after,
+.frieren-portfolio .anime-journey-more[open] > summary::after { content: "−"; }
+.frieren-portfolio .anime-personality-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(22rem, 1.18fr);
+  gap: clamp(1.6rem, 4vw, 3.5rem);
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--anime-line);
+}
+.frieren-portfolio .anime-personality-body > * { padding-top: 1.5rem; }
+
+.frieren-portfolio .anime-journey-more {
+  overflow: hidden;
+  border: 1px solid var(--anime-line);
+  border-radius: 1.1rem;
+  background: color-mix(in srgb, var(--anime-panel) 78%, transparent);
+}
+.frieren-portfolio .anime-journey-more-body {
+  display: grid;
+  gap: 0.8rem;
+  padding: 0 0.8rem 0.8rem;
+  border-top: 1px solid var(--anime-line);
+}
+.frieren-portfolio .anime-journey-more-body .anime-role { margin: 0; }
+
+.frieren-portfolio .anime-operation-more {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  border: 1px solid var(--anime-line);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--anime-panel) 78%, transparent);
+}
+.frieren-portfolio .anime-operation-more > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+  padding: 0.9rem 1.15rem;
+  color: var(--anime-ink);
+  cursor: pointer;
+  list-style: none;
+}
+.frieren-portfolio .anime-operation-more > summary::-webkit-details-marker { display: none; }
+.frieren-portfolio .anime-operation-more > summary span {
+  color: var(--anime-pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  font-style: italic;
+}
+.frieren-portfolio .anime-operation-more > summary strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-align: right;
+}
+.frieren-portfolio .anime-operation-more > summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  color: var(--anime-cyan);
+  font-size: 1.2rem;
+}
+.frieren-portfolio .anime-operation-more[open] > summary::after { content: "−"; }
+.frieren-portfolio .anime-operation-more-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  padding: 0.8rem;
+  border-top: 1px solid var(--anime-line);
+}
+.frieren-portfolio .anime-operation-more-grid .anime-operation-card { min-height: 100%; }
+
+.frieren-portfolio .anime-controls-inline {
+  margin-top: clamp(2.4rem, 5vw, 4rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--anime-line);
+}
+.frieren-portfolio .anime-controls-heading {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.32fr) minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: clamp(1.5rem, 3vw, 2.4rem);
+  cursor: pointer;
+  list-style: none;
+}
+.frieren-portfolio .anime-controls-heading::-webkit-details-marker { display: none; }
+.frieren-portfolio .anime-controls-inline:not([open]) .anime-controls-heading { margin-bottom: 0; }
+.frieren-portfolio .anime-controls-heading::after {
+  content: "+";
+  align-self: center;
+  color: var(--anime-cyan);
+  font-size: 1.4rem;
+}
+.frieren-portfolio .anime-controls-inline[open] .anime-controls-heading::after { content: "−"; }
+.frieren-portfolio .anime-controls-heading span {
+  color: var(--anime-pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  font-style: italic;
+}
+.frieren-portfolio .anime-controls-heading h3 {
+  max-width: 16ch;
+  margin: 0;
+  color: var(--anime-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+/* Keep the travelling icon visible as atmosphere, below readable controls. */
+.journey-party-route { z-index: 2; }
+.frieren-portfolio .anime-hero-copy,
+.frieren-portfolio .anime-portrait-frame,
+.frieren-portfolio .anime-evidence,
+.frieren-portfolio .anime-section-heading,
+.frieren-portfolio .anime-about-grid,
+.frieren-portfolio .anime-personality,
+.frieren-portfolio .anime-role,
+.frieren-portfolio .anime-journey-more,
+.frieren-portfolio .anime-operation-card,
+.frieren-portfolio .anime-operation-more,
+.frieren-portfolio .anime-controls-inline,
+.frieren-portfolio .anime-proof-stats,
+.frieren-portfolio .anime-disclosure,
+.frieren-portfolio .anime-speaking,
+.frieren-portfolio .anime-certifications,
+.frieren-portfolio .anime-note-list a,
+.frieren-portfolio .anime-cinematic figcaption,
+.frieren-portfolio .anime-contact > *,
+.frieren-portfolio .anime-footer > * {
+  position: relative;
+  z-index: 4;
+}
+body:not(.portfolio-anime) .card,
+body:not(.portfolio-anime) .topbar,
+body:not(.portfolio-anime) .footer {
+  position: relative;
+  z-index: 4;
+}
+
+.frieren-portfolio .anime-section {
+  padding-block: clamp(4rem, 7vw, 6rem);
+}
+
+@media (max-width: 720px) {
+  .anime-nav-links > a { display: none !important; }
+  .anime-mobile-menu { position: relative; display: block; }
+  .anime-mobile-menu > div a { display: flex !important; }
+  .frieren-portfolio .anime-nav { overflow: visible; }
+  .frieren-portfolio .anime-wordmark strong { font-size: 0.86rem; }
+
+  .frieren-portfolio .anime-hero {
+    gap: 1.4rem;
+    padding: 0.8rem;
+  }
+  .frieren-portfolio .anime-hero-copy { padding: 1rem; }
+  .frieren-portfolio .anime-hero h1 {
+    font-size: clamp(2.65rem, 12vw, 3.55rem);
+    line-height: 0.98;
+  }
+  .frieren-portfolio .anime-hero-actions { gap: 0.5rem; }
+  .frieren-portfolio .anime-button { min-height: 2.85rem; }
+  .frieren-portfolio .anime-portrait-frame { max-width: 240px; }
+
+  .frieren-portfolio .anime-section { padding-block: 3rem; }
+  .frieren-portfolio .anime-section::before { top: 1rem; }
+  .frieren-portfolio .anime-section-heading {
+    gap: 0.55rem;
+    margin-bottom: 1.55rem;
+    padding-bottom: 1rem;
+  }
+  .frieren-portfolio .anime-section-heading h2 {
+    font-size: clamp(2.25rem, 9.5vw, 2.8rem);
+    line-height: 1;
+  }
+  .frieren-portfolio .anime-about-grid { gap: 1.35rem; }
+  .frieren-portfolio .anime-about-copy p { line-height: 1.65; }
+
+  .frieren-portfolio .anime-personality > summary,
+  .frieren-portfolio .anime-journey-more > summary {
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .frieren-portfolio .anime-personality > summary strong,
+  .frieren-portfolio .anime-journey-more > summary strong {
+    max-width: 15rem;
+    font-size: 0.86rem;
+  }
+  .frieren-portfolio .anime-personality-body {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 1rem 1rem;
+  }
+  .frieren-portfolio .anime-personality-body > * { padding-top: 1rem; }
+  .frieren-portfolio .anime-journey-more-body { padding: 0 0.55rem 0.55rem; }
+
+  .frieren-portfolio .anime-operation-grid,
+  .frieren-portfolio .anime-operation-more-grid,
+  .frieren-portfolio .anime-control-sequence,
+  .frieren-portfolio .anime-disclosure-grid,
+  .frieren-portfolio .anime-proof-stats { gap: 0.55rem; }
+  .frieren-portfolio .anime-operation-card { padding: 1.1rem; }
+  .frieren-portfolio .anime-operation-more > summary {
+    align-items: flex-start;
+    min-height: 0;
+    padding: 1rem;
+  }
+  .frieren-portfolio .anime-operation-more > summary strong {
+    max-width: 13rem;
+    font-size: 0.82rem;
+  }
+  .frieren-portfolio .anime-operation-more-grid { grid-template-columns: 1fr; padding: 0.55rem; }
+  .frieren-portfolio .anime-controls-inline {
+    margin-top: 2rem;
+    padding-top: 1.8rem;
+  }
+  .frieren-portfolio .anime-controls-heading {
+    grid-template-columns: 1fr auto;
+    gap: 0.45rem;
+    margin-bottom: 1.25rem;
+  }
+  .frieren-portfolio .anime-controls-heading span { grid-column: 1 / -1; }
+  .frieren-portfolio .anime-controls-heading h3 { font-size: 2.15rem; }
+  .frieren-portfolio .anime-control-sequence li,
+  .frieren-portfolio .anime-control-sequence li:last-child {
+    min-height: 0;
+    padding: 1rem;
+  }
+  .frieren-portfolio .anime-control-sequence strong { margin-top: 1.6rem; }
+
+  .frieren-portfolio .anime-proof-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 1rem;
+  }
+  .frieren-portfolio .anime-proof-stats a,
+  .frieren-portfolio .anime-proof-stats a:last-child {
+    min-height: 6.2rem;
+    padding: 0.7rem;
+    border: 1px solid var(--anime-line);
+    border-radius: 0.8rem;
+  }
+  .frieren-portfolio .anime-proof-stats strong { font-size: 1.8rem; }
+  .frieren-portfolio .anime-proof-stats span { font-size: 0.66rem; }
+  .frieren-portfolio .anime-disclosure,
+  .frieren-portfolio .anime-disclosure-wide {
+    min-height: 0;
+    padding: 1rem;
+  }
+  .frieren-portfolio .anime-disclosure > span { margin-bottom: 1.45rem; }
+
+  .frieren-portfolio .anime-cert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .frieren-portfolio .anime-cert-grid span { min-height: 4.2rem; padding: 0.65rem; }
+  .frieren-portfolio .anime-note-list a { padding-block: 0.9rem; }
+  .frieren-portfolio .anime-note-list span { display: none; }
+  .frieren-portfolio .anime-contact {
+    min-height: 0;
+    margin-block: 3rem;
+    padding: 1.35rem;
+  }
+  .frieren-portfolio .anime-footer { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom)); }
 }

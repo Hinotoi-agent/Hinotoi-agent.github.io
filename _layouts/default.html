@@ -3,8 +3,60 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+    {% assign meta_title = site.title %}
+    {% if page.title %}{% assign meta_title = page.title | append: ' | ' | append: site.title %}{% endif %}
+    {% assign meta_description = page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+    {% assign canonical_url = page.url | absolute_url %}
+    <title>{{ meta_title }}</title>
+    <meta name="description" content="{{ meta_description | escape }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta property="og:locale" content="en_SG">
+    <meta property="og:type" content="{% if page.profile_page %}profile{% else %}website{% endif %}">
+    <meta property="og:site_name" content="{{ site.title | escape }}">
+    <meta property="og:title" content="{{ meta_title | escape }}">
+    <meta property="og:description" content="{{ meta_description | escape }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta name="twitter:card" content="{% if page.social_image %}summary_large_image{% else %}summary{% endif %}">
+    <meta name="twitter:title" content="{{ meta_title | escape }}">
+    <meta name="twitter:description" content="{{ meta_description | escape }}">
+    {% if page.social_image %}
+      {% assign social_image_url = page.social_image | absolute_url %}
+      <meta property="og:image" content="{{ social_image_url }}">
+      <meta property="og:image:alt" content="Frieren in a quiet-fantasy portrait for Lennon Chia's cybersecurity profile">
+      <meta name="twitter:image" content="{{ social_image_url }}">
+      <meta name="twitter:image:alt" content="Frieren in a quiet-fantasy portrait for Lennon Chia's cybersecurity profile">
+    {% endif %}
+    {% if page.profile_page %}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "@id": {{ canonical_url | append: '#profilepage' | jsonify }},
+          "url": {{ canonical_url | jsonify }},
+          "name": {{ meta_title | jsonify }},
+          "description": {{ meta_description | jsonify }},
+          "mainEntity": {
+            "@type": "Person",
+            "@id": {{ canonical_url | append: '#person' | jsonify }},
+            "name": "Lennon Chia",
+            "url": {{ canonical_url | jsonify }},
+            "image": {{ social_image_url | jsonify }},
+            "jobTitle": "Cybersecurity Manager",
+            "homeLocation": { "@type": "Place", "name": "Singapore" },
+            "sameAs": [
+              "https://github.com/Hinotoi-agent",
+              "https://www.linkedin.com/in/lennon-chia/"
+            ],
+            "knowsAbout": [
+              "Offensive security",
+              "AI-assisted penetration testing",
+              "Agentic security controls",
+              "Open-source vulnerability research"
+            ]
+          }
+        }
+      </script>
+    {% endif %}
     <script>
       (function () {
         var storedTheme;
@@ -57,7 +109,8 @@
         </div>
       </header>
 
-      <main class="main-grid">
+      {% if page.profile_page %}{% assign shell_main_tag = 'div' %}{% else %}{% assign shell_main_tag = 'main' %}{% endif %}
+      <{{ shell_main_tag }} class="main-grid">
         <div class="content-column">
           <article class="card content-card">
             {{ content }}
@@ -130,7 +183,7 @@
             </ul>
           </section>
         </aside>
-      </main>
+      </{{ shell_main_tag }}>
 
       <footer class="footer">
         <div class="card footer-card">
@@ -178,6 +231,13 @@
           applyTheme(next);
         });
       }());
+
+      document.querySelectorAll('.anime-mobile-menu a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var menu = link.closest('details');
+          if (menu) menu.removeAttribute('open');
+        });
+      });
     </script>
   </body>
 </html>

@@ -4,6 +4,8 @@ title: Lennon Chia — Security Across the Long Journey
 permalink: /about/
 body_class: portfolio-anime frieren-portfolio
 excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across offensive security, AI-assisted penetration testing, agentic controls, and open-source vulnerability research.
+profile_page: true
+social_image: /assets/img/frieren-anime-hero-hd.jpg
 ---
 
 {% assign merged_prs = site.data.merged_prs %}
@@ -19,11 +21,23 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <span><strong>LENNON CHIA</strong><small>Hinotoi · Security across the long journey</small></span>
     </a>
     <div class="anime-nav-links">
+      <a href="#proof">Evidence</a>
       <a href="#about">Profile</a>
       <a href="#experience">Journey</a>
-      <a href="#operations">Grimoire</a>
-      <a href="#proof">Archive</a>
+      <a href="#operations">Practice</a>
+      <a href="#notes">Field notes</a>
       <a class="anime-nav-cta" href="https://github.com/Hinotoi-agent" rel="me">GitHub ↗</a>
+      <details class="anime-mobile-menu">
+        <summary>Explore</summary>
+        <div>
+          <a href="#proof">Evidence</a>
+          <a href="#about">Profile</a>
+          <a href="#experience">Journey</a>
+          <a href="#operations">Practice</a>
+          <a href="#notes">Field notes</a>
+          <a href="https://github.com/Hinotoi-agent" rel="me">GitHub ↗</a>
+        </div>
+      </details>
     </div>
   </nav>
 
@@ -34,10 +48,11 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       <div class="anime-hero-copy">
         <div class="anime-status"><span aria-hidden="true"></span> Chapter XI · the journey continues · Singapore</div>
         <p class="anime-overline">Offensive security · responsible AI · the craft that endures</p>
-        <h1 id="anime-hero-title">Security,<br><em>remembered.</em><br>Judgment, retained.</h1>
+        <h1 id="anime-hero-title"><span>Security,</span> <em>remembered.</em> <span>Judgment, retained.</span></h1>
         <p class="anime-hero-lede">I lead AI innovation and penetration-testing teams, build human-validated security workflows, and research the trust boundaries where software gains authority.</p>
         <div class="anime-hero-actions">
-          <a class="anime-button anime-button-primary" href="#operations">Open the grimoire <span aria-hidden="true">↘</span></a>
+          <a class="anime-button anime-button-primary" href="#proof">View security work <span aria-hidden="true">↘</span></a>
+          <a class="anime-button anime-button-secondary" href="#notes">Read field notes <span aria-hidden="true">↘</span></a>
           <a class="anime-button anime-button-secondary" href="https://www.linkedin.com/in/lennon-chia/" rel="me">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
         <div class="anime-tag-row" aria-label="Specialisms">
@@ -66,172 +81,14 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
 
     <section class="anime-evidence" aria-label="Career and public-work highlights">
       <div><strong>11+</strong><span>Years on the security journey</span></div>
-      <div><strong>02</strong><span>Teams guided across AI and penetration testing</span></div>
-      <div><strong>≈50%</strong><span>Lower effort in selected AI-assisted trials</span></div>
+      <div><strong>2</strong><span>Teams guided across AI and penetration testing</span></div>
+      <a href="{{ '/merged-prs/' | relative_url }}"><strong>{{ security_prs | size }}</strong><span>Security / hardening PRs <b aria-hidden="true">↗</b></span></a>
       <a href="{{ '/merged-prs/' | relative_url }}"><strong>{{ merged_prs | size }}</strong><span>Merged PRs indexed <b aria-hidden="true">↗</b></span></a>
-    </section>
-
-    <figure class="anime-cinematic anime-cinematic-frieren-hd">
-      <picture>
-        <source type="image/webp" srcset="{{ '/assets/img/frieren-anime-closeup-1600.webp' | relative_url }} 1600w, {{ '/assets/img/frieren-anime-closeup-3200.webp' | relative_url }} 3200w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 1320px) calc(100vw - 4rem), 1240px">
-        <img src="{{ '/assets/img/frieren-anime-closeup-hd.jpg' | relative_url }}" width="7680" height="4320" loading="lazy" decoding="async" alt="Frieren in an anime close-up, with silver hair, pointed elven ears, green eyes, and garnet earrings">
-      </picture>
-      <figcaption><span>Frieren · power held in reserve</span><strong>Measured power. Deliberate judgment.</strong></figcaption>
-    </figure>
-
-    <section id="about" class="anime-section anime-about">
-      <header class="anime-section-heading">
-        <span>Scroll I · Profile</span>
-        <h2>Lessons that outlast the moment.</h2>
-      </header>
-      <div class="anime-about-grid">
-        <div class="anime-about-copy">
-          <p class="anime-drop-lede">I’m a Singapore-based cybersecurity professional working where offensive security, practical AI, and secure engineering meet.</p>
-          <p>As a Cybersecurity Manager at EY, I lead an AI innovation team and a penetration-testing delivery team across government and multinational environments. My role combines technical direction, methodology, finding validation, delivery quality, demonstrations, workshops, and client engagement.</p>
-          <p>I treat AI as a force multiplier—not a substitute for experienced security practitioners. The systems I build keep human review at the decision boundary, especially when a model can influence testing, triage, exploitation, or remediation advice.</p>
-        </div>
-        <aside class="anime-identity-card" aria-label="Profile summary">
-          <div class="anime-identity-label">Adventurer’s record · LC-01</div>
-          <dl>
-            <div><dt>Base</dt><dd>Singapore</dd></div>
-            <div><dt>Current role</dt><dd>Cybersecurity Manager, EY</dd></div>
-            <div><dt>Primary lens</dt><dd>Offensive security + AI</dd></div>
-            <div><dt>Research mode</dt><dd>Evidence → patch → regression proof</dd></div>
-          </dl>
-          <blockquote>“The useful question is not whether AI can act. It is where its output gains authority—and how a human stays in control.”</blockquote>
-        </aside>
-      </div>
-      <aside class="anime-personality" aria-labelledby="personality-title">
-        <div class="anime-personality-copy">
-          <span>Working-style snapshot · 22 May 2020</span>
-          <h3 id="personality-title">Architect <em>INTJ-A</em></h3>
-          <p>Independent, strategic, and systems-minded: a useful personal lens for how I plan, investigate, and turn ambiguous security boundaries into deliberate action.</p>
-          <small>This dated 16Personalities result is personal context—not a professional qualification or fixed definition.</small>
-        </div>
-        <div class="anime-traits" aria-label="Personality trait results">
-          <label><span>Introverted <strong>76%</strong></span><progress max="100" value="76">76%</progress></label>
-          <label><span>Intuitive <strong>56%</strong></span><progress max="100" value="56">56%</progress></label>
-          <label><span>Thinking <strong>72%</strong></span><progress max="100" value="72">72%</progress></label>
-          <label><span>Judging <strong>63%</strong></span><progress max="100" value="63">63%</progress></label>
-          <label><span>Assertive <strong>64%</strong></span><progress max="100" value="64">64%</progress></label>
-        </div>
-      </aside>
-      <div class="frieren-chapter-break" aria-hidden="true"><span>✦</span><b>Blue-moon weed</b><span>✦</span></div>
-    </section>
-
-    <section id="experience" class="anime-section anime-experience">
-      <header class="anime-section-heading">
-        <span>Scroll II · Journey</span>
-        <h2>A career measured in what endures.</h2>
-      </header>
-      <div class="anime-timeline">
-        <article class="anime-role anime-role-featured">
-          <div class="anime-role-meta">
-            <span>OCT 2021 — PRESENT</span>
-            <b>EY · SINGAPORE</b>
-          </div>
-          <div class="anime-role-body">
-            <p class="anime-role-index">Journey · 01</p>
-            <h3>Cybersecurity Manager</h3>
-            <ul>
-              <li>Lead an AI innovation team and a penetration-testing delivery team.</li>
-              <li>Own the architecture and ground-up development of an AI-assisted penetration-testing accelerator built on locally hosted language models.</li>
-              <li>Integrate AI into attack-path analysis, cyber risk assessment, secure code review, web testing, vulnerability triage, exploit validation, and remediation guidance.</li>
-              <li>Engineer agentic controls around least privilege, approval gates, auditability, rollback, and human oversight.</li>
-              <li>Set technical direction, validate findings, and assure delivery quality across the penetration-testing lifecycle.</li>
-            </ul>
-            <div class="anime-trial-note"><strong>Selected trial signal</strong><span>Approximately 50% lower analyst effort and triage time for selected AI-assisted activities, with findings and conclusions still human-validated.</span></div>
-          </div>
-        </article>
-
-        <article class="anime-role">
-          <div class="anime-role-meta">
-            <span>APR 2015 — OCT 2021</span>
-            <b>EY · SINGAPORE</b>
-          </div>
-          <div class="anime-role-body">
-            <p class="anime-role-index">Journey · 02</p>
-            <h3>Senior Information Security Consultant</h3>
-            <p>Built the technical foundation for more than six years of penetration testing, vulnerability assessment, offensive security delivery, and client-facing security work before moving into management.</p>
-          </div>
-        </article>
-
-        <article class="anime-role anime-role-education">
-          <div class="anime-role-meta">
-            <span>2013 — 2015</span>
-            <b>EDUCATION</b>
-          </div>
-          <div class="anime-role-body">
-            <p class="anime-role-index">Foundation · 01</p>
-            <h3>University of Wollongong</h3>
-            <p>Academic foundation supporting a career in information security, technical delivery, and systems thinking.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="operations" class="anime-section anime-operations">
-      <header class="anime-section-heading">
-        <span>Scroll III · Practice</span>
-        <h2>A grimoire of practical security.</h2>
-      </header>
-      <div class="anime-operation-grid">
-        <article class="anime-operation-card anime-operation-wide">
-          <span class="anime-operation-number">01</span>
-          <p class="anime-operation-kicker">Augmentation · AI-assisted offensive security</p>
-          <h3>Local models. Deliberate control. Human decisions.</h3>
-          <p>I’m building a locally hosted penetration-testing accelerator using high-performance model serving with SGLang and speculative decoding. It supports practitioners across analysis, review, testing, triage, validation, and remediation without treating model output as ground truth.</p>
-          <div class="anime-flow" aria-label="AI-assisted security workflow">
-            <span>CONTEXT</span><i aria-hidden="true"></i><span>MODEL</span><i aria-hidden="true"></i><span>WARDS</span><i aria-hidden="true"></i><span>JUDGMENT</span>
-          </div>
-        </article>
-
-        <article class="anime-operation-card">
-          <span class="anime-operation-number">02</span>
-          <p class="anime-operation-kicker">The five-ward control model</p>
-          <h3>Authority is designed, not assumed.</h3>
-          <p>Least privilege, explicit approvals, traceable audit records, safe rollback, and continuous human oversight define the operating boundary.</p>
-        </article>
-
-        <article class="anime-operation-card">
-          <span class="anime-operation-number">03</span>
-          <p class="anime-operation-kicker">Field practice · Penetration testing</p>
-          <h3>Methodology through quality assurance.</h3>
-          <p>I lead technical delivery, set methodology and direction, validate findings, and translate technical evidence into decisions.</p>
-        </article>
-
-        <article class="anime-operation-card">
-          <span class="anime-operation-number">04</span>
-          <p class="anime-operation-kicker">Open-source research grimoire</p>
-          <h3>Trace the boundary. Ship the fix.</h3>
-          <p>I reproduce source-to-sink paths, check for duplicates, contribute focused patches with regression tests, and turn shipped work into reusable research patterns.</p>
-          <div class="anime-project-links">
-            <a href="https://github.com/Hinotoi-agent/vulnweave">VulnWeave ↗</a>
-            <a href="https://github.com/Hinotoi-agent/Verifymate">Verifymate ↗</a>
-            <a href="{{ '/selected-work/' | relative_url }}">Selected work →</a>
-          </div>
-        </article>
-      </div>
-      <div class="frieren-chapter-break" aria-hidden="true"><span>✦</span><b>The party continues</b><span>✦</span></div>
-    </section>
-
-    <section class="anime-section anime-controls">
-      <header class="anime-section-heading anime-section-heading-compact">
-        <span>Five wards · Human in the loop</span>
-        <h2>Guardrails before autonomy.</h2>
-      </header>
-      <ol class="anime-control-sequence">
-        <li><b>01</b><strong>Least privilege</strong><span>Give each model and tool only the authority the task requires.</span></li>
-        <li><b>02</b><strong>Approval gates</strong><span>Pause before sensitive, irreversible, or externally visible actions.</span></li>
-        <li><b>03</b><strong>Audit trails</strong><span>Preserve what was requested, decided, executed, and returned.</span></li>
-        <li><b>04</b><strong>Rollback paths</strong><span>Design recovery before granting an agent the ability to change state.</span></li>
-        <li><b>05</b><strong>Human oversight</strong><span>Keep findings and conclusions accountable to an experienced reviewer.</span></li>
-      </ol>
     </section>
 
     <section id="proof" class="anime-section anime-proof">
       <header class="anime-section-heading">
-        <span>Scroll IV · Open archive</span>
+        <span>Scroll I · Open evidence</span>
         <h2>Evidence, preserved in the open.</h2>
       </header>
       <div class="anime-proof-stats">
@@ -259,6 +116,178 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       </div>
     </section>
 
+    <figure class="anime-cinematic anime-cinematic-frieren-hd">
+      <picture>
+        <source type="image/webp" srcset="{{ '/assets/img/frieren-anime-closeup-1600.webp' | relative_url }} 1600w, {{ '/assets/img/frieren-anime-closeup-3200.webp' | relative_url }} 3200w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 1320px) calc(100vw - 4rem), 1240px">
+        <img src="{{ '/assets/img/frieren-anime-closeup-hd.jpg' | relative_url }}" width="7680" height="4320" loading="lazy" decoding="async" alt="Frieren in an anime close-up, with silver hair, pointed elven ears, green eyes, and garnet earrings">
+      </picture>
+      <figcaption><span>Frieren · power held in reserve</span><strong>Measured power. Deliberate judgment.</strong></figcaption>
+    </figure>
+
+    <section id="about" class="anime-section anime-about">
+      <header class="anime-section-heading">
+        <span>Scroll II · Profile</span>
+        <h2>Lessons that outlast the moment.</h2>
+      </header>
+      <div class="anime-about-grid">
+        <div class="anime-about-copy">
+          <p class="anime-drop-lede">I’m a Singapore-based cybersecurity professional working where offensive security, practical AI, and secure engineering meet.</p>
+          <p>As a Cybersecurity Manager at EY, I lead an AI innovation team and a penetration-testing delivery team across government and multinational environments. My role combines technical direction, methodology, finding validation, delivery quality, demonstrations, workshops, and client engagement.</p>
+          <p>I treat AI as a force multiplier—not a substitute for experienced security practitioners. The systems I build keep human review at the decision boundary, especially when a model can influence testing, triage, exploitation, or remediation advice.</p>
+        </div>
+        <aside class="anime-identity-card" aria-label="Profile summary">
+          <div class="anime-identity-label">Adventurer’s record · LC-01</div>
+          <dl>
+            <div><dt>Base</dt><dd>Singapore</dd></div>
+            <div><dt>Current role</dt><dd>Cybersecurity Manager, EY</dd></div>
+            <div><dt>Primary lens</dt><dd>Offensive security + AI</dd></div>
+            <div><dt>Research mode</dt><dd>Evidence → patch → regression proof</dd></div>
+          </dl>
+          <blockquote>“The useful question is not whether AI can act. It is where its output gains authority—and how a human stays in control.”</blockquote>
+        </aside>
+      </div>
+      <details class="anime-personality">
+        <summary><span>Optional working-style snapshot</span><strong>Architect · INTJ-A</strong></summary>
+        <div class="anime-personality-body">
+          <div class="anime-personality-copy">
+            <span>Dated personal context · 22 May 2020</span>
+            <h3 id="personality-title">A systems-minded working style.</h3>
+            <p>Independent, strategic, and systems-minded: a useful personal lens for how I plan, investigate, and turn ambiguous security boundaries into deliberate action.</p>
+            <small>This dated 16Personalities result is personal context—not a professional qualification or fixed definition.</small>
+          </div>
+          <div class="anime-traits" aria-label="Personality trait results">
+            <label><span>Introverted <strong>76%</strong></span><progress max="100" value="76">76%</progress></label>
+            <label><span>Intuitive <strong>56%</strong></span><progress max="100" value="56">56%</progress></label>
+            <label><span>Thinking <strong>72%</strong></span><progress max="100" value="72">72%</progress></label>
+            <label><span>Judging <strong>63%</strong></span><progress max="100" value="63">63%</progress></label>
+            <label><span>Assertive <strong>64%</strong></span><progress max="100" value="64">64%</progress></label>
+          </div>
+        </div>
+      </details>
+      <div class="frieren-chapter-break" aria-hidden="true"><span>✦</span><b>Blue-moon weed</b><span>✦</span></div>
+    </section>
+
+    <section id="experience" class="anime-section anime-experience">
+      <header class="anime-section-heading">
+        <span>Scroll III · Journey</span>
+        <h2>A career measured in what endures.</h2>
+      </header>
+      <div class="anime-timeline">
+        <article class="anime-role anime-role-featured">
+          <div class="anime-role-meta">
+            <span>OCT 2021 — PRESENT</span>
+            <b>EY · SINGAPORE</b>
+          </div>
+          <div class="anime-role-body">
+            <p class="anime-role-index">Journey · 01</p>
+            <h3>Cybersecurity Manager</h3>
+            <ul>
+              <li>Lead an AI innovation team and a penetration-testing delivery team.</li>
+              <li>Own the architecture and ground-up development of an AI-assisted penetration-testing accelerator built on locally hosted language models.</li>
+              <li>Integrate AI into attack-path analysis, cyber risk assessment, secure code review, web testing, vulnerability triage, exploit validation, and remediation guidance.</li>
+              <li>Engineer agentic controls around least privilege, approval gates, auditability, rollback, and human oversight.</li>
+              <li>Set technical direction, validate findings, and assure delivery quality across the penetration-testing lifecycle.</li>
+            </ul>
+            <div class="anime-trial-note"><strong>Selected trial signal</strong><span>Approximately 50% lower analyst effort and triage time in bounded internal trials comparing selected AI-assisted activities with earlier manual workflows. This is directional and task-specific—not a claim across all testing—and findings and conclusions remain human-validated.</span></div>
+          </div>
+        </article>
+
+        <details class="anime-journey-more">
+          <summary><span>Earlier journey</span><strong>2013–2021 · Consulting and technical foundations</strong></summary>
+          <div class="anime-journey-more-body">
+            <article class="anime-role">
+              <div class="anime-role-meta">
+                <span>APR 2015 — OCT 2021</span>
+                <b>EY · SINGAPORE</b>
+              </div>
+              <div class="anime-role-body">
+                <p class="anime-role-index">Journey · 02</p>
+                <h3>Senior Information Security Consultant</h3>
+                <p>Built the technical foundation for more than six years of penetration testing, vulnerability assessment, offensive security delivery, and client-facing security work before moving into management.</p>
+              </div>
+            </article>
+
+            <article class="anime-role anime-role-education">
+              <div class="anime-role-meta">
+                <span>2013 — 2015</span>
+                <b>EDUCATION</b>
+              </div>
+              <div class="anime-role-body">
+                <p class="anime-role-index">Foundation · 01</p>
+                <h3>University of Wollongong</h3>
+                <p>Academic foundation supporting a career in information security, technical delivery, and systems thinking.</p>
+              </div>
+            </article>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="operations" class="anime-section anime-operations">
+      <header class="anime-section-heading">
+        <span>Scroll IV · Practice</span>
+        <h2>A grimoire of practical security.</h2>
+      </header>
+      <div class="anime-operation-grid">
+        <article class="anime-operation-card anime-operation-wide">
+          <span class="anime-operation-number">01</span>
+          <p class="anime-operation-kicker">Augmentation · AI-assisted offensive security</p>
+          <h3>Local models. Deliberate control. Human decisions.</h3>
+          <p>I’m building a locally hosted penetration-testing accelerator using high-performance model serving with SGLang and speculative decoding. It supports practitioners across analysis, review, testing, triage, validation, and remediation without treating model output as ground truth.</p>
+          <div class="anime-flow" aria-label="AI-assisted security workflow">
+            <span>CONTEXT</span><i aria-hidden="true"></i><span>MODEL</span><i aria-hidden="true"></i><span>WARDS</span><i aria-hidden="true"></i><span>JUDGMENT</span>
+          </div>
+        </article>
+
+        <details class="anime-operation-more">
+          <summary><span>More practice areas</span><strong>Controls · Testing · Open-source research</strong></summary>
+          <div class="anime-operation-more-grid">
+            <article class="anime-operation-card">
+              <span class="anime-operation-number">02</span>
+              <p class="anime-operation-kicker">The five-ward control model</p>
+              <h3>Authority is designed, not assumed.</h3>
+              <p>Least privilege, explicit approvals, traceable audit records, safe rollback, and continuous human oversight define the operating boundary.</p>
+            </article>
+
+            <article class="anime-operation-card">
+              <span class="anime-operation-number">03</span>
+              <p class="anime-operation-kicker">Field practice · Penetration testing</p>
+              <h3>Methodology through quality assurance.</h3>
+              <p>I lead technical delivery, set methodology and direction, validate findings, and translate technical evidence into decisions.</p>
+            </article>
+
+            <article class="anime-operation-card">
+              <span class="anime-operation-number">04</span>
+              <p class="anime-operation-kicker">Open-source research grimoire</p>
+              <h3>Trace the boundary. Ship the fix.</h3>
+              <p>I reproduce source-to-sink paths, check for duplicates, contribute focused patches with regression tests, and turn shipped work into reusable research patterns.</p>
+              <div class="anime-project-links">
+                <a href="https://github.com/Hinotoi-agent/vulnweave">VulnWeave ↗</a>
+                <a href="https://github.com/Hinotoi-agent/Verifymate">Verifymate ↗</a>
+                <a href="{{ '/selected-work/' | relative_url }}">Selected work →</a>
+              </div>
+            </article>
+          </div>
+        </details>
+      </div>
+
+      <details class="anime-controls-inline">
+        <summary class="anime-controls-heading">
+          <span>Five wards · Human in the loop</span>
+          <h3 id="controls-title">Guardrails before autonomy.</h3>
+        </summary>
+        <ol class="anime-control-sequence">
+          <li><b>01</b><strong>Least privilege</strong><span>Give each model and tool only the authority the task requires.</span></li>
+          <li><b>02</b><strong>Approval gates</strong><span>Pause before sensitive, irreversible, or externally visible actions.</span></li>
+          <li><b>03</b><strong>Audit trails</strong><span>Preserve what was requested, decided, executed, and returned.</span></li>
+          <li><b>04</b><strong>Rollback paths</strong><span>Design recovery before granting an agent the ability to change state.</span></li>
+          <li><b>05</b><strong>Human oversight</strong><span>Keep findings and conclusions accountable to an experienced reviewer.</span></li>
+        </ol>
+      </details>
+      <div class="frieren-chapter-break" aria-hidden="true"><span>✦</span><b>The party continues</b><span>✦</span></div>
+    </section>
+
+
     <section class="anime-section anime-background">
       <article class="anime-speaking">
         <p class="anime-operation-kicker">Gathering · Milipol TechX 2026</p>
@@ -281,7 +310,7 @@ excerpt: Lennon Chia is a Singapore-based cybersecurity manager working across o
       </article>
     </section>
 
-    <section class="anime-section anime-notes">
+    <section id="notes" class="anime-section anime-notes">
       <header class="anime-section-heading anime-section-heading-compact">
         <span>Field journal · Latest notes</span>
         <h2>Knowledge gathered along the way.</h2>
